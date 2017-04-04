@@ -1804,7 +1804,7 @@
 					<height>99</height>
 					<aspectratio>keep</aspectratio>
 					<visible>!String.IsEmpty(MusicPlayer.Genre)</visible>
-					<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$INFO[MusicPlayer.Genre,special://skin/extras/genre/music/icons/,.jpg]</texture>
+					<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$VAR[MusicGenrePosterVar]$INFO[MusicPlayer.Genre]$VAR[MusicGenreExtPosterVar]</texture>
 					<bordertexture border="-10">thumbs/cd_shadow3.png</bordertexture>
 				</control>
 				<control type="label">

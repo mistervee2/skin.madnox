@@ -488,7 +488,7 @@
 					</animation>
 					<control type="image">
 						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-						<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
+						<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[PosterVar]</texture>
 					</control>
 				</control>
 				<control type="group">
@@ -504,7 +504,7 @@
 					</animation>
 					<control type="image">
 						<aspectratio scalediffuse="false" aligny="center">scale</aspectratio>
-						<texture colordiffuse="61FFFFFF" flipy="true" background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
+						<texture colordiffuse="61FFFFFF" flipy="true" background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[PosterVar]</texture>
 					</control>
 				</control>
 			</control>

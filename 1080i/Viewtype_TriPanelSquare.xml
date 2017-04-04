@@ -178,7 +178,7 @@
 					<width>530</width>
 					<height>530</height>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[ListPosterVar]</texture>
+					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[PosterVar]</texture>
 					<fadetime>400</fadetime>
 				</control>
 				<control type="image">
@@ -197,7 +197,7 @@
 					<width>530</width>
 					<height>530</height>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
+					<texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[PosterVar]</texture>
 					<fadetime>400</fadetime>
 				</control>
 				<control type="image">
@@ -238,7 +238,7 @@
 					<width>487</width>
 					<height>487</height>
 					<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
+					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="DefaultMusicGenres.png">$VAR[PosterVar]</texture>
 					<fadetime>400</fadetime>
 				</control>
 				<control type="image">
@@ -257,7 +257,7 @@
 					<width>486</width>
 					<height>486</height>
 					<aspectratio align="center" scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[ListAlbumVar]</texture>
+					<texture background="true" diffuse="thumbs/boxes/cdcover_mask.png" fallback="DefaultMusicGenres.png">$VAR[PosterVar]</texture>
 					<fadetime>400</fadetime>
 				</control>
 				<control type="image">

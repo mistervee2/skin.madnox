@@ -254,14 +254,14 @@
 								<top>514</top>
 								<width>205</width>
 								<height>340</height>
-								<texture flipy="true" fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/reflection_diffuse_sq.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture flipy="true" fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/reflection_diffuse_sq.png" background="true">$VAR[PosterVar]</texture>
 							</control>
 							<control type="image">
 								<left>-75</left>
 								<top>163</top>
 								<width>207</width>
 								<height>333</height>
-								<texture fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/movieposter_mask.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/movieposter_mask.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -322,7 +322,7 @@
 								<top>66</top>
 								<width>277</width>
 								<height>470</height>
-								<texture fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/movieposter_mask.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/movieposter_mask.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -330,7 +330,7 @@
 								<top>556</top>
 								<width>276</width>
 								<height>480</height>
-								<texture fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/movieposter_mask.png" flipy="true" background="true">$VAR[ListPosterVar]</texture>
+								<texture fallback="thumbs/fallback_poster_tp_solid.jpg" diffuse="thumbs/movieposter_mask.png" flipy="true" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<colordiffuse>61FFFFFF</colordiffuse>
 							</control>
@@ -911,7 +911,7 @@
 								<top>524</top>
 								<width>230</width>
 								<height>180</height>
-								<texture flipy="true" background="true"  fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+								<texture flipy="true" background="true"  fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 								<aspectratio>scale</aspectratio>
 								<colordiffuse>61FFFFFF</colordiffuse>
 							</control>
@@ -920,7 +920,7 @@
 								<top>275</top>
 								<width>230</width>
 								<height>230</height>
-								<texture background="true"  fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+								<texture background="true"  fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false" align="left" aligny="bottom">scale</aspectratio>
 							</control>
 							<control type="image">
@@ -1005,7 +1005,7 @@
 								<top>170</top>
 								<width>352</width>
 								<height>352</height>
-								<texture background="true"  fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+								<texture background="true"  fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -1013,7 +1013,7 @@
 								<top>536</top>
 								<width>350</width>
 								<height>350</height>
-								<texture flipy="true" background="true"  fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+								<texture flipy="true" background="true"  fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<colordiffuse>61FFFFFF</colordiffuse>
 							</control>

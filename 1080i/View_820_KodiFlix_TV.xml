@@ -1303,7 +1303,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>6</bordersize>
 						<include>KodiFlixTVDimAnimation</include>
@@ -1314,7 +1314,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
 						<bordersize>6</bordersize>
 						<animation type="Conditional" reversible="false" condition="Skin.HasSetting(KodiFlixTVDimItems)">
@@ -1352,7 +1352,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
@@ -1362,7 +1362,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
@@ -1389,7 +1389,7 @@
 						<top>7</top>
 						<width>258</width>
 						<height>281</height>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<include>KodiFlixTVDimAnimation</include>
 						<animation effect="rotatey" start="-14" end="34" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
@@ -1400,7 +1400,7 @@
 						<top>7</top>
 						<width>193</width>
 						<height>281</height>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<include>KodiFlixTVDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
@@ -1491,7 +1491,7 @@
 							<top>5</top>
 							<width>239</width>
 							<height>283</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="34" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="-30"/>
 							<visible>Skin.HasSetting(KodiFlixBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixTVCenterList)</visible>
@@ -1501,7 +1501,7 @@
 							<top>5</top>
 							<width>200</width>
 							<height>283</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="45" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="-30"/>
 							<visible>Skin.HasSetting(KodiFlixBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixTVCenterList)</visible>
@@ -1511,7 +1511,7 @@
 							<top>6</top>
 							<width>256</width>
 							<height>280</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixTVCenterList)</visible>
@@ -1522,7 +1522,7 @@
 							<width>198</width>
 							<height>281</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixTVCenterList)</visible>
@@ -3283,7 +3283,7 @@
 			<top>572</top>
 			<width>403</width>
 			<height>332</height>
-			<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+			<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>!ListItem.IsParentFolder + Container.Content(tvshows)</visible>

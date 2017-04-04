@@ -371,6 +371,21 @@
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=RecordLabelIcons&amp;type=resource.images.recordlabels)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	</control>
+                	 -->
+                	<control type="button" id="306">
+                		<label>Video genre icons</label>
+                		<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
+                		<include>Default_SettingButton</include>
+                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
+                	</control>
+                	<control type="button" id="308">
+                		<label>Music genre icons</label>
+                		<label2>$INFO[Skin.String(MusicGenreIcons.Name)]</label2>
+                		<include>Default_SettingButton</include>
+                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
+                	</control>
                 	<control type="button" id="304">
                 		<label>Weather icons</label>
                 		<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
@@ -384,13 +399,6 @@
                 		<include>Default_SettingButton</include>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	</control> -->
-                	<control type="button" id="306">
-                		<label>Video genre icons</label>
-                		<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
-                		<include>Default_SettingButton</include>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
                 	</control>
                 	<!-- <control type="button" id="307">
                 		<label>Video genre fanart</label>
@@ -399,13 +407,7 @@
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
                 	</control>
-                	<control type="button" id="308">
-                		<label>Music genre icons</label>
-                		<label2>$INFO[Skin.String(MusicGenreIcons.Name)]</label2>
-                		<include>Default_SettingButton</include>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
-                	</control>
+                	
                 	<control type="button" id="309">
                 		<label>Music genre fanart</label>
                 		<label2>$INFO[Skin.String(MusicGenreFanart.Name)]</label2>

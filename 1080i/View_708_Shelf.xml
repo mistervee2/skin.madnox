@@ -315,7 +315,7 @@
 								<top>164</top>
 								<width>260</width>
 								<height>339</height>
-								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -323,7 +323,7 @@
 								<top>512</top>
 								<width>260</width>
 								<height>337</height>
-								<texture flipy="true" diffuse="views/shelf3DR/reflect_poster.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture flipy="true" diffuse="views/shelf3DR/reflect_poster.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio>stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -370,7 +370,7 @@
 								<top>67</top>
 								<width>351</width>
 								<height>477</height>
-								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
@@ -383,7 +383,7 @@
 								<height>475</height>
 								<visible>Control.HasFocus(708)</visible>
 								<colordiffuse>45FFFFFF</colordiffuse>
-								<texture flipy="true" background="true">$VAR[ListPosterVar]</texture>
+								<texture flipy="true" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
@@ -437,7 +437,7 @@
 								<top>67</top>
 								<width>349</width>
 								<height>477</height>
-								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
@@ -449,7 +449,7 @@
 								<width>357</width>
 								<height>475</height>
 								<colordiffuse>45FFFFFF</colordiffuse>
-								<texture flipy="true" background="true">$VAR[ListPosterVar]</texture>
+								<texture flipy="true" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 								<animation type="Focus" reversible="false">
 									<effect type="zoom" center="50,180" start="80" end="100" time="600" tween="cubic" easing="out" />
@@ -501,7 +501,7 @@
 								<top>67</top>
 								<width>351</width>
 								<height>477</height>
-								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture diffuse="views/shelf3DR/diffuse_box.png" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -510,7 +510,7 @@
 								<width>359</width>
 								<height>475</height>
 								<colordiffuse>45FFFFFF</colordiffuse>
-								<texture flipy="true" background="true">$VAR[ListPosterVar]</texture>
+								<texture flipy="true" background="true">$VAR[PosterVar]</texture>
 								<aspectratio scalediffuse="false">stretch</aspectratio>
 							</control>
 							<control type="image">
@@ -802,7 +802,7 @@
 							<control type="image">
 								<visible>[!String.IsEmpty(ListItem.Season) + !String.Contains(ListItem.DBTYPE,tvshow)]</visible>
 								<aspectratio scalediffuse="false" aligny="bottom">scale</aspectratio>
-								<texture diffuse="views/shelf3DR/disc_diffuse.png" background="true">$VAR[ListPosterVar]</texture>
+								<texture diffuse="views/shelf3DR/disc_diffuse.png" background="true">$VAR[PosterVar]</texture>
 							</control>
 							<!--START HERE-->
 							<control type="image">

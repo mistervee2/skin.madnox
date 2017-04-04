@@ -1028,7 +1028,7 @@
 					<top>78</top>
 					<width>264</width>
 					<height>400</height>
-					<texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[ListPosterVar]</texture>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[PosterVar]</texture>
 					<fadetime>200</fadetime>
 					<bordertexture border="-50">thumbs/poster_shadow.png</bordertexture>
 					<bordersize>0</bordersize>
@@ -1044,7 +1044,7 @@
                     <width>264</width>
                     <height>400</height>
                     <aspectratio>stretch</aspectratio>
-                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[ListPosterVar]</texture>
+                    <texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[PosterVar]</texture>
                     <fadetime>200</fadetime>
                     <bordertexture border="-50">thumbs/poster_shadow.png</bordertexture>
                     <bordersize>0</bordersize>
@@ -1643,7 +1643,7 @@
 					<width>323</width>
 					<height>470</height>
 					<aspectratio scalediffuse="false" align="center">scale</aspectratio>
-					<texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[ListPosterVar]</texture>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png">$VAR[PosterVar]</texture>
 					<fadetime>200</fadetime>
 					<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 					<bordersize>7</bordersize>

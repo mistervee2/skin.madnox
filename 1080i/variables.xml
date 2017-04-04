@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Art -->
 	<variable name="PosterVar">
+		<value condition="ListItem.IsParentFolder + Container.Content(episodes)">DefaultFolderBackLandscape.png</value>
+		<value condition="ListItem.IsParentFolder + [Container.Content(tvshows) | Container.Content(movies)]">DefaultFolderBackPoster.png</value>
 		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
-		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
+		<value condition="Container.Content(tags)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
+		<value condition="Container.Content(countries)">$VAR[ColorFlagsLanguage]$INFO[ListItem.Label,,.png]</value>
+		<value condition="Container.Content(years)">$INFO[ListItem.Label,special://skin/extras/year/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres) + [Window.IsActive(music) | Window.IsActive(musicvideos)]">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
+		<value condition="Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
+		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="!Integer.IsGreater(ListItem.Season,9) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Path]$INFO[ListItem.Season,../season0,-poster.jpg]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Path]$INFO[ListItem.Season,../season,-poster.jpg]</value>
+		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
+	<variable name="VideoGenrePosterVar">
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-coloured)">resource://resource.images.moviegenreicons.madnox-coloured/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-bw)">resource://resource.images.moviegenreicons.madnox-bw/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),zephyr)">resource://resource.images.moviegenreicons.arctic.zephyr/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),coloured)">resource://resource.images.moviegenreicons.coloured/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),filmstrip)">resource://resource.images.moviegenreicons.filmstrip/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),grey)">resource://resource.images.moviegenreicons.grey/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),poster)">resource://resource.images.moviegenreicons.poster/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),transparent)">resource://resource.images.moviegenreicons.transparent/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),white)">resource://resource.images.moviegenreicons.white/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),xzener-flat)">resource://resource.images.moviegenreicons.xzener-flat/</value>
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),xzener-reflection)">resource://resource.images.moviegenreicons.xzener-reflection/</value>
+	</variable>
+	<variable name="VideoGenreExtPosterVar">
+		<value condition="String.Contains(Skin.String(VideoGenreIcons.ext),jpg)">.jpg</value>
+		<value>.png</value>
+	</variable>
+	<variable name="MusicGenrePosterVar">
+		<value condition="String.Contains(Skin.String(MusicGenreIcons.path),grey)">resource://resource.images.musicgenreicons.grey/</value>
+		<value condition="String.Contains(Skin.String(MusicGenreIcons.path),poster)">resource://resource.images.musicgenreicons.poster/</value>
+		<value condition="String.Contains(Skin.String(MusicGenreIcons.path),text)">resource://resource.images.musicgenreicons.text/</value>
+	</variable>
+	<variable name="MusicGenreExtPosterVar">
+		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
+		<value>.png</value>
+	</variable>
+	<!-- END Viewtype Art -->
 	<variable name="DayTimeColorVar">
 		<value condition="String.StartsWith(System.Time(mm),0)">FF69f5ee</value>
 		<value condition="String.StartsWith(System.Time(mm),1)">FFF3F781</value>
@@ -1422,56 +1460,56 @@
 		<value>$INFO[ListItem.Date]$INFO[ListItem.Rating, • ]</value>
 	</variable>
 	<variable name="ShowcaseItem-7Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-7).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-7).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-7).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-7).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-7).Art(poster))">$INFO[ListItem(-7).Art(poster)]</value>
 		<value>$INFO[ListItem(-7).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-6Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-6).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-6).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-6).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-6).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-6).Art(poster))">$INFO[ListItem(-6).Art(poster)]</value>
 		<value>$INFO[ListItem(-6).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-5Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-5).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-5).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-5).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-5).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-5).Art(poster))">$INFO[ListItem(-5).Art(poster)]</value>
 		<value>$INFO[ListItem(-5).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-4Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-4).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-4).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-4).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-4).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-4).Art(poster))">$INFO[ListItem(-4).Art(poster)]</value>
 		<value>$INFO[ListItem(-4).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-3Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-3).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-3).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-3).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-3).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-3).Art(poster))">$INFO[ListItem(-3).Art(poster)]</value>
 		<value>$INFO[ListItem(-3).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-2Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-2).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-2).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-2).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-2).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-2).Art(poster))">$INFO[ListItem(-2).Art(poster)]</value>
 		<value>$INFO[ListItem(-2).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem-1Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(-1).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(-1).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-1).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(-1).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(-1).Art(poster))">$INFO[ListItem(-1).Art(poster)]</value>
 		<value>$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem0Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem.Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem.Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedPoster)) + Skin.HasSetting(SkinHelperAnimations) + [Control.Isvisible(50) | Control.Isvisible(501) | Control.Isvisible(510) | Control.Isvisible(511) | Control.Isvisible(700)| Control.Isvisible(514) | Control.Isvisible(516)]">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedPoster)]</value>
@@ -1479,63 +1517,63 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem1Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(1).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(1).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(1).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(1).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(1).Art(poster))">$INFO[ListItem(1).Art(poster)]</value>
 		<value>$INFO[ListItem(1).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem2Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(2).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(2).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(2).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(2).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(2).Art(poster))">$INFO[ListItem(2).Art(poster)]</value>
 		<value>$INFO[ListItem(2).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem3Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(3).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(3).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(3).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(3).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(3).Art(poster))">$INFO[ListItem(3).Art(poster)]</value>
 		<value>$INFO[ListItem(3).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem4Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(4).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(4).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(4).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(4).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(4).Art(poster))">$INFO[ListItem(4).Art(poster)]</value>
 		<value>$INFO[ListItem(4).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem5Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(5).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(5).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(5).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(5).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(5).Art(poster))">$INFO[ListItem(5).Art(poster)]</value>
 		<value>$INFO[ListItem(5).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem6Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(6).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(6).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(6).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(6).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(6).Art(poster))">$INFO[ListItem(6).Art(poster)]</value>
 		<value>$INFO[ListItem(6).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem7Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(7).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(7).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(7).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(7).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(7).Art(poster))">$INFO[ListItem(7).Art(poster)]</value>
 		<value>$INFO[ListItem(7).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem8Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(8).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(8).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(8).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(8).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(8).Art(poster))">$INFO[ListItem(8).Art(poster)]</value>
 		<value>$INFO[ListItem(8).Icon]</value>
 	</variable>
 	<variable name="ShowcaseItem9Var">
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem(9).Label]$VAR[ListGenrePosterExtVar]</value>
+		<value condition="Container.Content(genres)">$VAR[VideoGenrePosterVar]$INFO[ListItem(9).Label]$VAR[VideoGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(9).Label,special://skin/extras/year/video/icons/,.jpg]</value>
 		<value condition="Container.Content(episodes)">$INFO[ListItem(9).Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem(9).Art(poster))">$INFO[ListItem(9).Art(poster)]</value>
@@ -1879,67 +1917,67 @@
 	</variable>
 	<variable name="MusicShowcaseItem-6Var">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBackList.png</value>
-		<value condition="Container.Content(genres)">$INFO[ListItem(-6).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(-6).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-6).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(-6).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem-5Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(-5).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(-5).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-5).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(-5).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem-4Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(-4).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(-4).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-4).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(-4).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem-3Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(-3).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(-3).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-3).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(-3).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem-2Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(-2).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(-2).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-2).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(-2).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem-1Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(-1).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(-1).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(-1).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(-1).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem0Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem.Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem1Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(1).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(1).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(1).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(1).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem2Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(2).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(2).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(2).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(2).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem3Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(3).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(3).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(3).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(3).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem4Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(4).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(4).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(4).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(4).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem5Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(5).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(5).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(5).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(5).Icon]</value>
 	</variable>
 	<variable name="MusicShowcaseItem6Var">
-		<value condition="Container.Content(genres)">$INFO[ListItem(6).Label,special://skin/extras/genre/music/icons/,.jpg]</value>
+		<value condition="Container.Content(genres)">$VAR[MusicGenrePosterVar]$INFO[ListItem(6).Label]$VAR[MusicGenreExtPosterVar]</value>
 		<value condition="Container.Content(years)">$INFO[ListItem(6).Label,special://skin/extras/year/music/icons/,.jpg]</value>
 		<value>$INFO[ListItem(6).Icon]</value>
 	</variable>
@@ -2087,69 +2125,6 @@
 		<value condition="String.IsEqual(Skin.String(FavoritesListType),2)">$LOCALIZE[31175]</value>
 		<value>$LOCALIZE[31959]</value>
 	</variable>
-	<variable name="ListPosterVar">
-		<!--value condition="String.Contains(ListItem.Title,*)">$INFO[Container.Art(season.poster)]</value-->
-		<value condition="Container.Content(tags)">$VAR[ListGenrePosterVar]$INFO[ListItem.Label]$VAR[ListGenrePosterExtVar]</value>
-		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
-		<value condition="Container.Content(genres)">$VAR[ListGenrePosterVar]$INFO[ListItem.Label]$VAR[ListGenrePosterExtVar]</value>
-		<value condition="Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
-		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!Integer.IsGreater(ListItem.Season,9) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Path]$INFO[ListItem.Season,../season0,-poster.jpg]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Path]$INFO[ListItem.Season,../season,-poster.jpg]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
-	<variable name="ListGenrePosterVar">
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-coloured)">resource://resource.images.moviegenreicons.madnox-coloured/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-bw)">resource://resource.images.moviegenreicons.madnox-bw/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),zephyr)">resource://resource.images.moviegenreicons.arctic.zephyr/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),coloured)">resource://resource.images.moviegenreicons.coloured/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),filmstrip)">resource://resource.images.moviegenreicons.filmstrip/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),grey)">resource://resource.images.moviegenreicons.grey/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),poster)">resource://resource.images.moviegenreicons.poster/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),transparent)">resource://resource.images.moviegenreicons.transparent/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),white)">resource://resource.images.moviegenreicons.white/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),xzener-flat)">resource://resource.images.moviegenreicons.xzener-flat/</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),xzener-reflection)">resource://resource.images.moviegenreicons.xzener-reflection/</value>
-	</variable>
-	<variable name="ListGenrePosterExtVar">
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-coloured)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-bw)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),zephyr)">.png</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),coloured)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),filmstrip)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),grey)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),poster)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),transparent)">.png</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),white)">.jpg</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),xzener-flat)">.png</value>
-		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),xzener-reflection)">.png</value>
-	</variable>
-	<!-- <variable name="ListPosterVar1">
-		<value condition="Container.Content(tags)">$INFO[ListItem.Label,special://skin/extras/tags/video/icons/,.jpg]</value>
-		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
-		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/iconsBW/,.jpg]</value>
-		<value condition="Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
-		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!Integer.IsGreater(ListItem.Season,9) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]">$INFO[ListItem.Path]$INFO[ListItem.Season,../season0,-poster.jpg]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Path]$INFO[ListItem.Season,../season,-poster.jpg]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable> -->
-	<!-- <variable name="ListPosterBackupVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBack.png</value>
-		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/icons/,.jpg]</value>
-		<value condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedPoster)) + Skin.HasSetting(SkinHelperAnimations) + [Control.Isvisible(50) | Control.Isvisible(52) | Control.Isvisible(511) | Control.Isvisible(550) | Control.Isvisible(700)| Control.Isvisible(514) | Control.Isvisible(516)]">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedPoster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="!String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
-		<value condition="Container.Content(episodes) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="Container.Content(episodes)">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable> -->
 	<variable name="BannerVar">
 		<value condition="ListItem.IsParentFolder">DefaultFolderBackBanner.png</value>
 		<value condition="!String.IsEmpty(ListItem.Art(banner))">$INFO[ListItem.Art(banner)]</value>
@@ -2160,23 +2135,6 @@
 		<value condition="!Skin.HasSetting(UseTVShowLocalCovers) + !String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!Skin.HasSetting(UseTVShowLocalCovers)">$INFO[ListItem.Icon]</value>
 		<value>common/bgcolor.png</value>
-	</variable>
-	<variable name="ListAlbumVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBackList.png</value>
-		<value condition="Container.Content(countries)">$VAR[ColorFlagsLanguage]$INFO[ListItem.Label,,.png]</value>
-		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/music/icons/,.jpg]</value>
-		<value condition="Container.Content(years)">$INFO[ListItem.Label,special://skin/extras/year/music/icons/,.jpg]</value>
-		<value>$INFO[ListItem.Icon]</value>
-	</variable>
-	<variable name="ThumbnailVar">
-		<value condition="ListItem.IsParentFolder">DefaultFolderBackList.png</value>
-		<value condition="Container.Content(countries)">$VAR[ColorFlagsLanguage]$INFO[ListItem.Label,,.png]</value>
-		<value condition="Window.IsActive(music) + Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/music/icons/,.jpg]</value>
-		<value condition="Window.IsActive(music) + Container.Content(years)">$INFO[ListItem.Label,special://skin/extras/year/music/icons/,.jpg]</value>
-		<value condition="Window.IsActive(videos) + Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/genre/video/icons/,.jpg]</value>
-		<value condition="Window.IsActive(videos) + Container.Content(years)">$INFO[ListItem.Label,special://skin/extras/year/video/icons/,.jpg]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="PVRManagerHeaderVar">
 		<value condition="String.IsEmpty(Window.Property(IsRadio))">$LOCALIZE[19199] - $LOCALIZE[19023]</value>
@@ -2350,13 +2308,6 @@
 		<value condition="Skin.HasSetting(tvshowlogosfloor)">$LOCALIZE[31059]</value>
 		<value condition="Skin.HasSetting(tvshowbannersfloor)">$LOCALIZE[31454]</value>
 		<value>$LOCALIZE[31061]</value>
-	</variable>
-	<variable name="PosterThumbVar">
-		<value condition="!String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster)) + !Container.COntent(seasons)">$INFO[ListItem.Art(tvshow.poster)]</value>
-		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</value>
-		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="OverlayVar">
 		<value condition="Container.ListItem.IsResumable + String.IsEmpty(Window(Home).Property(Overlay.Resumable))">overlays/showcase/resumable.png</value>

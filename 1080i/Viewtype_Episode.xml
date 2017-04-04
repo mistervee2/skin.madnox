@@ -972,7 +972,7 @@
 					<width>533</width>
 					<height>800</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true">$VAR[ListPosterVar]</texture>
+					<texture background="true">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -1022,7 +1022,7 @@
 				<width>322</width>
 				<height>322</height>
 				<aspectratio scalediffuse="false">scale</aspectratio>
-				<texture background="true" diffuse="thumbs/cdcover_mask.png">$VAR[ListAlbumVar]</texture>
+				<texture background="true" diffuse="thumbs/cdcover_mask.png">$VAR[PosterVar]</texture>
 				<bordertexture border="20">thumbs/cd_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 			</control>
@@ -1263,7 +1263,7 @@
 					<width>150</width>
 					<height>225</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
-					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 					<fadetime>200</fadetime>
 				</control>
 				<control type="image">

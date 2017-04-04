@@ -1066,7 +1066,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<include>KodiFlixDimAnimation</include>
 						<bordersize>6</bordersize>
@@ -1077,7 +1077,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border_fade.png</bordertexture>
 						<bordersize>6</bordersize>
 						<include>KodiFlixDimAnimation</include>
@@ -1162,7 +1162,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 						<visible>ListItem.IsCollection | [[!Skin.HasSetting(KodiFlixCases) | !Skin.Hassetting(KodiFlixOpenCase)] | !Skin.HasSetting(usecases)] | String.IsEmpty(ListItem.Art(discart))</visible>
@@ -1173,7 +1173,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
@@ -1211,7 +1211,7 @@
 					</control>
 					<control type="image">
 						<include>KodiFlixMovieThumb</include>
-						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 						<include>KodiFlixOpenCase</include>
 						<visible>Skin.HasSetting(usecases) + [Container.Content(movies) | Container.Content(sets)] + Skin.Hassetting(KodiFlixCases) + !ListItem.IsParentFolder + Skin.HasSetting(KodiFlixOpenCase) + !String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
@@ -2012,7 +2012,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
@@ -2022,7 +2022,7 @@
 						<width>198</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 					<control type="image">
@@ -2060,7 +2060,7 @@
 					</control>
 					<control type="image">
 						<include>KodiFlixMovieThumb</include>
-						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+						<texture background="true" diffuse="thumbs/thumb_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 						<include>KodiFlixDVDShelfOpenCase</include>
 						<visible>[Container.Content(movies) | Container.Content(sets)] + !ListItem.IsParentFolder + !String.IsEmpty(ListItem.Art(discart))</visible>
 					</control>
@@ -2098,7 +2098,7 @@
 						<top>7</top>
 						<width>266</width>
 						<height>280</height>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-14" end="35" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
@@ -2109,7 +2109,7 @@
 						<top>7</top>
 						<width>197</width>
 						<height>281</height>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
@@ -2120,7 +2120,7 @@
 						<top>27</top>
 						<width>212</width>
 						<height>266</height>
-						<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-14" end="26" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
@@ -2131,7 +2131,7 @@
 						<top>27</top>
 						<width>180</width>
 						<height>263</height>
-						<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<include>KodiFlixDimAnimation</include>
 						<animation effect="rotatey" start="-4" end="40" time="0" condition="true">Conditional</animation>
 						<camera x="530" y="50"/>
@@ -2244,7 +2244,7 @@
 							<width>248</width>
 							<height>280.5</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="560" y="-10"/>
 							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -2254,7 +2254,7 @@
 							<top>5</top>
 							<width>200</width>
 							<height>283</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="45" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="-30"/>
 							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -2264,7 +2264,7 @@
 							<top>6</top>
 							<width>256</width>
 							<height>280</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -2275,7 +2275,7 @@
 							<width>204</width>
 							<height>281</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="47" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -2286,7 +2286,7 @@
 							<width>224</width>
 							<height>295</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="26" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
@@ -2296,7 +2296,7 @@
 							<top>26</top>
 							<width>205</width>
 							<height>295</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
@@ -2306,7 +2306,7 @@
 							<top>26</top>
 							<width>221</width>
 							<height>296</height>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-14" end="25" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + !Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
@@ -2317,7 +2317,7 @@
 							<width>202</width>
 							<height>295</height>
 							<aspectratio>stretch</aspectratio>
-							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+							<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 							<animation effect="rotatey" start="-4" end="36" time="0" condition="true">Conditional</animation>
 							<camera x="530" y="10"/>
 							<visible>!Skin.HasSetting(KodiFlixMoviesBoxsetsExtrazoom) + Skin.HasSetting(KodiFlixMoviesCenterList) + [Container.Content(movies) + !ListItem.IsCollection]</visible>
@@ -4630,7 +4630,7 @@
 			<top>572</top>
 			<width>403</width>
 			<height>332</height>
-			<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+			<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>

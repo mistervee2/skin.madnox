@@ -230,7 +230,7 @@
 					<width>422</width>
 					<height>626</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -255,7 +255,7 @@
 					<width>438</width>
 					<height>637</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -267,7 +267,7 @@
 					<width>438</width>
 					<height>637</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
-					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+					<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
@@ -1701,7 +1701,7 @@
 				<left>65</left>
 				<width>380</width>
 				<height>380</height>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[PosterVar]</texture>
 				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.ListItem.Art.DiscArt) + Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -1711,7 +1711,7 @@
 				<left>65</left>
 				<width>380</width>
 				<height>380</height>
-				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[ListAlbumVar]</texture>
+				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[PosterVar]</texture>
 				<visible>Skin.HasSetting(rightlistCD) + String.IsEmpty(Control.GetLabel(4172914)) + String.IsEmpty(SkinHelper.ListItem.Art.DiscArt) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -1788,7 +1788,7 @@
 					<width>410</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+					<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 				</control>
 				<control type="image">
@@ -1796,7 +1796,7 @@
 					<width>410</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
-					<texture diffuse="thumbs/cdcover_mask_reflect.png" flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+					<texture diffuse="thumbs/cdcover_mask_reflect.png" flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 				</control>
@@ -1829,7 +1829,7 @@
 					<width>410</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
-					<texture background="true" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+					<texture background="true" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 				</control>
 				<control type="image">
@@ -1837,7 +1837,7 @@
 					<width>410</width>
 					<height>410</height>
 					<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
-					<texture flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[ListAlbumVar]</texture>
+					<texture flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
 					<fadetime>IconCrossfadeTime2</fadetime>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 				</control>

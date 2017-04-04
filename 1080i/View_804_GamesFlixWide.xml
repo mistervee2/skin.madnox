@@ -175,7 +175,7 @@
 						<width>398</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
@@ -185,7 +185,7 @@
 						<width>400</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 				</itemlayout>
@@ -211,7 +211,7 @@
 						<width>398</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
@@ -221,7 +221,7 @@
 						<width>400</width>
 						<height>299</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 				</focusedlayout>
@@ -248,7 +248,7 @@
 						<width>348</width>
 						<height>249</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
@@ -258,7 +258,7 @@
 						<width>350</width>
 						<height>249</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 				</itemlayout>
@@ -284,7 +284,7 @@
 						<width>348</width>
 						<height>249</height>
 						<aspectratio align="center" aligny="center">scale</aspectratio>
-						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordertexture border="15">thumbs/thumb_border.png</bordertexture>
 						<bordersize>8</bordersize>
 					</control>
@@ -294,7 +294,7 @@
 						<width>350</width>
 						<height>249</height>
 						<aspectratio align="center" aligny="center">stretch</aspectratio>
-						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterVar]</texture>
+						<texture background="true" flipy="true" diffuse="thumbs/reflection_diffuse_sq.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
 						<bordersize>8</bordersize>
 					</control>
 				</focusedlayout>

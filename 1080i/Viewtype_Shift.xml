@@ -34,7 +34,7 @@
 			<width>300</width>
 			<height>300</height>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$VAR[ListAlbumVar]</texture>
+			<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$VAR[PosterVar]</texture>
 		</control>
 		<control type="image">
 			<left>-12</left>
@@ -52,7 +52,7 @@
 			<width>300</width>
 			<height>300</height>
 			<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-			<texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$VAR[ListAlbumVar]</texture>
+			<texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$VAR[PosterVar]</texture>
 			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 		</control>
@@ -64,7 +64,7 @@
 			<width>150</width>
 			<height>150</height>
 			<aspectratio scalediffuse="false">scale</aspectratio>
-			<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$VAR[ListAlbumVar]</texture>
+			<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAudio.png">$VAR[PosterVar]</texture>
 		</control>
 		<control type="image">
 			<left>-12</left>
@@ -82,7 +82,7 @@
 			<width>150</width>
 			<height>150</height>
 			<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
-			<texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$VAR[ListAlbumVar]</texture>
+			<texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png" fallback="DefaultAudio.png">$VAR[PosterVar]</texture>
 			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 		</control>
@@ -93,7 +93,7 @@
 			<top>150</top>
 			<width>300</width>
 			<height>450</height>
-			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
@@ -101,7 +101,7 @@
 			<top>150</top>
 			<width>300</width>
 			<height>450</height>
-			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 
@@ -119,7 +119,7 @@
 			<top>601</top>
 			<width>300</width>
 			<height>450</height>
-			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
@@ -129,7 +129,7 @@
 			<top>601</top>
 			<width>300</width>
 			<height>450</height>
-			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
@@ -169,7 +169,7 @@
 			<top>150</top>
 			<width>150</width>
 			<height>225</height>
-			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
@@ -177,7 +177,7 @@
 			<top>150</top>
 			<width>150</width>
 			<height>225</height>
-			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
 		</control>
 		<control type="image">
@@ -194,7 +194,7 @@
 			<top>381</top>
 			<width>150</width>
 			<height>225</height>
-			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 			<visible>Skin.HasSetting(genrethumbs)</visible>
@@ -204,7 +204,7 @@
 			<top>381</top>
 			<width>150</width>
 			<height>225</height>
-			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[ListPosterVar]</texture>
+			<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
 			<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 			<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 			<visible>!Skin.HasSetting(genrethumbs)</visible>
