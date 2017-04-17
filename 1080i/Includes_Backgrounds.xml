@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<include name="Background_MediaPlaying">
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(DisableBackgroundViz)</visible>
+		</control>
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo + !Skin.HasSetting(DisableBackgroundVideo)</visible>
+		</control>
+	</include>
+
+
 	<include name="WidgetBackgroundFanart">
 		<control type="multiimage">
 			<aspectratio align="center" aligny="top">scale</aspectratio>

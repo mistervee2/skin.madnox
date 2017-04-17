@@ -44,7 +44,87 @@
 		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
 		<value>.png</value>
 	</variable>
+	<variable name="WeatherFanartVar">
+		<value condition="!String.IsEmpty(Skin.String(WeatherFanart.path))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Weather.fanartcode]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]weather$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value>special://skin/extras/backgrounds/default.jpg</value>
+	</variable>
+	<variable name="SettingsFanartVar">
+		<value condition="!String.IsEmpty(Skin.String(SettingsFanart))">$INFO[Skin.String(SettingsFanart)]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]settings$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value>special://skin/extras/backgrounds/default.jpg</value>
+	</variable>
 	<!-- END Viewtype Art -->
+	<!-- Dialogs -->
+	<variable name="DialogHeading1110ColorsVar">
+		<value condition="ControlGroup(100).HasFocus">$LOCALIZE[31298]</value>
+		<value condition="ControlGroup(200).HasFocus(201)">$LOCALIZE[31736]</value>
+		<value condition="ControlGroup(200).HasFocus(202)">$ADDON[script.skin.helper.skinbackup 32020]</value>
+		<value>$LOCALIZE[31298]</value>
+	</variable>
+	<variable name="DialogHeadingColorPickerVar">
+		<value condition="Control.HasFocus(3110)">$ADDON[script.skin.helper.colorpicker 32011]</value>
+		<value condition="ControlGroup(200).HasFocus(3010)">$ADDON[script.skin.helper.colorpicker 32050]</value>
+		<value condition="ControlGroup(200).HasFocus(3030)">$ADDON[script.skin.helper.colorpicker 32141]</value>
+		<value condition="ControlGroup(200).HasFocus(3011)">$ADDON[script.skin.helper.colorpicker 32013]</value>
+		<value condition="ControlGroup(200).HasFocus(4000)">$LOCALIZE[222]</value>
+		<value condition="ControlGroup(200).HasFocus(3012)">$LOCALIZE[190]</value>
+		<value>$ADDON[script.skin.helper.colorpicker 32011]</value>
+	</variable>
+	<variable name="DialogItemsLabelVar">
+		<value condition="Control.IsVisible(3)">$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</value>
+		<value>$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</value>
+	</variable>
+	<variable name="DialogBottomSeparatorVar">
+		<value condition="Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,7)">button/list-select-nofocus.png</value>
+		<value condition="Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,5)">button/list-select-nofocus.png</value>
+		<value></value>
+	</variable>
+	<!-- END Dialogs -->
+	<!-- Breadcrumbs -->
+	<variable name="BreadcrumbsVideoVar">
+		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">$LOCALIZE[20342]</value>
+		<value condition="Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)">$LOCALIZE[20389]</value>
+		<value condition="Container.Content(tvshows) | String.StartsWith(container.folderpath,library://video/tvshows/) | String.StartsWith(container.folderpath,videodb://tvshows)">$LOCALIZE[20343]</value>
+		<value condition="Container.Content(seasons)">$LOCALIZE[20343]</value>
+		<value condition="Container.Content(episodes)">$LOCALIZE[20343]</value>
+		<value>$LOCALIZE[3]</value>
+	</variable>
+	<variable name="BreadcrumbsVideoIconVar">
+		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">movie.png</value>
+		<value condition="Container.Content(musicvideos) | String.StartsWith(container.folderpath,library://video/musicvideos/) | String.StartsWith(container.folderpath,videodb://musicvideos)">musicvideo.png</value>
+		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(container.folderpath,library://video/tvshows/) | String.StartsWith(container.folderpath,videodb://tvshows)">tvshow.png</value>
+		<value>video.png</value>
+	</variable>
+	<variable name="BreadcrumbsPVRChannelsVar">
+		<value condition="Window.IsActive(TVChannels)">$LOCALIZE[19020] / $LOCALIZE[19019] / $INFO[Control.GetLabel(29)]</value>
+		<value>$LOCALIZE[19021] / $LOCALIZE[19019] / $INFO[Control.GetLabel(29)]</value>
+	</variable>
+	<variable name="BreadcrumbsPVRGuideVar">
+		<value condition="Window.IsActive(TVGuide)">$LOCALIZE[19020] / $INFO[Control.GetLabel(29)] - $INFO[Control.GetLabel(30)]</value>
+		<value>$LOCALIZE[19021] / $INFO[Control.GetLabel(29)] - $INFO[Control.GetLabel(30)]</value>
+	</variable>
+	<variable name="BreadcrumbsPVRRecordingsVar">
+		<value condition="Window.IsActive(TVRecordings)">$LOCALIZE[19020] / $LOCALIZE[19017]$INFO[Control.GetLabel(30), / ]</value>
+		<value>$LOCALIZE[19021] / $LOCALIZE[19017]$INFO[Control.GetLabel(30), / ]</value>
+	</variable>
+	<variable name="BreadcrumbsPVRTimersVar">
+		<value condition="Window.IsActive(TVTimers)">$LOCALIZE[19020] / $LOCALIZE[19040]</value>
+		<value condition="Window.IsActive(RadioTimers)">$LOCALIZE[19021] / $LOCALIZE[19040]</value>
+		<value condition="Window.IsActive(TVTimerRules)">$LOCALIZE[19020] / $LOCALIZE[19138]$INFO[Control.GetLabel(29), / ]</value>
+		<value>$LOCALIZE[19021] / $LOCALIZE[19138]$INFO[Control.GetLabel(29), / ]</value>
+	</variable>
+	<variable name="BreadcrumbsPVRSearchVar">
+		<value condition="Window.IsActive(TVSearch)">$LOCALIZE[19020] / $LOCALIZE[137]</value>
+		<value>$LOCALIZE[19021] / $LOCALIZE[137]</value>
+	</variable>
+	<!-- END Dialogs -->
+	<!-- Icons and Media Flags -->
+	
+
+
+
+	
 	<variable name="DayTimeColorVar">
 		<value condition="String.StartsWith(System.Time(mm),0)">FF69f5ee</value>
 		<value condition="String.StartsWith(System.Time(mm),1)">FFF3F781</value>
@@ -497,22 +577,22 @@
 		<value>$INFO[ListItem.AudioCodec]$INFO[ListItem.AudioChannels]</value>
 	</variable>
 	<variable name="PlayerAudioFlagVar">
-	    <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
-	    <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
-	    <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
-	    <value condition="String.Contains(Player.Filename,dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
-	    <value condition="String.Contains(Player.Filename,auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
-	    <value condition="String.Contains(Player.Filename,atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
+		<value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
+		<value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
+		<value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
+		<value condition="String.Contains(Player.Filename,dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
+		<value condition="String.Contains(Player.Filename,auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
+		<value condition="String.Contains(Player.Filename,atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
 		<value>$VAR[ColorFlagsAudio]audio/$INFO[VideoPlayer.AudioCodec]$INFO[VideoPlayer.AudioChannels,,.png]</value>
 	</variable>
 	<variable name="LibraryAudioFlagVar">
-	    <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
-	    <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
-	    <value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
-	    <value condition="String.Contains(ListItem.Filename,atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
-	    <value condition="String.Contains(ListItem.Filename,dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
-	    <value condition="String.Contains(ListItem.Filename,auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
-	    <value>$VAR[ColorFlagsAudio]audio/$VAR[AudioFlagVar,,.png]</value>
+		<value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
+		<value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
+		<value condition="String.Contains(Window(Home).Property(SkinHelper.ListItem.Tags),auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
+		<value condition="String.Contains(ListItem.Filename,atmos)">$VAR[ColorFlagsAudio]audio\dolbyatmoslogo.png</value>
+		<value condition="String.Contains(ListItem.Filename,dtsx)">$VAR[ColorFlagsAudio]audio\dtsxlogo.png</value>
+		<value condition="String.Contains(ListItem.Filename,auro)">$VAR[ColorFlagsAudio]audio\aurologo.png</value>
+		<value>$VAR[ColorFlagsAudio]audio/$VAR[AudioFlagVar,,.png]</value>
 	</variable>
 	<variable name="NextEpisodeVar">
 		<value condition="!String.IsEmpty(Window(Home).Property(NextAired.Label)) + !String.IsEmpty(Window(Home).Property(NextAired.NextDay))">$INFO[Window(Home).Property(NextAired.NextDay)]</value>
@@ -674,16 +754,6 @@
 		<value condition="!String.IsEmpty(Container.ListItem.Art(fanart))">$INFO[Container.ListItem.Art(fanart)]</value>
 		<value condition="!String.IsEmpty(Skin.String(AddonBrowserBackground))">$INFO[Skin.String(AddonBrowserBackground)]</value>
 		<value>special://skin/backgrounds/programs/</value>
-	</variable>
-	<variable name="WeatherFanartVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanartDir)) + Control.HasFocus(7500)">$INFO[Container(7500).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanartDir)) + Control.HasFocus(7502)">$INFO[Container(7502).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanartDir)) + Control.HasFocus(7503)">$INFO[Container(7503).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanartDir)) + Control.HasFocus(7504)">$INFO[Container(7504).ListItem.Property(Fanart)]</value>
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanartDir)) + String.IsEqual(Skin.String(WeatherBackground),weather)">$INFO[Skin.String(WeatherFanartDir)]$INFO[Weather.FanartCode]</value>
-		<value condition="String.Contains(Skin.String(WeatherBackground),weatherworldbackground)">$INFO[Window(Weather).Property(Current.Earth.Phase.image)]</value>
-		<value condition="!String.IsEmpty(Skin.String(WeatherBackground))">$INFO[Skin.String(WeatherBackground)]</value>
-		<value>special://skin/backgrounds/weather/</value>
 	</variable>
 	<variable name="LiveTVFanartVar">
 		<value condition="!String.IsEmpty(Skin.String(LiveTVBackground))">$INFO[Skin.String(LiveTVBackground)]</value>
@@ -2072,7 +2142,7 @@
 		<value condition="!String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100]) + Window.IsActive(videos)">$INFO[Control.GetLabel(10), (,)]</value>
 		<value/>
 	</variable>
-	<variable name="BreadcrumbsVideoVar">
+	<!-- <variable name="BreadcrumbsVideoVar">
 		<value condition="Container.Content(movies)">$LOCALIZE[20342]</value>
 		<value condition="Container.Content(musicvideos)">$LOCALIZE[20389]</value>
 		<value condition="Container.Content(tvshows) | Container.Content(seasons) | [Container.Content(episodes) + !String.Contains(Container.FolderName,$LOCALIZE[20373])]">$LOCALIZE[20343]</value>
@@ -2100,7 +2170,7 @@
 		<value condition="Window.IsActive(script-Rom_Collection_Browser-main.xml)">Rom Collection Browser $INFO[ListItem.Property(romcollection), / ]</value>
 		<value condition="!String.IsEmpty(Container.FolderName)">$INFO[System.CurrentWindow]:</value>
 		<value>$INFO[System.CurrentWindow]</value>
-	</variable>
+	</variable> -->
 	<variable name="BreadcrumbsIconVar">
 		<value condition="Container.Content(seasons) | Container.Content(tvshows) | Container.Content(episodes) | Window.IsActive(script-NextAired-TVGuide.xml) | Window.IsActive(script-NextAired-TVGuide2.xml) | Window.IsActive(script-videoextras-main.xml)">common/tv_icon.png</value>
 		<value condition="Container.Content(movies) | Container.Content(sets) | Window.IsActive(videos) | Window.IsActive(videoplaylist)">common/logo_movies.png</value>

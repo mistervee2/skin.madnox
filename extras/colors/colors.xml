@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<colors>
+    <palette name="madnox">
+        <color name="Ocean">FF69f5ee</color>
+        <color name="Neon">FF03F2FF</color>
+        <color name="Waterspout">FFA4F4F9</color>
+        <color name="Light blue">FF6db9e5</color>
+        <color name="Blue">FF00BFFF</color>        
+        <color name="Pale green">ffB8FBB8</color>
+        <color name="Green">FF04B431</color>
+        <color name="Light green">FF6cf884</color>
+        <color name="Neon Green">FF39FF14</color>
+        <color name="Lime">FFc5fa05</color>
+        <color name="Yellow">FFF3F781</color>
+        <color name="Khaki">fff0e68c</color>
+        <color name="Gold">FFFFD700</color>
+        <color name="Golden rod">ffDAA520</color>
+        <color name="Orange">FFFFA500</color>
+        <color name="Red orange">FFFF4500</color>
+        <color name="Red">FFB20000</color>
+        <color name="Purple">FF9370D8</color>
+        <color name="Fuchsia">FFFF00FF</color>
+        <color name="Pink">FFfa98e0</color>
+        <color name="Black">FF000000</color>
+		<color name="Gray">FF808080</color>
+        <color name="White">FFFFFFFF</color>
+        <color name="Ocean">FF69f5ee</color>
+        <color name="Neon">FF03F2FF</color>
+        <color name="Waterspout">FFA4F4F9</color>
+        <color name="Light blue">FF6db9e5</color>
+        <color name="Blue">FF00BFFF</color>        
+        <color name="Pale green">ffB8FBB8</color>
+        <color name="Green">FF04B431</color>
+        <color name="Light green">FF6cf884</color>
+        <color name="Neon Green">FF39FF14</color>
+        <color name="Lime">FFc5fa05</color>
+        <color name="Yellow">FFF3F781</color>
+        <color name="Khaki">fff0e68c</color>
+        <color name="Gold">FFFFD700</color>
+        <color name="Golden rod">ffDAA520</color>
+        <color name="Orange">FFFFA500</color>
+        <color name="Red orange">FFFF4500</color>
+        <color name="Red">FFB20000</color>
+        <color name="Purple">FF9370D8</color>
+        <color name="Fuchsia">FFFF00FF</color>
+        <color name="Pink">FFfa98e0</color>
+        <color name="Black">FF000000</color>
+        <color name="Gray">FF808080</color>
+        <color name="White">FFFFFFFF</color>                
+    </palette>    
+</colors>

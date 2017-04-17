@@ -119,7 +119,7 @@
 				<info>Player.Progress</info>
 				<texturebg>osd/info/osd_progress_back_cache.png</texturebg>
 				<lefttexture></lefttexture>
-				<midtexture colordiffuse="$VAR[HomeMenuTextFocusVar]">osd/info/osd_progress_mid.png</midtexture>
+				<midtexture colordiffuse="FFFFFFFF">osd/info/osd_progress_mid.png</midtexture>
 				<righttexture></righttexture>
 				<visible>Player.HasMedia + Skin.HasSetting(ProgressNowPlaying)</visible>
 				<animation effect="fade" end="35" time="600" condition="Player.HasMedia">Conditional</animation>
@@ -202,6 +202,18 @@
 	</include>
 	<include name="Breadcrumbs_Furniture">
 		<control type="group">
+			<control type="label">
+				<top>50</top>
+				<height>50</height>
+				<label>$INFO[ListItem.DBTYPE]</label>
+			</control>
+			<control type="label">
+				<top>100</top>
+				<height>50</height>
+				<label>$INFO[container.folderpath]</label>
+			</control>
+
+
 			<visible>!Skin.HasSetting(disabletopbar) + !Window.IsVisible(script-globalsearch-main.xml)</visible>
 			<control type="button" id="4051">
 				<include>HiddenObject</include>

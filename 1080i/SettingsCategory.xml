@@ -1,172 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>3</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
-	<animation type="WindowOpen" reversible="false" condition="![Window.Previous(settings) | Window.Previous(skinsettings)]">
-		<effect type="zoom" start="150" end="100" center="960,540" time="720" tween="cubic" />
-		<effect type="fade" end="100" time="720" />
-	</animation>
-	<animation type="WindowClose" reversible="false" condition="![Window.Next(settings) | Window.Next(skinsettings)]">
-		<effect type="fade" start="100" end="0" time="240" />
-		<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in" />
-	</animation>
 	<controls>
-		<control type="group">
-			<include>CommonSettingsBackground</include>
-			<include>CommonMediaPlayingBackground</include>
-			<include>Furniture_SettingsFloor</include>
+		<!-- Backdrop -->
+		<include>Background_MediaPlaying</include>
+		<control type="multiimage">
+			<include>FullscreenDimensions</include>
+			<aspecratio>scale</aspecratio>
+			<imagepath background="true">$VAR[SettingsFanartVar]</imagepath>
+			<include content="Animation_Fanart">
+				<param name="opencondition" value="![Window.Previous(settings) | Window.Previous(skinsettings)]" />
+				<param name="closecondition" value="![Window.Next(settings) | Window.Next(skinsettings)]" />
+			</include>
+			<visible>$EXP[Fanart_Visible_MediaPlaying]</visible>
 		</control>
+		<!-- Floor -->
 		<control type="group">
-			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-			<include>Furniture_SettingsBackPanel</include>
-			<control type="group">
-				<!-- Modified to show Group Manager Background -->
-				<animation effect="fade" start="100" end="0" time="160" tween="cubic" easing="inout" condition="[Window.IsActive(DialogPVRChannelManager.xml) | Window.IsActive(DialogPVRGroupManager.xml)]">Conditional</animation>
-				<control type="grouplist" id="3">
-					<left>63</left>
-					<top>195</top>
-					<width>326</width>
-					<height>768</height>
-					<onleft>ActivateWindow(1121)</onleft>
-					<onright>5</onright>
-					<onup>20</onup>
-					<ondown>20</ondown>
-				</control>
-				<control type="label">
-					<left>358</left>
-					<top>-800</top>
-					<width>1491</width>
-					<align>center</align>
-					<label>$INFO[Control.GetLabel(2)] - $LOCALIZE[5]</label>
-					<font>Font_ShowcaseMainLabel2</font>
-				</control>
-				<control type="grouplist" id="5">
-					<left>387</left>
-					<top>180</top>
-					<width>1469</width>
-					<height>742</height>
-					<pagecontrol>60</pagecontrol>
-					<onleft>3</onleft>
-					<onright>60</onright>
-					<onup>5</onup>
-					<ondown>5</ondown>
-				</control>
-				<control type="image">
-					<left>1000</left>
-					<top>1035</top>
-					<width>60</width>
-					<height>40</height>
-					<texture colordiffuse="$VAR[DialogColorVar]">arrowdown2.png</texture>
-					<include>Animation_VisibleChange200</include>
-					<visible>Container(5).HasNext</visible>
-				</control>
-				<control type="scrollbar" id="60">
-					<left>1834</left>
-					<top>150</top>
-					<width>46</width>
-					<height>800</height>
-					<include>Animation_VerticalScrollBar</include>
-					<onleft>5</onleft>
-					<onright>3</onright>
-				</control>
+			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
+			<include content="Animation_Slide_Bottom">
+				<param name="opencondition" value="![Window.Previous(settings) | Window.Previous(skinsettings)]" />
+				<param name="closecondition" value="![Window.Next(settings) | Window.Next(skinsettings)]" />
+			</include>
+			<include>Floor_Background_Default</include>
+		</control>
+		<!-- Content -->
+		<control type="group">
+			<include>Animation_Slide_Bottom</include>
+			<animation effect="slide" end="0,20" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
+			<include content="Panel_Background_Settings">
+				<param name="reflect" value="!Skin.HasSetting(SettingsHideFloor)" />
+			</include>
+			<control type="label" id="2">
+				<top>90</top>
+				<left>116</left>
+				<width>298</width>
+				<height>100</height>
+				<font>Font33_Bold_Caps</font>
+			</control>
+			<control type="grouplist" id="3">
+				<left>91</left>
+				<top>190</top>
+				<width>323</width>
+				<height>768</height>
+				<onleft>9000</onleft>
+				<onright>5</onright>
 			</control>
 			<control type="button" id="10">
-				<width>334</width>
-				<height>74</height>
-				<textoffsetx>20</textoffsetx>
-				<textoffsety>18</textoffsety>
-				<texturefocus colordiffuse="$VAR[DialogColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<font>Font_Bold34_Caps</font>
+				<width>323</width>
+				<height>68</height>
+				<textoffsetx>25</textoffsetx>
+				<font>Font38_Cond</font>
 				<textcolor>grey</textcolor>
-				<focusedcolor>white2</focusedcolor>
+				<texturenofocus />
 			</control>
-			<control type="label" id="2">
-				<include>HiddenObject</include>
-			</control>
-			<control type="button" id="7">
-				<include>Default_SettingButton</include>
-			</control>
-			<control type="radiobutton" id="8">
-				<textoffsetx>30</textoffsetx>
-				<include>Default_SettingRadioButton</include>
-			</control>
-			<control type="spincontrolex" id="9">
-				<include>Default_SettingButton</include>
-			</control>
-			<control type="image" id="11">
-				<description>separator image</description>
-				<height>7</height>
-				<texture colordiffuse="$VAR[DialogColorVar]" border="15">settings/settings_separator2.png</texture>
+			<control type="label">
+				<top>90</top>
+				<left>461</left>
+				<width>1413</width>
+				<height>100</height>
+				<label>Options</label>
+				<font>Font33_Bold_Caps</font>
 			</control>
 			<control type="label" id="14">
 				<description>Default Label</description>
-				<width>1256</width>
+				<width>1413</width>
 				<textoffsetx>45</textoffsetx>
-				<top>0</top>
-				<height>50</height>
-				<label>-</label>
-				<align>center</align>
-				<aligny>center</aligny>
-				<font>Font_Bold30_Caps</font>
-				<textcolor>$VAR[DialogColorVar]</textcolor>
-				<shadowcolor>black</shadowcolor>
+				<height>68</height>
+				<align>left</align>
+				<font>Font30_Bold</font>
+				<textcolor>$VAR[HighlightColorVar]</textcolor>
 			</control>
-			<control type="image">
-				<description>bottom separator image</description>
-				<left>389</left>
-				<top>922</top>
-				<width>1467</width>
-				<height>7</height>
-				<texture colordiffuse="$VAR[DialogColorVar]" border="15">settings/settings_separator2.png</texture>
+			<control type="grouplist" id="5">
+				<left>416</left>
+				<top>190</top>
+				<width>1413</width>
+				<height>612</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>3</onleft>
+				<onright>60</onright>
+			</control>
+			<control type="image" id="11">
+				<description>separator image</description>
+				<height>1</height>
+				<texture />
+			</control>
+			<control type="textbox" id="6">
+				<description>description area</description>
+				<left>465</left>
+				<top>846</top>
+				<width>1315</width>
+				<height>120</height>
+				<align>left</align>
+				<textcolor>white2</textcolor>
+				<font>Font29_Cond</font>
+				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+			</control>
+			<control type="scrollbar" id="60">
+				<right>71</right>
+				<top>150</top>
+				<bottom></bottom>
+				<height>800</height>
+				<onleft>5</onleft>
 			</control>
 		</control>
+		<control type="button" id="7">
+			<include>Settings_Button</include>
+		</control>
+		<control type="radiobutton" id="8">
+			<radioposx>1306</radioposx>
+			<include>Settings_Button</include>
+		</control>
+		<control type="spincontrolex" id="9">
+			<include>Settings_Button</include>
+		</control>
+		<!-- Topbar -->
 		<control type="group">
-			<include>Animation_HideBreadCrumbs</include>
-			<include>Breadcrumbs_BackBar</include>
-			<include>BreadcrumbsContent</include>
-			<include>Breadcrumbs_Furniture</include>
+			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
+			<include content="Animation_Slide_Top">
+				<param name="slide" value="90" />
+				<param name="opencondition" value="![Window.Previous(settings) | Window.Previous(skinsettings)]" />
+				<param name="closecondition" value="![Window.Next(settings) | Window.Next(skinsettings)]" />
+			</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
+				<param name="breadcrumbs_icon" value="setting.png" />
+			</include>
 		</control>
-		<include>Furniture_NowPlayingWidget</include>
-		<control type="label">
-			<left>160</left>
-			<top>700</top>
-			<width>300</width>
-			<align>left</align>
-			<font>Font_Bold22_Caps</font>
-			<label>$LOCALIZE[31217]</label>
-		</control>
-		<control type="button" id="20">
-			<left>144</left>
-			<top>870</top>
-			<width>294</width>
-			<onleft>ActivateWindow(1121)</onleft>
-			<onright>5</onright>
-			<onup>3</onup>
-			<ondown>3</ondown>
-			<onback>3</onback>
-			<height>74</height>
-			<textoffsetx>20</textoffsetx>
-			<textoffsety>35</textoffsety>
-			<align>left</align>
-			<aligny>top</aligny>
-			<texturefocus colordiffuse="$VAR[DialogColorVar]">views/tripanel/listselect_fo.png</texturefocus>
-			<texturenofocus>-</texturenofocus>
-			<font>Font_Bold34_Caps</font>
-			<textcolor>grey</textcolor>
-			<focusedcolor>white2</focusedcolor>
-			<onclick>SettingsLevelChange</onclick>
-		</control>
-		<control type="textbox" id="6">
-			<description>description area</description>
-			<left>467</left>
-			<top>885</top>
-			<width>1200</width>
-			<height>65</height>
-			<align>left</align>
-			<textcolor>gray</textcolor>
-			<font>Font_Info</font>
-			<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
+		<!-- Media Menu -->
+		<include>MediaMenu_MouseOverlay</include>
+		<control type="group">
+			<include>MediaMenu_Common</include>
+			<control type="grouplist" id="9000">
+				<usecontrolcoords>true</usecontrolcoords>
+				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onright>3</onright>
+				<onback>7500</onback>
+				<include>MediaMenu_Settings</include>
+			</control>
 		</control>
 	</controls>
 </window>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window id="1111" type="dialog">
+	<defaultcontrol always="true">9001</defaultcontrol>
+	<controls>
+		<include content="Dialog_Furniture_BackgroundFade">
+			<param name="visible" value="!Skin.HasSetting(disabledialogbackground)" />
+		</include>
+		<control type="group">
+			<include content="Dialog_Furniture_Background">
+				<param name="label" value="$INFO[Window(home).Property(CustomDialogLabel)]" />
+			</include>
+			<!-- Background Chooser-->
+			<control type="grouplist" id="3">
+				<visible>String.IsEqual(Window(home).Property(CustomDialogLabel),$LOCALIZE[20445])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>974</width>
+				<height>420</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>200</onleft>
+				<onright>60</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<!-- ????? -->
+				<control type="button" id="101">
+					<label>$LOCALIZE[571]</label>
+					<onclick></onclick>
+					<include>Dialog_Button_Default</include>
+					<visible></visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

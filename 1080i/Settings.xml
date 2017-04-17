@@ -1,35 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">9000</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
 	<controls>
-		<include>CommonSettingsBackground</include>
+		<control type="multiimage">
+			<width>1920</width>
+			<height>1080</height>
+			<aspecratio>scale</aspecratio>
+			<imagepath background="true">$VAR[SettingsFanartVar]</imagepath>
+			<include content="Animation_Fanart">
+				<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]" />
+				<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]" />
+			</include>
+		</control>
 		<include>CommonMediaPlayingBackground</include>
-		<include>Furniture_SettingsFloor</include>
+
+
+		<include content="Floor_Background_Default">
+			<param name="visible" value="!Skin.HasSetting(SettingsHideFloor)" />
+		</include>
 		<control type="group">
-			<animation type="WindowOpen" reversible="false" condition="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]">
-				<effect type="zoom" start="150" end="100" center="960,540" time="240" tween="cubic"/>
-				<effect type="fade" end="100" time="240"/>
-			</animation>
-			<animation type="WindowClose" reversible="false" condition="![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]">
-				<effect type="fade" start="100" end="0" time="240"/>
-				<effect type="zoom" start="100" end="130" center="960,540" time="240" tween="cubic" easing="in"/>
-			</animation>
-			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
-			<control type="image">
-				<posx>52</posx>
-				<posy>50</posy>
-				<width>1815</width>
-				<height>1120</height>
-				<texture colordiffuse="$VAR[DialogColorVar]">wall/wall_bg.png</texture>
-			</control>
-			<control type="image">
-				<posx>52</posx>
-				<posy>50</posy>
-				<width>1815</width>
-				<height>1120</height>
-				<texture>wall/wall_bg_reflection.png</texture>
-			</control>
+			<include>Animation_Slide_Bottom</include>
+			<animation effect="slide" end="0,20" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
+			<include content="Panel_Background_Default">
+				<param name="reflect" value="!Skin.HasSetting(SettingsHideFloor)" />
+			</include>
+
+			
+			
 			<control type="image">
 				<posx>55</posx>
 				<posy>118</posy>
@@ -134,6 +131,68 @@
 					</control>
 				</focusedlayout>
 				<content>
+					<item>
+					<label>$LOCALIZE[14201]</label>
+					<onclick>ActivateWindow(PlayerSettings)</onclick>
+					<icon>icon/settings/player.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[14212]</label>
+					<onclick>ActivateWindow(MediaSettings)</onclick>
+					<icon>icon/settings/media.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[14205]</label>
+					<onclick>ActivateWindow(PVRSettings)</onclick>
+					<icon>icon/settings/livetv.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[14208]</label>
+					<onclick>ActivateWindow(ServiceSettings)</onclick>
+					<icon>icon/settings/service.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[15016]</label>
+					<visible>System.GetBool(gamesgeneral.enable)</visible>
+					<onclick>ActivateWindow(GameSettings)</onclick>
+					<icon>icon/settings/games.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[14207]</label>
+					<onclick>ActivateWindow(InterfaceSettings)</onclick>
+					<icon>icon/settings/interface.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[14210]</label>
+					<onclick>ActivateWindow(Profiles)</onclick>
+					<icon>icon/settings/profile.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[14209]</label>
+					<onclick>ActivateWindow(SystemSettings)</onclick>
+					<icon>icon/settings/system.png</icon>
+				</item>
+				<item>
+					<label>LibreELEC</label>
+					<onclick>RunAddon(service.libreelec.settings)</onclick>
+					<icon>icon/settings/libreelec.png</icon>
+					<visible>System.HasAddon(service.libreelec.settings)</visible>
+				</item>
+				<item>
+					<label>$LOCALIZE[138]</label>
+					<onclick>ActivateWindow(systeminfo)</onclick>
+					<icon>icon/settings/system.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[10003]</label>
+					<onclick>ActivateWindow(filemanager)</onclick>
+					<icon>icon/settings/filemanager.png</icon>
+				</item>
+				<item>
+					<label>$LOCALIZE[24001]</label>
+					<onclick>ActivateWindow(addonbrowser)</onclick>
+					<icon>icons/settings/addon.png</icon>
+				</item>
 					<item id="1">
 						<label>$LOCALIZE[14207]</label>
 						<property name="description">$LOCALIZE[31400]</property>
@@ -204,12 +263,10 @@
 			</control>
 			<!--            <control type="textbox">                <posx>555</posx>                <posy>810</posy>                <width>1200</width>                <height>210</height>                <label>$INFO[Container(9000).ListItem.Property(description)]</label>                <font>Font_Reg32</font>            </control>-->
 		</control>
-		<control type="group">
-			<include>Animation_HideBreadCrumbs</include>
-			<include>Breadcrumbs_BackBar</include>
-			<include>BreadcrumbsContent</include>
-			<include>Breadcrumbs_Furniture</include>
-		</control>
-		<include>Furniture_NowPlayingWidget</include>
+		<include content="TopBar">
+			<param name="breadcrumbs_label" value="$LOCALIZE[13000]" />
+			<param name="breadcrumbs_icon" value="setting.png" />
+			<param name="visible" value="!Skin.HasSetting(SettingsHideTopBar)" />
+		</include>
 	</controls>
 </window>

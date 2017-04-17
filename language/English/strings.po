@@ -2644,10 +2644,9 @@ msgctxt "#31735"
 msgid "Artwork"
 msgstr ""
 
-
-
-
-
+msgctxt "#31736"
+msgid "Global setting"
+msgstr ""
 
 ###########################################################################
 # skinshortcuts Locals start here

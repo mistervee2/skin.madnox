@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3110</defaultcontrol>
+	<controls>
+		<include content="Furniture_Dialog_Fade">
+			<param name="color" value="$VAR[DialogBackgroundColorVar]" />
+			<param name="visible" value="!Skin.HasSetting(disabledialogbackground)" />
+		</include>
+		<control type="group">
+			<include>Animation_DialogPopup</include>
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>778</width>
+			<height>475</height>
+			<include content="Furniture_Dialog_IconBackground">
+				<param name="labelid" value="" />
+				<param name="label" value="$VAR[DialogHeadingColorPickerVar]" />
+			</include>
+			<control type="grouplist" id="200">
+				<left>37</left>
+				<height>420</height>
+				<width>200</width>
+				<top>27</top>
+				<onleft>200</onleft>
+				<onright>3110</onright>
+				<onup>200</onup>
+				<ondown>200</ondown>
+				<itemgap>5</itemgap>
+				<orientation>vertical</orientation>
+				<!-- edit manual -->
+				<include content="Button_Dialog_Icon">
+					<param name="id" value="3010" />
+					<param name="icon" value="icon/mediamenu/keyboard.png" />
+				</include>
+				<!-- choose color palette -->
+				<include content="Button_Dialog_Icon">
+					<param name="id" value="3030" />
+					<param name="icon" value="icon/mediamenu/color.png" />
+				</include>
+				<!-- None -->
+				<include content="Button_Dialog_Icon">
+					<param name="id" value="3011" />
+					<param name="icon" value="icon/mediamenu/remove.png" />
+				</include>
+				<!-- Cancel -->
+				<include content="Button_Dialog_Icon">
+					<param name="id" value="4000" />
+					<param name="icon" value="icon/mediamenu/cancel.png" />
+					<param name="onclick" value="Action(close)" />
+				</include>
+				<!-- Save button -->
+				<include content="Button_Dialog_Icon">
+					<param name="id" value="3012" />
+					<param name="icon" value="icon/mediamenu/save.png" />
+				</include>
+			</control>
+			<!-- Color picker panel -->
+			<control type="panel" id="3110">
+				<left>157</left>
+				<top>88</top>
+				<width>574</width>
+				<height>284</height>
+				<orientation>vertical</orientation>
+				<onleft>200</onleft>
+				<onright>60</onright>
+				<onup>3020</onup>
+				<ondown>3020</ondown>
+				<preloaditems>4</preloaditems>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="71" width="71">
+					<control type="image">
+						<width>92%</width>
+						<height>92%</height>
+						<texture border="5">$INFO[ListItem.Icon]</texture>
+					</control>
+				</itemlayout>
+				<focusedlayout height="71" width="71">
+					<control type="group">
+						<animation effect="zoom" time="200" tween="sine" easing="inout" start="100" end="150" center="auto">Focus</animation>
+						<control type="image">
+							<width>92%</width>
+							<height>92%</height>
+							<texture border="5">$INFO[ListItem.Icon]</texture>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="3020">
+				<top>396</top>
+				<left>157</left>
+				<width>604</width>
+				<height>64</height>
+				<onup>3110</onup>
+				<ondown>3110</ondown>
+				<orientation>horizontal</orientation>
+				<itemgap>5</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<!-- label opacity-->
+				<control type="label" id="3016">
+					<width>auto</width>
+					<font>Font30_Reg</font>
+					<textcolor>grey2</textcolor>
+					<aligny>center</aligny>
+					<label>$ADDON[script.skin.helper.colorpicker 32049]</label>
+					<visible>!Control.HasFocus(3015)</visible>
+				</control>
+				<control type="label" id="30161">
+					<width>auto</width>
+					<font>Font30_Reg</font>
+					<textcolor>white6</textcolor>
+					<aligny>center</aligny>
+					<label>$ADDON[script.skin.helper.colorpicker 32049]</label>
+					<visible>Control.HasFocus(3015)</visible>
+				</control>
+				<!-- opacity slider -->
+				<control type="slider" id="3015">
+					<top>14</top>
+					<width>220</width>
+					<height>35</height>
+					<controloffsetx>6</controloffsetx>
+					<controloffsety>6</controloffsety>
+					<texturesliderbar border="15">button/slider-back.png</texturesliderbar>
+					<textureslidernib>button/slider-nofocus.png</textureslidernib>
+					<textureslidernibfocus>button/slider-focus.png</textureslidernibfocus>
+					<orientation>horizontal</orientation>
+				</control>
+				<!-- label opacity-->
+				<control type="label" id="3017">
+					<left>-5</left>
+					<width>80</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font30_Reg</font>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Control.Getlabel(3015)]</label>
+					<visible>!Control.HasFocus(3015)</visible>
+				</control>
+				<control type="label" id="30171">
+					<left>-5</left>
+					<width>80</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font30_Reg</font>
+					<textcolor>white6</textcolor>
+					<label>$INFO[Control.Getlabel(3015)]</label>
+					<visible>Control.HasFocus(3015)</visible>
+				</control>
+				<!--Color name-->
+				<control type="label">
+					<width>140</width>
+					<align>right</align>
+					<aligny>center</aligny>
+					<font>Font30_Reg</font>
+					<textcolor>$INFO[Window.Property(colorstring)]</textcolor>
+					<label>$INFO[Window.Property(colorstring)]</label>
+				</control>
+			</control>
+			<control type="image">
+				<top>396</top>
+				<left>142</left>
+				<width>601</width>
+				<height>64</height>
+				<texture colordiffuse="$VAR[DialogHighlightColorVar]" border="20">button/list-select-focus.png</texture>
+				<visible>ControlGroup(3020).HasFocus</visible>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>746</left>
+				<top>76</top>
+				<bottom>76</bottom>
+				<onleft>3110</onleft>
+				<textureslidernibfocus colordiffuse="$VAR[DialogHighlightColorVar]">button/scrollbar-nib-focus.png</textureslidernibfocus>
+			</control>
+		</control>
+	</controls>
+</window>

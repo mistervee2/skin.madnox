@@ -1,271 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="dialog" id="2000">
-	<defaultcontrol always="true">9000</defaultcontrol>
-	<coordinates>
-		<left>0</left>
-		<top>0</top>
-		<system>1</system>
-	</coordinates>
-	<include>Animation_DialogPopup2</include>
-	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Label],$ESCINFO[Window(selectdialog).Property(Label)])</onunload>
-	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">Skin.SetString($INFO[Window(selectdialog).Property(Property),,.Icon],$ESCINFO[Window(selectdialog).Property(Icon)])</onunload>
-	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Label,selectdialog)</onunload>
-	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Icon,selectdialog)</onunload>
-	<onunload condition="!String.IsEmpty(Window(selectdialog).Property(Property))">ClearProperty(Property,selectdialog)</onunload>
+<window>
+	<defaultcontrol always="true">3</defaultcontrol>
 	<controls>
-		<include>DialogBackFade</include>
-		<control type="image">
-			<left>356</left>
-			<top>180</top>
-			<width>1210</width>
-			<height>722</height>
-			<texture colordiffuse="$VAR[ColorDiffuseVar]">osd/osd_settings_back_glow.png</texture>
-			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-			<include>PanelGlowFade</include>
-		</control>
-		<control type="image">
-			<left>356</left>
-			<top>180</top>
-			<width>1210</width>
-			<height>722</height>
-			<texture colordiffuse="$VAR[DialogColorVar]">osd/osd_settings_back.png</texture>
-		</control>
-		<control type="image">
-			<left>375</left>
-			<top>232</top>
-			<width>1172</width>
-			<height>60</height>
-			<texture border="1">osd/osd_settings_buttonnf.png</texture>
-		</control>
-		<control type="image">
-			<left>375</left>
-			<top>774</top>
-			<width>1172</width>
-			<height>60</height>
-			<texture border="1">osd/osd_settings_buttonnf.png</texture>
-			<visible>Control.IsVisible(6)</visible>
-		</control>
-		<control type="label" id="1">
-			<left>420</left>
-			<top>225</top>
-			<width>800</width>
-			<height>60</height>
-			<label>$LOCALIZE[13406]</label>
-			<font>Font_Bold33</font>
-			<textcolor>$VAR[TitleColorVar]</textcolor>
-		</control>
-		<control type="grouplist" id="9001">
-			<left>1180</left>
-			<top>225</top>
-			<width>365</width>
-			<height>60</height>
-			<onleft>9000</onleft>
-			<onright>61</onright>
-			<ondown>9000</ondown>
-			<onup>9000</onup>
-			<control type="button" id="5">
-				<width>365</width>
-				<height>60</height>
-				<align>center</align>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus border="8">-</texturenofocus>
-				<label>186</label>
-				<font>Font_Bold33</font>
-				<textcolor>grey2</textcolor>
-			</control>
-			<control type="button" id="7">
-				<width>365</width>
-				<height>60</height>
-				<align>center</align>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-				<texturenofocus border="8">-</texturenofocus>
-				<label>-</label>
-				<font>Font_Bold33</font>
-				<textcolor>grey2</textcolor>
-			</control>
-		</control>
-		<control type="label">
-			<left>1214</left>
-			<top>842</top>
-			<width>315</width>
-			<height>60</height>
-			<align>right</align>
-			<aligny>bottom</aligny>
-			<label>$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</label>
-			<font>Font_Reg25</font>
-			<textcolor>grey2</textcolor>
-			<visible>Control.IsVisible(3)</visible>
-		</control>
-		<control type="label">
-			<left>1214</left>
-			<top>842</top>
-			<width>315</width>
-			<height>60</height>
-			<align>right</align>
-			<aligny>bottom</aligny>
-			<label>$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</label>
-			<font>Font_Reg25</font>
-			<textcolor>grey2</textcolor>
-			<visible>Control.IsVisible(6)</visible>
-		</control>
-		<control type="group" id="9000">
+		<include content="Dialog_Furniture_BackgroundFade">
+			<param name="visible" value="!Skin.HasSetting(disabledialogbackground)" />
+		</include>
+		<control type="group">
+			<include content="Dialog_Furniture_Background">
+				<param name="labelid" value="1" />
+			</include>
 			<control type="list" id="3">
-				<left>375</left>
-				<top>292</top>
-				<width>1172</width>
-				<height>540</height>
-				<onup>3</onup>
-				<ondown>3</ondown>
-				<onleft>9001</onleft>
-				<scrolltime>200</scrolltime>
-				<pagecontrol>61</pagecontrol>
-				<itemlayout height="60">
-					<control type="image">
-						<width>1172</width>
-						<height>60</height>
-						<texture border="1">osd/osd_settings_buttonnf.png</texture>
-					</control>
-					<control type="label">
-						<left>45</left>
-						<width>1082</width>
-						<height>60</height>
-						<font>Font_Reg30_2</font>
-						<textcolor>grey2</textcolor>
-						<info>ListItem.Label</info>
-					</control>
-				</itemlayout>
-				<focusedlayout height="60">
-					<control type="image">
-						<width>1172</width>
-						<height>60</height>
-						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
-						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(3)">Conditional</animation>
-					</control>
-					<control type="label">
-						<left>45</left>
-						<width>1082</width>
-						<height>60</height>
-						<font>Font_Reg30_2</font>
-						<info>ListItem.Label</info>
-					</control>
-				</focusedlayout>
+				<include content="Dialog_DefaultList">
+					<param name="id" value="3" />
+				</include>
 			</control>
 			<control type="list" id="6">
-				<left>375</left>
-				<top>292</top>
-				<width>1172</width>
-				<height>540</height>
+				<left>20</left>
+				<top>88</top>
+				<width>974</width>
+				<height>420</height>
 				<onup>6</onup>
 				<ondown>6</ondown>
-				<onleft>61</onleft>
+				<onleft>60</onleft>
 				<onright>9001</onright>
-				<pagecontrol>61</pagecontrol>
-				<scrolltime tween="quadratic">200</scrolltime>
-				<animation effect="slide" end="15,0" time="0" condition="!Control.IsVisible(61)">Conditional</animation>
-				<itemlayout height="90" width="825">
+				<scrolltime>200</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="84" width="554">
 					<control type="image">
-						<left>15</left>
-						<top>30</top>
-						<width>750</width>
-						<height>60</height>
-						<texture border="1">osd/osd_settings_buttonnf.png</texture>
+						<width>554</width>
+						<height>84</height>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
 					</control>
 					<control type="label">
-						<top>22</top>
-						<left>150</left>
-						<width>600</width>
-						<height>45</height>
-						<font>Font_Reg30</font>
+						<top>10</top>
+						<width>554</width>
+						<height>32</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font30_Reg</font>
 						<textcolor>grey2</textcolor>
-						<info>ListItem.Label</info>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
-						<left>52</left>
-						<top>8</top>
-						<width>75</width>
-						<height>75</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[Listitem.Icon]</texture>
-					</control>
-					<!-- <control type="label">
-						<left>150</left>
-						<top>45</top>
-						<width>600</width>
-						<height>45</height>
-						<font>Font_Info</font>
+					<control type="label">
+						<top>42</top>
+						<width>554</width>
+						<height>32</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font25_Cond</font>
 						<textcolor>grey2</textcolor>
-						<info>ListItem.Label2</info>
-					</control> -->
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
 				</itemlayout>
-				<focusedlayout height="90" width="825">
-					<control type="button">
-						<include>HiddenObject</include>
-						<onfocus condition="!String.IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Label,$ESCINFO[Container(6).ListItem.Label])</onfocus>
-						<onfocus condition="!String.IsEmpty(Window(selectdialog).Property(Property))">SetProperty(Icon,$ESCINFO[Container(6).ListItem.Icon])</onfocus>
-					</control>
+				<focusedlayout height="84" width="554">
 					<control type="image">
-						<left>15</left>
-						<top>30</top>
-						<width>750</width>
-						<height>60</height>
-						<texture border="1">osd/osd_settings_buttonnf.png</texture>
-					</control>
-					<control type="image">
-						<left>8</left>
-						<width>765</width>
-						<height>90</height>
-						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
-						<animation effect="fade" start="100" end="50" time="160" condition="!Control.HasFocus(6)">Conditional</animation>
+						<width>554</width>
+						<height>84</height>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(6)">Conditional</animation>
 					</control>
 					<control type="label">
-						<top>20</top>
-						<left>150</left>
-						<width>600</width>
-						<height>45</height>
-						<font>Font_Reg42</font>
-						<info>ListItem.Label</info>
+						<top>10</top>
+						<width>554</width>
+						<height>32</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font30_Reg</font>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="image">
-						<left>52</left>
-						<top>8</top>
-						<width>75</width>
-						<height>75</height>
-						<aspectratio>keep</aspectratio>
-						<texture>$INFO[Listitem.Icon]</texture>
+					<control type="label">
+						<top>42</top>
+						<width>554</width>
+						<height>32</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font25_Cond</font>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
-					<!-- <control type="label">
-						<left>150</left>
-						<top>45</top>
-						<width>600</width>
-						<height>45</height>
-						<font>Font_Info</font>
-						<textcolor>grey2</textcolor>
-						<info>ListItem.Label2</info>
-					</control> -->
 				</focusedlayout>
 			</control>
-		</control>
-		<control type="image">
-			<left>1160</left>
-			<top>290</top>
-			<width>390</width>
-			<height>390</height>
-			<aspectratio>keep</aspectratio>
-			<texture background="true">$INFO[Container(6).Listitem.Icon]</texture>
-			<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
-			<bordersize>7</bordersize>
-			<visible>Control.IsVisible(6)</visible>
-		</control>
-		<control type="scrollbar" id="61">
-			<left>354</left>
-			<top>285</top>
-			<width>46</width>
-			<height>540</height>
-			<include>Animation_VerticalScrollBar</include>
-			<onleft>5</onleft>
-			<onright>3</onright>
-			<ondown>61</ondown>
-			<onup>61</onup>
+			<control type="image">
+				<right>10</right>
+				<top>78</top>
+				<width>440</width>
+				<height>440</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$INFO[Container(6).Listitem.Icon]</texture>
+				<bordertexture border="20" colordiffuse="FF000000">thumb/shadow-square.png</bordertexture>
+				<bordersize>20</bordersize>
+				<visible>Control.IsVisible(6)</visible>
+			</control>
+			<control type="grouplist" id="9001">
+				<right>70</right>
+				<top>28</top>
+				<width>400</width>
+				<onleft>3</onleft>
+				<ondown>3</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id" value="5" />
+					<param name="label" value="" />
+				</include>
+				<include content="Dialog_Button_TopRight">
+					<param name="id" value="7" />
+					<param name="label" value="$LOCALIZE[222]" />
+				</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1</left>
+				<top>88</top>
+				<height>420</height>
+				<onright>3</onright>
+			</control>
 		</control>
 	</controls>
 </window>

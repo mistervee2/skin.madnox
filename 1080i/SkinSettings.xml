@@ -69,6 +69,11 @@
 						<label>31735</label>
 						<onclick>noop</onclick>
 					</item>
+					<item id="4">
+						<description>Furniture</description>
+						<label>Furniture</label>
+						<onclick>noop</onclick>
+					</item>
 					<item id="8">
 						<description>Help</description>
 						<label>31870</label>
@@ -343,6 +348,13 @@
                 	<onright>60</onright>
                 	<onup>9003</onup>
                 	<ondown>9003</ondown>
+                	<control type="button" id="301">
+                		<label>Backgrounds</label>
+                		<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
+                		<include>Default_SettingButton</include>
+                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=SkinBackgrounds&amp;type=resource.images.skinbackgrounds)</onclick>
+                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                	</control>
                 	<!-- <control type="radiobutton" id="300">
                 		<label>Coloured Media Flags</label>
                 		<radioposx>1274</radioposx>
@@ -371,35 +383,35 @@
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=RecordLabelIcons&amp;type=resource.images.recordlabels)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	</control>
-                	 -->
-                	<control type="button" id="306">
-                		<label>Video genre icons</label>
-                		<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
-                		<include>Default_SettingButton</include>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
-                	</control>
-                	<control type="button" id="308">
-                		<label>Music genre icons</label>
-                		<label2>$INFO[Skin.String(MusicGenreIcons.Name)]</label2>
-                		<include>Default_SettingButton</include>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
-                	</control>
-                	<control type="button" id="304">
-                		<label>Weather icons</label>
-                		<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
-                		<include>Default_SettingButton</include>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	</control>
-                	<control type="button" id="305">
-                		<label>Weather fanart</label>
-                		<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
-                		<include>Default_SettingButton</include>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	</control>
+                -->
+                <control type="button" id="306">
+                	<label>Video genre icons</label>
+                	<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
+                	<include>Default_SettingButton</include>
+                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
+                </control>
+                <control type="button" id="308">
+                	<label>Music genre icons</label>
+                	<label2>$INFO[Skin.String(MusicGenreIcons.Name)]</label2>
+                	<include>Default_SettingButton</include>
+                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
+                </control>
+                <control type="button" id="304">
+                	<label>Weather icons</label>
+                	<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
+                	<include>Default_SettingButton</include>
+                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
+                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                </control>
+                <control type="button" id="305">
+                	<label>Weather fanart</label>
+                	<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
+                	<include>Default_SettingButton</include>
+                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
+                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                </control>
                 	<!-- <control type="button" id="307">
                 		<label>Video genre fanart</label>
                 		<label2>$INFO[Skin.String(VideoGenreFanart.Name)]</label2>
@@ -415,6 +427,24 @@
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreFanart&amp;type=resource.images.musicgenrefanart)</onclick>
                 	</control> -->
+                </control>
+                <control type="grouplist" id="9004">
+                	<left>387</left>
+                	<top>195</top>
+                	<width>1469</width>
+                	<height>732</height>
+                	<visible>Container(9000).Hasfocus(4)</visible>
+                	<itemgap>-1</itemgap>
+                	<pagecontrol>60</pagecontrol>
+                	<onleft>9000</onleft>
+                	<onright>60</onright>
+                	<onup>9003</onup>
+                	<ondown>9003</ondown>
+                	<control type="button" id="401">
+                		<label>Topbar</label>
+                		<include>Default_SettingButton</include>
+                		<onclick>ActivateWindow(1111)</onclick>
+                	</control>
                 </control>
                 <control type="grouplist" id="9004">
                 	<left>387</left>

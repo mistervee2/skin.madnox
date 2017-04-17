@@ -1,5 +1,164 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- REWORK ANIMATIONS -->
+	<!-- Dialogs -->
+	<include name="Animation_Dialog_BackgroundFade">
+		<animation effect="fade" delay="200" start="0" end="100" time="300">WindowOpen</animation>
+		<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+		<animation effect="fade" delay="200" start="0" end="100" time="300">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
+	</include>
+	<include name="Animation_Dialog_Popup">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+			<effect type="fade" delay="200" start="0" end="100" time="300" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+			<effect type="fade" delay="200" start="0" end="100" time="300" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
+		</animation>
+	</include>
+	<include name="Animation_Dialog_MediaMenu">
+		<animation type="WindowOpen" reversible="false">
+			<effect type="slide" start="0" end="$PARAM[width]" time="320" delay="0" tween="cubic" easing="in" />
+		</animation>
+		<animation type="WindowClose" reversible="false">
+			<effect type="slide" start="$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="out" />
+		</animation>
+		<animation type="Visible" reversible="false">
+			<effect type="slide" start="-$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="in" />
+		</animation>
+		<animation type="Hidden" reversible="false">
+			<effect type="slide" start="0" end="-$PARAM[width]" time="320" delay="0" tween="cubic" easing="out" />
+		</animation>
+	</include>
+	<include name="Animation_Fanart">
+		<param name="opencondition">true</param>
+		<param name="closecondition">true</param>
+		<definition>
+			<fadetime>500</fadetime>
+			<animation type="Conditional" condition="Skin.HasSetting(animatedbg)">
+				<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
+				<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
+			</animation>
+			<animation effect="fade" time="300" condition="$PARAM[opencondition]">WindowOpen</animation>
+			<animation effect="fade" time="300" condition="$PARAM[closecondition]">WindowClose</animation>
+			<animation effect="fade" time="300">Visible</animation>
+			<animation effect="fade" time="300">Hidden</animation>
+		</definition>
+	</include>
+	<include name="Animation_Slide_Top">
+		<param name="slide">1080</param>
+		<param name="opencondition">true</param>
+		<param name="closecondition">true</param>
+		<definition>
+			<animation type="WindowOpen" condition="$PARAM[opencondition]">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,-$PARAM[slide]" end="0,0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" condition="$PARAM[closecondition]">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0,0" end="0,-$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,-$PARAM[slide]" end="0,0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0,0" end="0,-$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+		</definition>
+	</include>
+	<include name="Animation_Slide_Bottom">
+		<param name="slide">1080</param>
+		<param name="opencondition">true</param>
+		<param name="closecondition">true</param>
+		<definition>
+			<animation type="WindowOpen" condition="$PARAM[opencondition]">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,$PARAM[slide]" end="0,0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" condition="$PARAM[closecondition]">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0,0" end="0,$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="0,$PARAM[slide]" end="0,0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0,0" end="0,$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+		</definition>
+	</include>
+	<include name="Animation_Slide_Left">
+		<param name="slide">960</param>
+		<param name="opencondition">true</param>
+		<param name="closecondition">true</param>
+		<definition>
+			<animation type="WindowOpen" condition="$PARAM[opencondition]">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="-$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" condition="$PARAM[closecondition]">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0" end="-$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="-$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0" end="-$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+		</definition>
+	</include>
+	<include name="Animation_Slide_Right">
+		<param name="slide">960</param>
+		<param name="opencondition">true</param>
+		<param name="closecondition">true</param>
+		<definition>
+			<animation type="WindowOpen" condition="$PARAM[opencondition]">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose" condition="$PARAM[closecondition]">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0" end="$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
+				<effect type="slide" start="$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0" end="$PARAM[slide]" time="300" tween="cubic" easing="in" />
+			</animation>
+		</definition>
+	</include>
+
+	<include name="Animation_CommonFade">
+		<animation effect="fade" time="160">Visible</animation>
+		<animation effect="fade" time="160">Hidden</animation>
+		<animation effect="fade" time="400">WindowOpen</animation>
+		<animation effect="fade" time="160">WindowClose</animation>
+	</include>
+
+
+	<!-- REWORK ANIMATIONS END -->
+
+
 	<!-- Common -->
 	<include name="Animation_WindowFade250">
 		<animation effect="fade" time="200">WindowOpen</animation>
@@ -60,24 +219,20 @@
 	</include>
 	<include name="Animation_DialogPopup">
 		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
-			<effect type="fade" delay="160" end="100" time="240" />
+			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+			<effect type="fade" delay="200" start="0" end="100" time="300" />
 		</animation>
 		<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
-			<effect type="fade" start="100" end="0" time="240" />
+			<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
 		</animation>
 		<animation type="Visible" reversible="false">
-			<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
-			<effect type="fade" delay="160" end="100" time="240" />
+			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+			<effect type="fade" delay="200" start="0" end="100" time="300" />
 		</animation>
 		<animation type="Hidden" reversible="false">
-			<effect type="zoom" start="100" end="80" center="960,540" easing="in" tween="back" time="240" />
-			<effect type="fade" start="100" end="0" time="240" />
-		</animation>
-		<animation type="Focus" reversible="false">
-			<effect type="zoom" start="80" end="100" center="960,540" delay="160" tween="back" time="240" />
-			<effect type="fade" delay="160" end="100" time="240" />
+			<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+			<effect type="fade" start="100" end="0" time="300" />
 		</animation>
 	</include>
 	<include name="Animation_MediaMenuSlide2">
@@ -154,10 +309,10 @@
 		<animation effect="fade" time="240">VisibleChange</animation>
 	</include>
 	<include name="TopbarPulseAnimationLeft">
-		<animation effect="fade" start="100" end="20" time="1600" pulse="true" condition="true">Conditional</animation>
+		<animation effect="fade" start="100" end="20" time="5600" pulse="true" condition="true">Conditional</animation>
 	</include>
 	<include name="TopbarPulseAnimationRight">
-		<animation effect="fade" start="20" end="100" time="1600" pulse="true" condition="true">Conditional</animation>
+		<animation effect="fade" start="20" end="100" time="5600" pulse="true" condition="true">Conditional</animation>
 	</include>
 	<include name="Animation_OpenCloseZoom_New">
 		<animation type="WindowOpen" reversible="false">
