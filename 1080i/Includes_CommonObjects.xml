@@ -1,0 +1,892 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<!--  Dialogs -->
+	<include name="Dialog_Furniture_BackgroundFade">
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture colordiffuse="FF000000">color/white50.png</texture>
+			<visible>!Skin.HasSetting(disabledialogbackground)</visible>
+			<include>Animation_Dialog_BackgroundFade</include>
+		</control>
+	</include>
+	<include name="Dialog_Furniture_Close_Onclick">
+		<control type="button">
+			<include>FullscreenDimensions</include>
+			<font></font>
+			<texturefocus />
+			<texturenofocus />
+			<onclick>Action(close)</onclick>
+		</control>
+	</include>
+	<include name="Dialog_Furniture_Background">
+		<param name="width">1114</param>
+		<param name="height">588</param>
+		<param name="label"></param>
+		<param name="labelright">470</param>
+		<param name="labelalign">left</param>
+		<param name="labelid"></param>
+		<definition>
+			<include>Animation_DialogPopup</include>
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<control type="image">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="40">dialog/dialog-glow.png</texture>
+			</control>
+			<control type="image">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialog/dialog-back.png</texture>
+			</control>
+			<control type="label" id="$PARAM[labelid]">
+				<top>28</top>
+				<left>70</left>
+				<right>$PARAM[labelright]</right>
+				<height>60</height>
+				<align>$PARAM[labelalign]</align>
+				<label>$PARAM[label]</label>
+				<font>Font33_Bold</font>
+				<textcolor>$VAR[HighlightColorVar]</textcolor>
+			</control>
+			<control type="image">
+				<top>20</top>
+				<left>20</left>
+				<right>20</right>
+				<height>68</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<bottom>80</bottom>
+				<left>20</left>
+				<right>20</right>
+				<height>60</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">$VAR[DialogBottomSeparatorVar]</texture>
+			</control>
+			<control type="label">
+				<bottom>20</bottom>
+				<left>20</left>
+				<right>70</right>
+				<height>60</height>
+				<align>right</align>
+				<label>$VAR[DialogItemsLabelVar]</label>
+				<font>Font25_Cond</font>
+				<textcolor>grey</textcolor>
+			</control>
+		</definition>
+	</include>
+	<include name="Dialog_Furniture_IconBackground">
+		<param name="width">775</param>
+		<param name="height">475</param>
+		<param name="label"></param>
+		<param name="labelid"></param>
+		<definition>
+			<include>Animation_DialogPopup</include>
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<control type="image">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="22">dialog/scan-glow.png</texture>
+			</control>
+			<control type="image">
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="142,15,32,15">dialog/scan-back.png</texture>
+			</control>
+			<control type="label" id="$PARAM[labelid]">
+				<top>12</top>
+				<left>142</left>
+				<right>32</right>
+				<height>64</height>
+				<textoffsetx>15</textoffsetx>
+				<label>$PARAM[label]</label>
+				<font>Font26_Bold_Caps</font>
+				<textcolor>$VAR[HighlightColorVar]</textcolor>
+			</control>
+			<control type="image">
+				<top>12</top>
+				<left>142</left>
+				<right>32</right>
+				<height>64</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="20">button/list-select-nofocus.png</texture>
+			</control>
+		</definition>
+	</include>
+	<include name="Dialog_DefaultList">
+		<param name="width">1074</param>
+		<param name="height">420</param>
+		<definition>
+			<left>20</left>
+			<top>88</top>
+			<width>$PARAM[width]</width>
+			<height>$PARAM[height]</height>
+			<onleft>60</onleft>
+			<onright>9001</onright>
+			<scrolltime>200</scrolltime>
+			<pagecontrol>60</pagecontrol>
+			<itemlayout height="60">
+				<control type="image">
+					<width>$PARAM[width]</width>
+					<height>60</height>
+					<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<width>$PARAM[width]</width>
+					<height>60</height>
+					<textoffsetx>50</textoffsetx>
+					<font>Font30_Reg</font>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60">
+				<control type="image">
+					<width>$PARAM[width]</width>
+					<height>60</height>
+					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+					<animation effect="fade" start="100" end="30" time="40" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+				</control>
+				<control type="label">
+					<width>$PARAM[width]</width>
+					<height>60</height>
+					<textoffsetx>50</textoffsetx>
+					<font>Font30_Reg</font>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</focusedlayout>
+		</definition>
+	</include>
+	<include name="Dialog_Button_Default">
+		<width>1074</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
+		<textcolor>grey2</textcolor>
+	</include>
+	<include name="Dialog_Button_AddonSettings">
+		<width>800</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
+		<textcolor>grey2</textcolor>
+	</include>
+	<include name="Dialog_Button_TopRight">
+		<param name="onclick"></param>
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<width>auto</width>
+				<height>60</height>
+				<align>right</align>
+				<texturefocus />
+				<texturenofocus />
+				<label>$PARAM[label]</label>
+				<font>Font33_Bold</font>
+				<textcolor>grey2</textcolor>
+				<onclick>$PARAM[onclick]</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="Dialog_Button_Confirm">
+		<param name="id"></param>
+		<param name="label"></param>
+		<param name="onclick"></param>
+		<definition>
+			<control type="button" id="$PARAM[id]">
+				<width>265</width>
+				<height>80</height>
+				<label>$PARAM[label]</label>
+				<textoffsetx>20</textoffsetx>
+				<font>Font28_Reg</font>
+				<textcolor>grey2</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<align>center</align>
+				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">button/button-select-focus.png</texturefocus>
+				<texturenofocus border="20">button/button-select-nofocus.png</texturenofocus>
+				<onclick>$PARAM[onclick]</onclick>
+			</control>
+		</definition>
+	</include>
+	<include name="Dialog_Button_ColorSetting">
+		<width>601</width>
+		<height>64</height>
+		<textoffsetx>15</textoffsetx>
+		<font>Font30_Reg</font>
+		<textcolor>grey2</textcolor>
+		<focusedcolor>white6</focusedcolor>
+	</include>
+	<include name="Dialog_Button_Icon">
+		<width>80</width>
+		<height>80</height>
+		<align>center</align>
+		<aligny>center</aligny>
+		<font></font>
+		<texturefocus colordiffuse="$VAR[HighlightColorVar]">$PARAM[icon]</texturefocus>
+		<texturenofocus colordiffuse="grey2">$PARAM[icon]</texturenofocus>
+	</include>
+	<!--  Topbar -->
+	<include name="TopBar">
+		<control type="group">
+			<visible>!Skin.HasSetting(DisableTopbar)</visible>
+			<control type="image">
+				<description>background image</description>
+				<left>0</left>
+				<top>0</top>
+				<width>1920</width>
+				<height>87</height>
+				<texture colordiffuse="$VAR[TopbarColorVar]">$VAR[TopBarStyleVar]</texture>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<width>1920</width>
+				<height>40</height>
+				<info>Player.ProgressCache</info>
+				<texturebg>color/none.png</texturebg>
+				<lefttexture />
+				<midtexture colordiffuse="$VAR[HighlightColorVar]">color/white20.png</midtexture>
+				<righttexture></righttexture>
+				<overlaytexture />
+				<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying)</visible>
+			</control>
+			<control type="progress">
+				<description>Progressbar</description>
+				<width>1920</width>
+				<height>40</height>
+				<info>Player.Progress</info>
+				<texturebg>color/none.png</texturebg>
+				<lefttexture />
+				<midtexture colordiffuse="$VAR[HighlightColorVar]">color/white20.png</midtexture>
+				<righttexture></righttexture>
+				<overlaytexture />
+				<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying)</visible>
+			</control>
+			<control type="button">
+				<top>0</top>
+				<width>200</width>
+				<height>40</height>
+				<label></label>
+				<onclick>Action(Back)</onclick>
+				<texturefocus />
+				<texturenofocus />
+			</control>
+			<control type="grouplist">
+				<description>breadcrumbs top bar</description>
+				<visible>!Player.HasMedia | [Player.HasMedia + Skin.HasSetting(DisableTopbarNowPlaying)]</visible>
+				<left>5</left>
+				<width>760</width>
+				<height>40</height>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/$PARAM[breadcrumbs_icon]</texture>
+					<visible>!Skin.HasSetting(ColoredIcons)</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture>icon/colored/$PARAM[breadcrumbs_icon]</texture>
+					<visible>Skin.HasSetting(ColoredIcons)</visible>
+				</control>
+				<control type="label">
+					<width>10</width>
+					<label />
+				</control>
+				<control type="label">
+					<label>$PARAM[breadcrumbs_label]</label>
+					<include>BreadcrumbsLabel</include>
+				</control>
+				<control type="label">
+					<label>$INFO[Container.ShowTitle, / ]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>!String.IsEmpty(Container.ShowTitle) + !String.IsEqual(Container.ShowTitle,Container.FolderName)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Container.FolderName, / ]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>![Container.Content() + Window.IsActive(videos)]</visible>
+					<visible>![Window.IsActive(MyPVRChannels.xml) | Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRRecordings.xml) | Window.IsActive(MyPVRSearch.xml)]</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Container.PluginCategory, / ]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>!String.IsEmpty(Container.PluginCategory)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Control.GetLabel(10),: ]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>!String.IsEqual(Control.GetLabel(10),$LOCALIZE[16100]) + Window.IsActive(videos)</visible>
+				</control>
+				<control type="label">
+					<label>($LOCALIZE[31052])</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>Container.Filtered</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<description>now playing topbar</description>
+				<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying)</visible>
+				<left>5</left>
+				<width>760</width>
+				<height>40</height>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<itemgap>10</itemgap>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/play.png</texture>
+					<visible>Player.Playing</visible>
+				</control>
+				<control type="image">
+					<width>40</width>
+					<height>40</height>
+					<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/pause.png</texture>
+					<visible>Player.Paused</visible>
+				</control>
+				<control type="label" id="7700">
+					<label>$INFO[Player.Time]</label>
+					<textcolor>grey</textcolor>
+					<include>BreadcrumbsLabel</include>
+				</control>
+				<control type="fadelabel">
+					<label>$INFO[Player.Title]</label>
+					<label>$INFO[MusicPlayer.Artist]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>Player.HasAudio + !String.IsEmpty(Musicplayer.Artist)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Player.Title]</label>
+					<scroll>true</scroll>
+					<include>BreadcrumbsLabel</include>
+					<visible>Player.HasAudio + String.IsEmpty(Musicplayer.Artist)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Player.Title]</label>
+					<scroll>true</scroll>
+					<include>BreadcrumbsLabel</include>
+					<visible>Player.HasVideo</visible>
+				</control>
+				<control type="fadelabel">
+					<label>$INFO[Videoplayer.Title]</label>
+					<label>$INFO[Videoplayer.TVShowTitle]</label>
+					<visible>Player.HasVideo + !String.IsEmpty(Videoplayer.TVShowTitle)</visible>
+				</control>
+				<control type="fadelabel">
+					<label>$INFO[Videoplayer.ChannelName]</label>
+					<label>$INFO[Videoplayer.Title]</label>
+					<visible>Player.HasVideo + !String.IsEmpty(VideoPlayer.ChannelName)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Videoplayer.Title]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>Player.HasVideo + String.IsEmpty(Videoplayer.TVShowTitle) + String.IsEmpty(VideoPlayer.ChannelName)</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<description>right info top bar</description>
+				<right>5</right>
+				<width>760</width>
+				<orientation>horizontal</orientation>
+				<align>right</align>
+				<usecontrolcoords>true</usecontrolcoords>
+				<itemgap>0</itemgap>
+				<control type="multiimage">
+					<left>20</left>
+					<width>40</width>
+					<height>40</height>
+					<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Weather.FanartCode]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
+					<timeperimage>050</timeperimage>
+					<fadetime>1</fadetime>
+					<randomize>false</randomize>
+					<loop>true</loop>
+					<visible>!Skin.HasSetting(DisableTopbarWeather)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Window(weather).Property(Current.Temperature), ]$INFO[System.TemperatureUnits]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>!Skin.HasSetting(DisableTopbarWeather)</visible>
+				</control>
+				<control type="label">
+					<textcolor>grey2</textcolor>
+					<label>$INFO[System.Date,  ]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>!Skin.HasSetting(DisableTopbarDate)</visible>
+				</control>
+				<control type="label">
+					<textcolor>$VAR[HighlightColorVar]</textcolor>
+					<label>$INFO[System.Time,  ]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>!Skin.HasSetting(DisableTopbarTime)</visible>
+				</control>
+			</control>
+			<control type="grouplist">
+				<description>item and page count top bar</description>
+				<visible>!Skin.HasSetting(DisableTopbarItemCount)</visible>
+				<centerleft>50%</centerleft>
+				<width>350</width>
+				<orientation>horizontal</orientation>
+				<align>center</align>
+				<usecontrolcoords>true</usecontrolcoords>
+				<itemgap>0</itemgap>
+				<control type="image">
+					<top>4</top>
+					<width>34</width>
+					<height>34</height>
+					<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/list.png</texture>
+					<visible>Integer.IsGreater(Container.NumItems,0)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Container.NumItems,, $LOCALIZE[31025] ]</label>
+					<include>BreadcrumbsLabel</include>
+				</control>
+				<control type="image">
+					<top>4</top>
+					<width>34</width>
+					<height>34</height>
+					<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/pages.png</texture>
+					<visible>Integer.IsGreater(Container.NumPages,1)</visible>
+				</control>
+				<control type="label">
+					<label>$INFO[Container.CurrentPage]$INFO[Container.NumPages,/]</label>
+					<include>BreadcrumbsLabel</include>
+					<visible>Integer.IsGreater(Container.NumPages,1)</visible>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<description>scroll label</description>
+			<visible>!Skin.HasSetting(disablescrollletter)</visible>
+			<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
+			<animation effect="slide" tween="cubic" easing="inout" time="400" start="160" end="0">VisibleChange</animation>
+			<right>0</right>
+			<top>60</top>
+			<width>138</width>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>138</width>
+				<height>150</height>
+				<texture colordiffuse="$PARAM[panelcolor]" border="20,20,0,20">dialog/volume-back.png</texture>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<top>0</top>
+				<width>138</width>
+				<height>150</height>
+				<texture colordiffuse="$PARAM[glowcolor]" border="20,20,0,20">scmfixeddialog/volume-glow.png</texture>
+			</control>
+			<control type="label">
+				<left>12</left>
+				<top>12</top>
+				<width>126</width>
+				<height>126</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>$VAR[HighlightColorVar]</textcolor>
+				<font>Font80_Bold_Caps</font>
+			</control>
+		</control>
+	</include>
+	<include name="BreadcrumbsLabel">
+		<font>Font28_Reg</font>
+		<aligny>center</aligny>
+		<height>38</height>
+		<width min="1" max="832">auto</width>
+	</include>
+	<!-- Settings -->
+	<include name="Settings_Button">
+		<width>1393</width>
+		<height>68</height>
+		<textoffsetx>45</textoffsetx>
+		<font>Font30_Reg</font>
+		<textcolor>grey2</textcolor>
+	</include>
+	<include name="Settings_RadioButton">
+		<width>1393</width>
+		<height>68</height>
+		<textoffsetx>45</textoffsetx>
+		<font>Font30_Reg</font>
+		<textcolor>grey2</textcolor>
+		<textwidth>872</textwidth>
+		<radioposx>1288</radioposx>
+	</include>
+	<!--  Floor -->
+	<include name="Floor_Background_Default">
+		<control type="image">
+			<top>870</top>
+			<width>1920</width>
+			<height>210</height>
+			<texture colordiffuse="$VAR[FloorColorVar]" border="1">panel/floor.png</texture>
+		</control>
+		<control type="image">
+			<top>882</top>
+			<width>1920</width>
+			<height>198</height>
+			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor-spot-full.png</texture>
+		</control>
+		<control type="image">
+			<top>862</top>
+			<width>1920</width>
+			<height>20</height>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+		</control>
+	</include>
+	<include name="Floor_Background_Left">
+		<control type="image">
+			<top>870</top>
+			<width>1920</width>
+			<height>210</height>
+			<texture flipx="true" colordiffuse="$VAR[FloorColorVar]">panel/floor-right.png</texture>
+		</control>
+		<control type="image">
+			<top>882</top>
+			<width>880</width>
+			<height>198</height>
+			<texture flipx="true" colordiffuse="$VAR[FloorColorVar]">panel/floor-spot-right.png</texture>
+		</control>
+		<control type="image">
+			<top>862</top>
+			<width>1920</width>
+			<height>20</height>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+		</control>
+	</include>
+	<include name="Floor_Background_Right">
+		<control type="image">
+			<top>870</top>
+			<width>1920</width>
+			<height>210</height>
+			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor-right.png</texture>
+		</control>
+		<control type="image">
+			<left>1040</left>
+			<top>882</top>
+			<width>880</width>
+			<height>198</height>
+			<texture colordiffuse="$VAR[HighlightColorVar]">panel/floor-spot-right.png</texture>
+		</control>
+		<control type="image">
+			<top>862</top>
+			<width>1920</width>
+			<height>20</height>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+		</control>
+	</include>
+	<include name="Floor_Background_Middle">
+		<control type="image">
+			<top>870</top>
+			<width>1920</width>
+			<height>210</height>
+			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor.png</texture>
+		</control>
+		<control type="image">
+			<left>215</left>
+			<top>882</top>
+			<width>1490</width>
+			<height>198s</height>
+			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor-spot-middle.png</texture>
+		</control>
+		<control type="image">
+			<top>862</top>
+			<width>1920</width>
+			<height>20</height>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+		</control>
+	</include>
+	<!-- Panels -->
+	<include name="Panel_Fanart_SideShade">
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture colordiffuse="$VAR[BackgroundColorVar]">panel/sideshade.png</texture>
+		</control>
+	</include>
+	<include name="Panel_Background_Default">
+		<param name="left">85</param>
+		<param name="top">85</param>
+		<param name="width">1750</param>
+		<param name="height">920</param>
+		<param name="reflect">true</param>
+		<param name="reflecttop">981</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="image">
+				<width>1920</width>
+				<height>1080</height>
+				<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
+				<visible>![$PARAM[visible]]</visible>
+			</control>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+				<control type="image">
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="50">panel/panel-glow.png</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="60">panel/panel-back.png</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[left]</left>
+					<top>$PARAM[reflecttop]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture flipy="true" diffuse="panel/reflect.png" colordiffuse="$VAR[PanelColorVar]" border="60">panel/panel-back.png</texture>
+					<visible>$PARAM[reflect]</visible>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Panel_Background_Settings">
+		<param name="left">85</param>
+		<param name="top">85</param>
+		<param name="width">1750</param>
+		<param name="height">920</param>
+		<param name="reflect">true</param>
+		<param name="reflecttop">981</param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="image">
+				<width>1920</width>
+				<height>1080</height>
+				<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
+				<visible>![$PARAM[visible]]</visible>
+			</control>
+			<control type="group">
+				<visible>$PARAM[visible]</visible>
+				<control type="image">
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="50">panel/panel-glow.png</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[left]</left>
+					<top>$PARAM[top]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="340,40,40,40">panel/panel-settings-back.png</texture>
+				</control>
+				<control type="image">
+					<left>$PARAM[left]</left>
+					<top>$PARAM[reflecttop]</top>
+					<width>$PARAM[width]</width>
+					<height>$PARAM[height]</height>
+					<texture flipy="true" diffuse="panel/reflect.png" colordiffuse="$VAR[PanelColorVar]" border="340,40,40,40">panel/panel-settings-back.png</texture>
+					<visible>$PARAM[reflect]</visible>
+				</control>
+				<control type="image">
+					<left>100</left>
+					<bottom>90</bottom>
+					<width>323</width>
+					<height>172</height>
+					<aspectratio>keep</aspectratio>
+					<texture>icon/logo.png</texture>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- Weather -->
+	<include name="WeatherDailyList">
+		<control type="button" id="10$PARAM[item]">
+			<width>858</width>
+			<height>114</height>
+			<textcolor>grey</textcolor>
+			<focusedcolor>grey</focusedcolor>
+			<textoffsetx>156</textoffsetx>
+			<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Daily.$PARAM[item].LongDay),, ][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Daily.$PARAM[item].WindDirection)]</label>
+			<font>Font31_Cond_075</font>
+			<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
+			<onclick />
+			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
+		</control>
+		<control type="multiimage" id="10$PARAM[item]01">
+			<left>20</left>
+			<top>-114</top>
+			<width>114</width>
+			<height>114</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
+			<timeperimage>050</timeperimage>
+			<fadetime>1</fadetime>
+			<randomize>false</randomize>
+			<loop>true</loop>
+			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
+		</control>
+		<control type="label" id="10$PARAM[item]02">
+			<right>20</right>
+			<top>-114</top>
+			<width>300</width>
+			<height>114</height>
+			<align>right</align>
+			<textcolor>grey</textcolor>
+			<label>$INFO[Window(weather).Property(Daily.$PARAM[item].HighTemperature),[COLOR red],[/COLOR] / ]$INFO[Window(weather).Property(Daily.$PARAM[item].LowTemperature),[COLOR blue],[/COLOR]][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
+			<font>Font31_Cond_075</font>
+			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
+		</control>
+	</include>
+	<include name="Weather36hourList">
+		<control type="button" id="20$PARAM[item]">
+			<width>858</width>
+			<height>114</height>
+			<textcolor>grey</textcolor>
+			<focusedcolor>grey</focusedcolor>
+			<textoffsetx>156</textoffsetx>
+			<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(36Hour.$PARAM[item].Heading)][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].WindSpeed)]</label>
+			<font>Font31_Cond_075</font>
+			<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
+			<onclick />
+			<visible>!String.IsEmpty(Window(weather).Property(36Hour.$PARAM[item].Heading))</visible>
+		</control>
+		<control type="multiimage" id="20$PARAM[item]01">
+			<left>20</left>
+			<top>-114</top>
+			<width>114</width>
+			<height>114</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(36Hour.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
+			<timeperimage>050</timeperimage>
+			<fadetime>1</fadetime>
+			<randomize>false</randomize>
+			<loop>true</loop>
+			<visible>!String.IsEmpty(Window(weather).Property(36Hour.$PARAM[item].Heading))</visible>
+		</control>
+		<control type="label" id="20$PARAM[item]02">
+			<right>20</right>
+			<top>-114</top>
+			<width>300</width>
+			<height>114</height>
+			<align>right</align>
+			<textcolor>grey</textcolor>
+			<label>[COLOR white]$INFO[Window(weather).Property(36Hour.$PARAM[item].Temperature)][/COLOR][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
+			<font>Font31_Cond_075</font>
+			<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
+		</control>
+	</include>
+	<include name="WeatherWeekendList">
+		<control type="button" id="30$PARAM[item]">
+			<width>858</width>
+			<height>114</height>
+			<textcolor>grey</textcolor>
+			<focusedcolor>grey</focusedcolor>
+			<textoffsetx>156</textoffsetx>
+			<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Weekend.$PARAM[item].LongDay),, ][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Weekend.$PARAM[item].WindDirection)]</label>
+			<font>Font31_Cond_075</font>
+			<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
+			<onclick />
+			<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
+		</control>
+		<control type="multiimage" id="30$PARAM[item]01">
+			<left>20</left>
+			<top>-114</top>
+			<width>114</width>
+			<height>114</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Weekend.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
+			<timeperimage>050</timeperimage>
+			<fadetime>1</fadetime>
+			<randomize>false</randomize>
+			<loop>true</loop>
+			<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
+		</control>
+		<control type="label" id="30$PARAM[item]02">
+			<right>20</right>
+			<top>-114</top>
+			<width>300</width>
+			<height>114</height>
+			<align>right</align>
+			<textcolor>grey</textcolor>
+			<label>$INFO[Window(weather).Property(Weekend.$PARAM[item].HighTemperature),[COLOR red],[/COLOR] / ]$INFO[Window(weather).Property(Weekend.$PARAM[item].LowTemperature),[COLOR blue],[/COLOR]][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
+			<font>Font31_Cond_075</font>
+			<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
+		</control>
+	</include>
+	<include name="WeatherHourlyList">
+		<control type="button" id="40$PARAM[item]">
+			<width>858</width>
+			<height>114</height>
+			<textcolor>grey</textcolor>
+			<focusedcolor>grey</focusedcolor>
+			<textoffsetx>156</textoffsetx>
+			<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Hourly.$PARAM[item].Time)][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Hourly.$PARAM[item].WindDirection)]</label>
+			<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+			<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
+			<font>Font31_Cond_075</font>
+			<onclick />
+			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>
+		</control>
+		<control type="multiimage" id="40$PARAM[item]02">
+			<left>20</left>
+			<top>-114</top>
+			<width>114</width>
+			<height>114</height>
+			<aspectratio align="center" aligny="center">keep</aspectratio>
+			<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
+			<timeperimage>050</timeperimage>
+			<fadetime>1</fadetime>
+			<randomize>false</randomize>
+			<loop>true</loop>
+			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>
+		</control>
+		<control type="label" id="40$PARAM[item]03">
+			<right>20</right>
+			<top>-114</top>
+			<width>300</width>
+			<height>114</height>
+			<align>right</align>
+			<textcolor>grey</textcolor>
+			<label>$INFO[Window(weather).Property(Hourly.$PARAM[item].Temperature),[COLOR white],[/COLOR]][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
+			<font>Font31_Cond_075</font>
+			<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>
+		</control>
+	</include>
+	<include name="WeatherMapItem">
+		<control type="group">
+			<visible>$PARAM[visible]</visible>
+			<include>Animation_CommonFade</include>
+			<top>153</top>
+			<left>990</left>
+			<control type="label">
+				<width>800</width>
+				<height>60</height>
+				<align>center</align>
+				<label>$INFO[Window(weather).Property(Map.$PARAM[item].Heading)]</label>
+				<font>Font30_Bold_Caps</font>
+			</control>
+			<control type="image">
+				<top>72</top>
+				<width>800</width>
+				<height>593</height>
+				<aspectratio>scale</aspectratio>
+				<texture>$INFO[Window(weather).Property(Map.$PARAM[item].Area)]</texture>
+			</control>
+			<control type="image">
+				<top>72</top>
+				<width>800</width>
+				<height>593</height>
+				<aspectratio>scale</aspectratio>
+				<texture>$INFO[Window(weather).Property(Map.$PARAM[item].Layer)]</texture>
+			</control>
+			<control type="image">
+				<top>665</top>
+				<width>800</width>
+				<height>100</height>
+				<texture>$PARAM[key]</texture>
+			</control>
+		</control>
+	</include>
+</includes>

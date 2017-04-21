@@ -1,8 +1,0 @@
-<settings>
-    <!-- TopBar -->
-    <setting id="topbar" value="||MULTISELECT||" label="" condition="" icon="" description="">
-        <option id="default" label="Default" condition="" default=""/>
-        <option id="default" label="Shadow" condition="" default=""/>
-        <option id="default" label="Disable" condition="" default=""/>
-    </setting>
- </settings>

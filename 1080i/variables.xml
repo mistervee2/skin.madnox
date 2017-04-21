@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<!-- Fanart -->
+	<variable name="WeatherFanartVar">
+		<value condition="!String.IsEmpty(Skin.String(WeatherFanart)) + [String.Contains(Skin.String(WeatherFanart),.jpg) | String.Contains(Skin.String(WeatherFanart),.png)]">$INFO[Skin.String(WeatherFanart)]</value>
+		<value condition="!String.IsEmpty(Skin.String(WeatherFanart))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Weather.fanartcode]$INFO[Skin.String(WeatherFanart.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds))">$INFO[Skin.String(SkinBackgrounds.path)]weather$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value>special://skin/extras/backgrounds/default.jpg</value>
+	</variable>
+	<variable name="SettingsFanartVar">
+		<value condition="!String.IsEmpty(Skin.String(SettingsFanart))">$INFO[Skin.String(SettingsFanart)]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds))">$INFO[Skin.String(SkinBackgrounds.path)]settings$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value>special://skin/extras/backgrounds/default.jpg</value>
+	</variable>
+
 	<!-- Art -->
 	<variable name="PosterVar">
 		<value condition="ListItem.IsParentFolder + Container.Content(episodes)">DefaultFolderBackLandscape.png</value>
@@ -44,16 +57,7 @@
 		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
 		<value>.png</value>
 	</variable>
-	<variable name="WeatherFanartVar">
-		<value condition="!String.IsEmpty(Skin.String(WeatherFanart.path))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Weather.fanartcode]$INFO[Skin.String(WeatherFanart.ext)]</value>
-		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]weather$INFO[Skin.String(SkinBackgrounds.ext)]</value>
-		<value>special://skin/extras/backgrounds/default.jpg</value>
-	</variable>
-	<variable name="SettingsFanartVar">
-		<value condition="!String.IsEmpty(Skin.String(SettingsFanart))">$INFO[Skin.String(SettingsFanart)]</value>
-		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]settings$INFO[Skin.String(SkinBackgrounds.ext)]</value>
-		<value>special://skin/extras/backgrounds/default.jpg</value>
-	</variable>
+	
 	<!-- END Viewtype Art -->
 	<!-- Dialogs -->
 	<variable name="DialogHeading1110ColorsVar">
@@ -66,7 +70,7 @@
 		<value condition="Control.HasFocus(3110)">$ADDON[script.skin.helper.colorpicker 32011]</value>
 		<value condition="ControlGroup(200).HasFocus(3010)">$ADDON[script.skin.helper.colorpicker 32050]</value>
 		<value condition="ControlGroup(200).HasFocus(3030)">$ADDON[script.skin.helper.colorpicker 32141]</value>
-		<value condition="ControlGroup(200).HasFocus(3011)">$ADDON[script.skin.helper.colorpicker 32013]</value>
+		<value condition="ControlGroup(200).HasFocus(3011)">$LOCALIZE[571]</value>
 		<value condition="ControlGroup(200).HasFocus(4000)">$LOCALIZE[222]</value>
 		<value condition="ControlGroup(200).HasFocus(3012)">$LOCALIZE[190]</value>
 		<value>$ADDON[script.skin.helper.colorpicker 32011]</value>
@@ -119,8 +123,19 @@
 		<value>$LOCALIZE[19021] / $LOCALIZE[137]</value>
 	</variable>
 	<!-- END Dialogs -->
-	<!-- Icons and Media Flags -->
-	
+	<!-- Topbar -->
+	<variable name="TopBarStyleLabelVar">
+		<value condition="String.IsEqual(Skin.String(TopBarStyle),shadow)">$LOCALIZE[31054]</value>
+		<value condition="String.IsEqual(Skin.String(TopBarStyle),flat)">$LOCALIZE[31770]</value>
+		<value>$LOCALIZE[13278]</value>
+	</variable>
+	<variable name="TopBarStyleVar">
+		<value condition="String.IsEqual(Skin.String(TopBarStyle),shadow)">panel/topbar-shadow.png</value>
+		<value condition="String.IsEqual(Skin.String(TopBarStyle),flat)">panel/topbar-flat.png</value>
+		<value>panel/topbar.png</value>
+	</variable>
+
+
 
 
 

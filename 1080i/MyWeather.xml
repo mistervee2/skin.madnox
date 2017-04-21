@@ -2,34 +2,37 @@
 <window>
 	<defaultcontrol>7500</defaultcontrol>
 	<controls>
-		<control type="multiimage">
-			<top>0</top>
-			<left>0</left>
-			<width>1920</width>
-			<height>1080</height>
-			<imagepath background="true">$VAR[WeatherFanartVar]</imagepath>
-			<include>Animation_Fanart</include>
-		</control>
-		<include content="Floor_Background_Default">
-			<param name="visible" value="!Skin.HasSetting(WeatherHideFloor)" />
+		<!-- Backdrop -->
+		<include content="Fanart_Default">
+			<param name="imagepath" value="$VAR[WeatherFanartVar]" />
 		</include>
+		<include>Panel_Fanart_SideShade</include>
+		<!-- Floor -->
 		<control type="group">
-			<include>Animation_Slide_Bottom</include>
-			<animation effect="slide" end="0,20" time="400" tween="cubic" easing="out" condition="!Skin.HasSetting(WeatherHideTopBar)">Conditional</animation>
+			<visible>!Skin.HasSetting(WeatherHideFloor)</visible>
+			<include content="Animation_Slide_Bottom">
+				<param name="slide" value="218" />
+			</include>
+			<include>Floor_Background_Middle</include>
+		</control>
+		<!-- Content -->
+		<control type="group">
+			<include>Animation_Zoom_OpenClose</include>
+			<animation effect="slide" end="0,5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(WeatherHideTopBar)">Conditional</animation>
 			<include content="Panel_Background_Default">
 				<param name="reflect" value="!Skin.HasSetting(WeatherHideFloor)" />
 			</include>
 			<control type="image">
 				<left>960</left>
-				<top>134</top>
+				<top>144</top>
 				<width>1</width>
-				<height>813</height>
-				<texture colordiffuse="$VAR[WeatherPanelColorVar]">panel/line-vertical.png</texture>
+				<height>803</height>
+				<texture colordiffuse="$VAR[PanelColorVar]">panel/line-vertical.png</texture>
 			</control>
 			<control type="group">
-				<left>91</left>
+				<left>101</left>
 				<top>144</top>
-				<width>869</width>
+				<width>859</width>
 				<include>Animation_CommonFade</include>
 				<control type="grouplist">
 					<usecontrolcoords>true</usecontrolcoords>
@@ -45,7 +48,6 @@
 						<font>Font30_Bold_Caps</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
-						<aligny>center</aligny>
 						<label>$INFO[Window(weather).Property(Location)]</label>
 					</control>
 					<control type="label">
@@ -53,7 +55,6 @@
 						<height>30</height>
 						<font>Font32_Reg</font>
 						<align>center</align>
-						<aligny>center</aligny>
 						<textcolor>grey2</textcolor>
 						<label>$LOCALIZE[12014] $INFO[Window(weather).Property(Updated)]</label>
 					</control>
@@ -256,10 +257,10 @@
 						<control type="grouplist" id="7501">
 							<visible>String.IsEmpty(Window(weather).Property(Weather.CurrentView))</visible>
 							<include>Animation_CommonFade</include>
-							<left>960</left>
-							<top>134</top>
-							<width>870</width>
-							<height>812</height>
+							<left>961</left>
+							<top>145</top>
+							<width>858</width>
+							<height>798</height>
 							<onleft>9000</onleft>
 							<onright>60</onright>
 							<onup>7501</onup>
@@ -301,14 +302,14 @@
 						<control type="grouplist" id="7502">
 							<visible>String.IsEqual(Window(weather).Property(Weather.CurrentView),36hour)</visible>
 							<include>Animation_CommonFade</include>
-							<left>960</left>
-							<top>134</top>
-							<width>870</width>
-							<height>812</height>
+							<left>961</left>
+							<top>145</top>
+							<width>858</width>
+							<height>798</height>
 							<onleft>9000</onleft>
 							<onright>60</onright>
-							<onup>7501</onup>
-							<ondown>7501</ondown>
+							<onup>7502</onup>
+							<ondown>7502</ondown>
 							<pagecontrol>60</pagecontrol>
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
@@ -325,14 +326,14 @@
 						<control type="grouplist" id="7503">
 							<visible>String.IsEqual(Window(weather).Property(Weather.CurrentView),weekend)</visible>
 							<include>Animation_CommonFade</include>
-							<left>960</left>
-							<top>134</top>
-							<width>870</width>
-							<height>812</height>
+							<left>961</left>
+							<top>145</top>
+							<width>858</width>
+							<height>798</height>
 							<onleft>9000</onleft>
 							<onright>60</onright>
-							<onup>7501</onup>
-							<ondown>7501</ondown>
+							<onup>7503</onup>
+							<ondown>7503</ondown>
 							<pagecontrol>60</pagecontrol>
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
@@ -349,14 +350,14 @@
 						<control type="grouplist" id="7504">
 							<visible>String.IsEqual(Window(weather).Property(Weather.CurrentView),hourly)</visible>
 							<include>Animation_CommonFade</include>
-							<left>960</left>
-							<top>134</top>
-							<width>870</width>
-							<height>812</height>
+							<left>961</left>
+							<top>145</top>
+							<width>858</width>
+							<height>798</height>
 							<onleft>9000</onleft>
 							<onright>60</onright>
-							<onup>7501</onup>
-							<ondown>7501</ondown>
+							<onup>7504</onup>
+							<ondown>7504</ondown>
 							<pagecontrol>60</pagecontrol>
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
@@ -434,10 +435,10 @@
 							</include>
 						</control>
 						<control type="button" id="7505">
-							<top>195</top>
+							<top>205</top>
 							<left>970</left>
-							<width>850</width>
-							<height>743</height>
+							<width>840</width>
+							<height>733</height>
 							<onup>7504</onup>
 							<ondown>7504</ondown>
 							<onleft>9000</onleft>
@@ -449,10 +450,10 @@
 						<control type="group">
 							<visible>String.IsEqual(Window(weather).Property(Weather.CurrentView),map)</visible>
 							<include>Animation_CommonFade</include>
-							<top>143</top>
+							<top>153</top>
 							<left>990</left>
 							<control type="label">
-								<width>836</width>
+								<width>800</width>
 								<height>60</height>
 								<align>center</align>
 								<label>Radar ($INFO[Window(weather).Property(Radar)]) @ $INFO[Window(weather).Property(Updated)]</label>
@@ -460,48 +461,48 @@
 							</control>
 							<control type="image">
 								<top>72</top>
-								<width>810</width>
-								<height>703</height>
+								<width>800</width>
+								<height>693</height>
 								<texture>special://profile/addon_data/weather.ozweather/radarbackgrounds/$INFO[Window(weather).Property(Radar)]/legend.png</texture>
 							</control>
 							<control type="image">
 								<top>72</top>
-								<width>810</width>
-								<height>648</height>
+								<width>800</width>
+								<height>638</height>
 								<aspectratio>scale</aspectratio>
 								<texture>special://profile/addon_data/weather.ozweather/radarbackgrounds/$INFO[Window(weather).Property(Radar)]/background.png</texture>
 							</control>
 							<control type="image">
 								<top>72</top>
-								<width>810</width>
-								<height>648</height>
+								<width>800</width>
+								<height>638</height>
 								<aspectratio>scale</aspectratio>
 								<texture>special://profile/addon_data/weather.ozweather/radarbackgrounds/$INFO[Window(weather).Property(Radar)]/topography.png</texture>
 							</control>
 							<control type="image">
 								<top>72</top>
-								<width>810</width>
-								<height>648</height>
+								<width>800</width>
+								<height>638</height>
 								<aspectratio>scale</aspectratio>
 								<texture>special://profile/addon_data/weather.ozweather/radarbackgrounds/$INFO[Window(weather).Property(Radar)]/catchments.png</texture>
 							</control>
 							<control type="image">
 								<top>72</top>
-								<width>810</width>
-								<height>648</height>
+								<width>800</width>
+								<height>638</height>
 								<aspectratio>scale</aspectratio>
 								<texture>special://profile/addon_data/weather.ozweather/radarbackgrounds/$INFO[Window(weather).Property(Radar)]/range.png</texture>
 							</control>
 							<control type="image">
 								<top>72</top>
-								<width>810</width>
-								<height>648</height>
+								<width>800</width>
+								<height>638</height>
 								<aspectratio>scale</aspectratio>
 								<texture>special://profile/addon_data/weather.ozweather/radarbackgrounds/$INFO[Window(weather).Property(Radar)]/locations.png</texture>
 							</control>
 							<control type="multiimage">
 								<top>72</top>
-								<width>810</width>
+								<width>800</width>
 								<height>645</height>
 								<aspectratio>scale</aspectratio>
 								<imagepath>special://profile/addon_data/weather.ozweather/currentloop/$INFO[Window(weather).Property(Radar)]/</imagepath>
@@ -531,11 +532,18 @@
 				</control>
 			</control>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_label" value="Weather" />
-			<param name="breadcrumbs_icon" value="weather.png" />
-			<param name="visible" value="!Skin.HasSetting(WeatherHideTopBar)" />
-		</include>
+		<!-- Topbar -->
+		<control type="group">
+			<visible>!Skin.HasSetting(WeatherHideTopBar)</visible>
+			<include content="Animation_Slide_Top">
+				<param name="slide" value="90" />
+			</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label" value="$LOCALIZE[12600]" />
+				<param name="breadcrumbs_icon" value="weather.png" />
+			</include>
+		</control>
+		<!-- Media Menu -->
 		<include>MediaMenu_MouseOverlay</include>
 		<control type="group">
 			<include>MediaMenu_Common</include>

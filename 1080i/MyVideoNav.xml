@@ -1113,20 +1113,11 @@
 				</control>
 			</control>
 		</control>
-		<control type="group">
-			<include>Animation_HideBreadCrumbs</include>
-			<include>Breadcrumbs_BackBar</include>
-			<include>BreadcrumbsContent</include>
-			<include>Breadcrumbs_Furniture</include>
-		</control>
-		<!-- <include content="TopBar">
+		<include content="TopBar">
 			<param name="breadcrumbs_icon" value="$VAR[BreadcrumbsVideoIconVar]" />
 			<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
 			<param name="visible" value="true" />
-		</include> -->
-		
-
-		<!-- <include>Furniture_NowPlayingWidget</include> -->
+		</include>
 		<include>Media_Menu</include>
 		<include>ContextMenuOverlay</include>
 	</controls>

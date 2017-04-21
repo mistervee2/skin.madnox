@@ -2,27 +2,22 @@
   <!--  new colors -->
   <color name="white">FFFFFFFF</color>
   <color name="white2">FFe5e5e5</color>
-
   <color name="white3">abFFFFFF</color>
   <color name="white4">FFdfdfdf</color>
   <color name="white5">48FFFFFF</color>
   <color name="white6">d0FFFFFF</color>
-
   <color name="grey">FFa4a4a4</color>
   <color name="grey2">88FFFFFF</color>
   <color name="red">FFCE4421</color>
   <color name="blue">FF0084ff</color>
-
   <color name="highlight">FF6DB9EF</color>
-  <color name="panel">FFFFFFFF</color>
+  <color name="panel">FF6DB9EF</color>
   <color name="glow">FF000000</color>
   <color name="topbar">FFFFFFFF</color>
-  <color name="floor">FFFFFFFF</color>
+  <color name="floor">FF6DB9EF</color>
   <color name="background">FF000000</color>
-
   <color name="disabled">33FFFFFF</color>
   <color name="invalid">FFFF0000</color>
-
   <!--  old colors (a mass find and replace is required) -->
   <color name="base">ee114076</color>
   <color name="base1">dd114076</color>

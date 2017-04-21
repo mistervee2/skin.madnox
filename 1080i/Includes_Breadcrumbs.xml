@@ -202,18 +202,6 @@
 	</include>
 	<include name="Breadcrumbs_Furniture">
 		<control type="group">
-			<control type="label">
-				<top>50</top>
-				<height>50</height>
-				<label>$INFO[ListItem.DBTYPE]</label>
-			</control>
-			<control type="label">
-				<top>100</top>
-				<height>50</height>
-				<label>$INFO[container.folderpath]</label>
-			</control>
-
-
 			<visible>!Skin.HasSetting(disabletopbar) + !Window.IsVisible(script-globalsearch-main.xml)</visible>
 			<control type="button" id="4051">
 				<include>HiddenObject</include>

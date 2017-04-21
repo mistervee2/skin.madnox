@@ -2,17 +2,11 @@
 <window>
 	<defaultcontrol always="true">3110</defaultcontrol>
 	<controls>
-		<include content="Furniture_Dialog_Fade">
-			<param name="color" value="$VAR[DialogBackgroundColorVar]" />
-			<param name="visible" value="!Skin.HasSetting(disabledialogbackground)" />
-		</include>
+		<include>Dialog_Furniture_BackgroundFade</include>
+		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
-			<include>Animation_DialogPopup</include>
-			<centertop>50%</centertop>
-			<centerleft>50%</centerleft>
-			<width>778</width>
-			<height>475</height>
-			<include content="Furniture_Dialog_IconBackground">
+			<visible>!Window.IsActive(DialogSelect.xml) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(DialogNumeric.xml)</visible>
+			<include content="Dialog_Furniture_IconBackground">
 				<param name="labelid" value="" />
 				<param name="label" value="$VAR[DialogHeadingColorPickerVar]" />
 			</include>
@@ -28,31 +22,36 @@
 				<itemgap>5</itemgap>
 				<orientation>vertical</orientation>
 				<!-- edit manual -->
-				<include content="Button_Dialog_Icon">
-					<param name="id" value="3010" />
-					<param name="icon" value="icon/mediamenu/keyboard.png" />
-				</include>
+				<control type="button" id="3010">
+					<include content="Dialog_Button_Icon">
+						<param name="icon" value="icon/mediamenu/keyboard.png" />
+					</include>
+				</control>
 				<!-- choose color palette -->
-				<include content="Button_Dialog_Icon">
-					<param name="id" value="3030" />
-					<param name="icon" value="icon/mediamenu/color.png" />
-				</include>
-				<!-- None -->
-				<include content="Button_Dialog_Icon">
-					<param name="id" value="3011" />
-					<param name="icon" value="icon/mediamenu/remove.png" />
-				</include>
+				<control type="button" id="3030">
+					<include content="Dialog_Button_Icon">
+						<param name="icon" value="icon/mediamenu/color.png" />
+					</include>
+				</control>
+				<!-- None (reset to default) -->
+				<control type="button" id="3011">
+					<include content="Dialog_Button_Icon">
+						<param name="icon" value="icon/mediamenu/remove.png" />
+					</include>
+				</control>
 				<!-- Cancel -->
-				<include content="Button_Dialog_Icon">
-					<param name="id" value="4000" />
-					<param name="icon" value="icon/mediamenu/cancel.png" />
-					<param name="onclick" value="Action(close)" />
-				</include>
+				<control type="button" id="4000">
+					<onclick>Action(close)</onclick>
+					<include content="Dialog_Button_Icon">
+						<param name="icon" value="icon/mediamenu/cancel.png" />
+					</include>
+				</control>
 				<!-- Save button -->
-				<include content="Button_Dialog_Icon">
-					<param name="id" value="3012" />
-					<param name="icon" value="icon/mediamenu/save.png" />
-				</include>
+				<control type="button" id="3012">
+					<include content="Dialog_Button_Icon">
+						<param name="icon" value="icon/mediamenu/save.png" />
+					</include>
+				</control>
 			</control>
 			<!-- Color picker panel -->
 			<control type="panel" id="3110">
@@ -116,13 +115,6 @@
 				<control type="slider" id="3015">
 					<top>14</top>
 					<width>220</width>
-					<height>35</height>
-					<controloffsetx>6</controloffsetx>
-					<controloffsety>6</controloffsety>
-					<texturesliderbar border="15">button/slider-back.png</texturesliderbar>
-					<textureslidernib>button/slider-nofocus.png</textureslidernib>
-					<textureslidernibfocus>button/slider-focus.png</textureslidernibfocus>
-					<orientation>horizontal</orientation>
 				</control>
 				<!-- label opacity-->
 				<control type="label" id="3017">
@@ -160,7 +152,7 @@
 				<left>142</left>
 				<width>601</width>
 				<height>64</height>
-				<texture colordiffuse="$VAR[DialogHighlightColorVar]" border="20">button/list-select-focus.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]" border="20">button/list-select-focus.png</texture>
 				<visible>ControlGroup(3020).HasFocus</visible>
 			</control>
 			<control type="scrollbar" id="60">
@@ -168,7 +160,7 @@
 				<top>76</top>
 				<bottom>76</bottom>
 				<onleft>3110</onleft>
-				<textureslidernibfocus colordiffuse="$VAR[DialogHighlightColorVar]">button/scrollbar-nib-focus.png</textureslidernibfocus>
+				<textureslidernibfocus colordiffuse="$VAR[HighlightColorVar]">button/scrollbar-nib-focus.png</textureslidernibfocus>
 			</control>
 		</control>
 	</controls>

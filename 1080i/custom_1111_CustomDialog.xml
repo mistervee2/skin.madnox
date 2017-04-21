@@ -1,33 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1111" type="dialog">
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol always="true">3</defaultcontrol>
+	<onunload>ClearProperty(CustomDialogLabel,home)</onunload>
 	<controls>
-		<include content="Dialog_Furniture_BackgroundFade">
-			<param name="visible" value="!Skin.HasSetting(disabledialogbackground)" />
-		</include>
+		<include>Dialog_Furniture_BackgroundFade</include>
+		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<include content="Dialog_Furniture_Background">
 				<param name="label" value="$INFO[Window(home).Property(CustomDialogLabel)]" />
 			</include>
-			<!-- Background Chooser-->
+			<!-- Topbar Settings -->
 			<control type="grouplist" id="3">
-				<visible>String.IsEqual(Window(home).Property(CustomDialogLabel),$LOCALIZE[20445])</visible>
+				<!-- <visible>String.IsEqual(Window(home).Property(CustomDialogLabel),$LOCALIZE[20445])</visible> -->
 				<left>20</left>
 				<top>88</top>
-				<width>974</width>
+				<width>1074</width>
 				<height>420</height>
 				<pagecontrol>60</pagecontrol>
-				<onleft>200</onleft>
-				<onright>60</onright>
+				<onleft>60</onleft>
+				<onright>9001</onright>
 				<onup>100</onup>
 				<ondown>100</ondown>
-				<!-- ????? -->
-				<control type="button" id="101">
-					<label>$LOCALIZE[571]</label>
-					<onclick></onclick>
+				<control type="radiobutton" id="101">
+					<label>$LOCALIZE[24021]</label>
+					<onclick>Skin.ToggleSetting(DisableTopbar)</onclick>
+					<selected>Skin.HasSetting(DisableTopbar)</selected>
+					<radioposx>963</radioposx>
 					<include>Dialog_Button_Default</include>
 					<visible></visible>
 				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31750]</label>
+					<label2>$VAR[TopBarStyleLabelVar]</label2>
+					<include>Dialog_Button_Default</include>
+					<onclick condition="String.IsEmpty(Skin.String(TopBarStyle))">Skin.SetString(TopBarStyle,shadow)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(TopBarStyle),shadow)">Skin.SetString(TopBarStyle,flat)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(TopBarStyle),flat)">Skin.Reset(TopBarStyle)</onclick>
+					<visible>!Skin.HasSetting(DisableTopbar)</visible>
+				</control>
+				<control type="radiobutton" id="103">
+					<label>$LOCALIZE[31040]</label>
+					<onclick>Skin.ToggleSetting(DisableTopbarNowPlaying)</onclick>
+					<selected>!Skin.HasSetting(DisableTopbarNowPlaying)</selected>
+					<radioposx>963</radioposx>
+					<include>Dialog_Button_Default</include>
+					<visible>!Skin.HasSetting(DisableTopbar)</visible>
+				</control>
+				<control type="radiobutton" id="105">
+					<label>$LOCALIZE[31738]</label>
+					<onclick>Skin.ToggleSetting(DisableTopbarItemCount)</onclick>
+					<selected>!Skin.HasSetting(DisableTopbarItemCount)</selected>
+					<radioposx>963</radioposx>
+					<include>Dialog_Button_Default</include>
+					<visible>!Skin.HasSetting(DisableTopbar)</visible>
+				</control>
+				<control type="radiobutton" id="106">
+					<label>$LOCALIZE[31510]</label>
+					<onclick>Skin.ToggleSetting(DisableTopbarWeather)</onclick>
+					<selected>!Skin.HasSetting(DisableTopbarWeather)</selected>
+					<radioposx>963</radioposx>
+					<include>Dialog_Button_Default</include>
+					<visible>!Skin.HasSetting(DisableTopbar)</visible>
+				</control>
+				<control type="radiobutton" id="107">
+					<label>$LOCALIZE[552]</label>
+					<onclick>Skin.ToggleSetting(DisableTopbarDate)</onclick>
+					<selected>!Skin.HasSetting(DisableTopbarDate)</selected>
+					<radioposx>963</radioposx>
+					<include>Dialog_Button_Default</include>
+					<visible>!Skin.HasSetting(DisableTopbar)</visible>
+				</control>
+				<control type="radiobutton" id="108">
+					<label>$LOCALIZE[31737]</label>
+					<onclick>Skin.ToggleSetting(DisableTopbarTime)</onclick>
+					<selected>!Skin.HasSetting(DisableTopbarTime)</selected>
+					<radioposx>963</radioposx>
+					<include>Dialog_Button_Default</include>
+					<visible>!Skin.HasSetting(DisableTopbar)</visible>
+				</control>
+			</control>
+			<control type="grouplist" id="9001">
+				<right>70</right>
+				<top>28</top>
+				<width>400</width>
+				<onleft>3</onleft>
+				<ondown>3</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id" value="9002" />
+					<param name="label" value="$LOCALIZE[15067]" />
+					<param name="onclick" value="Action(close)" />
+				</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1</left>
+				<top>88</top>
+				<height>420</height>
+				<onright>3</onright>
 			</control>
 		</control>
 	</controls>

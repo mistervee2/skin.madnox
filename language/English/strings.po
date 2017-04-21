@@ -2648,6 +2648,26 @@ msgctxt "#31736"
 msgid "Global setting"
 msgstr ""
 
+msgctxt "#31737"
+msgid "Time"
+msgstr ""
+
+msgctxt "#31738"
+msgid "Item Count"
+msgstr ""
+
+msgctxt "#31739"
+msgid "Floor"
+msgstr ""
+
+msgctxt "#31740"
+msgid "Glow"
+msgstr ""
+
+msgctxt "#31741"
+msgid "Highlight"
+msgstr ""
+
 ###########################################################################
 # skinshortcuts Locals start here
 

@@ -39,7 +39,7 @@
 						<top>0</top>
 						<width>70</width>
 						<height>70</height>
-						<texture colordiffuse="grey2">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="grey2">$INFO[Container(211).ListItem.Property(quickicon)]</texture>
 						<visible>Skin.HasSetting(mainmenuicons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 				</itemlayout>
@@ -71,7 +71,7 @@
 						<top>2</top>
 						<width>70</width>
 						<height>70</height>
-						<texture>$INFO[ListItem.Icon]</texture>
+						<texture>$INFO[Container(211).ListItem.Property(quickicon)]</texture>
 						<visible>Skin.HasSetting(mainmenuicons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 				</focusedlayout>
@@ -154,10 +154,17 @@
 					<onclick>SetProperty(chooseProperty,InfoLine)</onclick>
 					<onclick>SendClick(404)</onclick>
 				</control>
-				<control type="button" id="306">
+				<!-- <control type="button" id="306">
 					<description>Change icon</description>
 					<include>Default_SettingButton</include>
 					<label>31746</label>
+					<visible>Skin.HasSetting(mainmenuicons) | String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+				</control> -->
+				<control type="button" id="306">
+					<description>Change icon</description>
+					<include>Default_SettingButton</include>
+					<label>SH 31746</label>
+					<onclick>RunScript(script.skin.helper.service,action=selectimage,skinshortcutsproperty=icon,resourceaddon=resource.images.skinbackgrounds)</onclick>
 					<visible>Skin.HasSetting(mainmenuicons) | String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
 

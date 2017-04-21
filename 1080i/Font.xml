@@ -15,11 +15,6 @@
 
         <!-- Regular Fonts (OpenSans-Regular.ttf) -->
         <font>
-            <name>Font26_Reg</name>
-            <filename>OpenSans-Regular.ttf</filename>
-            <size>24</size>
-        </font>
-          <font>
             <name>Font28_Reg</name>
             <filename>OpenSans-Regular.ttf</filename>
             <size>28</size>
@@ -34,11 +29,17 @@
             <filename>OpenSans-Regular.ttf</filename>
             <size>32</size>
         </font>
+         <font>
+            <name>Font36_Reg</name>
+            <filename>OpenSans-Regular.ttf</filename>
+            <size>36</size>
+        </font>
         <font>
             <name>Font40_Reg</name>
             <filename>OpenSans-Regular.ttf</filename>
             <size>40</size>
         </font>
+
         <!-- Regular Condensed Fonts (OpenSansCond.ttf) -->
        	<font>
             <name>Font25_Cond</name>
@@ -46,14 +47,19 @@
             <size>25</size>
         </font>
          <font>
-            <name>Font38_Cond</name>
-            <filename>OpenSansCond.ttf</filename>
-            <size>38</size>
-        </font>
-        <font>
             <name>Font29_Cond</name>
             <filename>OpenSansCond.ttf</filename>
             <size>29</size>
+        </font>
+        <font>
+            <name>Font32_Cond</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>32</size>
+        </font>
+         <font>
+            <name>Font38_Cond</name>
+            <filename>OpenSansCond.ttf</filename>
+            <size>38</size>
         </font>
          <font>
             <name>Font31_Cond_075</name>

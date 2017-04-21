@@ -5,12 +5,21 @@
 		<label />
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>Font29_Cond</font>
+		<font>Font30_Reg</font>
 		<textcolor>white2</textcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<selectedcolor>$VAR[HighlightColorVar]</selectedcolor>
 		<scroll>false</scroll>
 		<scrollspeed>40</scrollspeed>
+	</default>
+	<default type="fadelabel">
+		<aligny>center</aligny>
+		<font>Font30_Reg</font>
+		<textcolor>white2</textcolor>
+		<selectedcolor>$VAR[HighlightColorVar]</selectedcolor>
+		<scrollspeed>40</scrollspeed>
+		<pauseatend>7000</pauseatend>
+		<scrollout>false</scrollout>
 	</default>
 	<default type="grouplist">
 		<itemgap>0</itemgap>
@@ -97,61 +106,48 @@
 		<showonepage>false</showonepage>
 		<orientation>vertical</orientation>
 	</default>
+	<default type="progress">
+		<height>20</height>
+		<reveal>true</reveal>
+		<texturebg colordiffuse="$VAR[PanelColorVar]" border="8">dialog/progress/progress-back.png</texturebg>
+		<lefttexture />
+		<midtexture colordiffuse="$VAR[HighlightColorVar]" border="8">dialog/progress/progress-mid.png</midtexture>
+		<righttexture />
+		<overlaytexture />
+	</default>
+	<default type="slider">
+		<texturesliderbar border="15">button/slider-back.png</texturesliderbar>
+		<textureslidernib>button/slider-nofocus.png</textureslidernib>
+		<textureslidernibfocus>button/slider-focus.png</textureslidernibfocus>
+		<orientation>horizontal</orientation>
+		<width>200</width>
+		<height>34</height>
+	</default>
+	<default type="sliderex">
+		<texturesliderbar border="15">button/slider-back.png</texturesliderbar>
+		<textureslidernib>button/slider-nofocus.png</textureslidernib>
+		<textureslidernibfocus>button/slider-focus.png</textureslidernibfocus>
+		<texturefocus border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texturefocus>
+		<texturenofocus border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texturenofocus>
+		<sliderwidth>200</sliderwidth>
+		<sliderheight>34</sliderheight>
+		<aligny>center</aligny>
+		<font>Font30_Reg</font>
+		<textcolor>white2</textcolor>
+		<focusedcolor>white</focusedcolor>
+		<disabledcolor>disabled</disabledcolor>
+	</default>
 	<!-- rework end -->
 
 
-	<default type="fadelabel">
-		<aligny>center</aligny>
-		<font>Font_Reg29</font>
-		<textcolor>white2</textcolor>
-		<selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-		<scrollspeed>20</scrollspeed>
-		<pauseatend>3000</pauseatend>
-		<scrollout>false</scrollout>
-	</default>
+	
 	<default type="textbox">
 		<align>justify</align>
 		<font>Font_Reg29</font>
 		<textcolor>white2</textcolor>
 	</default>
-	<default type="progress">
-		<left>0</left>
-		<top>0</top>
-		<texturebg colordiffuse="$VAR[ColorDiffuseVar]">dialogs/progress/progress_back.png</texturebg>
-		<lefttexture colordiffuse="$VAR[ColorDiffuseVar]" border="1">dialogs/progress/progress_left.png</lefttexture>
-		<midtexture colordiffuse="$VAR[ColorDiffuseVar]" border="1">dialogs/progress/progress_mid.png</midtexture>
-		<righttexture colordiffuse="$VAR[ColorDiffuseVar]" border="1">dialogs/progress/progress_right.png</righttexture>
-		<overlaytexture>-</overlaytexture>
-	</default>
-	<default type="slider">
-		<left>0</left>
-		<top>0</top>
-		<controloffsetx>75</controloffsetx>
-		<controloffsety>0</controloffsety>
-		<texturesliderbar>-</texturesliderbar>
-		<textureslidernib>-</textureslidernib>
-		<textureslidernibfocus>-</textureslidernibfocus>
-		<orientation>horizontal</orientation>
-	</default>
-	<default type="sliderex">
-		<left>0</left>
-		<top>0</top>
-		<height>52</height>
-		<textoffsetx>30</textoffsetx>
-		<aligny>center</aligny>
-		<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
-		<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">osd/osd_settings_buttonnf.png</texturenofocus>
-		<font>Font_Reg29</font>
-		<textcolor>white3</textcolor>
-		<selectedcolor>$VAR[ColorDiffuseVar]</selectedcolor>
-		<disabledcolor>grey3</disabledcolor>
-		<sliderwidth>150</sliderwidth>
-		<sliderheight>20</sliderheight>
-		<texturesliderbar border="22,1,22,1">settings/slider_back.png</texturesliderbar>
-		<textureslidernib>settings/orb_nofo.png</textureslidernib>
-		<textureslidernibfocus>settings/orb_fo.png</textureslidernibfocus>
-		<focusedcolor>white</focusedcolor>
-	</default>
+
+	
 	<default type="mover">
 		<left>0</left>
 		<top>0</top>
