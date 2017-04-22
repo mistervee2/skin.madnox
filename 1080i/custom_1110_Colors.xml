@@ -7,8 +7,7 @@
 		<control type="group">
 			<visible>!Window.IsActive(script-skin_helper_service-ColorPicker.xml)</visible>
 			<include content="Dialog_Furniture_IconBackground">
-				<param name="labelid" value="" />
-				<param name="label" value="$VAR[DialogHeading1110ColorsVar]" />
+				<param name="label">$VAR[DialogHeading1110ColorsVar]</param>
 			</include>
 			<control type="grouplist" id="200">
 				<left>37</left>
@@ -25,7 +24,7 @@
 					<onclick>Dialog.Close(all)</onclick>
 					<onclick>ActivateWindowAndFocus(skinsettings,8000,2)</onclick>
 					<include content="Dialog_Button_Icon">
-						<param name="icon" value="icon/mediamenu/skinsettings.png" />
+						<param name="icon">icon/mediamenu/skinsettings.png</param>
 					</include>
 				</control>
 			</control>

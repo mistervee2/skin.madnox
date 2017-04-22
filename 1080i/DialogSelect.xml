@@ -6,7 +6,7 @@
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<include content="Dialog_Furniture_Background">
-				<param name="labelid" value="1" />
+				<param name="labelid">1</param>
 			</include>
 			<control type="image">
 				<centerleft>50%</centerleft>
@@ -19,7 +19,7 @@
 			</control>
 			<control type="list" id="3">
 				<include content="Dialog_DefaultList">
-					<param name="id" value="3" />
+					<param name="id">3</param>
 				</include>
 			</control>
 			<control type="list" id="6">
@@ -104,12 +104,12 @@
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<include content="Dialog_Button_TopRight">
-					<param name="id" value="5" />
-					<param name="label" value="" />
+					<param name="id">5</param>
+					<param name="label"></param>
 				</include>
 				<include content="Dialog_Button_TopRight">
-					<param name="id" value="7" />
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="id">7</param>
+					<param name="label">$LOCALIZE[222]</param>
 				</include>
 			</control>
 			<control type="scrollbar" id="60">

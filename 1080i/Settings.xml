@@ -3,19 +3,19 @@
 	<defaultcontrol always="true">8000</defaultcontrol>
 	<controls>
 		<!-- Backdrop -->
-		<include content="Fanart_Default">
-			<param name="imagepath" value="$VAR[SettingsFanartVar]" />
-			<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]" />
-			<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]" />
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[SettingsFanartVar]</param>
+			<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]</param>
+			<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]</param>
 		</include>
-		<include>Panel_Fanart_SideShade</include>
 		<!-- Floor -->
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
 			<include content="Animation_Slide_Bottom">
-				<param name="slide" value="218" />
-				<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]" />
-				<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]" />
+				<param name="slide">218</param>
+				<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]</param>
+				<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]</param>
 			</include>
 			<include>Floor_Background_Default</include>
 		</control>
@@ -24,7 +24,7 @@
 			<include>Animation_Zoom_OpenClose</include>
 			<animation effect="slide" end="0,-5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
 			<include content="Panel_Background_Default">
-				<param name="reflect" value="!Skin.HasSetting(SettingsHideFloor)" />
+				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
 			<control type="panel" id="8000">
 				<left>131</left>
@@ -54,9 +54,7 @@
 				</itemlayout>
 				<focusedlayout height="258" width="422">
 					<control type="group">
-						<animation type="Focus">
-							<effect type="zoom" center="196,114" start="100" end="107" time="250" tween="sine" />
-						</animation>
+						<animation effect="zoom" center="196,114" start="100" end="107" time="250" tween="sine">Focus</animation>
 						<control type="image">
 							<width>392</width>
 							<height>228</height>
@@ -159,13 +157,13 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
-				<param name="slide" value="90" />
-				<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]" />
-				<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]" />
+				<param name="slide">90</param>
+				<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]</param>
+				<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]</param>
 			</include>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[13000]" />
-				<param name="breadcrumbs_icon" value="settings.png" />
+				<param name="breadcrumbs_label">$LOCALIZE[13000]</param>
+				<param name="breadcrumbs_icon">settings.png</param>
 			</include>
 		</control>
 		<!-- Media Menu -->

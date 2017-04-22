@@ -7,7 +7,7 @@
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<include content="Dialog_Furniture_Background">
-				<param name="label" value="$INFO[Window(home).Property(CustomDialogLabel)]" />
+				<param name="label">$INFO[Window(home).Property(CustomDialogLabel)]</param>
 			</include>
 			<!-- Topbar Settings -->
 			<control type="grouplist" id="3">
@@ -89,9 +89,9 @@
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<include content="Dialog_Button_TopRight">
-					<param name="id" value="9002" />
-					<param name="label" value="$LOCALIZE[15067]" />
-					<param name="onclick" value="Action(close)" />
+					<param name="id">9002</param>
+					<param name="label">$LOCALIZE[15067]</param>
+					<param name="onclick">Action(close)</param>
 				</include>
 			</control>
 			<control type="scrollbar" id="60">

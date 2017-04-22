@@ -1,32 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<include name="Fanart_Default">
+	<include name="Background_Nowplaying">
+		<control type="visualisation">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasAudio + !Skin.HasSetting(DisableBackgroundViz)</visible>
+		</control>
+		<control type="videowindow">
+			<include>FullscreenDimensions</include>
+			<visible>Player.HasVideo + !Skin.HasSetting(DisableBackgroundVideo)</visible>
+		</control>
+	</include>
+	<include name="Background_Fanart_Default">
 		<param name="opencondition">true</param>
 		<param name="closecondition">true</param>
+		<param name="sideshade">true</param>
+		<param name="fullshade">false</param>
 		<definition>
-			<control type="visualisation">
-				<include>FullscreenDimensions</include>
-				<visible>Player.HasAudio + !Skin.HasSetting(DisableBackgroundViz)</visible>
-			</control>
-			<control type="videowindow">
-				<include>FullscreenDimensions</include>
-				<visible>Player.HasVideo + !Skin.HasSetting(DisableBackgroundVideo)</visible>
-			</control>
-			<control type="multiimage">
-				<include>FullscreenDimensions</include>
-				<aspecratio>scale</aspecratio>
-				<imagepath background="true">$PARAM[imagepath]</imagepath>
-				<randomize>true</randomize>
-				<fadetime>600</fadetime>
-				<animation type="Conditional" condition="Skin.HasSetting(animatedbg)">
-					<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
-					<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
-				</animation>
+			<control type="group">
+				<visible>$EXP[Fanart_Visible_MediaPlaying]</visible>
 				<animation effect="fade" time="240" condition="$PARAM[opencondition]">WindowOpen</animation>
 				<animation effect="fade" time="240" condition="$PARAM[closecondition]">WindowClose</animation>
 				<animation effect="fade" time="240">Visible</animation>
 				<animation effect="fade" time="240">Hidden</animation>
-				<visible>$EXP[Fanart_Visible_MediaPlaying]</visible>
+				<control type="multiimage">
+					<include>FullscreenDimensions</include>
+					<aspecratio>scale</aspecratio>
+					<imagepath background="true">$PARAM[imagepath]</imagepath>
+					<randomize>true</randomize>
+					<fadetime>600</fadetime>
+					<animation type="Conditional" condition="Skin.HasSetting(animatedbg)">
+						<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
+						<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
+					</animation>
+				</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture colordiffuse="$VAR[BackgroundColorVar]">panel/sideshade.png</texture>
+					<visible>$PARAM[sideshade]</visible>
+				</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
+					<visible>$PARAM[fullshade]</visible>
+				</control>
 			</control>
 		</definition>
 	</include>

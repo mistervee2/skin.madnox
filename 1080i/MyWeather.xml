@@ -3,24 +3,24 @@
 	<defaultcontrol>7500</defaultcontrol>
 	<controls>
 		<!-- Backdrop -->
-		<include content="Fanart_Default">
-			<param name="imagepath" value="$VAR[WeatherFanartVar]" />
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[WeatherFanartVar]</param>
 		</include>
-		<include>Panel_Fanart_SideShade</include>
 		<!-- Floor -->
 		<control type="group">
 			<visible>!Skin.HasSetting(WeatherHideFloor)</visible>
 			<include content="Animation_Slide_Bottom">
-				<param name="slide" value="218" />
+				<param name="slide">218</param>
 			</include>
-			<include>Floor_Background_Middle</include>
+			<include>Floor_Background_Default</include>
 		</control>
 		<!-- Content -->
 		<control type="group">
 			<include>Animation_Zoom_OpenClose</include>
 			<animation effect="slide" end="0,5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(WeatherHideTopBar)">Conditional</animation>
 			<include content="Panel_Background_Default">
-				<param name="reflect" value="!Skin.HasSetting(WeatherHideFloor)" />
+				<param name="reflect">!Skin.HasSetting(WeatherHideFloor)</param>
 			</include>
 			<control type="image">
 				<left>960</left>
@@ -269,34 +269,34 @@
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
 							<include content="WeatherDailyList">
-								<param name="item" value="1" />
+								<param name="item">1</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="2" />
+								<param name="item">2</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="3" />
+								<param name="item">3</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="4" />
+								<param name="item">4</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="5" />
+								<param name="item">5</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="6" />
+								<param name="item">6</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="7" />
+								<param name="item">7</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="8" />
+								<param name="item">8</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="9" />
+								<param name="item">9</param>
 							</include>
 							<include content="WeatherDailyList">
-								<param name="item" value="10" />
+								<param name="item">10</param>
 							</include>
 						</control>
 						<control type="grouplist" id="7502">
@@ -314,13 +314,13 @@
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
 							<include content="Weather36hourList">
-								<param name="item" value="1" />
+								<param name="item">1</param>
 							</include>
 							<include content="Weather36hourList">
-								<param name="item" value="2" />
+								<param name="item">2</param>
 							</include>
 							<include content="Weather36hourList">
-								<param name="item" value="3" />
+								<param name="item">3</param>
 							</include>
 						</control>
 						<control type="grouplist" id="7503">
@@ -338,13 +338,13 @@
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
 							<include content="WeatherWeekendList">
-								<param name="item" value="1" />
+								<param name="item">1</param>
 							</include>
 							<include content="WeatherWeekendList">
-								<param name="item" value="2" />
+								<param name="item">2</param>
 							</include>
 							<include content="WeatherWeekendList">
-								<param name="item" value="3" />
+								<param name="item">3</param>
 							</include>
 						</control>
 						<control type="grouplist" id="7504">
@@ -362,76 +362,76 @@
 							<orientation>vertical</orientation>
 							<usecontrolcoords>true</usecontrolcoords>
 							<include content="WeatherHourlyList">
-								<param name="item" value="1" />
+								<param name="item">1</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="2" />
+								<param name="item">2</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="3" />
+								<param name="item">3</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="4" />
+								<param name="item">4</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="5" />
+								<param name="item">5</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="6" />
+								<param name="item">6</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="7" />
+								<param name="item">7</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="8" />
+								<param name="item">8</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="9" />
+								<param name="item">9</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="10" />
+								<param name="item">10</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="11" />
+								<param name="item">11</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="12" />
+								<param name="item">12</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="13" />
+								<param name="item">13</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="14" />
+								<param name="item">14</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="15" />
+								<param name="item">15</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="16" />
+								<param name="item">16</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="17" />
+								<param name="item">17</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="18" />
+								<param name="item">18</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="19" />
+								<param name="item">19</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="20" />
+								<param name="item">20</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="21" />
+								<param name="item">21</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="22" />
+								<param name="item">22</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="23" />
+								<param name="item">23</param>
 							</include>
 							<include content="WeatherHourlyList">
-								<param name="item" value="24" />
+								<param name="item">24</param>
 							</include>
 						</control>
 						<control type="button" id="7505">
@@ -514,19 +514,19 @@
 							</control>
 						</control>
 						<include content="WeatherMapItem">
-							<param name="item" value="1" />
-							<param name="visible" value="String.IsEqual(Window(weather).Property(Weather.CurrentView),map1)" />
-							<param name="key" value="weather/key2.png" />
+							<param name="item">1</param>
+							<param name="visible">String.IsEqual(Window(weather).Property(Weather.CurrentView),map1)</param>
+							<param name="key">weather/key2.png</param>
 						</include>
 						<include content="WeatherMapItem">
-							<param name="item" value="2" />
-							<param name="visible" value="String.IsEqual(Window(weather).Property(Weather.CurrentView),map2)" />
-							<param name="key" value="weather/key1.png" />
+							<param name="item">2</param>
+							<param name="visible">String.IsEqual(Window(weather).Property(Weather.CurrentView),map2)</param>
+							<param name="key">weather/key1.png</param>
 						</include>
 						<include content="WeatherMapItem">
-							<param name="item" value="3" />
-							<param name="visible" value="String.IsEqual(Window(weather).Property(Weather.CurrentView),map3)" />
-							<param name="key" value="weather/key1.png" />
+							<param name="item">3</param>
+							<param name="visible">String.IsEqual(Window(weather).Property(Weather.CurrentView),map3)</param>
+							<param name="key">weather/key1.png</param>
 						</include>
 					</control>
 				</control>
@@ -536,11 +536,11 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(WeatherHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
-				<param name="slide" value="90" />
+				<param name="slide">90</param>
 			</include>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[12600]" />
-				<param name="breadcrumbs_icon" value="weather.png" />
+				<param name="breadcrumbs_label">$LOCALIZE[12600]</param>
+				<param name="breadcrumbs_icon">weather.png</param>
 			</include>
 		</control>
 		<!-- Media Menu -->
@@ -553,89 +553,89 @@
 				<onright>7500</onright>
 				<onback>7500</onback>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="3" />
-					<param name="label" value="$INFO[Control.GetLabel(3)]" />
-					<param name="icon" value="icon/mediamenu/pin.png" />
-					<param name="onclick" value="Weather.LocationNext" />
+					<param name="id">3</param>
+					<param name="label">$INFO[Control.GetLabel(3)]</param>
+					<param name="icon">icon/mediamenu/pin.png</param>
+					<param name="onclick">Weather.LocationNext</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="2" />
-					<param name="label" value="$LOCALIZE[184]" />
-					<param name="icon" value="icon/mediamenu/refresh.png" />
+					<param name="id">2</param>
+					<param name="label">$LOCALIZE[184]</param>
+					<param name="icon">icon/mediamenu/refresh.png</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9001" />
-					<param name="icon" value="icon/mediamenu/settings.png" />
-					<param name="label" value="$LOCALIZE[5]" />
-					<param name="onclick" value="ActivateWindow(servicesettings,weather)" />
+					<param name="id">9001</param>
+					<param name="icon">icon/mediamenu/settings.png</param>
+					<param name="label">$LOCALIZE[5]</param>
+					<param name="onclick">ActivateWindow(servicesettings,weather)</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9002" />
-					<param name="icon" value="icon/mediamenu/weather.png" />
-					<param name="label" value="$LOCALIZE[31896]" />
-					<param name="onfocus" value="ClearProperty(Weather.CurrentView,weather)" />
+					<param name="id">9002</param>
+					<param name="icon">icon/mediamenu/weather.png</param>
+					<param name="label">$LOCALIZE[10508]</param>
+					<param name="onfocus">ClearProperty(Weather.CurrentView,weather)</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9003" />
-					<param name="icon" value="icon/mediamenu/repeat.png" />
-					<param name="label" value="$LOCALIZE[33034]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,36hour)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(36hour.IsFetched))" />
+					<param name="id">9003</param>
+					<param name="icon">icon/mediamenu/repeat.png</param>
+					<param name="label">$LOCALIZE[33034]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,36hour)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(36hour.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9004" />
-					<param name="icon" value="icon/mediamenu/calendar.png" />
-					<param name="label" value="$LOCALIZE[33037]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,weekend)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Weekend.IsFetched))" />
+					<param name="id">9004</param>
+					<param name="icon">icon/mediamenu/calendar.png</param>
+					<param name="label">$LOCALIZE[33037]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,weekend)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(Weekend.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9005" />
-					<param name="icon" value="icon/mediamenu/time.png" />
-					<param name="label" value="$LOCALIZE[33036]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,hourly)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))" />
+					<param name="id">9005</param>
+					<param name="icon">icon/mediamenu/time.png</param>
+					<param name="label">$LOCALIZE[33036]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,hourly)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9006" />
-					<param name="icon" value="icon/mediamenu/map.png" />
-					<param name="label" value="$LOCALIZE[33035]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,map)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Radar))" />
+					<param name="id">9006</param>
+					<param name="icon">icon/mediamenu/map.png</param>
+					<param name="label">$LOCALIZE[33035]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,map)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(Radar))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9007" />
-					<param name="icon" value="icon/mediamenu/infrared.png" />
-					<param name="label" value="$INFO[Window(weather).Property(Map.1.Heading)]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,map1)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Map.1.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))" />
+					<param name="id">9007</param>
+					<param name="icon">icon/mediamenu/infrared.png</param>
+					<param name="label">$INFO[Window(weather).Property(Map.1.Heading)]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,map1)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(Map.1.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9008" />
-					<param name="icon" value="icon/mediamenu/satellite.png" />
-					<param name="label" value="$INFO[Window(weather).Property(Map.2.Heading)]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,map2)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Map.2.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))" />
+					<param name="id">9008</param>
+					<param name="icon">icon/mediamenu/satellite.png</param>
+					<param name="label">$INFO[Window(weather).Property(Map.2.Heading)]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,map2)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(Map.2.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9009" />
-					<param name="icon" value="icon/mediamenu/radar.png" />
-					<param name="label" value="$INFO[Window(weather).Property(Map.3.Heading)]" />
-					<param name="onfocus" value="SetProperty(Weather.CurrentView,map3)" />
-					<param name="visible" value="!String.IsEmpty(Window(weather).Property(Map.3.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))" />
+					<param name="id">9009</param>
+					<param name="icon">icon/mediamenu/radar.png</param>
+					<param name="label">$INFO[Window(weather).Property(Map.3.Heading)]</param>
+					<param name="onfocus">SetProperty(Weather.CurrentView,map3)</param>
+					<param name="visible">!String.IsEmpty(Window(weather).Property(Map.3.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9010" />
-					<param name="icon" value="icon/mediamenu/image.png" />
-					<param name="label" value="$LOCALIZE[14018]" />
-					<param name="onclick" value="ActivateWindow(1122)" />
+					<param name="id">9010</param>
+					<param name="icon">icon/mediamenu/image.png</param>
+					<param name="label">$LOCALIZE[14018]</param>
+					<param name="onclick">ActivateWindow(1122)</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="9011" />
-					<param name="icon" value="icon/mediamenu/arrowleft.png" />
-					<param name="label" value="$LOCALIZE[31633]" />
-					<param name="onclick" value="ActivateWindow(1113)" />
-					<param name="visible" value="!Skin.HasSetting(disablequicknav)" />
+					<param name="id">9011</param>
+					<param name="icon">icon/mediamenu/arrowleft.png</param>
+					<param name="label">$LOCALIZE[31633]</param>
+					<param name="onclick">ActivateWindow(1113)</param>
+					<param name="visible">!Skin.HasSetting(disablequicknav)</param>
 				</include>
 			</control>
 		</control>

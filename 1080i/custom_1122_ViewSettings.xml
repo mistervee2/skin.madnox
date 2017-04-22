@@ -6,12 +6,12 @@
 			<visible>!Window.IsActive(DialogSelect.xml) + !Window.IsActive(1110) + !Window.IsActive(1111)</visible>
 			<left>-485</left>
 			<include content="Animation_Dialog_MediaMenu">
-				<param name="width" value="485" />
+				<param name="width">485</param>
 			</include>
 			<include content="Furniture_MediaMenu_Background">
-				<param name="width" value="480" />
-				<param name="glowleft" value="471" />
-				<param name="dialog" value="1122" />
+				<param name="width">480</param>
+				<param name="glowleft">471</param>
+				<param name="dialog">1122</param>
 			</include>
 			<control type="grouplist" id="9001">
 				<left>0</left>

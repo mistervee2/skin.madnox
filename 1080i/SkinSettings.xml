@@ -4,19 +4,19 @@
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|madnox-quicknav)</onunload>
 	<controls>
 		<!-- Backdrop -->
-		<include content="Fanart_Default">
-			<param name="imagepath" value="$VAR[SettingsFanartVar]" />
-			<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(settings)]" />
-			<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(1116) | Window.Next(settings)]" />
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[SettingsFanartVar]</param>
+			<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(settings)]</param>
+			<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(settings)]</param>
 		</include>
-		<include>Panel_Fanart_SideShade</include>
 		<!-- Floor -->
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
 			<include content="Animation_Slide_Bottom">
-				<param name="slide" value="218" />
-				<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(settings)]" />
-				<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(1116) | Window.Next(settings)]" />
+				<param name="slide">218</param>
+				<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(settings)]</param>
+				<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(settings)]</param>
 			</include>
 			<include>Floor_Background_Default</include>
 		</control>
@@ -25,7 +25,7 @@
 			<include>Animation_Zoom_OpenClose</include>
 			<animation effect="slide" end="0,-5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
 			<include content="Panel_Background_Settings">
-				<param name="reflect" value="!Skin.HasSetting(SettingsHideFloor)" />
+				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
 			<control type="label">
 				<top>100</top>
@@ -65,6 +65,7 @@
 						<height>68</height>
 						<textoffsetx>25</textoffsetx>
 						<font>Font36_Reg</font>
+						<focusedcolor>white</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
@@ -853,18 +854,25 @@
 					</control>
 				</control>
 			</control>
+			<control type="scrollbar" id="60">
+				<right>81</right>
+				<top>200</top>
+				<bottom>132</bottom>
+				<height>800</height>
+				<onleft>2</onleft>
+			</control>
 		</control>
 		<!-- Topbar -->
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
-				<param name="slide" value="90" />
-				<param name="opencondition" value="![Window.Previous(SettingsCategory.xml) | Window.Previous(1116) | Window.Previous(settings)]" />
-				<param name="closecondition" value="![Window.Next(SettingsCategory.xml) | Window.Next(1116) | Window.Next(settings)]" />
+				<param name="slide">90</param>
+				<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(settings)]</param>
+				<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(settings)]</param>
 			</include>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[5] / $LOCALIZE[20077]" />
-				<param name="breadcrumbs_icon" value="settings.png" />
+				<param name="breadcrumbs_label">$LOCALIZE[5] / $LOCALIZE[20077]</param>
+				<param name="breadcrumbs_icon">settings.png</param>
 			</include>
 		</control>
 		<!-- Media Menu -->

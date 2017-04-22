@@ -7,8 +7,7 @@
 		<control type="group">
 			<visible>!Window.IsActive(DialogSelect.xml) + !Window.IsActive(virtualkeyboard) + !Window.IsActive(DialogNumeric.xml)</visible>
 			<include content="Dialog_Furniture_IconBackground">
-				<param name="labelid" value="" />
-				<param name="label" value="$VAR[DialogHeadingColorPickerVar]" />
+				<param name="label">$VAR[DialogHeadingColorPickerVar]</param>
 			</include>
 			<control type="grouplist" id="200">
 				<left>37</left>
@@ -24,32 +23,32 @@
 				<!-- edit manual -->
 				<control type="button" id="3010">
 					<include content="Dialog_Button_Icon">
-						<param name="icon" value="icon/mediamenu/keyboard.png" />
+						<param name="icon">icon/mediamenu/keyboard.png</param>
 					</include>
 				</control>
 				<!-- choose color palette -->
 				<control type="button" id="3030">
 					<include content="Dialog_Button_Icon">
-						<param name="icon" value="icon/mediamenu/color.png" />
+						<param name="icon">icon/mediamenu/color.png</param>
 					</include>
 				</control>
 				<!-- None (reset to default) -->
 				<control type="button" id="3011">
 					<include content="Dialog_Button_Icon">
-						<param name="icon" value="icon/mediamenu/remove.png" />
+						<param name="icon">icon/mediamenu/remove.png</param>
 					</include>
 				</control>
 				<!-- Cancel -->
 				<control type="button" id="4000">
 					<onclick>Action(close)</onclick>
 					<include content="Dialog_Button_Icon">
-						<param name="icon" value="icon/mediamenu/cancel.png" />
+						<param name="icon">icon/mediamenu/cancel.png</param>
 					</include>
 				</control>
 				<!-- Save button -->
 				<control type="button" id="3012">
 					<include content="Dialog_Button_Icon">
-						<param name="icon" value="icon/mediamenu/save.png" />
+						<param name="icon">icon/mediamenu/save.png</param>
 					</include>
 				</control>
 			</control>

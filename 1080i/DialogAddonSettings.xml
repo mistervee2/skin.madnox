@@ -134,16 +134,16 @@
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<include content="Dialog_Button_TopRight">
-					<param name="id" value="10" />
-					<param name="label" value="" />
+					<param name="id">10"</param>
+					<param name="label">"</param>
 				</include>
 				<include content="Dialog_Button_TopRight">
-					<param name="id" value="11" />
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="id">11"</param>
+					<param name="label">$LOCALIZE[222]"</param>
 				</include>
 				<include content="Dialog_Button_TopRight">
-					<param name="id" value="12" />
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="id">12"</param>
+					<param name="label">$LOCALIZE[222]"</param>
 				</include>
 			</control>
 			<control type="scrollbar" id="60">

@@ -8,6 +8,12 @@
 		<animation effect="fade" delay="200" start="0" end="100" time="300">Visible</animation>
 		<animation effect="fade" start="100" end="0" time="300">Hidden</animation>
 	</include>
+	<include name="Animation_CommonFade">
+		<animation effect="fade" time="160">Visible</animation>
+		<animation effect="fade" time="160">Hidden</animation>
+		<animation effect="fade" time="400">WindowOpen</animation>
+		<animation effect="fade" time="160">WindowClose</animation>
+	</include>
 	<include name="Animation_Dialog_Popup">
 		<animation type="WindowOpen" reversible="false">
 			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
@@ -27,18 +33,21 @@
 		</animation>
 	</include>
 	<include name="Animation_Dialog_MediaMenu">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="slide" start="0" end="$PARAM[width]" time="320" delay="0" tween="cubic" easing="in" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="slide" start="$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="out" />
-		</animation>
-		<animation type="Visible" reversible="false">
-			<effect type="slide" start="-$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="in" />
-		</animation>
-		<animation type="Hidden" reversible="false">
-			<effect type="slide" start="0" end="-$PARAM[width]" time="320" delay="0" tween="cubic" easing="out" />
-		</animation>
+		<param name="width">430</param>
+		<definition>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="slide" start="0" end="$PARAM[width]" time="320" delay="0" tween="cubic" easing="in" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="slide" start="$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="out" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="slide" start="-$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="slide" start="0" end="-$PARAM[width]" time="320" delay="0" tween="cubic" easing="out" />
+			</animation>
+		</definition>
 	</include>
 	<include name="Animation_Zoom_OpenClose">
 		<animation type="WindowOpen" reversible="false">
@@ -118,16 +127,10 @@
 			</animation>
 		</definition>
 	</include>
-
-	<include name="Animation_CommonFade">
-		<animation effect="fade" time="160">Visible</animation>
-		<animation effect="fade" time="160">Hidden</animation>
-		<animation effect="fade" time="400">WindowOpen</animation>
-		<animation effect="fade" time="160">WindowClose</animation>
-	</include>
-
-
 	<!-- REWORK ANIMATIONS END -->
+
+
+
 
 
 	<!-- Common -->

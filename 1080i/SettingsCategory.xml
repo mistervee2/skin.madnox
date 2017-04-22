@@ -3,19 +3,19 @@
 	<defaultcontrol>3</defaultcontrol>
 	<controls>
 		<!-- Backdrop -->
-		<include content="Fanart_Default">
-			<param name="imagepath" value="$VAR[SettingsFanartVar]" />
-			<param name="opencondition" value="![Window.Previous(settings) | Window.Previous(skinsettings)]" />
-			<param name="closecondition" value="![Window.Next(settings) | Window.Next(skinsettings)]" />
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[SettingsFanartVar]</param>
+			<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]</param>
+			<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]</param>
 		</include>
-		<include>Panel_Fanart_SideShade</include>
 		<!-- Floor -->
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
 			<include content="Animation_Slide_Bottom">
-				<param name="slide" value="218" />
-				<param name="opencondition" value="![Window.Previous(settings) | Window.Previous(skinsettings)]" />
-				<param name="closecondition" value="![Window.Next(settings) | Window.Next(skinsettings)]" />
+				<param name="slide">218</param>
+				<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]</param>
+				<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]</param>
 			</include>
 			<include>Floor_Background_Default</include>
 		</control>
@@ -24,7 +24,7 @@
 			<include>Animation_Zoom_OpenClose</include>
 			<animation effect="slide" end="0,-5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
 			<include content="Panel_Background_Settings">
-				<param name="reflect" value="!Skin.HasSetting(SettingsHideFloor)" />
+				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
 			<!-- Left menu -->
 			<control type="label" id="2">
@@ -88,15 +88,14 @@
 				<bottom>116</bottom>
 				<width>1303</width>
 				<height>120</height>
-				<align>left</align>
 				<textcolor>white2</textcolor>
 				<font>Font29_Cond</font>
 				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="scrollbar" id="60">
 				<right>81</right>
-				<top>150</top>
-				<bottom></bottom>
+				<top>200</top>
+				<bottom>267</bottom>
 				<height>800</height>
 				<onleft>5</onleft>
 			</control>
@@ -115,13 +114,13 @@
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
-				<param name="slide" value="90" />
-				<param name="opencondition" value="![Window.Previous(settings) | Window.Previous(skinsettings)]" />
-				<param name="closecondition" value="![Window.Next(settings) | Window.Next(skinsettings)]" />
+				<param name="slide">90</param>
+				<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]</param>
+				<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]</param>
 			</include>
 			<include content="TopBar">
-				<param name="breadcrumbs_label" value="$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]" />
-				<param name="breadcrumbs_icon" value="settings.png" />
+				<param name="breadcrumbs_label">$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]</param>
+				<param name="breadcrumbs_icon">settings.png</param>
 			</include>
 		</control>
 		<!-- Media Menu -->

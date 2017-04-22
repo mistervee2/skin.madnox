@@ -5,12 +5,12 @@
 		<control type="group">
 			<left>-230</left>
 			<include content="Animation_Dialog_MediaMenu">
-				<param name="width" value="230" />
+				<param name="width">230</param>
 			</include>
 			<include content="Furniture_MediaMenu_Background">
-				<param name="width" value="230" />
-				<param name="glowleft" value="221" />
-				<param name="dialog" value="1113" />
+				<param name="width">230</param>
+				<param name="glowleft">221</param>
+				<param name="dialog">1113</param>
 			</include>
 			<control type="list" id="9001">
 				<width>220</width>

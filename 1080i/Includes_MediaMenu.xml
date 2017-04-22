@@ -48,7 +48,7 @@
 				<visible>$PARAM[visible]</visible>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
-			<control type="image" id="9$PARAM[id]01">
+			<control type="image" id="9$PARAM[id]02">
 				<top>-75</top>
 				<left>10</left>
 				<width>70</width>
@@ -57,7 +57,7 @@
 				<visible>$PARAM[visible]</visible>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
-			<control type="label" id="9$PARAM[id]02">
+			<control type="label" id="9$PARAM[id]03">
 				<top>-85</top>
 				<left>80</left>
 				<width>320</width>
@@ -70,7 +70,7 @@
 				<visible>$PARAM[visible]</visible>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
-			<control type="label" id="9$PARAM[id]02">
+			<control type="label" id="9$PARAM[id]04">
 				<top>-85</top>
 				<left>80</left>
 				<width>320</width>
@@ -148,7 +148,7 @@
 			<param name="label" value="$LOCALIZE[31217]: $INFO[Control.GetLabel(20)]" />
 			<param name="icon" value="icon/mediamenu/skinsettings.png" />
 			<param name="onclick" value="SettingsLevelChange" />
-			<param name="visible" value="!Window.IsActive(settings)" />
+			<param name="visible" value="!Window.IsActive(settings) + !Window.IsActive(profiles) + !Window.IsActive(skinsettings)" />
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9010" />
