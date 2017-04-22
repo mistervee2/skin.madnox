@@ -21,17 +21,9 @@
   <!--  old colors (a mass find and replace is required) -->
   <color name="base">ee114076</color>
   <color name="base1">dd114076</color>
-  <color name="white2">FFe5e5e5</color>
-  <color name="white3">abFFFFFF</color>
-  <color name="white4">FFdfdfdf</color>
-  <color name="white5">48FFFFFF</color>
-  <color name="white6">d0FFFFFF</color>
-  <color name="grey2">88FFFFFF</color>
-  <color name="grey3">33FFFFFF</color>
   <color name="black">FF000000</color>
   <color name="selected">9b3cd2fd</color>
   <color name="dialogheader">DDced8da</color>
-  <color name="floor">FFFFFFFF</color>
   <color name="high">FFC61F26</color>
   <color name="low">FF0055be</color>
   <color name="green">FF00FF00</color>
