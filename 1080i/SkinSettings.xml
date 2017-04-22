@@ -418,6 +418,23 @@
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreFanart&amp;type=resource.images.musicgenrefanart)</onclick>
                 	</control> -->
                 </control>
+                <!--  Artwork -->
+				<control type="grouplist" id="8005">
+					<left>426</left>
+					<top>200</top>
+					<width>1393</width>
+					<height>748</height>
+					<pagecontrol>60</pagecontrol>
+					<onleft>8000</onleft>
+					<onright>60</onright>
+					<visible>Container(8000).Hasfocus(5)</visible>
+					<control type="button" id="301">
+						<label>Manage Color Themes</label>
+						<include>Settings_Button</include>
+						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
+						<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+					</control>
+                </control>
                 <!-- Scripts -->
                 <control type="grouplist" id="8008">
                 	<left>426</left>
