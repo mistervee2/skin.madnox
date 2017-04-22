@@ -41,7 +41,7 @@
 				<width>323</width>
 				<height>612</height>
 				<onleft>9000</onleft>
-				<onright>8001</onright>
+				<onright>8010</onright>
 				<visible>!Window.IsActive(script-skinshortcuts.xml)</visible>
 				<itemlayout height="68" width="323">
 					<control type="label">
@@ -120,8 +120,9 @@
 				<visible>!Container(8000).Hasfocus(9)</visible>
 			</control>
 			<!-- Main menu -->
-			<control type="group" id="8001">
-				<control type="grouplist">
+			<control type="group" id="8010">
+				<visible>!Window.IsActive(script-skinshortcuts.xml)</visible>
+				<control type="grouplist" id="8001">
 					<left>426</left>
 					<top>200</top>
 					<width>1393</width>
@@ -182,7 +183,7 @@
 					</control>
 				</control>
 				<!-- General -->
-				<control type="grouplist" id="8001">
+				<control type="grouplist" id="8002">
 					<left>426</left>
 					<top>200</top>
 					<width>1393</width>
@@ -258,7 +259,7 @@
 					</control>
 				</control>
 				<!-- Furniture -->
-				<control type="grouplist" id="8004">
+				<control type="grouplist" id="8003">
 					<left>426</left>
 					<top>200</top>
 					<width>1393</width>
@@ -309,7 +310,7 @@
 					</control>
 				</control>
 				<!--  Artwork -->
-				<control type="grouplist" id="8003">
+				<control type="grouplist" id="8004">
 					<left>426</left>
 					<top>200</top>
 					<width>1393</width>
@@ -418,7 +419,7 @@
                 	</control> -->
                 </control>
                 <!-- Scripts -->
-                <control type="grouplist" id="8004">
+                <control type="grouplist" id="8008">
                 	<left>426</left>
                 	<top>200</top>
                 	<width>1393</width>
@@ -653,7 +654,7 @@
 						<visible>System.HasAddon(service.library.data.provider)</visible>
 					</control> -->
 				</control>
-				<control type="grouplist" id="8005">	<!-- CREDIT SCREEN -->
+				<control type="grouplist" id="8009">	<!-- CREDIT SCREEN -->
 					<left>471</left>
 					<top>125</top>
 					<width>1303</width>
@@ -783,7 +784,7 @@
 						<texture>kodi.png</texture>
 					</control>
 				</control>
-				<control type="grouplist" id="8009">
+				<control type="grouplist" id="8010">
 					<left>426</left>
 					<top>200</top>
 					<width>1393</width>
