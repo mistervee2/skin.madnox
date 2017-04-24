@@ -5,7 +5,7 @@
 		<value condition="Window.IsActive(games)">$VAR[GamesHighlightColorVar]</value>
 		<value condition="Window.IsActive(pictures)">$VAR[PicturesHighlightColorVar]</value>
 		<value condition="Window.IsActive(weather)">$VAR[WeatherHighlightColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">$VAR[SettingsHighlightColorVar]</value>
+		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)  | Window.IsActive(screencalibration)">$VAR[SettingsHighlightColorVar]</value>
 		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicHighlightColorVar]</value>
 		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[TVHighlightColorVar]</value>
 		<value condition="Window.IsActive(radiochannels) | Window.IsActive(radiorecordings) | Window.IsActive(radioguide) | Window.IsActive(radiotimers) | Window.IsActive(radiosearch) | Window.IsActive(radiotimerrules) | Window.IsActive(fullscreenradio)">$VAR[RadioHighlightColorVar]</value>

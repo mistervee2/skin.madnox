@@ -57,7 +57,7 @@
 		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
 		<value>.png</value>
 	</variable>
-	
+
 	<!-- END Viewtype Art -->
 	<!-- Dialogs -->
 	<variable name="DialogHeading1110ColorsVar">

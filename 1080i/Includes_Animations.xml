@@ -127,6 +127,19 @@
 			</animation>
 		</definition>
 	</include>
+	<include name="Animation_FurnitureShift">
+		<param name="slidetopbar">-5</param>
+		<param name="slidefloor">15</param>
+		<param name="slidetopbarcondition">false</param>
+		<param name="slidefloorcondition">false</param>
+		<definition>
+			<animation effect="slide" end="0,$PARAM[slidetopbar]" time="400" tween="cubic" easing="out" condition="$PARAM[slidetopbarcondition]">Conditional</animation>
+			<animation effect="slide" end="0,$PARAM[slidefloor]" time="400" tween="cubic" easing="out" condition="$PARAM[slidefloorcondition]">Conditional</animation>
+		</definition>
+	</include>
+	
+
+
 	<!-- REWORK ANIMATIONS END -->
 
 

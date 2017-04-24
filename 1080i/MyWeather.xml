@@ -18,7 +18,10 @@
 		<!-- Content -->
 		<control type="group">
 			<include>Animation_Zoom_OpenClose</include>
-			<animation effect="slide" end="0,5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(WeatherHideTopBar)">Conditional</animation>
+			<include content="Animation_FurnitureShift">
+				<param name="slidetopbarcondition">Skin.HasSetting(WeatherHideTopBar)</param>
+				<param name="slidefloorcondition">!Skin.HasSetting(WeatherHideTopBar) + Skin.HasSetting(WeatherHideFloor)</param>
+			</include>
 			<include content="Panel_Background_Default">
 				<param name="reflect">!Skin.HasSetting(WeatherHideFloor)</param>
 			</include>

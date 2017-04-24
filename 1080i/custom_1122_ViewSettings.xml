@@ -24,7 +24,7 @@
 				<ondown>9001</ondown>
 				<onback>Dialog.Close(1122)</onback>
 				<include condition="Window.IsActive(weather)">MediaMenu_Viewsettings_Weather</include>
-				<include condition="Window.IsVisible(settings) | Window.IsVisible(systeminfo) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(profiles) | Window.IsVisible(skinsettings) |  Window.IsVisible(script-skinshortcuts.xml)">MediaMenu_Viewsettings_Settings</include>
+				<include condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">MediaMenu_Viewsettings_Settings</include>
 			</control>
 		</control>
 	</controls>

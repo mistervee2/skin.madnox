@@ -22,7 +22,10 @@
 		<!-- Content -->
 		<control type="group">
 			<include>Animation_Zoom_OpenClose</include>
-			<animation effect="slide" end="0,-5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
+			<include content="Animation_FurnitureShift">
+				<param name="slidetopbarcondition">Skin.HasSetting(SettingsHideTopBar)</param>
+				<param name="slidefloorcondition">!Skin.HasSetting(SettingsHideTopBar) + Skin.HasSetting(SettingsHideFloor)</param>
+			</include>
 			<include content="Panel_Background_Settings">
 				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
@@ -57,7 +60,7 @@
 						<width>323</width>
 						<height>68</height>
 						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
-						<animation effect="fade" start="100" end="30" time="40" condition="!Control.HasFocus(8000)">Conditional</animation>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(8000)">Conditional</animation>
 					</control>
 					<control type="label">
 						<width>323</width>
@@ -181,8 +184,8 @@
 			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
 				<param name="slide">90"</param>
-				<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]"</param>
-				<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]"</param>
+				<param name="opencondition">!Window.Previous(settings)</param>
+				<param name="closecondition">!Window.Next(settings)</param>
 			</include>
 			<include content="TopBar">
 				<param name="breadcrumbs_label">$LOCALIZE[5] / $LOCALIZE[13200]</param>

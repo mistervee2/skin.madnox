@@ -2,186 +2,193 @@
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
-	<menucontrol>9051</menucontrol>
-	<onload>SetProperty(Window.HasSettings,True,home)</onload>
-	<onload>ClearProperty(MediaMenu,Home)</onload>
-	<onunload>ClearProperty(Window.HasSettings,Home)</onunload>
 	<controls>
-		<include>CommonBackground</include>
+		<!-- Backdrop -->
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[SettingsFanartVar]</param>
+			<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+			<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
+		</include>
+		<!-- Floor -->
 		<control type="group">
-			<animation effect="slide" tween="cubic" time="720" start="0,1080" end="0,0">WindowOpen</animation>
-			<animation effect="slide" tween="cubic" time="720" end="0,1080" start="0,0">WindowClose</animation>
-			<!-- view id = 50 -->
-			<control type="group">
-				<visible>Control.IsVisible(50) + !Window.IsActive(addoninformation)</visible>
-				<include>ViewAnimation</include>
-				<control type="group">
-					<left>100</left>
-					<top>-40</top>
+			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
+			<include content="Animation_Slide_Bottom">
+				<param name="slide">218</param>
+				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
+			</include>
+			<include>Floor_Background_Default</include>
+		</control>
+		<!-- Content -->
+		<control type="group">
+			<include>Animation_Zoom_OpenClose</include>
+			<include content="Animation_FurnitureShift">
+				<param name="slidetopbarcondition">Skin.HasSetting(SettingsHideTopBar)</param>
+				<param name="slidefloorcondition">!Skin.HasSetting(SettingsHideTopBar) + Skin.HasSetting(SettingsHideFloor)</param>
+			</include>
+			<include content="Panel_Background_Default">
+				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
+			</include>
+			<control type="fixedlist" id="50">
+				<left>101</left>
+				<top>145</top>
+				<width>1718</width>
+				<height>798</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<viewtype label="535">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="114">
 					<control type="image">
-						<description>background image</description>
-						<left>-32</left>
-						<top>1020</top>
-						<width>1784</width>
-						<height>904</height>
-						<texture border="40">panel_reflect.png</texture>
+						<height>114</height>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
 					</control>
 					<control type="image">
-						<description>background image</description>
-						<left>-32</left>
-						<top>148</top>
-						<width>1784</width>
-						<height>904</height>
-						<texture border="40">listpanel_back.png</texture>
+						<left>45</left>
+						<top>15</top>
+						<width>84</width>
+						<height>84</height>
+						<aspectratio>scale</aspectratio>
+						<texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
 					</control>
-					<control type="list" id="50">
-						<left>0</left>
-						<top>180</top>
-						<width>1720</width>
-						<height>840</height>
-						<onleft>9000</onleft>
-						<onright>60</onright>
-						<onup>50</onup>
-						<ondown>50</ondown>
-						<viewtype label="535">list</viewtype>
-						<pagecontrol>60</pagecontrol>
-						<scrolltime tween="quadratic" easing="out">200</scrolltime>
-						<itemlayout height="120" width="1720">
-							<control type="image">
-								<top>60</top>
-								<width>1720</width>
-								<height>60</height>
-								<texture border="1">separator2.png</texture>
-							</control>
-							<control type="image">
-								<left>15</left>
-								<top>8</top>
-								<width>105</width>
-								<height>105</height>
-								<aspectratio>keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-							</control>
-							<control type="label">
-								<left>135</left>
-								<top>0</top>
-								<width>1565</width>
-								<height>70</height>
-								<font>font30</font>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>$VAR[FocusTextureColorVar]</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-								<animation effect="slide" start="0,0" end="0,25" time="0" condition="IsEmpty(ListItem.Property(Event.Description))">Conditional</animation>
-							</control>
-							<control type="label">
-								<left>135</left>
-								<top>50</top>
-								<width>1565</width>
-								<height>60</height>
-								<font>font15</font>
-								<textcolor>grey3</textcolor>
-								<selectedcolor>$VAR[FocusTextureColorVar]</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Property(Event.Description)]</label>
-							</control>
-							<control type="label">
-								<left>60</left>
-								<top>0</top>
-								<width>1630</width>
-								<height>120</height>
-								<font>font15</font>
-								<align>right</align>
-								<textcolor>grey2</textcolor>
-								<selectedcolor>$VAR[FocusTextureColorVar]</selectedcolor>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label2]</label>
-							</control>
-						</itemlayout>
-						<focusedlayout height="120" width="1720">
-							<control type="image">
-								<top>60</top>
-								<width>1720</width>
-								<height>60</height>
-								<texture border="1">separator2.png</texture>
-							</control>
-							<control type="image">
-								<left>0</left>
-								<top>0</top>
-								<width>1720</width>
-								<height>120</height>
-								<texture border="8">listselect_fo_clear.png</texture>
-								<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-								<visible>Control.HasFocus(50)</visible>
-								<include>VisibleFadeEffect</include>
-							</control>
-							<control type="image">
-								<left>15</left>
-								<top>8</top>
-								<width>105</width>
-								<height>105</height>
-								<aspectratio>keep</aspectratio>
-								<texture background="true">$INFO[ListItem.Icon]</texture>
-							</control>
-							<control type="label">
-								<left>135</left>
-								<top>0</top>
-								<width>1565</width>
-								<height>70</height>
-								<font>font30</font>
-								<textcolor>white</textcolor>
-								<selectedcolor>$VAR[FocusTextureColorVar]</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label]</label>
-								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
-								<animation effect="slide" start="0,0" end="0,25" time="0" condition="IsEmpty(ListItem.Property(Event.Description))">Conditional</animation>
-							</control>
-							<control type="label">
-								<left>135</left>
-								<top>50</top>
-								<width>1565</width>
-								<height>60</height>
-								<font>font15</font>
-								<textcolor>white</textcolor>
-								<selectedcolor>$VAR[FocusTextureColorVar]</selectedcolor>
-								<align>left</align>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Property(Event.Description)]</label>
-								<animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
-							</control>
-							<control type="label">
-								<left>60</left>
-								<top>0</top>
-								<width>1630</width>
-								<height>120</height>
-								<font>font15</font>
-								<align>right</align>
-								<textcolor>white</textcolor>
-								<selectedcolor>$VAR[FocusTextureColorVar]</selectedcolor>
-								<aligny>center</aligny>
-								<label>$INFO[ListItem.Label2]</label>
-								<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(50)">Conditional</animation>
-							</control>
-						</focusedlayout>
+					<control type="label">
+						<left>144</left>
+						<right>465</right>
+						<top>15</top>
+						<height>42</height>
+						<aligny>center</aligny>
+						<font>Font32_Reg</font>
+						<textcolor>white6</textcolor>
+						<label>$INFO[ListItem.Label]</label>
 					</control>
-					<control type="scrollbar" id="60">
-						<left>1720</left>
-						<top>180</top>
-						<width>14</width>
-						<height>840</height>
-						<onup>60</onup>
-						<ondown>60</ondown>
-						<onleft>50</onleft>
-						<onright>9002</onright>
-						<texturesliderbackground>-</texturesliderbackground>
-						<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
-						<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
-						<showonepage>false</showonepage>
-						<orientation>vertical</orientation>
+					<control type="label">
+						<left>144</left>
+						<top>57</top>
+						<right>45</right>
+						<height>42</height>
+						<font>Font29_Cond</font>
+						<textcolor>grey2</textcolor>
+						<label>$INFO[ListItem.Property(Event.Description)]</label>
 					</control>
-				</control>
+					<control type="label">
+						<right>45</right>
+						<top>15</top>
+						<width>400</width>
+						<height>42</height>
+						<align>right</align>
+						<font>Font32_Reg</font>
+						<textcolor>white6</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="114">
+					<control type="image">
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<visible>Control.HasFocus(50)</visible>
+					</control>
+					<control type="image">
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+						<visible>!Control.HasFocus(50)</visible>
+					</control>
+					<control type="image">
+						<left>45</left>
+						<top>15</top>
+						<width>84</width>
+						<height>84</height>
+						<aspectratio>scale</aspectratio>
+						<texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
+					</control>
+					<control type="label">
+						<left>144</left>
+						<right>465</right>
+						<top>15</top>
+						<height>42</height>
+						<aligny>center</aligny>
+						<font>Font32_Reg</font>
+						<textcolor>white6</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<left>144</left>
+						<top>57</top>
+						<right>45</right>
+						<height>42</height>
+						<font>Font29_Cond</font>
+						<textcolor>grey2</textcolor>
+						<label>$INFO[ListItem.Property(Event.Description)]</label>
+					</control>
+					<control type="label">
+						<right>45</right>
+						<top>15</top>
+						<width>400</width>
+						<height>42</height>
+						<align>right</align>
+						<font>Font32_Reg</font>
+						<textcolor>white6</textcolor>
+						<label>$INFO[ListItem.Label2]</label>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<right>81</right>
+				<top>143</top>
+				<bottom>132</bottom>
+				<onleft>8000</onleft>
+			</control>
+		</control>
+		<!-- Topbar -->
+		<control type="group">
+			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
+			<include content="Animation_Slide_Top">
+				<param name="slide">90</param>
+				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
+			</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label">$LOCALIZE[14111]</param>
+				<param name="breadcrumbs_icon">info.png</param>
+			</include>
+		</control>
+		<!-- Media Menu -->
+		<include>MediaMenu_MouseOverlay</include>
+		<control type="group">
+			<include>MediaMenu_Common</include>
+			<control type="grouplist" id="9000">
+				<usecontrolcoords>true</usecontrolcoords>
+				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onright>50</onright>
+				<onback>50</onback>
+				<include content="MediaMenu_Icon_ToggleButton">
+					<param name="id">4</param>
+					<param name="label">$LOCALIZE[584]</param>
+					<param name="altlabel">$LOCALIZE[585]</param>
+					<param name="icon">icon/mediamenu/arrowdown.png</param>
+				</include>
+				<include content="MediaMenu_Icon_Button">
+					<param name="id">21</param>
+					<param name="icon">icon/mediamenu/level.png</param>
+					<param name="label">$INFO[Control.GetLabel(21)]</param>
+				</include>
+				<include content="MediaMenu_Icon_RadioButton">
+					<param name="id">22</param>
+					<param name="label">$INFO[Control.GetLabel(22)]</param>
+					<param name="visible">!String.Contains(Control.GetLabel(21),$LOCALIZE[14118])</param>
+				</include>
+				<include content="MediaMenu_Icon_Button">
+					<param name="id">20</param>
+					<param name="icon">icon/mediamenu/remove.png</param>
+					<param name="label">$LOCALIZE[192]</param>
+				</include>
+				<include content="MediaMenu_Icon_Button">
+					<param name="id">501</param>
+					<param name="icon">icon/mediamenu/skinsettings.png</param>
+					<param name="label">$LOCALIZE[5]</param>
+					<param name="onclick">ActivateWindow(systemsettings,logging)</param>
+				</include>
+				<include>MediaMenu_Settings</include>
 			</control>
 		</control>
 	</controls>

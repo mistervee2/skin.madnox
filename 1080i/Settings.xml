@@ -6,23 +6,26 @@
 		<include>Background_Nowplaying</include>
 		<include content="Background_Fanart_Default">
 			<param name="imagepath">$VAR[SettingsFanartVar]</param>
-			<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]</param>
-			<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]</param>
+			<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+			<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
 		</include>
 		<!-- Floor -->
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
 			<include content="Animation_Slide_Bottom">
 				<param name="slide">218</param>
-				<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]</param>
-				<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]</param>
+				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
 			</include>
 			<include>Floor_Background_Default</include>
 		</control>
 		<!-- Content -->
 		<control type="group">
 			<include>Animation_Zoom_OpenClose</include>
-			<animation effect="slide" end="0,-5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
+			<include content="Animation_FurnitureShift">
+				<param name="slidetopbarcondition">Skin.HasSetting(SettingsHideTopBar)</param>
+				<param name="slidefloorcondition">!Skin.HasSetting(SettingsHideTopBar) + Skin.HasSetting(SettingsHideFloor)</param>
+			</include>
 			<include content="Panel_Background_Default">
 				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
@@ -158,8 +161,8 @@
 			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
 				<param name="slide">90</param>
-				<param name="opencondition">![Window.Previous(SettingsCategory.xml) | Window.Previous(systeminfo) | Window.Previous(skinsettings)]</param>
-				<param name="closecondition">![Window.Next(SettingsCategory.xml) | Window.Next(systeminfo) | Window.Next(skinsettings)]</param>
+				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
 			</include>
 			<include content="TopBar">
 				<param name="breadcrumbs_label">$LOCALIZE[13000]</param>

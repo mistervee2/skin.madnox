@@ -8,6 +8,7 @@
   <color name="white6">d0FFFFFF</color>
   <color name="grey">FFa4a4a4</color>
   <color name="grey2">88FFFFFF</color>
+  <color name="shadow">88000000</color>
   <color name="red">FFCE4421</color>
   <color name="blue">FF0084ff</color>
   <color name="highlight">FF6DB9EF</color>

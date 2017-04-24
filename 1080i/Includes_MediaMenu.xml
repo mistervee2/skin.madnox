@@ -85,6 +85,121 @@
 			</control>
 		</definition>
 	</include>
+	<include name="MediaMenu_Icon_RadioButton">
+		<param name="label"></param>
+		<param name="onclick"></param>
+		<param name="onfocus"></param>
+		<param name="visible">true</param>
+		<definition>
+			<control type="radiobutton" id="$PARAM[id]">
+				<width>400</width>
+				<height>90</height>
+				<radiowidth>70</radiowidth>
+				<radioheight>70</radioheight>
+				<radioposx>10</radioposx>
+				<radioposy>15</radioposy>
+				<font />
+				<textureradioonfocus colordiffuse="white6">icon/mediamenu/ok.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="grey2">icon/mediamenu/ok.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="white6">icon/mediamenu/cancel.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="grey2">icon/mediamenu/cancel.png</textureradiooffnofocus>
+				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
+				<onclick>$PARAM[onclick]</onclick>
+				<onfocus>$PARAM[onfocus]</onfocus>.
+				<visible>$PARAM[visible]</visible>
+			</control>
+			<control type="label" id="9$PARAM[id]01">
+				<top>-90</top>
+				<left>80</left>
+				<width>320</width>
+				<height>90</height>
+				<font>Font30_Reg</font>
+				<textcolor>grey2</textcolor>
+				<textoffsetx>10</textoffsetx>
+				<label>$PARAM[label]</label>
+				<visible>$PARAM[visible]</visible>
+				<visible>!Control.HasFocus($PARAM[id])</visible>
+			</control>
+			<control type="label" id="9$PARAM[id]02">
+				<top>-90</top>
+				<left>80</left>
+				<width>320</width>
+				<height>90</height>
+				<font>Font30_Reg</font>
+				<textcolor>white6</textcolor>
+				<textoffsetx>10</textoffsetx>
+				<label>$PARAM[label]</label>
+				<visible>$PARAM[visible]</visible>
+				<visible>Control.HasFocus($PARAM[id])</visible>
+			</control>
+		</definition>
+	</include>
+	<include name="MediaMenu_Icon_ToggleButton">
+		<param name="label"></param>
+		<param name="altlabel"></param>
+		<param name="onclick" />
+		<param name="onfocus" />
+		<param name="visible">true</param>
+		<definition>
+			<control type="togglebutton" id="$PARAM[id]">
+				<width>400</width>
+				<height>90</height>
+				<font />
+				<label>$PARAM[label]</label>
+				<altlabel>$PARAM[altlabel]</altlabel>
+				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
+				<onclick>$PARAM[onclick]</onclick>
+				<onfocus>$PARAM[onfocus]</onfocus>.
+				<visible>$PARAM[visible]</visible>
+			</control>
+			<control type="image" id="9$PARAM[id]01">
+				<top>-75</top>
+				<left>10</left>
+				<width>70</width>
+				<height>70</height>
+				<texture colordiffuse="grey2">$PARAM[icon]</texture>
+				<visible>$PARAM[visible]</visible>
+				<visible>!Control.HasFocus($PARAM[id])</visible>
+			</control>
+			<control type="image" id="9$PARAM[id]02">
+				<top>-75</top>
+				<left>10</left>
+				<width>70</width>
+				<height>70</height>
+				<texture colordiffuse="white6">$PARAM[icon]</texture>
+				<visible>$PARAM[visible]</visible>
+				<visible>Control.HasFocus($PARAM[id])</visible>
+			</control>
+			<control type="label" id="9$PARAM[id]03">
+				<top>-85</top>
+				<left>80</left>
+				<width>320</width>
+				<height>90</height>
+				<font>Font30_Reg</font>
+				<textcolor>grey2</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<label>$INFO[Control.GetLabel($PARAM[id])]</label>
+				<visible>$PARAM[visible]</visible>
+				<visible>!Control.HasFocus($PARAM[id])</visible>
+			</control>
+			<control type="label" id="9$PARAM[id]04">
+				<top>-85</top>
+				<left>80</left>
+				<width>320</width>
+				<height>90</height>
+				<font>Font30_Reg</font>
+				<textcolor>white6</textcolor>
+				<aligny>center</aligny>
+				<textoffsetx>10</textoffsetx>
+				<label>$INFO[Control.GetLabel($PARAM[id])]</label>
+				<visible>$PARAM[visible]</visible>
+				<visible>Control.HasFocus($PARAM[id])</visible>
+			</control>
+		</definition>
+	</include>
 	<include name="MediaMenu_MouseOverlay">
 		<control type="button" id="6130">
 			<label></label>
@@ -143,13 +258,6 @@
 	</include>
 	<!-- Settings -->
 	<include name="MediaMenu_Settings">
-		<include content="MediaMenu_Icon_Button">
-			<param name="id" value="20" />
-			<param name="label" value="$LOCALIZE[31217]: $INFO[Control.GetLabel(20)]" />
-			<param name="icon" value="icon/mediamenu/skinsettings.png" />
-			<param name="onclick" value="SettingsLevelChange" />
-			<param name="visible" value="!Window.IsActive(settings) + !Window.IsActive(profiles) + !Window.IsActive(skinsettings)" />
-		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9010" />
 			<param name="icon" value="icon/mediamenu/image.png" />

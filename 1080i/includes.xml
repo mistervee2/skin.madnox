@@ -62,7 +62,12 @@
 	<constant name="IconCrossfadeTime">400</constant>
 	<constant name="IconCrossfadeTime2">250</constant>
 	<expression name="Fanart_Visible_MediaPlaying">!Player.HasMedia | [Player.HasAudio + Skin.HasSetting(DisableBackgroundViz)] | [Player.HasVideo + Skin.HasSetting(DisableBackgroundVideo)]</expression>
+
 	<expression name="Area_Visible_Settings">Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)</expression>
+
+	<expression name="Settings_Animation_OpenCondition">![Window.Previous(settings) | Window.Previous(SettingsCategory.xml) | Window.Previous(skinsettings) | Window.Previous(profiles) | Window.Previous(systeminfo) | Window.Previous(eventlog) | Window.Previous(filemanager)]</expression>
+	<expression name="Settings_Animation_CloseCondition">![Window.Next(settings) | Window.Next(SettingsCategory.xml) | Window.Next(skinsettings) | Window.Next(profiles) | Window.Next(systeminfo) | Window.Next(eventlog) | Window.Next(filemanager)]</expression>
+
 	<include name="ButtonInfoDialogsCommonValues">
 		<height>60</height>
 		<width>254</width>

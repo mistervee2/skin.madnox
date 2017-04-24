@@ -15,13 +15,14 @@
 		<param name="closecondition">true</param>
 		<param name="sideshade">true</param>
 		<param name="fullshade">false</param>
+		<param name="bottomshade">false</param>
 		<definition>
 			<control type="group">
 				<visible>$EXP[Fanart_Visible_MediaPlaying]</visible>
 				<animation effect="fade" time="240" condition="$PARAM[opencondition]">WindowOpen</animation>
 				<animation effect="fade" time="240" condition="$PARAM[closecondition]">WindowClose</animation>
-				<animation effect="fade" time="240">Visible</animation>
-				<animation effect="fade" time="240">Hidden</animation>
+				<!-- <animation effect="fade" time="240">Visible</animation>
+				<animation effect="fade" time="240">Hidden</animation> -->
 				<control type="multiimage">
 					<include>FullscreenDimensions</include>
 					<aspecratio>scale</aspecratio>
@@ -42,6 +43,13 @@
 					<include>FullscreenDimensions</include>
 					<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
 					<visible>$PARAM[fullshade]</visible>
+				</control>
+				<control type="image">
+					<top>880</top>
+					<width>1920</width>
+					<height>200</height>
+					<texture colordiffuse="$VAR[BackgroundColorVar]">panel/floor-gradient.png</texture>
+					<visible>$PARAM[bottomshade]</visible>
 				</control>
 			</control>
 		</definition>

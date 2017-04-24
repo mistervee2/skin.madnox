@@ -524,6 +524,51 @@
 		<textwidth>872</textwidth>
 		<radioposx>1288</radioposx>
 	</include>
+	<include name="Settings_LeftButton">
+		<width>323</width>
+		<height>68</height>
+		<textoffsetx>25</textoffsetx>
+		<font>Font36_Reg</font>
+		<textcolor>grey</textcolor>
+		<texturenofocus />
+	</include>
+	<include name="Settings_LeftToggleButton">
+		<width>323</width>
+		<height>68</height>
+		<textoffsetx>25</textoffsetx>
+		<font>Font36_Reg</font>
+		<textcolor>grey</textcolor>
+		<texturenofocus />
+	</include>
+	<include name="Settings_Label_SystemInfo">
+		<width>1393</width>
+		<height>56</height>
+		<textoffsetx>45</textoffsetx>
+		<font>Font30_Reg</font>
+		<textcolor>grey2</textcolor>
+	</include>
+
+	<include name="PlaylistWindowButton">
+		<param name="width">100%</param>
+		<definition>
+			<control type="button" id="$PARAM[control_id]">
+				<width>$PARAM[width]</width>
+				<height>110</height>
+				<align>left</align>
+				<aligny>top</aligny>
+				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
+				<texturenofocus />
+				<textoffsetx>40</textoffsetx>
+				<textoffsety>35</textoffsety>
+				<label>$PARAM[label]</label>
+				<onclick>$PARAM[onclick]</onclick>
+				<selectedcolor>white</selectedcolor>
+			</control>
+		</definition>
+	</include>
+
+
+	
 	<!--  Floor -->
 	<include name="Floor_Background_Default">
 		<control type="image">
@@ -617,12 +662,6 @@
 		<param name="reflecttop">981</param>
 		<param name="visible">true</param>
 		<definition>
-			<control type="image">
-				<width>1920</width>
-				<height>1080</height>
-				<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
-				<visible>![$PARAM[visible]]</visible>
-			</control>
 			<control type="group">
 				<visible>$PARAM[visible]</visible>
 				<control type="image">
@@ -697,6 +736,67 @@
 					<aspectratio>keep</aspectratio>
 					<texture>icon/logo.png</texture>
 				</control>
+			</control>
+		</definition>
+	</include>
+	<!-- File Manager -->
+	<include name="FileManager_List">
+		<param name="id"></param>
+		<param name="left"></param>
+		<param name="onleft"></param>
+		<param name="onright"></param>
+		<param name="scrollbar_id"></param>
+		<definition>
+			<control type="list" id="$PARAM[id]">
+				<left>$PARAM[left]</left>
+				<top>144</top>
+				<width>833</width>
+				<height>804</height>
+				<onleft>$PARAM[onleft]</onleft>
+				<onright>$PARAM[onright]</onright>
+				<pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
+				<itemlayout height="67">
+					<control type="image">
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>45</left>
+						<right>20</right>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>white6</textcolor>
+					</control>
+					<control type="label">
+						<textoffsetx>45</textoffsetx>
+						<right>0</right>
+						<align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>grey2</textcolor>
+					</control>
+				</itemlayout>
+				<focusedlayout height="67">
+					<control type="image">
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<visible>Control.HasFocus($PARAM[id])</visible>
+					</control>
+					<control type="image">
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+						<visible>!Control.HasFocus($PARAM[id])</visible>
+					</control>
+					<control type="label">
+						<left>45</left>
+						<right>20</right>
+						<scroll>true</scroll>
+						<label>$INFO[ListItem.Label]</label>
+						<textcolor>white6</textcolor>
+					</control>
+					<control type="label">
+						<textoffsetx>20</textoffsetx>
+						<right>25</right>
+						<align>right</align>
+						<label>$INFO[ListItem.Label2]</label>
+						<textcolor>grey2</textcolor>
+					</control>
+				</focusedlayout>
 			</control>
 		</definition>
 	</include>

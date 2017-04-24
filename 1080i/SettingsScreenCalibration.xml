@@ -2,60 +2,52 @@
 <window>
 	<defaultcontrol>8</defaultcontrol>
 	<controls>
-		<control type="videowindow" id="20">
+		<control type="videowindow">
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasVideo</visible>
 		</control>
-		<control type="group">
-			<visible>!Player.HasVideo</visible>
-			<include>CommonSettingsBackground</include>
-		</control>
-		<control type="image">
-			<texture>common/bgcolor.png</texture>
-			<include>FullscreenDimensions</include>
-			<animation effect="fade" start="100" end="80" time="40" condition="true">Conditional</animation>
-			<animation effect="fade" end="100" time="2400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="240">WindowClose</animation>
-		</control>
 		<control type="mover" id="8">
-			<width>192</width>
-			<height>192</height>
-			<texturefocus>calibration/calibrate-topleft-focus.png</texturefocus>
-			<texturenofocus>calibration/calibrate-topleft.png</texturenofocus>
+			<width>128</width>
+			<height>128</height>
+			<texturefocus colordiffuse="$VAR[HighlightColorVar]">calibration/calibrate-topleft.png</texturefocus>
+			<texturenofocus colordiffuse="grey2">calibration/calibrate-topleft.png</texturenofocus>
 		</control>
 		<control type="mover" id="9">
-			<left>1050</left>
-			<top>750</top>
-			<width>192</width>
-			<height>192</height>
-			<texturefocus>calibration/calibrate-bottomright-focus.png</texturefocus>
-			<texturenofocus>calibration/calibrate-bottomright.png</texturenofocus>
+			<left>1792</left>
+			<top>952</top>
+			<width>128</width>
+			<height>128</height>
+			<texturefocus flipx="true" flipy="true" colordiffuse="$VAR[HighlightColorVar]">calibration/calibrate-topleft.png</texturefocus>
+			<texturenofocus flipx="true" flipy="true" colordiffuse="grey2">calibration/calibrate-topleft.png</texturenofocus>
 		</control>
 		<control type="mover" id="10">
-			<left>300</left>
-			<top>750</top>
-			<width>768</width>
-			<height>192</height>
-			<texturefocus>calibration/calibrate-subtitles-focus.png</texturefocus>
-			<texturenofocus>calibration/calibrate-subtitles.png</texturenofocus>
+			<width>640</width>
+			<height>38</height>
+			<texturefocus colordiffuse="$VAR[HighlightColorVar]">calibration/calibrate-subtitles.png</texturefocus>
+			<texturenofocus colordiffuse="grey2">calibration/calibrate-subtitles.png</texturenofocus>
 		</control>
-		<control type="resize" id="11"></control>
+		<control type="resize" id="11">
+			<width>512</width>
+			<height>512</height>
+			<texturefocus colordiffuse="$VAR[HighlightColorVar]">calibration/calibrate-pixelratio.png</texturefocus>
+			<texturenofocus colordiffuse="grey2">calibration/calibrate-pixelratio.png</texturenofocus>
+		</control>
 		<control type="group">
-			<left>30</left>
-			<top>120</top>
 			<control type="fadelabel" id="2">
-				<top>15</top>
-				<width>1860</width>
+				<top>85</top>
+				<width>1920</width>
+				<height>50</height>
 				<align>center</align>
-				<label>-</label>
-				<font>Font_Bold34</font>
+				<shadowcolor>shadow</shadowcolor>
+				<font>Font36_Reg</font>
 			</control>
 			<control type="fadelabel" id="3">
-				<top>60</top>
-				<width>1860</width>
+				<top>135</top>
+				<width>1920</width>
+				<height>50</height>
 				<align>center</align>
-				<label>-</label>
-				<font>Font_Bold34</font>
+				<shadowcolor>shadow</shadowcolor>
+				<font>Font36_Reg</font>
 			</control>
 		</control>
 	</controls>

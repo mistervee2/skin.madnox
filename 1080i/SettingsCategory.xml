@@ -6,23 +6,26 @@
 		<include>Background_Nowplaying</include>
 		<include content="Background_Fanart_Default">
 			<param name="imagepath">$VAR[SettingsFanartVar]</param>
-			<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]</param>
-			<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]</param>
+			<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+			<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
 		</include>
 		<!-- Floor -->
 		<control type="group">
 			<visible>!Skin.HasSetting(SettingsHideFloor)</visible>
 			<include content="Animation_Slide_Bottom">
 				<param name="slide">218</param>
-				<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]</param>
-				<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]</param>
+				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
 			</include>
 			<include>Floor_Background_Default</include>
 		</control>
 		<!-- Content -->
 		<control type="group">
 			<include>Animation_Zoom_OpenClose</include>
-			<animation effect="slide" end="0,-5" time="400" tween="cubic" easing="out" condition="Skin.HasSetting(SettingsHideTopBar)">Conditional</animation>
+			<include content="Animation_FurnitureShift">
+				<param name="slidetopbarcondition">Skin.HasSetting(SettingsHideTopBar)</param>
+				<param name="slidefloorcondition">!Skin.HasSetting(SettingsHideTopBar) + Skin.HasSetting(SettingsHideFloor)</param>
+			</include>
 			<include content="Panel_Background_Settings">
 				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
@@ -43,12 +46,7 @@
 				<onright>5</onright>
 			</control>
 			<control type="button" id="10">
-				<width>323</width>
-				<height>68</height>
-				<textoffsetx>25</textoffsetx>
-				<font>Font36_Reg</font>
-				<textcolor>grey</textcolor>
-				<texturenofocus />
+				<include>Settings_LeftButton</include>
 			</control>
 			<!-- Right menu -->
 			<control type="label">
@@ -96,7 +94,6 @@
 				<right>81</right>
 				<top>200</top>
 				<bottom>267</bottom>
-				<height>800</height>
 				<onleft>5</onleft>
 			</control>
 		</control>
@@ -115,8 +112,8 @@
 			<visible>!Skin.HasSetting(SettingsHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
 				<param name="slide">90</param>
-				<param name="opencondition">![Window.Previous(settings) | Window.Previous(skinsettings)]</param>
-				<param name="closecondition">![Window.Next(settings) | Window.Next(skinsettings)]</param>
+				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param>
 			</include>
 			<include content="TopBar">
 				<param name="breadcrumbs_label">$LOCALIZE[5]$INFO[Control.GetLabel(2), / ]</param>
@@ -131,7 +128,14 @@
 				<usecontrolcoords>true</usecontrolcoords>
 				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
 				<onright>3</onright>
-				<onback>7500</onback>
+				<onback>3</onback>
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="20" />
+					<param name="label" value="$LOCALIZE[31217]: $INFO[Control.GetLabel(20)]" />
+					<param name="icon" value="icon/mediamenu/skinsettings.png" />
+					<param name="onclick" value="SettingsLevelChange" />
+					<param name="visible" value="Window.IsActive(SettingsCategory.xml)" />
+				</include>
 				<include>MediaMenu_Settings</include>
 			</control>
 		</control>
