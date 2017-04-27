@@ -17,11 +17,11 @@
 		</control>
 	</include>
 	<include name="MainMenuLabels">
-		<top>-3</top>
+		<top>0</top>
 		<height>225</height>
 		<align>center</align>
 		<label>$INFO[ListItem.Label]</label>
-		<font>Font_MainClassic</font>
+		<font>Font_MainMenu</font>
 	</include>
 	<include name="MainMenuListContent">
 		<left>-338</left>
@@ -506,7 +506,7 @@
 				<height>36</height>
 				<align>right</align>
 				<label>[COLOR grey]$INFO[System.Date(ddd)] • $INFO[System.Date(D)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  •[/COLOR]  $INFO[System.Time]</label>
-				<font>Font_Reg28_Caps</font>
+				<font>Font28_Reg</font>
 				<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 				<visible>!Skin.HasSetting(shorterhomebars) + Skin.HasSetting(W_condition_image)</visible>
 			</control>
@@ -516,7 +516,7 @@
 				<height>36</height>
 				<align>right</align>
 				<label>[COLOR grey]$INFO[System.Date(DDD)] • $INFO[System.Date(D)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  •[/COLOR]  $INFO[System.Time]</label>
-				<font>Font_Reg28_Caps</font>
+				<font>Font28_Reg</font>
 				<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 				<visible>Skin.HasSetting(shorterhomebars)</visible>
 			</control>
@@ -526,7 +526,7 @@
 				<height>36</height>
 				<align>right</align>
 				<label>[COLOR grey]$INFO[System.Date(DDD)] • $INFO[System.Date(D)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)]  •[/COLOR]  $INFO[System.Time]</label>
-				<font>Font_Reg28_Caps</font>
+				<font>Font28_Reg</font>
 				<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 				<visible>!Skin.HasSetting(W_condition_image)</visible>
 			</control>
@@ -541,7 +541,7 @@
 					<width min="0" max="700">auto</width>
 					<height>36</height>
 					<label>$INFO[Window(weather).Property(Current.Temperature)] $INFO[System.TemperatureUnits] [COLOR grey]• [/COLOR]</label>
-					<font>Font_Reg28_Caps</font>
+					<font></font>
 					<textcolor>$VAR[HomeMenuWidgetTextVar]</textcolor>
 				</control>
 				<control type="image">

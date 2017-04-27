@@ -3,14 +3,12 @@
 	<!-- rework start -->
 	<default type="label">
 		<label />
-		<align>left</align>
 		<aligny>center</aligny>
 		<font>Font30_Reg</font>
 		<textcolor>white2</textcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<selectedcolor>$VAR[HighlightColorVar]</selectedcolor>
 		<scroll>false</scroll>
-		<scrollspeed>40</scrollspeed>
 	</default>
 	<default type="fadelabel">
 		<aligny>center</aligny>
@@ -20,6 +18,17 @@
 		<scrollspeed>40</scrollspeed>
 		<pauseatend>7000</pauseatend>
 		<scrollout>false</scrollout>
+	</default>
+	<default type="edit">
+		<textoffsetx>10</textoffsetx>
+		<aligny>center</aligny>
+		<texturefocus />
+		<texturenofocus />
+		<font>Font30_Reg</font>
+		<textcolor>white2</textcolor>
+		<focusedcolor>$VAR[HighlightColorVar]</focusedcolor>
+		<disabledcolor>disabled</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
 	</default>
 	<default type="grouplist">
 		<itemgap>0</itemgap>
@@ -38,9 +47,10 @@
 		<textoffsetx>10</textoffsetx>
 		<font>Font30_Reg</font>
 		<aligny>center</aligny>
-		<textcolor>white2</textcolor>
+		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
+		<invalidcolor>invalid</invalidcolor>
 	</default>
 	<default type="radiobutton">
 		<texturefocus border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texturefocus>
@@ -52,7 +62,7 @@
 		<textoffsetx>10</textoffsetx>
 		<font>Font30_Reg</font>
 		<aligny>center</aligny>
-		<textcolor>white2</textcolor>
+		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
@@ -62,7 +72,7 @@
 		<textoffsetx>10</textoffsetx>
 		<font>Font30_Reg</font>
 		<aligny>center</aligny>
-		<textcolor>white2</textcolor>
+		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
@@ -76,7 +86,7 @@
 		<textoffsetx>10</textoffsetx>
 		<font>Font30_Reg</font>
 		<aligny>center</aligny>
-		<textcolor>white2</textcolor>
+		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
@@ -162,18 +172,6 @@
 		<texturefocus>calibration/calibrate-pixelratio-focus.png</texturefocus>
 		<texturenofocus>calibration/calibrate-pixelratio.png</texturenofocus>
 	</default>
-	<default type="edit">
-		<left>0</left>
-		<top>0</top>
-		<width>450</width>
-		<height>63</height>
-		<textoffsetx>10</textoffsetx>
-		<aligny>center</aligny>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>button-nofocus.png</texturenofocus>
-		<font>Font_Reg29</font>
-		<textcolor>white2</textcolor>
-		<disabledcolor>grey3</disabledcolor>
-	</default>
+
 	
 </includes>

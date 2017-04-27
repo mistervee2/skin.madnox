@@ -4,14 +4,13 @@
 		<!-- Start of font rework -->
 
 		<!-- Special Fonts -->
-
-		<!-- <font>
+		<font>
             <name>Font_MainMenu</name>
             <filename>OpenSansCond.ttf</filename>
             <aspect>0.72</aspect>
             <style>bold uppercase</style>
             <size>112</size>
-        </font> -->
+        </font>
 
         <!-- Regular Fonts (OpenSans-Regular.ttf) -->
         <font>

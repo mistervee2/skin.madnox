@@ -175,6 +175,7 @@
 		<textcolor>grey2</textcolor>
 	</include>
 	<include name="Dialog_Button_TopRight">
+		<param name="id"></param>
 		<param name="label"></param>
 		<param name="onclick"></param>
 		<definition>
@@ -229,6 +230,49 @@
 			<font></font>
 			<texturefocus colordiffuse="$VAR[HighlightColorVar]">$PARAM[icon]</texturefocus>
 			<texturenofocus colordiffuse="grey2">$PARAM[icon]</texturenofocus>
+		</definition>
+	</include>
+	<include name="Dialog_KeyboardButton">
+		<width>80</width>
+		<height>80</height>
+		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturefocus>
+		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturenofocus>
+		<textcolor>77FFFFFF</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<align>center</align>
+		<textoffsetx>10</textoffsetx>
+		<font>font13</font>
+	</include>
+	<include name="Dialog_KeyboardToggleButton">
+		<width>180</width>
+		<height>80</height>
+		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturefocus>
+		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturenofocus>
+		<alttexturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</alttexturefocus>
+		<alttexturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</alttexturenofocus>
+		<textcolor>77FFFFFF</textcolor>
+		<focusedcolor>FFFFFFFF</focusedcolor>
+		<align>center</align>
+		<textoffsetx>10</textoffsetx>
+		<font>font13</font>
+	</include>
+	<include name="Dialog_KeyboardButtonHighlight">
+		<param name="id" />
+		<param name="top">0</param>
+		<param name="left">0</param>
+		<param name="width">123</param>
+		<param name="height">123</param>
+		<definition>
+			<control type="image">
+				<top>$PARAM[top]</top>
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="$VAR[HighlightColorVar]" border="35">button/keyboard-highlight.png</texture>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Control.HasFocus($PARAM[id])</visible>
+			</control>
 		</definition>
 	</include>
 	<!--  Topbar -->

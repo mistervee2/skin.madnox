@@ -82,6 +82,7 @@
 	<variable name="DialogBottomSeparatorVar">
 		<value condition="Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,7)">button/list-select-nofocus.png</value>
 		<value condition="Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,5)">button/list-select-nofocus.png</value>
+		<value condition="Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput)">button/list-select-nofocus.png</value>
 		<value></value>
 	</variable>
 	<!-- END Dialogs -->
