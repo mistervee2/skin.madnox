@@ -11,6 +11,11 @@
             <style>bold uppercase</style>
             <size>112</size>
         </font>
+        <font>
+			<name>Font40_Icon</name>
+			<filename>Material-Design-Iconic-Font.ttf</filename>
+			<size>40</size>
+		</font>
 
         <!-- Regular Fonts (OpenSans-Regular.ttf) -->
         <font>

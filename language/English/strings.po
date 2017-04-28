@@ -1616,8 +1616,12 @@ msgctxt "#31400"
 msgid "CPU"
 msgstr ""
 
+msgctxt "#31401"
+msgid "Predictive text for virtual keyboard"
+msgstr ""
+
 ###########################################################################
-# 31401-31406 empty
+# 31402-31406 empty
 
 msgctxt "#31407"
 msgid "  •  Show Visualisation"

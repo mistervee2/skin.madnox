@@ -1,8 +1,8 @@
 <colors>
   <color name="white">FFFFFFFF</color><!-- focused label in list, container, button, or heading -->
   <color name="white2">FFe5e5e5</color><!-- default label color not in the above, alt-heading or other so the main heading still stands out -->
-  <color name="grey">FFa4a4a4</color><!-- unfocused label in list, container or button -->
-  <color name="grey2">88FFFFFF</color><!-- sub-heading or other -->
+  <color name="grey">88FFFFFF</color><!-- unfocused label in list, container or button -->
+  <color name="grey2">FFa4a4a4</color><!-- sub-heading or other -->
   <color name="red">FFCE4421</color><!-- for weather high temp -->
   <color name="blue">FF0084ff</color><!-- for weather low temp -->
   <color name="shadow">88000000</color><!-- only for shadow under text -->
@@ -18,6 +18,11 @@
   <color name="background">FF000000</color>
 
   <!--  old colors (will be deleted over time otherwise breakage will occour) -->
+  <color name="white3">abFFFFFF</color>
+  <color name="white4">FFdfdfdf</color>
+  <color name="white5">48FFFFFF</color>
+  <color name="white6">d0FFFFFF</color>
+  <color name="grey3">33FFFFFF</color>
   <color name="base">ee114076</color>
   <color name="base1">dd114076</color>
   <color name="black">FF000000</color>

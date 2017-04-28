@@ -6,7 +6,7 @@
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<visible>!Window.IsVisible(numericinput)</visible>
-			<animation effect="slide" end="0,-100" delay="1" condition="Control.IsVisible(313) | [Control.IsVisible(8010) + System.HasAddon(plugin.program.autocompletion)]">Conditional</animation>
+			<animation effect="slide" end="0,-100" delay="1" condition="Control.IsVisible(313) | [Control.IsVisible(8010) + System.HasAddon(plugin.program.autocompletion) + !Skin.HasSetting(DisablePredictiveText)]">Conditional</animation>
 			<include content="Dialog_Furniture_Background">
 				<param name="labelid">311</param>
 				<param name="labelright">70</param>
@@ -27,7 +27,7 @@
 						<onup condition="!Integer.IsGreater(Container(9010).NumItems,0)">312</onup>
 						<onup condition="Integer.IsGreater(Container(9010).NumItems,0)">9010</onup>
 						<ondown>307</ondown>
-						<font>font26_title</font>
+						<font>Font25_Cond</font>
 						<include>Dialog_KeyboardButton</include>
 					</control>
 					<control type="button" id="100">
@@ -417,7 +417,7 @@
 						<onup>166</onup>
 						<ondown>312</ondown>
 						<label></label>
-						<font>font_icon40</font>
+						<font>Font40_Icon</font>
 						<include>Dialog_KeyboardButton</include>
 					</control>
 					<control type="button" id="306">
@@ -426,7 +426,7 @@
 						<onup>167</onup>
 						<ondown>312</ondown>
 						<label></label>
-						<font>font_icon40</font>
+						<font>Font40_Icon</font>
 						<include>Dialog_KeyboardButton</include>
 					</control>
 					<control type="button" id="308">
@@ -707,35 +707,31 @@
 			</control>
 			<control type="edit" id="312">
 				<description>Edit Text</description>
-				<left>25</left>
+				<left>22</left>
 				<top>473</top>
 				<width>1080</width>
 				<height>60</height>
 				<onup>515</onup>
+				<textoffsetx>20</textoffsetx>
 				<ondown condition="!Integer.IsGreater(Container(9010).NumItems,0)">511</ondown>
 				<ondown condition="Integer.IsGreater(Container(9010).NumItems,0)">9010</ondown>
 				<align>center</align>
-				<aligny>center</aligny>
 			</control>
-			
 			<control type="group">
-				<visible>Control.IsVisible(313) | [System.HasAddon(plugin.program.autocompletion) + !Window.IsActive(script-skin_helper_service-ColorPicker.xml)]</visible>
+				<top>553</top>
+				<visible>Control.IsVisible(313) | [System.HasAddon(plugin.program.autocompletion) + !Window.IsActive(script-skin_helper_service-ColorPicker.xml) + !Skin.HasSetting(DisablePredictiveText)]</visible>
 				<include>Animation_CommonFade</include>
 				<control type="image">
-					<top>553</top>
 					<width>1124</width>
 					<height>199</height>
 					<texture colordiffuse="$VAR[GlowColorVar]" border="40">dialog/dialog-glow.png</texture>
 				</control>
 				<control type="image">
-					<top>553</top>
 					<width>1124</width>
 					<height>199</height>
 					<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialog/dialog-back.png</texture>
 				</control>
 				<control type="panel" id="8010">
-					<left>0</left>
-					<top>553</top>
 					<width>1100</width>
 					<height>200</height>
 					<orientation>horizontal</orientation>
@@ -754,10 +750,10 @@
 							<left>22</left>
 							<width>363</width>
 							<height>123</height>
-							<font>font12</font>
+							<font>Font29_Cond</font>
 							<align>center</align>
 							<textoffsetx>20</textoffsetx>
-							<textcolor>77FFFFFF</textcolor>
+							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
@@ -779,10 +775,10 @@
 								<left>22</left>
 								<width>363</width>
 								<height>123</height>
-								<font>font12</font>
+								<font>Font29_Cond</font>
 								<align>center</align>
 								<textoffsetx>20</textoffsetx>
-								<textcolor>77FFFFFF</textcolor>
+								<textcolor>white</textcolor>
 								<label>$INFO[ListItem.Label]</label>
 							</control>
 						</control>
@@ -792,7 +788,7 @@
 				<control type="group">
 					<visible>Control.IsVisible(313)</visible>
 					<left>22</left>
-					<top>575</top>
+					<top>22</top>
 					<animation effect="fade" time="400">VisibleChange</animation>
 					<control type="image">
 						<width>1080</width>
@@ -806,25 +802,24 @@
 						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
 					</control>
 					<control type="label" id="314">
-						<left>40</left>
 						<top>75</top>
-						<width>1050</width>
+						<width>1080</width>
 						<height>80</height>
-						<label>123 $INFO[ListItem.Label]</label>
-						<font>font13</font>
-						<textcolor>77FFFFFF</textcolor>
+						<font>Font29_Cond</font>
 						<align>center</align>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>grey</textcolor>
 					</control>
 				</control>
 				<control type="label" id="313">
 					<left>22</left>
-					<top>512</top>
-					<width>1050</width>
+					<top>22</top>
+					<width>1080</width>
 					<height>80</height>
-					<label>$INFO[ListItem.Label]</label>
-					<font>font13</font>
-					<textcolor>77FFFFFF</textcolor>
+					<font>Font29_Cond</font>
 					<align>center</align>
+					<textoffsetx>20</textoffsetx>
+					<textcolor>grey</textcolor>
 				</control>
 			</control>
 		</control>

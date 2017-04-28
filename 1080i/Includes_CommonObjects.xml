@@ -237,11 +237,8 @@
 		<height>80</height>
 		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturefocus>
 		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturenofocus>
-		<textcolor>77FFFFFF</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
 		<align>center</align>
 		<textoffsetx>10</textoffsetx>
-		<font>font13</font>
 	</include>
 	<include name="Dialog_KeyboardToggleButton">
 		<width>180</width>
@@ -250,11 +247,8 @@
 		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturenofocus>
 		<alttexturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</alttexturefocus>
 		<alttexturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</alttexturenofocus>
-		<textcolor>77FFFFFF</textcolor>
-		<focusedcolor>FFFFFFFF</focusedcolor>
 		<align>center</align>
 		<textoffsetx>10</textoffsetx>
-		<font>font13</font>
 	</include>
 	<include name="Dialog_KeyboardButtonHighlight">
 		<param name="id" />
@@ -391,13 +385,25 @@
 						<width>40</width>
 						<height>40</height>
 						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/play.png</texture>
-						<visible>Player.Playing</visible>
+						<visible>Player.Playing + !Skin.HasSetting(ColoredIcons)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>icon/colored/play.png</texture>
+						<visible>Player.Playing + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
 						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/pause.png</texture>
-						<visible>Player.Paused</visible>
+						<visible>Player.Paused + !Skin.HasSetting(ColoredIcons)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>icon/colored/pause.png</texture>
+						<visible>Player.Paused + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label" id="7700">
 						<label>$INFO[Player.Time]</label>
@@ -485,22 +491,32 @@
 					<usecontrolcoords>true</usecontrolcoords>
 					<itemgap>0</itemgap>
 					<control type="image">
-						<top>4</top>
-						<width>34</width>
-						<height>34</height>
+						<width>40</width>
+						<height>40</height>
 						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/list.png</texture>
-						<visible>Integer.IsGreater(Container.NumItems,0)</visible>
+						<visible>Integer.IsGreater(Container.NumItems,0) + !Skin.HasSetting(ColoredIcons)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>icon/colored/list.png</texture>
+						<visible>Integer.IsGreater(Container.NumItems,0) + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Container.NumItems,, $LOCALIZE[31025] ]</label>
 						<include>BreadcrumbsLabel</include>
 					</control>
 					<control type="image">
-						<top>4</top>
-						<width>34</width>
-						<height>34</height>
+						<width>40</width>
+						<height>40</height>
 						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/pages.png</texture>
-						<visible>Integer.IsGreater(Container.NumPages,1)</visible>
+						<visible>Integer.IsGreater(Container.NumPages,1) + !Skin.HasSetting(ColoredIcons)</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>icon/colored/pages.png</texture>
+						<visible>Integer.IsGreater(Container.NumPages,1) + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Container.CurrentPage]$INFO[Container.NumPages,/]</label>
@@ -511,7 +527,7 @@
 			</control>
 			<control type="group">
 				<description>scroll label</description>
-				<visible>!Skin.HasSetting(disablescrollletter)</visible>
+				<visible>!Skin.HasSetting(DisableScrollLetter)</visible>
 				<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
 				<animation effect="slide" tween="cubic" easing="inout" time="400" start="160" end="0">VisibleChange</animation>
 				<right>0</right>
@@ -547,7 +563,6 @@
 	</include>
 	<include name="BreadcrumbsLabel">
 		<font>Font28_Reg</font>
-		<aligny>center</aligny>
 		<height>38</height>
 		<width min="1" max="832">auto</width>
 	</include>
@@ -556,15 +571,11 @@
 		<width>1393</width>
 		<height>68</height>
 		<textoffsetx>45</textoffsetx>
-		<font>Font30_Reg</font>
-		<textcolor>grey2</textcolor>
 	</include>
 	<include name="Settings_RadioButton">
 		<width>1393</width>
 		<height>68</height>
 		<textoffsetx>45</textoffsetx>
-		<font>Font30_Reg</font>
-		<textcolor>grey2</textcolor>
 		<textwidth>872</textwidth>
 		<radioposx>1288</radioposx>
 	</include>
@@ -573,7 +584,6 @@
 		<height>68</height>
 		<textoffsetx>25</textoffsetx>
 		<font>Font36_Reg</font>
-		<textcolor>grey</textcolor>
 		<texturenofocus />
 	</include>
 	<include name="Settings_LeftToggleButton">
@@ -581,38 +591,13 @@
 		<height>68</height>
 		<textoffsetx>25</textoffsetx>
 		<font>Font36_Reg</font>
-		<textcolor>grey</textcolor>
 		<texturenofocus />
 	</include>
 	<include name="Settings_Label_SystemInfo">
 		<width>1393</width>
 		<height>56</height>
 		<textoffsetx>45</textoffsetx>
-		<font>Font30_Reg</font>
-		<textcolor>grey2</textcolor>
 	</include>
-
-	<include name="PlaylistWindowButton">
-		<param name="width">100%</param>
-		<definition>
-			<control type="button" id="$PARAM[control_id]">
-				<width>$PARAM[width]</width>
-				<height>110</height>
-				<align>left</align>
-				<aligny>top</aligny>
-				<texturefocus colordiffuse="button_focus">lists/focus.png</texturefocus>
-				<texturenofocus />
-				<textoffsetx>40</textoffsetx>
-				<textoffsety>35</textoffsety>
-				<label>$PARAM[label]</label>
-				<onclick>$PARAM[onclick]</onclick>
-				<selectedcolor>white</selectedcolor>
-			</control>
-		</definition>
-	</include>
-
-
-	
 	<!--  Floor -->
 	<include name="Floor_Background_Default">
 		<control type="image">

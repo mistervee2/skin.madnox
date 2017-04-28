@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<!-- rework start -->
 	<default type="label">
 		<label />
 		<aligny>center</aligny>
@@ -29,6 +28,11 @@
 		<focusedcolor>$VAR[HighlightColorVar]</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<invalidcolor>invalid</invalidcolor>
+	</default>
+	<default type="textbox">
+		<align>justify</align>
+		<font>Font29_Cond</font>
+		<textcolor>white2</textcolor>
 	</default>
 	<default type="grouplist">
 		<itemgap>0</itemgap>
@@ -102,7 +106,7 @@
 		<textoffsetx>10</textoffsetx>
 		<font>Font30_Reg</font>
 		<aligny>center</aligny>
-		<textcolor>white2</textcolor>
+		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
@@ -143,35 +147,8 @@
 		<sliderheight>34</sliderheight>
 		<aligny>center</aligny>
 		<font>Font30_Reg</font>
-		<textcolor>white2</textcolor>
+		<textcolor>grey</textcolor>
 		<focusedcolor>white</focusedcolor>
 		<disabledcolor>disabled</disabledcolor>
 	</default>
-	<!-- rework end -->
-
-
-	
-	<default type="textbox">
-		<align>justify</align>
-		<font>Font_Reg29</font>
-		<textcolor>white2</textcolor>
-	</default>
-
-	
-	<default type="mover">
-		<left>0</left>
-		<top>0</top>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
-	</default>
-	<default type="resize">
-		<left>0</left>
-		<top>348</top>
-		<width>384</width>
-		<height>384</height>
-		<texturefocus>calibration/calibrate-pixelratio-focus.png</texturefocus>
-		<texturenofocus>calibration/calibrate-pixelratio.png</texturenofocus>
-	</default>
-
-	
 </includes>

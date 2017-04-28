@@ -196,11 +196,18 @@
 					<onleft>8000</onleft>
 					<onright>60</onright>
 					<visible>Container(8000).Hasfocus(2)</visible>
-					<control type="radiobutton" id="101">
+					<control type="radiobutton" id="201">
 						<label>20189</label>
 						<include>Settings_RadioButton</include>
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
+					</control>
+					<control type="radiobutton" id="202">
+						<label>$LOCALIZE[31401]</label>
+						<include>Settings_RadioButton</include>
+						<onclick>Skin.ToggleSetting(DisablePredictiveText)</onclick>
+						<selected>!Skin.HasSetting(DisablePredictiveText)</selected>
+						<visible>System.HasAddon(script.module.autocompletion)</visible>
 					</control>
 					<control type="radiobutton" id="291">
 						<label>31734</label>
@@ -422,7 +429,7 @@
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreFanart&amp;type=resource.images.musicgenrefanart)</onclick>
                 	</control> -->
                 </control>
-                <!--  Artwork -->
+                <!--  Colors -->
 				<control type="grouplist" id="8005">
 					<left>426</left>
 					<top>200</top>
@@ -434,9 +441,21 @@
 					<visible>Container(8000).Hasfocus(5)</visible>
 					<control type="button" id="301">
 						<label>Manage Color Themes</label>
-						<include>Settings_Button</include>
 						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
 						<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+						<include>Settings_Button</include>
+					</control>
+					<control type="radiobutton" id="302">
+						<label>Colored Icons</label>
+						<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
+						<selected>Skin.HasSetting(ColoredIcons)</selected>
+						<include>Settings_RadioButton</include>
+					</control>
+					<control type="radiobutton" id="303">
+						<include>Settings_RadioButton</include>
+						<label>Colored Media Flags</label>
+						<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
+						<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
 					</control>
                 </control>
                 <!-- Scripts -->
@@ -493,18 +512,32 @@
                 		<visible>System.HasAddon(script.skin.helper.colorpicker)</visible>
                 	</control>
                 	<control type="button" id="407">
-                		<label>script.skin.helper.colorpicker</label>
+                		<label>script.skin.helper.skinbackup</label>
                 		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
                 		<include>Settings_Button</include>
                 		<onclick>InstallAddon(script.skin.helper.skinbackup)</onclick>
                 		<visible>!System.HasAddon(script.skin.helper.skinbackup)</visible>
                 	</control>
                 	<control type="button" id="408">
-                		<label>script.skin.helper.colorpicker</label>
+                		<label>script.skin.helper.skinbackup</label>
                 		<label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
                 		<include>Settings_Button</include>
                 		<onclick>Addon.OpenSettings(script.skin.helper.skinbackup)</onclick>
                 		<visible>System.HasAddon(script.skin.helper.skinbackup)</visible>
+                	</control>
+                	<control type="button" id="415">
+                		<label>script.module.autocompletion  -  $LOCALIZE[31401]</label>
+                		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                		<include>Settings_Button</include>
+                		<onclick>InstallAddon(script.module.autocompletion)</onclick>
+                		<visible>!System.HasAddon(script.module.autocompletion)</visible>
+                	</control>
+                	<control type="button" id="416">
+                		<label>script.module.autocompletion  -  $LOCALIZE[31401]</label>
+                		<label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                		<include>Settings_Button</include>
+                		<onclick>Addon.OpenSettings(script.module.autocompletion)</onclick>
+                		<visible>System.HasAddon(script.module.autocompletion)</visible>
                 	</control>
                 	<control type="button" id="409">
                 		<label>script.extendedinfo</label>
