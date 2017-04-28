@@ -234,15 +234,15 @@
 					<control type="radiobutton" id="107">
 						<label>$LOCALIZE[31492]</label>
 						<include>Settings_RadioButton</include>
-						<onclick>Skin.ToggleSetting(Use_Startup_Playlist)</onclick>
-						<selected>Skin.HasSetting(Use_Startup_Playlist)</selected>
+						<onclick>Skin.ToggleSetting(EnableStartupPlaylist)</onclick>
+						<selected>Skin.HasSetting(EnableStartupPlaylist)</selected>
 					</control>
 					<control type="button" id="108">
-						<label>- $LOCALIZE[559]:</label>
-						<label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(Startup_Playlist_Path)][/COLOR]</label2>
+						<label> - $LOCALIZE[559]</label>
+						<label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(StartupPlaylist)][/COLOR]</label2>
 						<include>Settings_Button</include>
-						<onclick>Skin.SetFile(Startup_Playlist_Path,.m3u|.xsp,special://profile/playlists/music/)</onclick>
-						<enable>Skin.HasSetting(Use_Startup_Playlist)</enable>
+						<onclick>Skin.SetFile(StartupPlaylist,.m3u|.xsp,special://profile/playlists/music/)</onclick>
+						<visible>Skin.HasSetting(EnableStartupPlaylist)</visible>
 					</control>
 					<control type="radiobutton" id="17072">
 						<label>31286</label>
@@ -430,33 +430,110 @@
                 	</control> -->
                 </control>
                 <!--  Colors -->
-				<control type="grouplist" id="8005">
-					<left>426</left>
-					<top>200</top>
-					<width>1393</width>
-					<height>748</height>
-					<pagecontrol>60</pagecontrol>
-					<onleft>8000</onleft>
-					<onright>60</onright>
-					<visible>Container(8000).Hasfocus(5)</visible>
-					<control type="button" id="301">
-						<label>Manage Color Themes</label>
-						<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
-						<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
-						<include>Settings_Button</include>
-					</control>
-					<control type="radiobutton" id="302">
-						<label>Colored Icons</label>
-						<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
-						<selected>Skin.HasSetting(ColoredIcons)</selected>
-						<include>Settings_RadioButton</include>
-					</control>
-					<control type="radiobutton" id="303">
-						<include>Settings_RadioButton</include>
-						<label>Colored Media Flags</label>
-						<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
-						<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
-					</control>
+                <control type="grouplist" id="8005">
+                	<left>426</left>
+                	<top>200</top>
+                	<width>1393</width>
+                	<height>748</height>
+                	<pagecontrol>60</pagecontrol>
+                	<onleft>8000</onleft>
+                	<onright>60</onright>
+                	<visible>Container(8000).Hasfocus(5)</visible>
+                	<control type="label" id="14">
+                		<font>Font30_Bold</font>
+                		<textcolor>$VAR[HighlightColorVar]</textcolor>
+                		<label>General</label>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="301">
+                		<label>Manage Color Themes</label>
+                		<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
+                		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<!-- <control type="radiobutton" id="302">
+                		<label>Colored Icons</label>
+                		<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
+                		<selected>Skin.HasSetting(ColoredIcons)</selected>
+                		<include>Settings_RadioButton</include>
+                	</control>
+                	<control type="radiobutton" id="303">
+                		<include>Settings_RadioButton</include>
+                		<label>Colored Media Flags</label>
+                		<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
+                		<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
+                	</control> -->
+                	<control type="button" id="304">
+                		<label>Global</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="label" id="14">
+                		<font>Font30_Bold</font>
+                		<textcolor>$VAR[HighlightColorVar]</textcolor>
+                		<label>Global Overrides</label>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Home</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Movies</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>TV Shows</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>TV</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Music Videos</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Music</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Radio</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Pictures</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Addons</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Games</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Weather</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="304">
+                		<label>Settings</label>
+                		<onclick>ActivateWindow(1110)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
                 </control>
                 <!-- Scripts -->
                 <control type="grouplist" id="8008">

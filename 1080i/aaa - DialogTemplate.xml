@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">8001</defaultcontrol>
+	<controls>
+		<include>Dialog_Furniture_BackgroundFade</include> <!-- THIS FADES THE BACKGROUND -->
+		<include>Dialog_Furniture_Close_Onclick</include> <!-- THIS LETS YOU TAP WITH A TOUCH SCREEN OR CLICK IN THE EMPTY SPACE AROUND THE DIALOG TO CLOSE -->
+		<control type="group">
+			<include content="Dialog_Furniture_Background"> <!-- CHANGE AND REMOVE WHAT IS NEEDED SEE THE WIKI ON PARAMS -->
+				<param name="width">1114</param>
+				<param name="height">588</param>
+				<param name="label"></param>
+				<param name="labelright">470</param>
+				<param name="labelalign">left</param>
+				<param name="labelid"></param>
+			</include>
+
+
+
+
+			<!-- INSERT CONTENT HERE -->
+
+
+
+
+			<control type="grouplist" id="8001"> <!-- THISE ARE THE DEFAULT BUTTONS -->
+				<right>70</right>
+				<top>28</top>
+				<width>400</width>
+				<onleft>60</onleft>
+				<ondown>60</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">9002</param>
+					<param name="label">$LOCALIZE[15067]</param>
+					<param name="onclick">Action(close)</param>
+				</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1</left>
+				<top>88</top>
+				<height>420</height>
+				<onright>8001</onright>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1955,7 +1955,7 @@ msgid "Show Extra Info"
 msgstr ""
 
 msgctxt "#31492"
-msgid "Enable Playlist on Startup"
+msgid "Music Playlist on Startup"
 msgstr ""
 
 msgctxt "#31493"
