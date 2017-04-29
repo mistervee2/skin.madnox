@@ -13,6 +13,15 @@
 				<param name="labelalign">left</param>
 				<param name="labelid"></param>
 			</include>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>30</bottom>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[DialogColorVar]">icon/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container().HasNext</visible>
+			</control>
 
 
 
@@ -22,7 +31,7 @@
 
 
 
-			<control type="grouplist" id="8001"> <!-- THISE ARE THE DEFAULT BUTTONS -->
+			<control type="grouplist" id="8001"> <!-- THESE ARE THE DEFAULT BUTTONS -->
 				<right>70</right>
 				<top>28</top>
 				<width>400</width>

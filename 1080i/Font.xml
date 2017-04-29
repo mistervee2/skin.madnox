@@ -5,122 +5,122 @@
 
 		<!-- Special Fonts -->
 		<font>
-            <name>Font_MainMenu</name>
-            <filename>OpenSansCond.ttf</filename>
-            <aspect>0.72</aspect>
-            <style>bold uppercase</style>
-            <size>112</size>
-        </font>
-        <font>
+			<name>Font_MainMenu</name>
+			<filename>OpenSansCond.ttf</filename>
+			<aspect>0.72</aspect>
+			<style>bold uppercase</style>
+			<size>112</size>
+		</font>
+		<font>
 			<name>Font40_Icon</name>
 			<filename>Material-Design-Iconic-Font.ttf</filename>
 			<size>40</size>
 		</font>
 
-        <!-- Regular Fonts (OpenSans-Regular.ttf) -->
-        <font>
-            <name>Font28_Reg</name>
-            <filename>OpenSans-Regular.ttf</filename>
-            <size>28</size>
-        </font>
-         <font>
-            <name>Font30_Reg</name>
-            <filename>OpenSans-Regular.ttf</filename>
-            <size>30</size>
-        </font>
-        <font>
-            <name>Font32_Reg</name>
-            <filename>OpenSans-Regular.ttf</filename>
-            <size>32</size>
-        </font>
-         <font>
-            <name>Font36_Reg</name>
-            <filename>OpenSans-Regular.ttf</filename>
-            <size>36</size>
-        </font>
-        <font>
-            <name>Font40_Reg</name>
-            <filename>OpenSans-Regular.ttf</filename>
-            <size>40</size>
-        </font>
-
-        <!-- Regular Condensed Fonts (OpenSansCond.ttf) -->
-       	<font>
-            <name>Font25_Cond</name>
-            <filename>OpenSansCond.ttf</filename>
-            <size>25</size>
-        </font>
-         <font>
-            <name>Font29_Cond</name>
-            <filename>OpenSansCond.ttf</filename>
-            <size>29</size>
-        </font>
-        <font>
-            <name>Font32_Cond</name>
-            <filename>OpenSansCond.ttf</filename>
-            <size>32</size>
-        </font>
-         <font>
-            <name>Font38_Cond</name>
-            <filename>OpenSansCond.ttf</filename>
-            <size>38</size>
-        </font>
-         <font>
-            <name>Font31_Cond_075</name>
-            <filename>OpenSansCond.ttf</filename>
-            <linespacing>0.8</linespacing>
-            <size>31</size>
-        </font>
-
-        <!-- Bold Fonts (OpenSans-Bold.ttf) -->
-        <font>
-            <name>Font30_Bold</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <size>28</size>
-        </font>
-        <font>
-            <name>Font33_Bold</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <size>33</size>
-        </font>
-
-
-        <!-- Bold Caps Fonts (OpenSans-Bold.ttf) -->
+		<!-- Regular Fonts (OpenSans-Regular.ttf) -->
 		<font>
-            <name>Font26_Bold_Caps</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <style>uppercase</style>
-            <size>26</size>
-        </font>
-        <font>
-            <name>Font30_Bold_Caps</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <style>uppercase</style>
-            <size>30</size>
-        </font>
-         <font>
-            <name>Font33_Bold_Caps</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <style>uppercase</style>
-            <size>33</size>
-        </font>
-        <font>
-            <name>Font49_Bold_Caps</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <style>uppercase</style>
-            <size>49</size>
-        </font>
-        <font>
-            <name>Font80_Bold_Caps</name>
-            <filename>OpenSans-Bold.ttf</filename>
-            <style>uppercase</style>
-            <size>80</size>
-        </font>
+			<name>Font28_Reg</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font30_Reg</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>Font32_Reg</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>Font36_Reg</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>Font40_Reg</name>
+			<filename>OpenSans-Regular.ttf</filename>
+			<size>40</size>
+		</font>
+
+		<!-- Regular Condensed Fonts (OpenSansCond.ttf) -->
+		<font>
+			<name>Font25_Cond</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>Font29_Cond</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>29</size>
+		</font>
+		<font>
+			<name>Font32_Cond</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>Font38_Cond</name>
+			<filename>OpenSansCond.ttf</filename>
+			<size>38</size>
+		</font>
+		<font>
+			<name>Font31_Cond_075</name>
+			<filename>OpenSansCond.ttf</filename>
+			<linespacing>0.8</linespacing>
+			<size>31</size>
+		</font>
+
+		<!-- Bold Fonts (OpenSans-Bold.ttf) -->
+		<font>
+			<name>Font30_Bold</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<size>28</size>
+		</font>
+		<font>
+			<name>Font33_Bold</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<size>33</size>
+		</font>
+
+
+		<!-- Bold Caps Fonts (OpenSans-Bold.ttf) -->
+		<font>
+			<name>Font26_Bold_Caps</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>26</size>
+		</font>
+		<font>
+			<name>Font30_Bold_Caps</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>30</size>
+		</font>
+		<font>
+			<name>Font33_Bold_Caps</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>33</size>
+		</font>
+		<font>
+			<name>Font49_Bold_Caps</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>49</size>
+		</font>
+		<font>
+			<name>Font80_Bold_Caps</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<style>uppercase</style>
+			<size>80</size>
+		</font>
 
 
 
 
-        <!-- End of font rework -->
+		<!-- End of font rework -->
 
 
 
@@ -390,7 +390,7 @@
 			<aspect>1.2</aspect>
 			<size>31</size>
 		</font>
-	
+		
 		
 		
 		<font>
