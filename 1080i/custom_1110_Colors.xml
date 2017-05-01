@@ -449,10 +449,10 @@
 			<!-- Weather -->
 			<control type="grouplist" id="100">
 				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[400])</visible>
-				<left>142</left>
-				<top>76</top>
-				<width>604</width>
-				<height>540</height>
+				<left>20</left>
+				<right>20</right>
+				<top>88</top>
+				<height>360</height>
 				<pagecontrol>60</pagecontrol>
 				<onleft>60</onleft>
 				<onright>8000</onright>
@@ -498,47 +498,47 @@
 			<control type="grouplist" id="100">
 				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[24992])</visible>
 				<left>20</left>
+				<right>20</right>
 				<top>88</top>
-				<width>1074</width>
-				<height>300</height>
+				<height>360</height>
 				<pagecontrol>60</pagecontrol>
 				<onleft>60</onleft>
 				<onright>8000</onright>
 				<onup>8000</onup>
 				<control type="button" id="101">
 					<label>$LOCALIZE[31741]</label>
-					<label2>[COLOR $VAR[SettingsHighlightColorVar]]$VAR[SettingsHighlightColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsHighlight.color)</onclick>
+					<label2>[COLOR $VAR[SystemHighlightColorVar]]$VAR[SystemHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemHighlight.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="102">
 					<label>$LOCALIZE[31804]</label>
-					<label2>[COLOR $VAR[SettingsPanelColorVar]]$VAR[SettingsPanelColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsPanel.color)</onclick>
+					<label2>[COLOR $VAR[SystemPanelColorVar]]$VAR[SystemPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemPanel.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="103">
 					<label>$LOCALIZE[31740]</label>
-					<label2>[COLOR $VAR[SettingsGlowColorVar]]$VAR[SettingsGlowColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsGlow.color)</onclick>
+					<label2>[COLOR $VAR[SystemGlowColorVar]]$VAR[SystemGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemGlow.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="104">
 					<label>$LOCALIZE[31676]</label>
-					<label2>[COLOR $VAR[SettingsTopbarColorVar]]$VAR[SettingsTopbarColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsTopbar.color)</onclick>
+					<label2>[COLOR $VAR[SystemTopbarColorVar]]$VAR[SystemTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemTopbar.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="105">
 					<label>$LOCALIZE[31739]</label>
-					<label2>[COLOR $VAR[SettingsFloorColorVar]]$VAR[SettingsFloorColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsFloor.color)</onclick>
+					<label2>[COLOR $VAR[SystemFloorColorVar]]$VAR[SystemFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemFloor.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="106">
 					<label>$LOCALIZE[33068]</label>
-					<label2>[COLOR $VAR[SettingsBackgroundColorVar]]$VAR[SettingsBackgroundColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsBackground.color)</onclick>
+					<label2>[COLOR $VAR[SystemBackgroundColorVar]]$VAR[SystemBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemBackground.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 			</control>
