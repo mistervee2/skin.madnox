@@ -339,32 +339,32 @@
                 		<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
                 		<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
                 	</control> -->
-					<control type="radiobutton" id="110">
-						<include>Settings_RadioButton</include>
-						<selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
-						<onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
-						<label>$LOCALIZE[31216]</label>
-						<visible>System.HasAddon(script.artwork.downloader)</visible>
-					</control>
-					<control type="radiobutton" id="17112">
-						<include>Settings_RadioButton</include>
-						<label>31292</label>
-						<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
-						<selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
-					</control>
-					<control type="radiobutton" id="17114">
-						<include>Settings_RadioButton</include>
-						<label>31469</label>
-						<onclick>Skin.ToggleSetting(SkinHelperAnimations)</onclick>
-						<selected>Skin.HasSetting(SkinHelperAnimations)</selected>
-					</control>
-					<control type="button" id="401">
-						<label>Backgrounds</label>
-						<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
-						<include>Settings_Button</include>
-						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=SkinBackgrounds&amp;type=resource.images.skinbackgrounds)</onclick>
-						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-					</control>
+                	<control type="radiobutton" id="110">
+                		<include>Settings_RadioButton</include>
+                		<selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
+                		<onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
+                		<label>$LOCALIZE[31216]</label>
+                		<visible>System.HasAddon(script.artwork.downloader)</visible>
+                	</control>
+                	<control type="radiobutton" id="17112">
+                		<include>Settings_RadioButton</include>
+                		<label>31292</label>
+                		<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
+                		<selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
+                	</control>
+                	<control type="radiobutton" id="17114">
+                		<include>Settings_RadioButton</include>
+                		<label>31469</label>
+                		<onclick>Skin.ToggleSetting(SkinHelperAnimations)</onclick>
+                		<selected>Skin.HasSetting(SkinHelperAnimations)</selected>
+                	</control>
+                	<control type="button" id="401">
+                		<label>Backgrounds</label>
+                		<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
+                		<include>Settings_Button</include>
+                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=SkinBackgrounds&amp;type=resource.images.skinbackgrounds)</onclick>
+                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
+                	</control>
                 	<!-- <control type="radiobutton" id="300">
                 		<label>Coloured Media Flags</label>
                 		<radioposx>1274</radioposx>
@@ -458,6 +458,26 @@
                 		<label>$ADDON[script.skin.helper.skinbackup 32020]</label>
                 		<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
                 		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="radiobutton" id="320">
+                		<label>$LOCALIZE[31408]</label>
+                		<onclick>Skin.ToggleSetting(SkinHelper.EnableDayNightThemes)</onclick>
+                		<selected>Skin.HasSetting(SkinHelper.EnableDayNightThemes)</selected>
+                		<include>Settings_RadioButton</include>
+                	</control>
+                	<control type="button" id="321">
+                		<label> - $LOCALIZE[31409]</label>
+                		<label2>$INFO[Skin.String(SkinHelper.ColorTheme.Day)]</label2>
+                		<onclick>RunScript(script.skin.helper.skinbackup,action=ColorThemes,daynight=day)</onclick>
+                		<visible>Skin.HasSetting(SkinHelper.EnableDayNightThemes)</visible>
+                		<include>Settings_Button</include>
+                	</control>
+                	<control type="button" id="322">
+                		<label> - $LOCALIZE[31410]</label>
+                		<label2>$INFO[Skin.String(SkinHelper.ColorTheme.Night)]</label2>
+                		<onclick>RunScript(script.skin.helper.skinbackup,action=ColorThemes,daynight=night)</onclick>
+                		<visible>Skin.HasSetting(SkinHelper.EnableDayNightThemes)</visible>
                 		<include>Settings_Button</include>
                 	</control>
                 	<control type="button" id="303">

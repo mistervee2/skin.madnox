@@ -1643,9 +1643,17 @@ msgctxt "#31407"
 msgid "  •  Show Visualisation"
 msgstr ""
 
-###########################################################################
-# 31408-31410 empty
+msgctxt "#31408"
+msgid "Enable day/night color themes"
+msgstr ""
 
+msgctxt "#31409"
+msgid "Theme to use at day time"
+msgstr ""
+
+msgctxt "#31410"
+msgid "Theme to use at night time"
+msgstr ""
 
 msgctxt "#31411"
 msgid "MANAGER"
