@@ -8,8 +8,10 @@
 			<include content="Dialog_Furniture_Background">
 				<param name="labelid">20</param>
 				<param name="labelright">70</param>
-				<param name="width">1420</param>
-				<param name="height">592</param>
+				<param name="width">1440</param>
+				<param name="height">590</param>
+				<param name="bottomleftlabel">[COLOR $INFO[Window.Property(colorstring)]]$INFO[Window.Property(colorstring), ][/COLOR]</param>
+				<param name="bottomrightlabel">$INFO[Container(3110).NumItems,, $LOCALIZE[14078]]$INFO[Container(3110).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3110).NumPages,/,)]</param>
 			</include>
 			<control type="image">
 				<left>160</left>
@@ -32,21 +34,16 @@
 			<!-- Left menu -->
 			<control type="grouplist" id="9">
 				<left>20</left>
-				<top>89</top>
-				<width>320</width>
+				<top>88</top>
+				<width>340</width>
 				<height>420</height>
 				<onright>2</onright>
 			</control>
 			<control type="button" id="13">
-				<width>320</width>
-				<height>60</height>
-				<textoffsetx>50</textoffsetx>
-				<font>Font32_Reg</font>
-				<textcolor>grey</textcolor>
-				<texturenofocus />
+				<include>Dialog_Button_Left</include>
 			</control>
 			<control type="image">
-				<left>340</left>
+				<left>360</left>
 				<top>88</top>
 				<width>4</width>
 				<height>421</height>
@@ -61,8 +58,8 @@
 			</control>
 			<!-- Right menu -->
 			<control type="grouplist" id="2">
-				<left>340</left>
-				<top>89</top>
+				<left>360</left>
+				<top>88</top>
 				<width>1060</width>
 				<height>420</height>
 				<pagecontrol>60</pagecontrol>
@@ -79,21 +76,19 @@
 			<control type="label" id="7">
 				<font>Font30_Reg</font>
 				<textcolor>white</textcolor>
-				<include>Dialog_Button_AddonSettings</include>
+				<include>Dialog_Button_Right</include>
 			</control>
 			<control type="button" id="3">
-				<include>Dialog_Button_AddonSettings</include>
+				<include>Dialog_Button_Right</include>
 			</control>
 			<control type="radiobutton" id="4">
-				<textwidth>890</textwidth>
-				<radioposx>949</radioposx>
-				<include>Dialog_Button_AddonSettings</include>
+				<include>Dialog_RadioButton_Right</include>
 			</control>
 			<control type="spincontrolex" id="5">
-				<include>Dialog_Button_AddonSettings</include>
+				<include>Dialog_Button_Right</include>
 			</control>
 			<control type="sliderex" id="8">
-				<include>Dialog_Button_AddonSettings</include>
+				<include>Dialog_Button_Right</include>
 			</control>
 			<control type="image" id="6">
 				<description>separator image</description>
@@ -123,7 +118,7 @@
 				<visible>!ControlGroup(2).HasFocus + !String.IsEqual(Container(2).NumItems,0)</visible>
 			</control>
 			<control type="grouplist" id="8000">
-				<right>70</right>
+				<right>60</right>
 				<top>28</top>
 				<width>400</width>
 				<onleft>2</onleft>

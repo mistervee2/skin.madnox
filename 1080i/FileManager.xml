@@ -64,7 +64,6 @@
 					<height>40</height>
 					<align>right</align>
 					<font>Font30_Bold</font>
-					<textcolor>white6</textcolor>
 					<label>$INFO[Container(20).CurrentItem,,/]$INFO[Container(20).NumItems]</label>
 				</control>
 			</control>
@@ -105,7 +104,6 @@
 					<height>40</height>
 					<align>right</align>
 					<font>Font30_Bold</font>
-					<textcolor>white6</textcolor>
 					<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
 				</control>
 			</control>
@@ -129,7 +127,7 @@
 			<include>MediaMenu_Common</include>
 			<control type="grouplist" id="9000">
 				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>20</onright>
 				<onback>20</onback>
 				<include>MediaMenu_Settings</include>

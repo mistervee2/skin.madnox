@@ -31,8 +31,9 @@
 	</default>
 	<default type="textbox">
 		<align>justify</align>
-		<font>Font29_Cond</font>
+		<font>Font30_Reg</font>
 		<textcolor>white2</textcolor>
+		<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 	</default>
 	<default type="grouplist">
 		<itemgap>0</itemgap>

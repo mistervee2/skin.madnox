@@ -6,7 +6,7 @@
   <color name="red">FFCE4421</color><!-- for weather high temp -->
   <color name="blue">FF0084ff</color><!-- for weather low temp -->
   <color name="shadow">88000000</color><!-- only for shadow under text -->
-  <color name="disabled">33FFFFFF</color><!-- only for use in defaults.xml for diabled item -->
+  <color name="disabled">33FFFFFF</color><!-- only for use in defaults.xml for disabled item -->
   <color name="invalid">ABCE4421</color><!-- only for use in defaults.xml for invalid item -->
 
   <!-- skin wide default colors - fallbacks for script.skin.helper.colorpicker - see Variables_Colors.xml -->

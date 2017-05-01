@@ -31,12 +31,8 @@
 			</include>
 			<!-- Left menu -->
 			<control type="label">
-				<top>100</top>
-				<left>126</left>
-				<width>273</width>
-				<height>100</height>
 				<label>$LOCALIZE[130]</label>
-				<font>Font33_Bold_Caps</font>
+				<include>Settings_LeftLabel</include>
 			</control>
 			<control type="grouplist" id="8000">
 				<left>101</left>
@@ -203,7 +199,7 @@
 			<include>MediaMenu_Common</include>
 			<control type="grouplist" id="9000">
 				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>95</onright>
 				<onback>95</onback>
 				<include>MediaMenu_Settings</include>

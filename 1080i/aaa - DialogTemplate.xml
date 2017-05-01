@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">8001</defaultcontrol>
+	<defaultcontrol always="true">????</defaultcontrol>
 	<controls>
 		<include>Dialog_Furniture_BackgroundFade</include> <!-- THIS FADES THE BACKGROUND -->
 		<include>Dialog_Furniture_Close_Onclick</include> <!-- THIS LETS YOU TAP WITH A TOUCH SCREEN OR CLICK IN THE EMPTY SPACE AROUND THE DIALOG TO CLOSE -->
@@ -9,16 +9,20 @@
 				<param name="width">1114</param>
 				<param name="height">588</param>
 				<param name="label"></param>
+				<param name="labelleft">70</param>
 				<param name="labelright">470</param>
 				<param name="labelalign">left</param>
 				<param name="labelid"></param>
+				<param name="bottomseparatorvisible">true</param>
+				<param name="bottomleftlabel"></param>
+				<param name="bottomrightlabel"></param>
 			</include>
 			<control type="image">
 				<centerleft>50%</centerleft>
 				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[DialogColorVar]">icon/default/arrowdown.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Container().HasNext</visible>
 			</control>
@@ -31,8 +35,8 @@
 
 
 
-			<control type="grouplist" id="8001"> <!-- THESE ARE THE DEFAULT BUTTONS -->
-				<right>70</right>
+			<control type="grouplist" id="8000"> <!-- THESE ARE THE DEFAULT BUTTONS -->
+				<right>60</right>
 				<top>28</top>
 				<width>400</width>
 				<onleft>60</onleft>
@@ -41,7 +45,7 @@
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<include content="Dialog_Button_TopRight">
-					<param name="id">9002</param>
+					<param name="id">8001</param>
 					<param name="label">$LOCALIZE[15067]</param>
 					<param name="onclick">Action(close)</param>
 				</include>

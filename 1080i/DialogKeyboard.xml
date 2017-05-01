@@ -6,7 +6,7 @@
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<visible>!Window.IsVisible(numericinput)</visible>
-			<animation effect="slide" end="0,-100" delay="1" condition="Control.IsVisible(313) | [Control.IsVisible(8010) + System.HasAddon(plugin.program.autocompletion) + !Skin.HasSetting(DisablePredictiveText)]">Conditional</animation>
+			<animation effect="slide" end="0,-100" delay="1" condition="Control.IsVisible(313) | Control.IsVisible(8010)">Conditional</animation>
 			<include content="Dialog_Furniture_Background">
 				<param name="labelid">311</param>
 				<param name="labelright">70</param>
@@ -719,7 +719,7 @@
 			</control>
 			<control type="group">
 				<top>553</top>
-				<visible>Control.IsVisible(313) | [System.HasAddon(plugin.program.autocompletion) + !Window.IsActive(script-skin_helper_service-ColorPicker.xml) + !Skin.HasSetting(DisablePredictiveText)]</visible>
+				<visible>Control.IsVisible(313) | Control.IsVisible(8010)</visible>
 				<include>Animation_CommonFade</include>
 				<control type="image">
 					<width>1124</width>
@@ -731,20 +731,48 @@
 					<height>199</height>
 					<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialog/dialog-back.png</texture>
 				</control>
-				<control type="panel" id="8010">
-					<width>1100</width>
-					<height>200</height>
-					<orientation>horizontal</orientation>
-					<onup>312</onup>
-					<ondown>511</ondown>
-					<visible>!Control.IsVisible(313)</visible>
-					<itemlayout width="358" height="75">
+			</control>
+			<control type="panel" id="8010">
+				<top>553</top>
+				<width>1100</width>
+				<height>200</height>
+				<orientation>horizontal</orientation>
+				<onup>312</onup>
+				<ondown>511</ondown>
+				<include>Animation_CommonFade</include>
+				<visible>!Control.IsVisible(313) + System.HasAddon(plugin.program.autocompletion) + !Window.IsActive(script-skin_helper_service-ColorPicker.xml) + !Skin.HasSetting(DisablePredictiveText)</visible>
+				<itemlayout width="358" height="75">
+					<control type="image">
+						<left>22</left>
+						<top>22</top>
+						<width>363</width>
+						<height>80</height>
+						<texture border="10" colordiffuse="$VAR[DialogColorVar]">button/keyboard-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<left>22</left>
+						<width>363</width>
+						<height>123</height>
+						<font>Font29_Cond</font>
+						<align>center</align>
+						<textoffsetx>20</textoffsetx>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="349" height="75">
+					<control type="group">
 						<control type="image">
 							<left>22</left>
 							<top>22</top>
 							<width>363</width>
 							<height>80</height>
 							<texture border="10" colordiffuse="$VAR[DialogColorVar]">button/keyboard-nofocus.png</texture>
+						</control>
+						<control type="image">
+							<width>406</width>
+							<height>123</height>
+							<texture colordiffuse="$VAR[HighlightColorVar]" border="35">button/keyboard-highlight.png</texture>
 						</control>
 						<control type="label">
 							<left>22</left>
@@ -753,67 +781,31 @@
 							<font>Font29_Cond</font>
 							<align>center</align>
 							<textoffsetx>20</textoffsetx>
-							<textcolor>grey</textcolor>
+							<textcolor>white</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
-					</itemlayout>
-					<focusedlayout width="349" height="75">
-						<control type="group">
-							<control type="image">
-								<left>22</left>
-								<top>22</top>
-								<width>363</width>
-								<height>80</height>
-								<texture border="10" colordiffuse="$VAR[DialogColorVar]">button/keyboard-nofocus.png</texture>
-							</control>
-							<control type="image">
-								<width>406</width>
-								<height>123</height>
-								<texture colordiffuse="$VAR[HighlightColorVar]" border="35">button/keyboard-highlight.png</texture>
-							</control>
-							<control type="label">
-								<left>22</left>
-								<width>363</width>
-								<height>123</height>
-								<font>Font29_Cond</font>
-								<align>center</align>
-								<textoffsetx>20</textoffsetx>
-								<textcolor>white</textcolor>
-								<label>$INFO[ListItem.Label]</label>
-							</control>
-						</control>
-					</focusedlayout>
-					<content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=6</content>
+					</control>
+				</focusedlayout>
+				<content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=6</content>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(313)</visible>
+				<left>22</left>
+				<top>22</top>
+				<include>Animation_CommonFade</include>
+				<control type="image">
+					<width>1080</width>
+					<height>80</height>
+					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
 				</control>
-				<control type="group">
-					<visible>Control.IsVisible(313)</visible>
-					<left>22</left>
-					<top>22</top>
-					<animation effect="fade" time="400">VisibleChange</animation>
-					<control type="image">
-						<width>1080</width>
-						<height>80</height>
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
-					</control>
-					<control type="image">
-						<top>75</top>
-						<width>1080</width>
-						<height>80</height>
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
-					</control>
-					<control type="label" id="314">
-						<top>75</top>
-						<width>1080</width>
-						<height>80</height>
-						<font>Font29_Cond</font>
-						<align>center</align>
-						<textoffsetx>20</textoffsetx>
-						<textcolor>grey</textcolor>
-					</control>
+				<control type="image">
+					<top>75</top>
+					<width>1080</width>
+					<height>80</height>
+					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
 				</control>
-				<control type="label" id="313">
-					<left>22</left>
-					<top>22</top>
+				<control type="label" id="314">
+					<top>75</top>
 					<width>1080</width>
 					<height>80</height>
 					<font>Font29_Cond</font>
@@ -821,6 +813,16 @@
 					<textoffsetx>20</textoffsetx>
 					<textcolor>grey</textcolor>
 				</control>
+			</control>
+			<control type="label" id="313">
+				<left>22</left>
+				<top>22</top>
+				<width>1080</width>
+				<height>80</height>
+				<font>Font29_Cond</font>
+				<align>center</align>
+				<textoffsetx>20</textoffsetx>
+				<textcolor>grey</textcolor>
 			</control>
 		</control>
 	</controls>

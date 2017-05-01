@@ -175,7 +175,7 @@
 			<include>MediaMenu_Common</include>
 			<control type="grouplist" id="9000">
 				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>8000</onright>
 				<onback>8000</onback>
 				<include>MediaMenu_Settings</include>

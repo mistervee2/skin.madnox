@@ -1197,7 +1197,7 @@ msgid "Widget"
 msgstr ""
 
 msgctxt "#31296"
-msgid "Customize Quick Nav"
+msgid "Dim screen on dialog popup"
 msgstr ""
 
 msgctxt "#31297"
@@ -1620,8 +1620,24 @@ msgctxt "#31401"
 msgid "Predictive text for virtual keyboard"
 msgstr ""
 
+msgctxt "#31402"
+msgid "Global override"
+msgstr ""
+
+msgctxt "#31403"
+msgid "Manage"
+msgstr ""
+
+msgctxt "#31404"
+msgid "Video now playing background"
+msgstr ""
+
+msgctxt "#31405"
+msgid "Music now playing background"
+msgstr ""
+
 ###########################################################################
-# 31402-31406 empty
+# 31406 empty
 
 msgctxt "#31407"
 msgid "  •  Show Visualisation"
@@ -2327,7 +2343,7 @@ msgid "Enable Extended Info widget"
 msgstr ""
 
 msgctxt "#31633"
-msgid "QuickNav"
+msgid "Quick Nav"
 msgstr ""
 
 msgctxt "#31634"
@@ -2619,7 +2635,7 @@ msgid "Artwork"
 msgstr ""
 
 msgctxt "#31736"
-msgid "Global setting"
+msgid "Global default"
 msgstr ""
 
 msgctxt "#31737"

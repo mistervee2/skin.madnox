@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol>8000</defaultcontrol>
+	<defaultcontrol always="true">8000</defaultcontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|madnox-quicknav)</onunload>
 	<controls>
 		<!-- Backdrop -->
@@ -31,12 +31,8 @@
 				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
 			<control type="label">
-				<top>100</top>
-				<left>126</left>
-				<width>273</width>
-				<height>100</height>
-				<font>Font33_Bold_Caps</font>
 				<label>$LOCALIZE[20077]</label>
+				<include>Settings_LeftLabel</include>
 			</control>
 			<control type="list" id="8000">
 				<left>101</left>
@@ -68,7 +64,6 @@
 						<height>68</height>
 						<textoffsetx>25</textoffsetx>
 						<font>Font36_Reg</font>
-						<focusedcolor>white</focusedcolor>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 				</focusedlayout>
@@ -95,7 +90,7 @@
 					</item>
 					<item id="5">
 						<description>Colors</description>
-						<label>Colors</label>
+						<label>$LOCALIZE[14078]</label>
 						<onclick />
 					</item>
 					<item id="8">
@@ -115,12 +110,8 @@
 				</content>
 			</control>
 			<control type="label">
-				<top>100</top>
-				<left>471</left>
-				<width>1413</width>
-				<height>100</height>
 				<label>$LOCALIZE[33063]</label>
-				<font>Font33_Bold_Caps</font>
+				<include>Settings_RightLabel</include>
 				<visible>!Container(8000).Hasfocus(9)</visible>
 			</control>
 			<!-- Main menu -->
@@ -180,11 +171,6 @@
 						<onclick>SetProperty(FeaturedSetup,true,Home)</onclick>
 						<onclick>ActivateWindow(1147)</onclick>
 					</control>
-					<control type="button" id="444">
-						<label>31347</label>
-						<include>Settings_Button</include>
-						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=madnox-quicknav)</onclick>
-					</control>
 				</control>
 				<!-- General -->
 				<control type="grouplist" id="8002">
@@ -197,7 +183,7 @@
 					<onright>60</onright>
 					<visible>Container(8000).Hasfocus(2)</visible>
 					<control type="radiobutton" id="201">
-						<label>20189</label>
+						<label>$LOCALIZE[20189]</label>
 						<include>Settings_RadioButton</include>
 						<onclick>Skin.ToggleSetting(AutoScroll)</onclick>
 						<selected>Skin.HasSetting(AutoScroll)</selected>
@@ -209,18 +195,23 @@
 						<selected>!Skin.HasSetting(DisablePredictiveText)</selected>
 						<visible>System.HasAddon(script.module.autocompletion)</visible>
 					</control>
-					<control type="radiobutton" id="291">
-						<label>31734</label>
+					<control type="radiobutton" id="203">
+						<label>$LOCALIZE[31296]</label>
 						<include>Settings_RadioButton</include>
-						<onclick>Skin.ToggleSetting(quicklistmenu)</onclick>
-						<selected>Skin.HasSetting(quicklistmenu)</selected>
+						<onclick>Skin.ToggleSetting(DisableDialogBackground)</onclick>
+						<selected>!Skin.HasSetting(DisableDialogBackground)</selected>
 					</control>
-					<control type="radiobutton" id="298">
-						<description>Play trailers in fullscreen</description>
-						<label>31279</label>
+					<control type="radiobutton" id="204">
+						<label>$LOCALIZE[31404]</label>
 						<include>Settings_RadioButton</include>
-						<onclick>Skin.ToggleSetting(fstrailer)</onclick>
-						<selected>Skin.HasSetting(fstrailer)</selected>
+						<onclick>Skin.ToggleSetting(DisableBackgroundVideoNowPlaying)</onclick>
+						<selected>!Skin.HasSetting(DisableBackgroundVideoNowPlaying)</selected>
+					</control>
+					<control type="radiobutton" id="205">
+						<label>$LOCALIZE[31405]</label>
+						<include>Settings_RadioButton</include>
+						<onclick>Skin.ToggleSetting(DisableBackgroundMusicNowPlaying)</onclick>
+						<selected>!Skin.HasSetting(DisableBackgroundMusicNowPlaying)</selected>
 					</control>
 					<control type="button" id="261">
 						<label>$LOCALIZE[31186]:</label>
@@ -285,24 +276,30 @@
 						<onclick>SetProperty(CustomDialogLabel,$LOCALIZE[31676],home)</onclick>
 						<onclick>ActivateWindow(1111)</onclick>
 					</control>
+					<control type="radiobutton" id="402">
+						<label>$LOCALIZE[31633]</label>
+						<include>Settings_RadioButton</include>
+						<onclick>Skin.ToggleSetting(DisableQuickNav)</onclick>
+						<selected>!Skin.HasSetting(DisableQuickNav)</selected>
+					</control>
+					<control type="button" id="403">
+						<label>$LOCALIZE[31347]</label>
+						<include>Settings_Button</include>
+						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=madnox-quicknav)</onclick>
+						<visible>!Skin.HasSetting(DisableQuickNav)</visible>
+					</control>
+					<control type="radiobutton" id="404">
+						<label>$LOCALIZE[31280]</label>
+						<include>Settings_RadioButton</include>
+						<onclick>Skin.ToggleSetting(DisableScrollLetter)</onclick>
+						<selected>!Skin.HasSetting(DisableScrollLetter)</selected>
+					</control>
 					<control type="radiobutton" id="290">
 						<label>31265</label>
 						<include>Settings_RadioButton</include>
 						<onclick>Notification($LOCALIZE[31902],$LOCALIZE[31871])</onclick>
 						<onclick>Skin.ToggleSetting(smallerdialogs)</onclick>
 						<selected>Skin.HasSetting(smallerdialogs)</selected>
-					</control>
-					<control type="radiobutton" id="17031">
-						<label>31280</label>
-						<include>Settings_RadioButton</include>
-						<onclick>Skin.ToggleSetting(ShowScrollLetter)</onclick>
-						<selected>Skin.HasSetting(ShowScrollLetter)</selected>
-					</control>
-					<control type="radiobutton" id="17115">
-						<include>Settings_RadioButton</include>
-						<label>$LOCALIZE[31534]</label>
-						<onclick>Skin.ToggleSetting(AlphabetScrollbar)</onclick>
-						<selected>Skin.HasSetting(AlphabetScrollbar)</selected>
 					</control>
 					<control type="button" id="517">
 						<label>$LOCALIZE[31809]</label>
@@ -330,6 +327,18 @@
 					<onleft>8000</onleft>
 					<onright>60</onright>
 					<visible>Container(8000).Hasfocus(4)</visible>
+					<!-- <control type="radiobutton" id="302">
+                		<label>Colored Icons</label>
+                		<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
+                		<selected>Skin.HasSetting(ColoredIcons)</selected>
+                		<include>Settings_RadioButton</include>
+                	</control>
+                	<control type="radiobutton" id="303">
+                		<include>Settings_RadioButton</include>
+                		<label>Colored Media Flags</label>
+                		<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
+                		<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
+                	</control> -->
 					<control type="radiobutton" id="110">
 						<include>Settings_RadioButton</include>
 						<selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
@@ -349,7 +358,7 @@
 						<onclick>Skin.ToggleSetting(SkinHelperAnimations)</onclick>
 						<selected>Skin.HasSetting(SkinHelperAnimations)</selected>
 					</control>
-					<control type="button" id="301">
+					<control type="button" id="401">
 						<label>Backgrounds</label>
 						<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
 						<include>Settings_Button</include>
@@ -385,28 +394,28 @@
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	</control>
                 -->
-                <control type="button" id="306">
+                <control type="button" id="406">
                 	<label>Video genre icons</label>
                 	<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
                 	<include>Settings_Button</include>
                 	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
                 </control>
-                <control type="button" id="308">
+                <control type="button" id="408">
                 	<label>Music genre icons</label>
                 	<label2>$INFO[Skin.String(MusicGenreIcons.Name)]</label2>
                 	<include>Settings_Button</include>
                 	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
                 </control>
-                <control type="button" id="304">
+                <control type="button" id="404">
                 	<label>Weather icons</label>
                 	<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
                 	<include>Settings_Button</include>
                 	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                 	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 </control>
-                <control type="button" id="305">
+                <control type="button" id="405">
                 	<label>Weather fanart</label>
                 	<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
                 	<include>Settings_Button</include>
@@ -420,7 +429,7 @@
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
                 	</control>
-                	
+
                 	<control type="button" id="309">
                 		<label>Music genre fanart</label>
                 		<label2>$INFO[Skin.String(MusicGenreFanart.Name)]</label2>
@@ -439,98 +448,97 @@
                 	<onleft>8000</onleft>
                 	<onright>60</onright>
                 	<visible>Container(8000).Hasfocus(5)</visible>
-                	<control type="label" id="14">
+                	<control type="label" id="301">
                 		<font>Font30_Bold</font>
                 		<textcolor>$VAR[HighlightColorVar]</textcolor>
-                		<label>General</label>
+                		<label>$LOCALIZE[16000]</label>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="301">
-                		<label>Manage Color Themes</label>
+                	<control type="button" id="302">
+                		<label>$ADDON[script.skin.helper.skinbackup 32020]</label>
                 		<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
                 		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<!-- <control type="radiobutton" id="302">
-                		<label>Colored Icons</label>
-                		<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
-                		<selected>Skin.HasSetting(ColoredIcons)</selected>
-                		<include>Settings_RadioButton</include>
-                	</control>
-                	<control type="radiobutton" id="303">
-                		<include>Settings_RadioButton</include>
-                		<label>Colored Media Flags</label>
-                		<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
-                		<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
-                	</control> -->
-                	<control type="button" id="304">
-                		<label>Global</label>
+                	<control type="button" id="303">
+                		<label>$LOCALIZE[31736]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[31736],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="label" id="14">
+                	<control type="label" id="304">
                 		<font>Font30_Bold</font>
                 		<textcolor>$VAR[HighlightColorVar]</textcolor>
-                		<label>Global Overrides</label>
+                		<label>$LOCALIZE[31402]</label>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Home</label>
+                	<control type="button" id="305">
+                		<description>Home</description>
+                		<label>$LOCALIZE[10000]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[10000],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Movies</label>
+                	<control type="button" id="306">
+                		<description>Movies</description>
+                		<label>$LOCALIZE[342]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[342],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>TV Shows</label>
+                	<control type="button" id="307">
+                		<description>TV Shows</description>
+                		<label>$LOCALIZE[36903]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[36903],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>TV</label>
+                	<control type="button" id="308">
+                		<description>PVR and Live TV</description>
+                		<label>$LOCALIZE[14204]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[14204],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Music Videos</label>
+                	<control type="button" id="309">
+                		<description>Music Videos</description>
+                		<label>$LOCALIZE[20389]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[20389],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Music</label>
+                	<control type="button" id="310">
+                		<description>Music</description>
+                		<label>$LOCALIZE[14216]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[14216],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Radio</label>
+                	<control type="button" id="311">
+                		<description>Games</description>
+                		<label>$LOCALIZE[15016]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[15016],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Pictures</label>
+                	<control type="button" id="312">
+                		<description>Pictures</description>
+                		<label>$LOCALIZE[14217]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[14217],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Addons</label>
+                	<control type="button" id="313">
+                		<description>Weather</description>
+                		<label>$LOCALIZE[400]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[400],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
-                	<control type="button" id="304">
-                		<label>Games</label>
-                		<onclick>ActivateWindow(1110)</onclick>
-                		<include>Settings_Button</include>
-                	</control>
-                	<control type="button" id="304">
-                		<label>Weather</label>
-                		<onclick>ActivateWindow(1110)</onclick>
-                		<include>Settings_Button</include>
-                	</control>
-                	<control type="button" id="304">
-                		<label>Settings</label>
+                	<control type="button" id="314">
+                		<description>System</description>
+                		<label>$LOCALIZE[24992]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[24992],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
@@ -972,7 +980,7 @@
 				<top>200</top>
 				<bottom>132</bottom>
 				<height>800</height>
-				<onleft>2</onleft>
+				<onleft>8010</onleft>
 			</control>
 		</control>
 		<!-- Topbar -->
@@ -994,7 +1002,7 @@
 			<include>MediaMenu_Common</include>
 			<control type="grouplist" id="9000">
 				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>8000</onright>
 				<onback>8000</onback>
 				<include>MediaMenu_Settings</include>

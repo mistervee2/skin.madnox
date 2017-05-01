@@ -80,7 +80,7 @@
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
-				<right>70</right>
+				<right>60</right>
 				<top>28</top>
 				<width>400</width>
 				<onleft>3</onleft>

@@ -513,7 +513,6 @@
 								<pauseatend>1000</pauseatend>
 								<fadetime>0</fadetime>
 								<randomize>false</randomize>
-								<loop>yes</loop>
 							</control>
 						</control>
 						<include content="WeatherMapItem">
@@ -552,7 +551,7 @@
 			<include>MediaMenu_Common</include>
 			<control type="grouplist" id="9000">
 				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>7500</onright>
 				<onback>7500</onback>
 				<include content="MediaMenu_Icon_Button">
@@ -638,7 +637,7 @@
 					<param name="icon">icon/mediamenu/arrowleft.png</param>
 					<param name="label">$LOCALIZE[31633]</param>
 					<param name="onclick">ActivateWindow(1113)</param>
-					<param name="visible">!Skin.HasSetting(disablequicknav)</param>
+					<param name="visible">!Skin.HasSetting(DisableQuickNav)</param>
 				</include>
 			</control>
 		</control>

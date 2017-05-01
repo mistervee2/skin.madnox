@@ -11,6 +11,7 @@
 				<param name="labelalign">center</param>
 				<param name="width">955</param>
 				<param name="height">420</param>
+				<param name="bottomseparatorvisible">false</param>
 			</include>
 			<control type="textbox" id="9">
 				<description>dialog line 1/2/3</description>
@@ -20,8 +21,7 @@
 				<height>130</height>
 				<align>center</align>
 				<font>Font30_Reg</font>
-				<textcolor>white3</textcolor>
-				<autoscroll time="2000" delay="2000" repeat="4000">Skin.HasSetting(AutoScroll)</autoscroll>
+				<autoscroll time="2000" delay="2000" repeat="4000">True</autoscroll>
 			</control>
 			<control type="progress" id="20">
 				<left>70</left>

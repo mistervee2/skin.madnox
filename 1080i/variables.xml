@@ -12,7 +12,6 @@
 		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds))">$INFO[Skin.String(SkinBackgrounds.path)]settings$INFO[Skin.String(SkinBackgrounds.ext)]</value>
 		<value>special://skin/extras/backgrounds/default.jpg</value>
 	</variable>
-
 	<!-- Art -->
 	<variable name="PosterVar">
 		<value condition="ListItem.IsParentFolder + Container.Content(episodes)">DefaultFolderBackLandscape.png</value>
@@ -57,35 +56,13 @@
 		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
 		<value>.png</value>
 	</variable>
-
-	<!-- END Viewtype Art -->
 	<!-- Dialogs -->
-	<variable name="DialogHeading1110ColorsVar">
-		<value condition="ControlGroup(100).HasFocus">$LOCALIZE[31298]</value>
-		<value condition="ControlGroup(200).HasFocus(201)">$LOCALIZE[31736]</value>
-		<value condition="ControlGroup(200).HasFocus(202)">$ADDON[script.skin.helper.skinbackup 32020]</value>
-		<value>$LOCALIZE[31298]</value>
-	</variable>
-	<variable name="DialogHeadingColorPickerVar">
-		<value condition="Control.HasFocus(3110)">$ADDON[script.skin.helper.colorpicker 32011]</value>
-		<value condition="ControlGroup(200).HasFocus(3010)">$ADDON[script.skin.helper.colorpicker 32050]</value>
-		<value condition="ControlGroup(200).HasFocus(3030)">$ADDON[script.skin.helper.colorpicker 32141]</value>
-		<value condition="ControlGroup(200).HasFocus(3011)">$LOCALIZE[571]</value>
-		<value condition="ControlGroup(200).HasFocus(4000)">$LOCALIZE[222]</value>
-		<value condition="ControlGroup(200).HasFocus(3012)">$LOCALIZE[190]</value>
-		<value>$ADDON[script.skin.helper.colorpicker 32011]</value>
-	</variable>
 	<variable name="DialogItemsLabelVar">
 		<value condition="Control.IsVisible(3)">$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</value>
-		<value>$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</value>
+		<value condition="Control.IsVisible(6)">$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</value>
+		<value condition="ControlGroup(100).HasFocus">$INFO[Container(100).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(100).NumItems,/]</value>
+		<value condition="!ControlGroup(100).HasFocus">$LOCALIZE[31025]$INFO[Container(100).NumItems, 1/]</value>
 	</variable>
-	<variable name="DialogBottomSeparatorVar">
-		<value condition="Control.IsVisible(3) + !Integer.IsGreater(Container(3).NumItems,7)">button/list-select-nofocus.png</value>
-		<value condition="Control.IsVisible(6) + !Integer.IsGreater(Container(6).NumItems,5)">button/list-select-nofocus.png</value>
-		<value condition="Window.IsActive(virtualkeyboard) | Window.IsActive(numericinput)">button/list-select-nofocus.png</value>
-		<value></value>
-	</variable>
-	<!-- END Dialogs -->
 	<!-- Breadcrumbs -->
 	<variable name="BreadcrumbsVideoVar">
 		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(container.folderpath,videodb://movies)">$LOCALIZE[20342]</value>
@@ -123,7 +100,6 @@
 		<value condition="Window.IsActive(TVSearch)">$LOCALIZE[19020] / $LOCALIZE[137]</value>
 		<value>$LOCALIZE[19021] / $LOCALIZE[137]</value>
 	</variable>
-	<!-- END Dialogs -->
 	<!-- Topbar -->
 	<variable name="TopBarStyleLabelVar">
 		<value condition="String.IsEqual(Skin.String(TopBarStyle),shadow)">$LOCALIZE[31054]</value>
@@ -140,7 +116,7 @@
 
 
 
-	
+	<!-- OLD VARS -->
 	<variable name="DayTimeColorVar">
 		<value condition="String.StartsWith(System.Time(mm),0)">FF69f5ee</value>
 		<value condition="String.StartsWith(System.Time(mm),1)">FFF3F781</value>

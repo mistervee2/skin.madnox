@@ -31,11 +31,7 @@
 			</include>
 			<!-- Left menu -->
 			<control type="label" id="2">
-				<top>100</top>
-				<left>126</left>
-				<width>273</width>
-				<height>100</height>
-				<font>Font33_Bold_Caps</font>
+				<include>Settings_LeftLabel</include>
 			</control>
 			<control type="grouplist" id="3">
 				<left>101</left>
@@ -50,12 +46,8 @@
 			</control>
 			<!-- Right menu -->
 			<control type="label">
-				<top>100</top>
-				<left>471</left>
-				<width>1413</width>
-				<height>100</height>
 				<label>$LOCALIZE[33063]</label>
-				<font>Font33_Bold_Caps</font>
+				<include>Settings_RightLabel</include>
 			</control>
 			<control type="grouplist" id="5">
 				<left>426</left>
@@ -86,9 +78,7 @@
 				<bottom>116</bottom>
 				<width>1303</width>
 				<height>120</height>
-				<textcolor>white2</textcolor>
 				<font>Font29_Cond</font>
-				<autoscroll time="3000" delay="4000" repeat="5000">true</autoscroll>
 			</control>
 			<control type="scrollbar" id="60">
 				<right>81</right>
@@ -101,8 +91,7 @@
 			<include>Settings_Button</include>
 		</control>
 		<control type="radiobutton" id="8">
-			<radioposx>1306</radioposx>
-			<include>Settings_Button</include>
+			<include>Settings_RadioButton</include>
 		</control>
 		<control type="spincontrolex" id="9">
 			<include>Settings_Button</include>
@@ -126,7 +115,7 @@
 			<include>MediaMenu_Common</include>
 			<control type="grouplist" id="9000">
 				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(disablequicknav)">ActivateWindow(1113)</onleft>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>3</onright>
 				<onback>3</onback>
 				<include content="MediaMenu_Icon_Button">

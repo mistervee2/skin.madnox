@@ -1,130 +1,574 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1110" type="dialog">
 	<defaultcontrol always="true">100</defaultcontrol>
+	<onunload>ClearProperty(CustomColorLabel,home)</onunload>
 	<controls>
 		<include>Dialog_Furniture_BackgroundFade</include>
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<visible>!Window.IsActive(script-skin_helper_service-ColorPicker.xml)</visible>
-			<include content="Dialog_Furniture_IconBackground">
-				<param name="label">$VAR[DialogHeading1110ColorsVar]</param>
+			<include content="Dialog_Furniture_Background">
+				<param name="label">$INFO[Window(home).Property(CustomColorLabel)]</param>
+				<param name="width">854</param>
+				<param name="height">528</param>
+				<param name="bottomseparatorvisible">false</param>
+				<param name="bottomrightlabel">$VAR[DialogItemsLabelVar]</param>
 			</include>
-			<control type="grouplist" id="200">
-				<left>37</left>
-				<height>420</height>
-				<width>200</width>
-				<top>27</top>
-				<onleft>200</onleft>
-				<onright>100</onright>
-				<onup>200</onup>
-				<ondown>200</ondown>
-				<itemgap>5</itemgap>
-				<!-- Go to skin color settings -->
-				<control type="button" id="201">
-					<onclick>Dialog.Close(all)</onclick>
-					<onclick>ActivateWindowAndFocus(skinsettings,8000,2)</onclick>
-					<include content="Dialog_Button_Icon">
-						<param name="icon">icon/mediamenu/skinsettings.png</param>
-					</include>
+			<!-- Global default -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[31736])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[GlobalHighlightColorVar]]$VAR[GlobalHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GlobalHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[GlobalPanelColorVar]]$VAR[GlobalPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GlobalPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[GlobalGlowColorVar]]$VAR[GlobalGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GlobalGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[GlobalTopbarColorVar]]$VAR[GlobalTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GlobalTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[GlobalFloorColorVar]]$VAR[GlobalFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GlobalFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[GlobalBackgroundColorVar]]$VAR[GlobalBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GlobalBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- Home -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[10000])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[HomeHighlightColorVar]]$VAR[HomeHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=HomeHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[HomePanelColorVar]]$VAR[HomePanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=HomePanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[HomeGlowColorVar]]$VAR[HomeGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=HomeGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[HomeTopbarColorVar]]$VAR[HomeTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=HomeTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[HomeFloorColorVar]]$VAR[HomeFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=HomeFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[HomeBackgroundColorVar]]$VAR[HomeBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=HomeBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- Movies -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[342])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[MoviesHighlightColorVar]]$VAR[MoviesHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MoviesHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[MoviesPanelColorVar]]$VAR[MoviesPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MoviesPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[MoviesGlowColorVar]]$VAR[MoviesGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MoviesGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[MoviesTopbarColorVar]]$VAR[MoviesTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MoviesTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[MoviesFloorColorVar]]$VAR[MoviesFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MoviesFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[MoviesBackgroundColorVar]]$VAR[MoviesBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MoviesBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- TV Shows -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[36903])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[TVShowsHighlightColorVar]]$VAR[TVShowsHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=TVShowsHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[TVShowsPanelColorVar]]$VAR[TVShowsPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=TVShowsPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[TVShowsGlowColorVar]]$VAR[TVShowsGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=TVShowsGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[TVShowsTopbarColorVar]]$VAR[TVShowsTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=TVShowsTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[TVShowsFloorColorVar]]$VAR[TVShowsFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=TVShowsFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[TVShowsBackgroundColorVar]]$VAR[TVShowsBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=TVShowsBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- PVR and Live TV -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[14204])</visible>
+				<left>20</left>
+				<right>20</right>
+				<top>88</top>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[PVRHighlightColorVar]]$VAR[PVRHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[PVRPanelColorVar]]$VAR[PVRPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[PVRGlowColorVar]]$VAR[PVRGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[PVRTopbarColorVar]]$VAR[PVRTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[PVRFloorColorVar]]$VAR[PVRFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[PVRBackgroundColorVar]]$VAR[PVRBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PVRBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- Music Videos -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[20389])</visible>
+				<left>20</left>
+				<right>20</right>
+				<top>88</top>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[MusicVideosHighlightColorVar]]$VAR[MusicVideosHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicVideosHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[MusicVideosPanelColorVar]]$VAR[MusicVideosPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicVideosPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[MusicVideosGlowColorVar]]$VAR[MusicVideosGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicVideosGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[MusicVideosTopbarColorVar]]$VAR[MusicVideosTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicVideosTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[MusicVideosFloorColorVar]]$VAR[MusicVideosFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicVideosFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[MusicVideosBackgroundColorVar]]$VAR[MusicVideosBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicVideosBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- Music -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[14216])</visible>
+				<left>20</left>
+				<right>20</right>
+				<top>88</top>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[MusicHighlightColorVar]]$VAR[MusicHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[MusicPanelColorVar]]$VAR[MusicPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[MusicGlowColorVar]]$VAR[MusicGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[MusicTopbarColorVar]]$VAR[MusicTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[MusicFloorColorVar]]$VAR[MusicFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[MusicBackgroundColorVar]]$VAR[MusicBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=MusicBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- Games -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[15016])</visible>
+				<left>20</left>
+				<right>20</right>
+				<top>88</top>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[GamesHighlightColorVar]]$VAR[GamesHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GamesHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[GamesPanelColorVar]]$VAR[GamesPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GamesPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[GamesGlowColorVar]]$VAR[GamesGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GamesGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[GamesTopbarColorVar]]$VAR[GamesTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GamesTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[GamesFloorColorVar]]$VAR[GamesFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GamesFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[GamesBackgroundColorVar]]$VAR[GamesBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=GamesBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+			</control>
+			<!-- Pictures -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[14217])</visible>
+				<left>20</left>
+				<right>20</right>
+				<top>88</top>
+				<height>360</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
+				<control type="button" id="101">
+					<label>$LOCALIZE[31741]</label>
+					<label2>[COLOR $VAR[PicturesHighlightColorVar]]$VAR[PicturesHighlightColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PicturesHighlight.color,header=$LOCALIZE[31741])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="102">
+					<label>$LOCALIZE[31804]</label>
+					<label2>[COLOR $VAR[PicturesPanelColorVar]]$VAR[PicturesPanelColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PicturesPanel.color,header=$LOCALIZE[31804])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="103">
+					<label>$LOCALIZE[31740]</label>
+					<label2>[COLOR $VAR[PicturesGlowColorVar]]$VAR[PicturesGlowColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PicturesGlow.color,header=$LOCALIZE[31740])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="104">
+					<label>$LOCALIZE[31676]</label>
+					<label2>[COLOR $VAR[PicturesTopbarColorVar]]$VAR[PicturesTopbarColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PicturesTopbar.color,header=$LOCALIZE[31676])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="105">
+					<label>$LOCALIZE[31739]</label>
+					<label2>[COLOR $VAR[PicturesFloorColorVar]]$VAR[PicturesFloorColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PicturesFloor.color,header=$LOCALIZE[31739])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
+				</control>
+				<control type="button" id="106">
+					<label>$LOCALIZE[33068]</label>
+					<label2>[COLOR $VAR[PicturesBackgroundColorVar]]$VAR[PicturesBackgroundColorLabelVar][/COLOR]</label2>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=PicturesBackground.color,header=$LOCALIZE[33068])</onclick>
+					<include>Dialog_Button_ColorSetting</include>
 				</control>
 			</control>
 			<!-- Weather -->
 			<control type="grouplist" id="100">
-				<visible>Window.IsActive(weather)</visible>
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[400])</visible>
 				<left>142</left>
 				<top>76</top>
 				<width>604</width>
 				<height>540</height>
 				<pagecontrol>60</pagecontrol>
-				<onleft>200</onleft>
-				<onright>60</onright>
-				<onup>100</onup>
-				<ondown>100</ondown>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
 				<control type="button" id="101">
 					<label>$LOCALIZE[31741]</label>
 					<label2>[COLOR $VAR[WeatherHighlightColorVar]]$VAR[WeatherHighlightColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherHighlight.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherHighlight.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="102">
 					<label>$LOCALIZE[31804]</label>
 					<label2>[COLOR $VAR[WeatherPanelColorVar]]$VAR[WeatherPanelColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherPanel.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherPanel.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="103">
 					<label>$LOCALIZE[31740]</label>
 					<label2>[COLOR $VAR[WeatherGlowColorVar]]$VAR[WeatherGlowColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherGlow.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherGlow.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="104">
 					<label>$LOCALIZE[31676]</label>
 					<label2>[COLOR $VAR[WeatherTopbarColorVar]]$VAR[WeatherTopbarColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherTopbar.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherTopbar.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="105">
 					<label>$LOCALIZE[31739]</label>
 					<label2>[COLOR $VAR[WeatherFloorColorVar]]$VAR[WeatherFloorColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherFloor.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherFloor.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="106">
 					<label>$LOCALIZE[33068]</label>
 					<label2>[COLOR $VAR[WeatherBackgroundColorVar]]$VAR[WeatherBackgroundColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherBackground.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherBackground.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 			</control>
-			<!-- Settings -->
+			<!-- System -->
 			<control type="grouplist" id="100">
-				<visible>$EXP[Area_Visible_Settings]</visible>
-				<left>142</left>
-				<top>76</top>
-				<width>604</width>
-				<height>540</height>
+				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[24992])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>300</height>
 				<pagecontrol>60</pagecontrol>
-				<onleft>200</onleft>
-				<onright>60</onright>
-				<onup>100</onup>
-				<ondown>100</ondown>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<onup>8000</onup>
 				<control type="button" id="101">
 					<label>$LOCALIZE[31741]</label>
 					<label2>[COLOR $VAR[SettingsHighlightColorVar]]$VAR[SettingsHighlightColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsHighlight.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsHighlight.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="102">
 					<label>$LOCALIZE[31804]</label>
 					<label2>[COLOR $VAR[SettingsPanelColorVar]]$VAR[SettingsPanelColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsPanel.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsPanel.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="103">
 					<label>$LOCALIZE[31740]</label>
 					<label2>[COLOR $VAR[SettingsGlowColorVar]]$VAR[SettingsGlowColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsGlow.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsGlow.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="104">
 					<label>$LOCALIZE[31676]</label>
 					<label2>[COLOR $VAR[SettingsTopbarColorVar]]$VAR[SettingsTopbarColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsTopbar.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsTopbar.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="105">
 					<label>$LOCALIZE[31739]</label>
 					<label2>[COLOR $VAR[SettingsFloorColorVar]]$VAR[SettingsFloorColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsFloor.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsFloor.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="106">
 					<label>$LOCALIZE[33068]</label>
 					<label2>[COLOR $VAR[SettingsBackgroundColorVar]]$VAR[SettingsBackgroundColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsBackground.color,palette=madnox)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SettingsBackground.color)</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
+			</control>
+			<!-- Top right menu -->
+			<control type="grouplist" id="8000">
+				<right>60</right>
+				<top>28</top>
+				<width>600</width>
+				<onleft>100</onleft>
+				<ondown>100</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">8002</param>
+					<param name="label">$LOCALIZE[31403]</param>
+					<param name="visible">!Window.IsActive(skinsettings)</param>
+				</include>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">8003</param>
+					<param name="label">$LOCALIZE[15067]</param>
+					<param name="onclick">Action(close)</param>
+				</include>
+			</control>
+			<!-- Scroll bar -->
+			<control type="scrollbar" id="60">
+				<left>1</left>
+				<top>88</top>
+				<height>420</height>
+				<onright>100</onright>
 			</control>
 		</control>
 	</controls>

@@ -61,7 +61,7 @@
 	<constant name="FanartCrossfadeTime">500</constant>
 	<constant name="IconCrossfadeTime">400</constant>
 	<constant name="IconCrossfadeTime2">250</constant>
-	<expression name="Fanart_Visible_MediaPlaying">!Player.HasMedia | [Player.HasAudio + Skin.HasSetting(DisableBackgroundViz)] | [Player.HasVideo + Skin.HasSetting(DisableBackgroundVideo)]</expression>
+	<expression name="Fanart_Visible_MediaPlaying">!Player.HasMedia | [Player.HasAudio + Skin.HasSetting(DisableBackgroundMusicNowPlaying)] | [Player.HasVideo + Skin.HasSetting(DisableBackgroundVideoNowPlaying)]</expression>
 
 	<expression name="Area_Visible_Settings">Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)</expression>
 
@@ -402,16 +402,7 @@
 		<aspectratio aligny="top">scale</aspectratio>
 		<colordiffuse>white2</colordiffuse>
 	</include>
-	<include name="HiddenObject">
-		<left>-300</left>
-		<top>-300</top>
-		<width>1</width>
-		<height>1</height>
-		<texturefocus>-</texturefocus>
-		<texturenofocus>-</texturenofocus>
-		<label>-</label>
-		<font>-</font>
-	</include>
+	
 	<include name="TvTunesVisibleCondition">
 		<visible>String.IsEmpty(Window(videos).Property(tvtunesIsAlive))</visible>
 	</include>
@@ -596,10 +587,6 @@
 		<texturenofocus>settings/settings_radiobuttonoff.png</texturenofocus>
 		<font>Font_Reg32</font>
 		<textcolor>grey2</textcolor>
-	</include>
-	<include name="FullscreenDimensions">
-		<width>1920</width>
-		<height>1080</height>
 	</include>
 	<include name="Objects_OSDSeekForward">
 		<width min="10" max="300">auto</width>

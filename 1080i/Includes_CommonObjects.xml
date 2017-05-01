@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
+	<include name="FullscreenDimensions">
+		<width>1920</width>
+		<height>1080</height>
+	</include>
+	<include name="HiddenObject">
+		<left>-300</left>
+		<top>-300</top>
+		<width>1</width>
+		<height>1</height>
+		<texturefocus />
+		<texturenofocus />
+		<font />
+	</include>
 	<!--  Dialogs -->
 	<include name="Dialog_Furniture_BackgroundFade">
 		<control type="image">
 			<include>FullscreenDimensions</include>
 			<texture colordiffuse="FF000000">color/white50.png</texture>
-			<visible>!Skin.HasSetting(disabledialogbackground)</visible>
+			<visible>!Skin.HasSetting(DisableDialogBackground)</visible>
 			<include>Animation_Dialog_BackgroundFade</include>
 		</control>
 	</include>
 	<include name="Dialog_Furniture_Close_Onclick">
 		<control type="button">
 			<include>FullscreenDimensions</include>
-			<font></font>
+			<font />
 			<texturefocus />
 			<texturenofocus />
 			<onclick>Action(close)</onclick>
@@ -22,9 +35,13 @@
 		<param name="width">1114</param>
 		<param name="height">588</param>
 		<param name="label"></param>
+		<param name="labelleft">70</param>
 		<param name="labelright">470</param>
 		<param name="labelalign">left</param>
 		<param name="labelid"></param>
+		<param name="bottomseparatorvisible">true</param>
+		<param name="bottomleftlabel"></param>
+		<param name="bottomrightlabel"></param>
 		<definition>
 			<include>Animation_DialogPopup</include>
 			<centertop>50%</centertop>
@@ -43,7 +60,7 @@
 			</control>
 			<control type="label" id="$PARAM[labelid]">
 				<top>28</top>
-				<left>70</left>
+				<left>$PARAM[labelleft]</left>
 				<right>$PARAM[labelright]</right>
 				<height>60</height>
 				<align>$PARAM[labelalign]</align>
@@ -63,57 +80,27 @@
 				<left>20</left>
 				<right>20</right>
 				<height>60</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="30">$VAR[DialogBottomSeparatorVar]</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texture>
+				<visible>$PARAM[bottomseparatorvisible]</visible>
 			</control>
 			<control type="label">
 				<bottom>20</bottom>
-				<left>20</left>
-				<right>70</right>
+				<left>70</left>
+				<right>380</right>
 				<height>60</height>
-				<align>right</align>
-				<label>$VAR[DialogItemsLabelVar]</label>
+				<label>$PARAM[bottomleftlabel]</label>
 				<font>Font25_Cond</font>
 				<textcolor>grey</textcolor>
 			</control>
-		</definition>
-	</include>
-	<include name="Dialog_Furniture_IconBackground">
-		<param name="width">775</param>
-		<param name="height">475</param>
-		<param name="label"></param>
-		<param name="labelid"></param>
-		<definition>
-			<include>Animation_DialogPopup</include>
-			<centertop>50%</centertop>
-			<centerleft>50%</centerleft>
-			<width>$PARAM[width]</width>
-			<height>$PARAM[height]</height>
-			<control type="image">
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<texture colordiffuse="$VAR[GlowColorVar]" border="22">dialog/scan-glow.png</texture>
-			</control>
-			<control type="image">
-				<width>$PARAM[width]</width>
-				<height>$PARAM[height]</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="142,15,32,15">dialog/scan-back.png</texture>
-			</control>
-			<control type="label" id="$PARAM[labelid]">
-				<top>12</top>
-				<left>142</left>
-				<right>32</right>
-				<height>64</height>
-				<textoffsetx>15</textoffsetx>
-				<label>$PARAM[label]</label>
-				<font>Font26_Bold_Caps</font>
-				<textcolor>$VAR[HighlightColorVar]</textcolor>
-			</control>
-			<control type="image">
-				<top>12</top>
-				<left>142</left>
-				<right>32</right>
-				<height>64</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="20">button/list-select-nofocus.png</texture>
+			<control type="label">
+				<bottom>20</bottom>
+				<right>70</right>
+				<width>300</width>
+				<height>60</height>
+				<align>right</align>
+				<label>$PARAM[bottomrightlabel]</label>
+				<font>Font25_Cond</font>
+				<textcolor>grey</textcolor>
 			</control>
 		</definition>
 	</include>
@@ -141,7 +128,7 @@
 					<height>60</height>
 					<textoffsetx>50</textoffsetx>
 					<font>Font30_Reg</font>
-					<textcolor>grey2</textcolor>
+					<textcolor>grey</textcolor>
 					<label>$INFO[ListItem.Label]</label>
 				</control>
 			</itemlayout>
@@ -166,18 +153,30 @@
 		<width>1074</width>
 		<height>60</height>
 		<textoffsetx>50</textoffsetx>
-		<textcolor>grey2</textcolor>
 	</include>
-	<include name="Dialog_Button_AddonSettings">
+	<include name="Dialog_Button_Left">
+		<width>340</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
+		<texturenofocus />
+	</include>
+	<include name="Dialog_Button_Right">
 		<width>800</width>
 		<height>60</height>
 		<textoffsetx>50</textoffsetx>
-		<textcolor>grey2</textcolor>
+	</include>
+	<include name="Dialog_RadioButton_Right">
+		<width>800</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
+		<textwidth>890</textwidth>
+		<radioposx>949</radioposx>
 	</include>
 	<include name="Dialog_Button_TopRight">
 		<param name="id"></param>
 		<param name="label"></param>
 		<param name="onclick"></param>
+		<param name="visible">true</param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
 				<width>auto</width>
@@ -187,8 +186,8 @@
 				<texturenofocus />
 				<label>$PARAM[label]</label>
 				<font>Font33_Bold</font>
-				<textcolor>grey2</textcolor>
 				<onclick>$PARAM[onclick]</onclick>
+				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
 	</include>
@@ -203,8 +202,6 @@
 				<label>$PARAM[label]</label>
 				<textoffsetx>20</textoffsetx>
 				<font>Font28_Reg</font>
-				<textcolor>grey2</textcolor>
-				<focusedcolor>white</focusedcolor>
 				<align>center</align>
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">button/button-select-focus.png</texturefocus>
 				<texturenofocus border="20">button/button-select-nofocus.png</texturenofocus>
@@ -213,24 +210,14 @@
 		</definition>
 	</include>
 	<include name="Dialog_Button_ColorSetting">
-		<width>601</width>
-		<height>64</height>
-		<textoffsetx>15</textoffsetx>
-		<font>Font30_Reg</font>
-		<textcolor>grey2</textcolor>
-		<focusedcolor>white6</focusedcolor>
+		<width>814</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
 	</include>
-	<include name="Dialog_Button_Icon">
-		<param name="icon">icon/mediamenu/cancel.png</param>
-		<definition>
-			<width>80</width>
-			<height>80</height>
-			<align>center</align>
-			<aligny>center</aligny>
-			<font></font>
-			<texturefocus colordiffuse="$VAR[HighlightColorVar]">$PARAM[icon]</texturefocus>
-			<texturenofocus colordiffuse="grey2">$PARAM[icon]</texturenofocus>
-		</definition>
+	<include name="Dialog_Button_Left">
+		<width>340</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
 	</include>
 	<include name="Dialog_KeyboardButton">
 		<width>80</width>
@@ -538,14 +525,14 @@
 					<top>0</top>
 					<width>138</width>
 					<height>150</height>
-					<texture colordiffuse="$PARAM[panelcolor]" border="20,20,0,20">dialog/volume-back.png</texture>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="20,20,0,20">dialog/volume-back.png</texture>
 				</control>
 				<control type="image">
 					<left>0</left>
 					<top>0</top>
 					<width>138</width>
 					<height>150</height>
-					<texture colordiffuse="$PARAM[glowcolor]" border="20,20,0,20">scmfixeddialog/volume-glow.png</texture>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="20,20,0,20">dialog/volume-glow.png</texture>
 				</control>
 				<control type="label">
 					<left>12</left>
@@ -553,7 +540,6 @@
 					<width>126</width>
 					<height>126</height>
 					<align>center</align>
-					<aligny>center</aligny>
 					<label>$INFO[ListItem.SortLetter]</label>
 					<textcolor>$VAR[HighlightColorVar]</textcolor>
 					<font>Font80_Bold_Caps</font>
@@ -579,6 +565,13 @@
 		<textwidth>872</textwidth>
 		<radioposx>1288</radioposx>
 	</include>
+	<include name="Settings_LeftLabel">
+		<top>100</top>
+		<left>126</left>
+		<width>273</width>
+		<height>100</height>
+		<font>Font33_Bold_Caps</font>
+	</include>
 	<include name="Settings_LeftButton">
 		<width>323</width>
 		<height>68</height>
@@ -586,12 +579,12 @@
 		<font>Font36_Reg</font>
 		<texturenofocus />
 	</include>
-	<include name="Settings_LeftToggleButton">
-		<width>323</width>
-		<height>68</height>
-		<textoffsetx>25</textoffsetx>
-		<font>Font36_Reg</font>
-		<texturenofocus />
+	<include name="Settings_RightLabel">
+		<top>100</top>
+		<left>471</left>
+		<width>1413</width>
+		<height>100</height>
+		<font>Font33_Bold_Caps</font>
 	</include>
 	<include name="Settings_Label_SystemInfo">
 		<width>1393</width>
@@ -792,38 +785,32 @@
 						<left>45</left>
 						<right>20</right>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white6</textcolor>
+						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
 						<textoffsetx>45</textoffsetx>
 						<right>0</right>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>grey2</textcolor>
+						<textcolor>grey</textcolor>
 					</control>
 				</itemlayout>
 				<focusedlayout height="67">
 					<control type="image">
 						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
-						<visible>Control.HasFocus($PARAM[id])</visible>
-					</control>
-					<control type="image">
-						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
-						<visible>!Control.HasFocus($PARAM[id])</visible>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
 					</control>
 					<control type="label">
 						<left>45</left>
 						<right>20</right>
 						<scroll>true</scroll>
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>white6</textcolor>
 					</control>
 					<control type="label">
 						<textoffsetx>20</textoffsetx>
 						<right>25</right>
 						<align>right</align>
 						<label>$INFO[ListItem.Label2]</label>
-						<textcolor>grey2</textcolor>
 					</control>
 				</focusedlayout>
 			</control>
@@ -843,7 +830,6 @@
 				<font>Font31_Cond_075</font>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
-				<onclick />
 				<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
 			</control>
 			<control type="multiimage" id="10$PARAM[item]01">
@@ -885,7 +871,6 @@
 				<font>Font31_Cond_075</font>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
-				<onclick />
 				<visible>!String.IsEmpty(Window(weather).Property(36Hour.$PARAM[item].Heading))</visible>
 			</control>
 			<control type="multiimage" id="20$PARAM[item]01">
@@ -927,7 +912,6 @@
 				<font>Font31_Cond_075</font>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
-				<onclick />
 				<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
 			</control>
 			<control type="multiimage" id="30$PARAM[item]01">
@@ -969,7 +953,6 @@
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
 				<font>Font31_Cond_075</font>
-				<onclick />
 				<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>
 			</control>
 			<control type="multiimage" id="40$PARAM[item]02">
