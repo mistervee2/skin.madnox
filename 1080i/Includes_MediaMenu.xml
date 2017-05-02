@@ -25,8 +25,12 @@
 		</control>
 	</include>
 	<include name="MediaMenu_Icon_Button">
-		<param name="onclick" />
-		<param name="onfocus" />
+		<param name="id"></param>
+		<param name="icon"></param>
+		<param name="label"></param>
+		<param name="onclick"></param>
+		<param name="onclick2"></param>
+		<param name="onfocus"></param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
@@ -36,7 +40,8 @@
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
-				<onfocus>$PARAM[onfocus]</onfocus>.
+				<onclick>$PARAM[onclick2]</onclick>
+				<onfocus>$PARAM[onfocus]</onfocus>
 				<visible>$PARAM[visible]</visible>
 			</control>
 			<control type="image" id="9$PARAM[id]01">
@@ -44,7 +49,7 @@
 				<left>10</left>
 				<width>70</width>
 				<height>70</height>
-				<texture colordiffuse="grey2">$PARAM[icon]</texture>
+				<texture colordiffuse="grey">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
@@ -53,7 +58,7 @@
 				<left>10</left>
 				<width>70</width>
 				<height>70</height>
-				<texture colordiffuse="white6">$PARAM[icon]</texture>
+				<texture colordiffuse="white">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
@@ -62,9 +67,7 @@
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
-				<font>Font30_Reg</font>
-				<textcolor>grey2</textcolor>
-				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
 				<textoffsetx>10</textoffsetx>
 				<label>$PARAM[label]</label>
 				<visible>$PARAM[visible]</visible>
@@ -75,9 +78,6 @@
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
-				<font>Font30_Reg</font>
-				<textcolor>white6</textcolor>
-				<aligny>center</aligny>
 				<textoffsetx>10</textoffsetx>
 				<label>$PARAM[label]</label>
 				<visible>$PARAM[visible]</visible>
@@ -86,6 +86,8 @@
 		</definition>
 	</include>
 	<include name="MediaMenu_Icon_RadioButton">
+		<param name="id"></param>
+		<param name="icon"></param>
 		<param name="label"></param>
 		<param name="onclick"></param>
 		<param name="onfocus"></param>
@@ -99,10 +101,10 @@
 				<radioposx>10</radioposx>
 				<radioposy>15</radioposy>
 				<font />
-				<textureradioonfocus colordiffuse="white6">icon/mediamenu/ok.png</textureradioonfocus>
-				<textureradioonnofocus colordiffuse="grey2">icon/mediamenu/ok.png</textureradioonnofocus>
-				<textureradioofffocus colordiffuse="white6">icon/mediamenu/cancel.png</textureradioofffocus>
-				<textureradiooffnofocus colordiffuse="grey2">icon/mediamenu/cancel.png</textureradiooffnofocus>
+				<textureradioonfocus colordiffuse="white">icon/mediamenu/ok.png</textureradioonfocus>
+				<textureradioonnofocus colordiffuse="grey">icon/mediamenu/ok.png</textureradioonnofocus>
+				<textureradioofffocus colordiffuse="white">icon/mediamenu/cancel.png</textureradioofffocus>
+				<textureradiooffnofocus colordiffuse="grey">icon/mediamenu/cancel.png</textureradiooffnofocus>
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
@@ -114,8 +116,7 @@
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
-				<font>Font30_Reg</font>
-				<textcolor>grey2</textcolor>
+				<textcolor>grey</textcolor>
 				<textoffsetx>10</textoffsetx>
 				<label>$PARAM[label]</label>
 				<visible>$PARAM[visible]</visible>
@@ -126,8 +127,6 @@
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
-				<font>Font30_Reg</font>
-				<textcolor>white6</textcolor>
 				<textoffsetx>10</textoffsetx>
 				<label>$PARAM[label]</label>
 				<visible>$PARAM[visible]</visible>
@@ -136,10 +135,12 @@
 		</definition>
 	</include>
 	<include name="MediaMenu_Icon_ToggleButton">
+		<param name="id"></param>
+		<param name="icon"></param>
 		<param name="label"></param>
 		<param name="altlabel"></param>
-		<param name="onclick" />
-		<param name="onfocus" />
+		<param name="onclick"></param>
+		<param name="onfocus"></param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="togglebutton" id="$PARAM[id]">
@@ -159,7 +160,7 @@
 				<left>10</left>
 				<width>70</width>
 				<height>70</height>
-				<texture colordiffuse="grey2">$PARAM[icon]</texture>
+				<texture colordiffuse="grey">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
@@ -168,7 +169,7 @@
 				<left>10</left>
 				<width>70</width>
 				<height>70</height>
-				<texture colordiffuse="white6">$PARAM[icon]</texture>
+				<texture colordiffuse="white">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
@@ -177,9 +178,7 @@
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
-				<font>Font30_Reg</font>
-				<textcolor>grey2</textcolor>
-				<aligny>center</aligny>
+				<textcolor>grey</textcolor>
 				<textoffsetx>10</textoffsetx>
 				<label>$INFO[Control.GetLabel($PARAM[id])]</label>
 				<visible>$PARAM[visible]</visible>
@@ -190,9 +189,6 @@
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
-				<font>Font30_Reg</font>
-				<textcolor>white6</textcolor>
-				<aligny>center</aligny>
 				<textoffsetx>10</textoffsetx>
 				<label>$INFO[Control.GetLabel($PARAM[id])]</label>
 				<visible>$PARAM[visible]</visible>
@@ -209,7 +205,6 @@
 			<top>0</top>
 			<texturefocus />
 			<texturenofocus />
-			<onback>7500</onback>
 		</control>
 	</include>
 	<include name="MediaMenu_Label_ViewSettings">
@@ -224,24 +219,17 @@
 		<height>60</height>
 		<textoffsetx>15</textoffsetx>
 		<font>Font28_Reg</font>
-		<textcolor>grey2</textcolor>
-		<focusedcolor>white6</focusedcolor>
 	</include>
-	<include name="Furniture_MediaMenu_Background">
+	<include name="MediaMenu_Background">
+		<param name="width">480</param>
+		<param name="glowleft">471</param>
+		<definition>
 		<control type="button">
-			<left>0</left>
-			<top>0</top>
-			<width>1920</width>
-			<height>1080</height>
-			<label />
+			<include>FullscreenDimensions</include>
+			<font />
 			<texturefocus />
 			<texturenofocus />
-			<onleft>9001</onleft>
-			<onright>9001</onright>
-			<onup>9001</onup>
-			<ondown>9001</ondown>
-			<onback>Dialog.Close($PARAM[dialog])</onback>
-			<onclick>Dialog.Close($PARAM[dialog])</onclick>
+			<onclick>Action(close)</onclick>
 		</control>
 		<control type="image">
 			<left>0</left>
@@ -255,6 +243,7 @@
 			<height>1080</height>
 			<texture colordiffuse="$VAR[GlowColorVar]">dialog/glow-right.png</texture>
 		</control>
+	</definition>
 	</include>
 	<!-- Settings -->
 	<include name="MediaMenu_Settings">
@@ -311,8 +300,8 @@
 		</control>
 		<control type="button" id="109">
 			<label>$LOCALIZE[31298]</label>
-			<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">ActivateWindow(1110)</onclick>
-			<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[24992],home)</onclick>
+			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 	</include>
@@ -361,41 +350,12 @@
 		</control>
 		<control type="button" id="109">
 			<label>$LOCALIZE[31298]</label>
-			<onclick condition="System.HasAddon(script.skin.helper.colorpicker)">ActivateWindow(1110)</onclick>
-			<onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
+			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[400],home)</onclick>
+			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 	</include>
 	<!-- ????? CONTENT -->
-	<include name="MediaMenu_Content_VideoLibrary">
-		<control type="button" id="3">
-			<label>103</label>
-			<onleft>ClearProperty(viewtypeselect,home)</onleft>
-			<include>Objects_MediaMenuButtonIcons</include>
-			<visible>Control.IsEnabled(3)</visible>
-		</control>
-
-		<item>
-			<label>103</label>
-			<onclick>Container.NextSortMethod</onclick>
-			<icon>icon/mediamenu/pin.png</icon>
-		</item>
-		<item>
-			<label>$LOCALIZE[184]</label>
-			<onclick>Weather.Refresh</onclick>
-			<icon>icon/mediamenu/refresh.png</icon>
-		</item>
-		<item>
-			<label>$LOCALIZE[5]</label>
-			<onclick>Dialog.Close(1111)</onclick>
-			<onclick>ActivateWindow(servicesettings,weather)</onclick>
-			<icon>icon/mediamenu/settings.png</icon>
-		</item>
-
-	</include>
-
-
-
 
 
 

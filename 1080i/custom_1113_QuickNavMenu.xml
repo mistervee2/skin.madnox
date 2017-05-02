@@ -5,9 +5,9 @@
 		<control type="group">
 			<left>-230</left>
 			<include content="Animation_Dialog_MediaMenu">
-				<param name="width">230</param>
+				<param name="slide">230</param>
 			</include>
-			<include content="Furniture_MediaMenu_Background">
+			<include content="MediaMenu_Background">
 				<param name="width">230</param>
 				<param name="glowleft">221</param>
 				<param name="dialog">1113</param>

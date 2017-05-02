@@ -14,6 +14,15 @@
 				<param name="bottomseparatorvisible">false</param>
 				<param name="bottomrightlabel">$VAR[DialogItemsLabelVar]</param>
 			</include>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>30</bottom>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(100).HasNext</visible>
+			</control>
 			<!-- Global default -->
 			<control type="grouplist" id="100">
 				<visible>String.IsEqual(Window(home).Property(CustomColorLabel),$LOCALIZE[31736])</visible>
@@ -460,37 +469,37 @@
 				<control type="button" id="101">
 					<label>$LOCALIZE[31741]</label>
 					<label2>[COLOR $VAR[WeatherHighlightColorVar]]$VAR[WeatherHighlightColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherHighlight.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherHighlight.color,header=$LOCALIZE[31741])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="102">
 					<label>$LOCALIZE[31804]</label>
 					<label2>[COLOR $VAR[WeatherPanelColorVar]]$VAR[WeatherPanelColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherPanel.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherPanel.color,header=$LOCALIZE[31804])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="103">
 					<label>$LOCALIZE[31740]</label>
 					<label2>[COLOR $VAR[WeatherGlowColorVar]]$VAR[WeatherGlowColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherGlow.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherGlow.color,header=$LOCALIZE[31740])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="104">
 					<label>$LOCALIZE[31676]</label>
 					<label2>[COLOR $VAR[WeatherTopbarColorVar]]$VAR[WeatherTopbarColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherTopbar.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherTopbar.color,header=$LOCALIZE[31676])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="105">
 					<label>$LOCALIZE[31739]</label>
 					<label2>[COLOR $VAR[WeatherFloorColorVar]]$VAR[WeatherFloorColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherFloor.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherFloor.color,header=$LOCALIZE[31739])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="106">
 					<label>$LOCALIZE[33068]</label>
 					<label2>[COLOR $VAR[WeatherBackgroundColorVar]]$VAR[WeatherBackgroundColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherBackground.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=WeatherBackground.color,header=$LOCALIZE[33068])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 			</control>
@@ -508,37 +517,37 @@
 				<control type="button" id="101">
 					<label>$LOCALIZE[31741]</label>
 					<label2>[COLOR $VAR[SystemHighlightColorVar]]$VAR[SystemHighlightColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemHighlight.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemHighlight.color,header=$LOCALIZE[31741])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="102">
 					<label>$LOCALIZE[31804]</label>
 					<label2>[COLOR $VAR[SystemPanelColorVar]]$VAR[SystemPanelColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemPanel.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemPanel.color,header=$LOCALIZE[31804])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="103">
 					<label>$LOCALIZE[31740]</label>
 					<label2>[COLOR $VAR[SystemGlowColorVar]]$VAR[SystemGlowColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemGlow.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemGlow.color,header=$LOCALIZE[31740])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="104">
 					<label>$LOCALIZE[31676]</label>
 					<label2>[COLOR $VAR[SystemTopbarColorVar]]$VAR[SystemTopbarColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemTopbar.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemTopbar.color,header=$LOCALIZE[31676])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="105">
 					<label>$LOCALIZE[31739]</label>
 					<label2>[COLOR $VAR[SystemFloorColorVar]]$VAR[SystemFloorColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemFloor.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemFloor.color,header=$LOCALIZE[31739])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 				<control type="button" id="106">
 					<label>$LOCALIZE[33068]</label>
 					<label2>[COLOR $VAR[SystemBackgroundColorVar]]$VAR[SystemBackgroundColorLabelVar][/COLOR]</label2>
-					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemBackground.color)</onclick>
+					<onclick>RunScript(script.skin.helper.colorpicker,skinstring=SystemBackground.color,header=$LOCALIZE[33068])</onclick>
 					<include>Dialog_Button_ColorSetting</include>
 				</control>
 			</control>

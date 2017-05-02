@@ -71,37 +71,30 @@
 					<item id="1">
 						<description>Main Menu</description>
 						<label>$LOCALIZE[31634]</label>
-						<onclick />
 					</item>
 					<item id="2">
 						<description>General</description>
 						<label>128</label>
-						<onclick />
 					</item>
 					<item id="3">
 						<description>Furniture</description>
 						<label>Furniture</label>
-						<onclick />
 					</item>
 					<item id="4">
 						<description>Artwork</description>
 						<label>31735</label>
-						<onclick />
 					</item>
 					<item id="5">
 						<description>Colors</description>
 						<label>$LOCALIZE[14078]</label>
-						<onclick />
 					</item>
 					<item id="8">
 						<description>Scripts</description>
 						<label>$LOCALIZE[10020]</label>
-						<onclick />
 					</item>
 					<item id="10">
 						<description>Paths</description>
 						<label>31641</label>
-						<onclick />
 					</item>
 					<item id="9">
 						<label>470</label>
@@ -283,7 +276,7 @@
 						<selected>!Skin.HasSetting(DisableQuickNav)</selected>
 					</control>
 					<control type="button" id="403">
-						<label>$LOCALIZE[31347]</label>
+						<label> - $LOCALIZE[31347]</label>
 						<include>Settings_Button</include>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=madnox-quicknav)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav)</visible>

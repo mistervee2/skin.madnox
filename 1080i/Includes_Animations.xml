@@ -33,19 +33,19 @@
 		</animation>
 	</include>
 	<include name="Animation_Dialog_MediaMenu">
-		<param name="width">430</param>
+		<param name="slide">430</param>
 		<definition>
 			<animation type="WindowOpen" reversible="false">
-				<effect type="slide" start="0" end="$PARAM[width]" time="320" delay="0" tween="cubic" easing="in" />
+				<effect type="slide" start="0" end="$PARAM[slide]" time="320" delay="0" tween="cubic" easing="in" />
 			</animation>
 			<animation type="WindowClose" reversible="false">
-				<effect type="slide" start="$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="out" />
+				<effect type="slide" start="$PARAM[slide]" end="0" time="320" delay="0" tween="cubic" easing="out" />
 			</animation>
 			<animation type="Visible" reversible="false">
-				<effect type="slide" start="-$PARAM[width]" end="0" time="320" delay="0" tween="cubic" easing="in" />
+				<effect type="slide" start="-$PARAM[slide]" end="0" time="320" delay="0" tween="cubic" easing="in" />
 			</animation>
 			<animation type="Hidden" reversible="false">
-				<effect type="slide" start="0" end="-$PARAM[width]" time="320" delay="0" tween="cubic" easing="out" />
+				<effect type="slide" start="0" end="-$PARAM[slide]" time="320" delay="0" tween="cubic" easing="out" />
 			</animation>
 		</definition>
 	</include>
@@ -86,22 +86,10 @@
 		<param name="opencondition">true</param>
 		<param name="closecondition">true</param>
 		<definition>
-			<animation type="WindowOpen" condition="$PARAM[opencondition]">
-				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-				<effect type="slide" start="-$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
-			</animation>
-			<animation type="WindowClose" condition="$PARAM[closecondition]">
-				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
-				<effect type="slide" start="0" end="-$PARAM[slide]" time="300" tween="cubic" easing="in" />
-			</animation>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-				<effect type="slide" start="-$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
-				<effect type="slide" start="0" end="-$PARAM[slide]" time="300" tween="cubic" easing="in" />
-			</animation>
+			<animation effect="slide" start="-$PARAM[slide]" end="0" time="240" tween="cubic" condition="$PARAM[opencondition]">WindowOpen</animation>
+			<animation effect="slide" start="0" end="-$PARAM[slide]" time="240" tween="cubic" easing="in" condition="$PARAM[closecondition]">WindowClose</animation>
+			<animation effect="slide" start="-$PARAM[slide]" end="0" time="240" tween="cubic">Visible</animation>
+			<animation effect="slide" start="0" end="-$PARAM[slide]" time="240" tween="cubic" easing="in">Hidden</animation>
 		</definition>
 	</include>
 	<include name="Animation_Slide_Right">
@@ -109,22 +97,10 @@
 		<param name="opencondition">true</param>
 		<param name="closecondition">true</param>
 		<definition>
-			<animation type="WindowOpen" condition="$PARAM[opencondition]">
-				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-				<effect type="slide" start="$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
-			</animation>
-			<animation type="WindowClose" condition="$PARAM[closecondition]">
-				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
-				<effect type="slide" start="0" end="$PARAM[slide]" time="300" tween="cubic" easing="in" />
-			</animation>
-			<animation type="Visible">
-				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="out" />
-				<effect type="slide" start="$PARAM[slide]" end="0" time="400" tween="cubic" easing="out" />
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" start="100" end="0" time="300" tween="sine" easing="in" />
-				<effect type="slide" start="0" end="$PARAM[slide]" time="300" tween="cubic" easing="in" />
-			</animation>
+			<animation effect="slide" start="$PARAM[slide]" end="0" time="240" tween="cubic" condition="$PARAM[opencondition]">WindowOpen</animation>
+			<animation effect="slide" start="0" end="$PARAM[slide]" time="240" tween="cubic" easing="in" condition="$PARAM[closecondition]">WindowClose</animation>
+			<animation effect="slide" start="$PARAM[slide]" end="0" time="240" tween="cubic">Visible</animation>
+			<animation effect="slide" start="0" end="$PARAM[slide]" time="240" tween="cubic" easing="in">Hidden</animation>
 		</definition>
 	</include>
 	<include name="Animation_FurnitureShift">
@@ -137,9 +113,6 @@
 			<animation effect="slide" end="0,$PARAM[slidefloor]" time="400" tween="cubic" easing="out" condition="$PARAM[slidefloorcondition]">Conditional</animation>
 		</definition>
 	</include>
-	
-
-
 	<!-- REWORK ANIMATIONS END -->
 
 

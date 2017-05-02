@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">10</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+	<!-- <defaultcontrol always="true">10</defaultcontrol> -->
+	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<!-- <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
 	<onload condition="System.HasAddon(script.toolbox)">RunScript(script.toolbox,daemon=True,radius=30)</onload>
-	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload>
+	<onload condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onload> -->
 	<!-- Intro Movie -->
 	<!-- onload condition="!Skin.HasSetting(DisableIntro)">PlayMedia(special://skin/extras/intro.mp4,1)</onload -->
 	<!-- onunload>PlayerControl(Stop)</onunload -->
 	<!-- Intro End -->
-	<onunload>Skin.SetString(SkinHelper.RandomFanartDelay,7)</onunload>
+	<!-- <onunload>Skin.SetString(SkinHelper.RandomFanartDelay,7)</onunload>
 	<animation type="WindowClose" reversible="false">
 		<effect type="fade" start="100" end="0" time="640" />
 	</animation>
 	<animation type="WindowOpen" reversible="false">
 		<effect type="fade" end="100" delay="800" time="640" />
-	</animation>
+	</animation> -->
 	<controls>
-		<control type="button" id="10">
+		<!-- <control type="button" id="10">
 			<include>HiddenObject</include>
 			<onfocus condition="Skin.HasSetting(Use_Startup_Playlist) + !String.IsEmpty(Skin.String(Startup_Playlist_Path)) + !String.StartsWith(Skin.String(Startup_Playlist_Path),RunScript)">PlayMedia($ESCINFO[Skin.String(Startup_Playlist_Path)])</onfocus>
 			<onfocus condition="Skin.HasSetting(Use_Startup_Playlist) + !String.IsEmpty(Skin.String(Startup_Playlist_Path)) + String.StartsWith(Skin.String(Startup_Playlist_Path),RunScript)">$ESCINFO[Skin.String(Startup_Playlist_Path)]</onfocus>
@@ -38,15 +39,15 @@
 			<texture>common/black.png</texture>
 			<include>Animation_WindowFade200</include>
 			<include>FullscreenDimensions</include>
-		</control>
-		<control type="image">
+		</control> -->
+		<!-- <control type="image">
 			<width>1920</width>
 			<height>1080</height>
 			<aspectratio scalediffuse="false">keep</aspectratio>
 			<texture>kodisplash.jpg</texture>
-			<!-- visible>Skin.HasSetting(DisableIntro)</visible -->
-		</control>
-		<control type="image">
+			<visible>Skin.HasSetting(DisableIntro)</visible>
+		</control> -->
+		<!-- <control type="image">
 			<left>923</left>
 			<top>603</top>
 			<width>74</width>
@@ -54,11 +55,11 @@
 			<texture colordiffuse="$VAR[ColorDiffuseVar]">spinner.png</texture>
 			<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" reversible="false" condition="true">Conditional</animation>
 			<animation effect="fade" start="70" time="1200" condition="true" pulse="true">Conditional</animation>
-			<!-- visible>Skin.HasSetting(DisableIntro)</visible -->
+			<visible>Skin.HasSetting(DisableIntro)</visible>
 		</control>
 		<control type="videowindow">
 			<include>FullscreenDimensions</include>
 			<visible>Player.HasVideo</visible>
-		</control>
+		</control> -->
 	</controls>
 </window>

@@ -154,6 +154,13 @@
 		<height>60</height>
 		<textoffsetx>50</textoffsetx>
 	</include>
+	<include name="Dialog_RadioButton_Default">
+		<width>1074</width>
+		<height>60</height>
+		<textwidth>902</textwidth>
+		<radioposx>963</radioposx>
+		<textoffsetx>50</textoffsetx>
+	</include>
 	<include name="Dialog_Button_Left">
 		<width>340</width>
 		<height>60</height>
