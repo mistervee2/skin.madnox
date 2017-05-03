@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<onload condition="Library.IsScanningVideo + Skin.HasSetting(UpdateArtworkDownloader)">SetProperty(UpdateArt,1)</onload>
-	<onunload condition="!String.IsEmpty(Window.Property(UpdateArt)) + Skin.HasSetting(UpdateArtworkDownloader) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader,silent=true)</onunload>
+	<onunload condition="!String.IsEmpty(Window.Property(UpdateArt)) + System.HasAddon(script.artwork.downloader)">RunScript(script.artwork.downloader,silent=true)</onunload>
+	<onunload>ClearProperty(UpdateArt)</onunload>
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>

@@ -263,31 +263,31 @@
 					<onleft>8000</onleft>
 					<onright>60</onright>
 					<visible>Container(8000).Hasfocus(3)</visible>
-					<control type="button" id="401">
+					<control type="button" id="301">
 						<label>$LOCALIZE[31676]</label>
 						<include>Settings_Button</include>
 						<onclick>SetProperty(CustomDialogLabel,$LOCALIZE[31676],home)</onclick>
 						<onclick>ActivateWindow(1111)</onclick>
 					</control>
-					<control type="radiobutton" id="402">
+					<control type="radiobutton" id="302">
 						<label>$LOCALIZE[31633]</label>
 						<include>Settings_RadioButton</include>
 						<onclick>Skin.ToggleSetting(DisableQuickNav)</onclick>
 						<selected>!Skin.HasSetting(DisableQuickNav)</selected>
 					</control>
-					<control type="button" id="403">
+					<control type="button" id="303">
 						<label> - $LOCALIZE[31347]</label>
 						<include>Settings_Button</include>
 						<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=madnox-quicknav)</onclick>
 						<visible>!Skin.HasSetting(DisableQuickNav)</visible>
 					</control>
-					<control type="radiobutton" id="404">
+					<control type="radiobutton" id="304">
 						<label>$LOCALIZE[31280]</label>
 						<include>Settings_RadioButton</include>
 						<onclick>Skin.ToggleSetting(DisableScrollLetter)</onclick>
 						<selected>!Skin.HasSetting(DisableScrollLetter)</selected>
 					</control>
-					<control type="radiobutton" id="405">
+					<control type="radiobutton" id="305">
 						<label>$LOCALIZE[31265]</label>
 						<include>Settings_RadioButton</include>
 						<onclick>Notification($LOCALIZE[25000],$LOCALIZE[31265])</onclick>
@@ -332,7 +332,7 @@
                 		<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
                 		<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
                 	</control> -->
-                	<control type="radiobutton" id="110">
+                	<control type="radiobutton" id="401">
                 		<include>Settings_RadioButton</include>
                 		<selected>Skin.HasSetting(UpdateArtworkDownloader)</selected>
                 		<onclick>Skin.ToggleSetting(UpdateArtworkDownloader)</onclick>
@@ -594,6 +594,20 @@
                 		<include>Settings_Button</include>
                 		<onclick>Addon.OpenSettings(script.skin.helper.service)</onclick>
                 		<visible>System.HasAddon(script.skin.helper.service)</visible>
+                	</control>
+                	<control type="button" id="417">
+                		<label>script.module.metadatautils</label>
+                		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                		<include>Settings_Button</include>
+                		<onclick>InstallAddon(script.module.metadatautils)</onclick>
+                		<visible>!System.HasAddon(script.module.metadatautils)</visible>
+                	</control>
+                	<control type="button" id="418">
+                		<label>script.module.metadatautils</label>
+                		<label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                		<include>Settings_Button</include>
+                		<onclick>Addon.OpenSettings(script.module.metadatautils)</onclick>
+                		<visible>System.HasAddon(script.module.metadatautils)</visible>
                 	</control>
                 	<control type="button" id="405">
                 		<label>script.skin.helper.colorpicker</label>
