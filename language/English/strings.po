@@ -1073,7 +1073,7 @@ msgid "Colored Mpaa Flags"
 msgstr ""
 
 msgctxt "#31265"
-msgid "Smaller pop-up dialogs"
+msgid "Smaller pop-up notifications"
 msgstr ""
 
 msgctxt "#31266"
@@ -3196,9 +3196,8 @@ msgctxt "#31870"
 msgid "Help"
 msgstr ""
 
-msgctxt "#31871"
-msgid "Available at Passion-XBMC repository"
-msgstr ""
+###########################################################################
+# 31871 empty
 
 msgctxt "#31872"
 msgid "Mixed Movies"

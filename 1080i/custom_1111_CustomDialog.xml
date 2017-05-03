@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1111" type="dialog">
-	<defaultcontrol always="true">3</defaultcontrol>
+	<defaultcontrol always="true">100</defaultcontrol>
 	<onunload>ClearProperty(CustomDialogLabel,home)</onunload>
 	<controls>
 		<include>Dialog_Furniture_BackgroundFade</include>
@@ -32,12 +32,6 @@
 				<onright>9001</onright>
 				<onup>100</onup>
 				<ondown>100</ondown>
-				<control type="radiobutton" id="101">
-					<label>$LOCALIZE[24021]</label>
-					<onclick>Skin.ToggleSetting(DisableTopbar)</onclick>
-					<selected>Skin.HasSetting(DisableTopbar)</selected>
-					<include>Dialog_RadioButton_Default</include>
-				</control>
 				<control type="button" id="102">
 					<label>$LOCALIZE[31750]</label>
 					<label2>$VAR[TopBarStyleLabelVar]</label2>

@@ -64,7 +64,7 @@
 				<textoffsetx>45</textoffsetx>
 				<height>68</height>
 				<align>left</align>
-				<font>Font30_Bold</font>
+				<font>Font28_Bold</font>
 				<textcolor>$VAR[HighlightColorVar]</textcolor>
 			</control>
 			<control type="image" id="11">

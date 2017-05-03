@@ -53,7 +53,7 @@
 					<left>100</left>
 					<width>630</width>
 					<height>40</height>
-					<font>Font30_Bold</font>
+					<font>Font28_Bold</font>
 					<textcolor>grey2</textcolor>
 					<haspath>true</haspath>
 				</control>
@@ -63,7 +63,7 @@
 					<width>200</width>
 					<height>40</height>
 					<align>right</align>
-					<font>Font30_Bold</font>
+					<font>Font28_Bold</font>
 					<label>$INFO[Container(20).CurrentItem,,/]$INFO[Container(20).NumItems]</label>
 				</control>
 			</control>
@@ -93,7 +93,7 @@
 					<left>985</left>
 					<width>630</width>
 					<height>40</height>
-					<font>Font30_Bold</font>
+					<font>Font28_Bold</font>
 					<textcolor>grey2</textcolor>
 					<haspath>true</haspath>
 				</control>
@@ -103,8 +103,8 @@
 					<width>200</width>
 					<height>40</height>
 					<align>right</align>
-					<font>Font30_Bold</font>
-					<label>$INFO[Container(21).CurrentItem,, / ]$INFO[Container(21).NumItems]</label>
+					<font>Font28_Bold</font>
+					<label>$INFO[Container(21).CurrentItem,,/]$INFO[Container(21).NumItems]</label>
 				</control>
 			</control>
 		</control>

@@ -22,6 +22,13 @@
 			<include>Animation_Dialog_BackgroundFade</include>
 		</control>
 	</include>
+	<include name="Dialog_Furniture_BackgroundFade_Forced">
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture colordiffuse="FF000000">color/white50.png</texture>
+			<include>Animation_Dialog_BackgroundFade</include>
+		</control>
+	</include>
 	<include name="Dialog_Furniture_Close_Onclick">
 		<control type="button">
 			<include>FullscreenDimensions</include>
@@ -269,7 +276,6 @@
 		<param name="breadcrumbs_label"></param>
 		<definition>
 			<control type="group">
-				<visible>!Skin.HasSetting(DisableTopbar)</visible>
 				<control type="image">
 					<description>background image</description>
 					<left>0</left>
@@ -474,6 +480,16 @@
 						<include>BreadcrumbsLabel</include>
 						<visible>!Skin.HasSetting(DisableTopbarTime)</visible>
 					</control>
+					<control type="label">
+						<width>10</width>
+						<visible>Player.Muted</visible>
+					</control>
+					<control type="image">
+						<width>40</width>
+						<height>40</height>
+						<texture>icon/mute.png</texture>
+						<visible>Player.Muted</visible>
+					</control>
 				</control>
 				<control type="grouplist">
 					<description>item and page count top bar</description>
@@ -519,33 +535,29 @@
 					</control>
 				</control>
 			</control>
-			<control type="group">
+			<control type="group" id="6111">
 				<description>scroll label</description>
 				<visible>!Skin.HasSetting(DisableScrollLetter)</visible>
 				<visible>Container.Scrolling + [String.IsEqual(Container.SortMethod,$LOCALIZE[551]) | String.IsEqual(Container.SortMethod,$LOCALIZE[561]) | String.IsEqual(Container.SortMethod,$LOCALIZE[558]) | String.IsEqual(Container.SortMethod,$LOCALIZE[557]) | String.IsEqual(Container.SortMethod,$LOCALIZE[556])]</visible>
-				<animation effect="slide" tween="cubic" easing="inout" time="400" start="160" end="0">VisibleChange</animation>
+				<animation effect="slide" tween="cubic" easing="inout" time="400" start="142" end="0">VisibleChange</animation>
 				<right>0</right>
-				<top>60</top>
-				<width>138</width>
+				<top>50</top>
+				<width>134</width>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>138</width>
-					<height>150</height>
-					<texture colordiffuse="$VAR[PanelColorVar]" border="20,20,0,20">dialog/volume-back.png</texture>
+					<width>134</width>
+					<height>134</height>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/volume-back.png</texture>
 				</control>
 				<control type="image">
-					<left>0</left>
-					<top>0</top>
-					<width>138</width>
-					<height>150</height>
-					<texture colordiffuse="$VAR[GlowColorVar]" border="20,20,0,20">dialog/volume-glow.png</texture>
+					<width>134</width>
+					<height>134</height>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialog/scan-glow.png</texture>
 				</control>
 				<control type="label">
 					<left>12</left>
 					<top>12</top>
-					<width>126</width>
-					<height>126</height>
+					<width>110</width>
+					<height>110</height>
 					<align>center</align>
 					<label>$INFO[ListItem.SortLetter]</label>
 					<textcolor>$VAR[HighlightColorVar]</textcolor>
@@ -834,7 +846,7 @@
 				<focusedcolor>grey</focusedcolor>
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Daily.$PARAM[item].LongDay),, ][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Daily.$PARAM[item].WindDirection)]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
 				<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
@@ -860,7 +872,7 @@
 				<align>right</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[Window(weather).Property(Daily.$PARAM[item].HighTemperature),[COLOR red],[/COLOR] / ]$INFO[Window(weather).Property(Daily.$PARAM[item].LowTemperature),[COLOR blue],[/COLOR]][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
 			</control>
 		</definition>
@@ -875,7 +887,7 @@
 				<focusedcolor>grey</focusedcolor>
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(36Hour.$PARAM[item].Heading)][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].WindSpeed)]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
 				<visible>!String.IsEmpty(Window(weather).Property(36Hour.$PARAM[item].Heading))</visible>
@@ -901,7 +913,7 @@
 				<align>right</align>
 				<textcolor>grey</textcolor>
 				<label>[COLOR white]$INFO[Window(weather).Property(36Hour.$PARAM[item].Temperature)][/COLOR][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
 			</control>
 		</definition>
@@ -916,7 +928,7 @@
 				<focusedcolor>grey</focusedcolor>
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Weekend.$PARAM[item].LongDay),, ][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Weekend.$PARAM[item].WindDirection)]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
 				<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
@@ -942,7 +954,7 @@
 				<align>right</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[Window(weather).Property(Weekend.$PARAM[item].HighTemperature),[COLOR red],[/COLOR] / ]$INFO[Window(weather).Property(Weekend.$PARAM[item].LowTemperature),[COLOR blue],[/COLOR]][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
 			</control>
 		</definition>
@@ -959,7 +971,7 @@
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Hourly.$PARAM[item].Time)][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Hourly.$PARAM[item].WindDirection)]</label>
 				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>
 			</control>
 			<control type="multiimage" id="40$PARAM[item]02">
@@ -983,7 +995,7 @@
 				<align>right</align>
 				<textcolor>grey</textcolor>
 				<label>$INFO[Window(weather).Property(Hourly.$PARAM[item].Temperature),[COLOR white],[/COLOR]][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].Humidity),$LOCALIZE[406]: ][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].ChancePrecipitation),$LOCALIZE[33021]: ]</label>
-				<font>Font31_Cond_075</font>
+				<font>Font31_Cond_08</font>
 				<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>
 			</control>
 		</definition>
@@ -1002,7 +1014,7 @@
 					<height>60</height>
 					<align>center</align>
 					<label>$INFO[Window(weather).Property(Map.$PARAM[item].Heading)]</label>
-					<font>Font30_Bold_Caps</font>
+					<font>Font28_Bold_Caps</font>
 				</control>
 				<control type="image">
 					<top>72</top>

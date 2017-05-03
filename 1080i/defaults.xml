@@ -124,9 +124,9 @@
 	<default type="progress">
 		<height>20</height>
 		<reveal>true</reveal>
-		<texturebg colordiffuse="$VAR[PanelColorVar]" border="8">dialog/progress/progress-back.png</texturebg>
+		<texturebg colordiffuse="$VAR[PanelColorVar]" border="8">dialog/progress-control/progress-back.png</texturebg>
 		<lefttexture />
-		<midtexture colordiffuse="$VAR[HighlightColorVar]" border="8">dialog/progress/progress-mid.png</midtexture>
+		<midtexture colordiffuse="$VAR[HighlightColorVar]" border="8">dialog/progress-control/progress-mid.png</midtexture>
 		<righttexture />
 		<overlaytexture />
 	</default>

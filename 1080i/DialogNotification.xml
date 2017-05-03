@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<coordinates>
-		<left>0</left>
-		<top>0</top>
-		<system>1</system>
-	</coordinates>
-	<include>Animation_DialogPopup</include>
 	<controls>
 		<control type="group">
-			<include>Dialogs_Group</include>
-			<include>Dialogs_Tablet</include>
-			<animation effect="slide" end="0,-870" time="0" condition="VideoPlayer.IsFullscreen | [[Window.IsActive(home)] + Skin.HasSetting(lowermainmenu)]">Conditional</animation>
-			<animation effect="slide" end="0,470" time="0" condition="[Window.IsActive(home) + Skin.HasSetting(lowermainmenu) + Window.IsActive(1128)]">Conditional</animation>
+			<include>Animation_DialogPopup</include>
+			<animation effect="zoom" end="80" center="auto" time="240" tween="cubic" easing="inout" condition="Skin.HasSetting(SmallerNotifications)">Conditional</animation>
+			<top>49</top>
+			<centerleft>50%</centerleft>
+			<height>134</height>
+			<width>730</width>
+			<control type="image">
+				<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialog/scan-glow.png</texture>
+			</control>
+			<control type="image">
+				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/scan-back.png</texture>
+			</control>
 			<control type="image" id="400">
-				<left>16</left>
-				<top>14</top>
-				<width>110</width>
-				<height>110</height>
-				<aspectratio aligny="top">keep</aspectratio>
-				<texture>dialogs/exclamation.png</texture>
+				<top>22</top>
+				<left>26</left>
+				<width>90</width>
+				<height>90</height>
 				<animation effect="fade" start="50" time="800" condition="true" pulse="true">Conditional</animation>
 			</control>
-			<control type="label" id="401">
-				<left>158</left>
-				<top>33</top>
-				<width>564</width>
-				<height>32</height>
-				<align>center</align>
-				<font>Font_Bold30</font>
-				<textcolor>white3</textcolor>
-				<scroll>true</scroll>
+			<control type="image">
+				<top>22</top>
+				<left>26</left>
+				<width>90</width>
+				<height>90</height>
+				<texture>icon/exclamation.png</texture>
+				<animation effect="fade" start="50" time="800" condition="true" pulse="true">Conditional</animation>
+				<visible>String.IsEmpty(Control.GetLabel(400))</visible>
 			</control>
-			<control type="label" id="402">
-				<left>158</left>
-				<top>69</top>
-				<width>564</width>
-				<height>32</height>
+			<control type="grouplist">
+				<top>12</top>
+				<left>150</left>
+				<width>530</width>
+				<height>110</height>
 				<align>center</align>
-				<textcolor>white3</textcolor>
-				<scroll>true</scroll>
+				<control type="fadelabel" id="401">
+					<description>Line 1 Label</description>
+					<height>40</height>
+					<font>Font29_Cond</font>
+				</control>
+				<control type="textbox" id="402">
+					<description>Line 2 Label</description>
+					<height>40</height>
+					<textcolor>grey</textcolor>
+					<font>Font29_Cond</font>
+				</control>
 			</control>
 		</control>
 	</controls>

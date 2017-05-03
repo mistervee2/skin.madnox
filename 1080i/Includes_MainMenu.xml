@@ -409,7 +409,7 @@
 					<top>-5</top>
 					<width>45</width>
 					<height>45</height>
-					<texture>dialogs/circle/$INFO[Container(8014).ListItem.PercentPlayed].png</texture>
+					<texture>dialog/circle/p$INFO[Container(8014).ListItem.PercentPlayed].png</texture>
 					<colordiffuse>black</colordiffuse>
 					<visible>Integer.IsGreater(Container(8014).NumItems,0)</visible>
 				</control>

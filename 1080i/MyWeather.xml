@@ -48,7 +48,7 @@
 						<description>weather location label</description>
 						<top>25</top>
 						<height>50</height>
-						<font>Font30_Bold_Caps</font>
+						<font>Font28_Bold_Caps</font>
 						<textcolor>white</textcolor>
 						<align>center</align>
 						<label>$INFO[Window(weather).Property(Location)]</label>
@@ -460,7 +460,7 @@
 								<height>60</height>
 								<align>center</align>
 								<label>Radar ($INFO[Window(weather).Property(Radar)]) @ $INFO[Window(weather).Property(Updated)]</label>
-								<font>Font30_Bold_Caps</font>
+								<font>Font28_Bold_Caps</font>
 							</control>
 							<control type="image">
 								<top>72</top>

@@ -66,7 +66,7 @@
 			<size>38</size>
 		</font>
 		<font>
-			<name>Font31_Cond_075</name>
+			<name>Font31_Cond_08</name>
 			<filename>OpenSansCond.ttf</filename>
 			<linespacing>0.8</linespacing>
 			<size>31</size>
@@ -74,7 +74,12 @@
 
 		<!-- Bold Fonts (OpenSans-Bold.ttf) -->
 		<font>
-			<name>Font30_Bold</name>
+			<name>Font25_Bold</name>
+			<filename>OpenSans-Bold.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>Font28_Bold</name>
 			<filename>OpenSans-Bold.ttf</filename>
 			<size>28</size>
 		</font>
@@ -93,7 +98,7 @@
 			<size>26</size>
 		</font>
 		<font>
-			<name>Font30_Bold_Caps</name>
+			<name>Font28_Bold_Caps</name>
 			<filename>OpenSans-Bold.ttf</filename>
 			<style>uppercase</style>
 			<size>30</size>
