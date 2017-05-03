@@ -5,6 +5,7 @@
 	<controls>
 		<control type="group">
 			<include>Animation_DialogPopup</include>
+			<animation effect="zoom" end="80" center="auto" time="240" tween="cubic" easing="inout" condition="Skin.HasSetting(SmallerNotifications)">Conditional</animation>
 			<top>49</top>
 			<centerleft>50%</centerleft>
 			<height>134</height>
