@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">8000</defaultcontrol>
+	<menucontrol>9000</menucontrol>
 	<onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|madnox-quicknav)</onunload>
 	<controls>
 		<!-- Backdrop -->

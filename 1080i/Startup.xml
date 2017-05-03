@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<!-- <defaultcontrol always="true">10</defaultcontrol> -->
+
+
+	<!-- Run any essential scripts or set a setting on startup (should also be added to settingscategory.xml) -->
+	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<!-- END Essential scripts or settings -->
+
+
 	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
 	<!-- <include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
