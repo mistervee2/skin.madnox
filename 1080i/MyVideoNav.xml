@@ -148,53 +148,6 @@
 		<include>ShowcaseInfoPaneTextOnly</include>
 		<include>Furniture_Showcase</include>
 		<include condition="!Skin.HasSetting(DisableInfoWallVL) | !Skin.HasSetting(DisableWallVL)">WallPanel</include> -->
-		<control type="group">
-			<animation effect="slide" end="0,1080" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
-			<control type="group">
-				<!-- view id = 50 -->
-				<include>CommonRootView</include>
-				<!-- view id = 510 -->
-				<include condition="String.IsEmpty(Skin.String(DisablePostersVL))">PostersViewList</include>
-				<include condition="String.IsEmpty(Skin.String(DisablePostersVL)) | String.IsEmpty(Skin.String(DisableTriPanelVL))">PostersView</include>
-				<!--view id = 52-->
-				<include condition="String.IsEmpty(Skin.String(DisableTriPanelVL))">TriPanel</include>
-				<!-- view id = 53 -->
-				<include condition="String.IsEmpty(Skin.String(DisableTriPanelVL))">TriPanelSquare</include>
-				<!-- view id = 500 -->
-				<include condition="String.IsEmpty(Skin.String(DisableWallVL))">Viewtype_Wall</include>
-				<!-- view id = 501 Showcase-->
-				<include condition="String.IsEmpty(Skin.String(DisableShowCaseVL))">Showcase</include>
-				<!-- view id = 508 Bannerview-->
-				<include condition="String.IsEmpty(Skin.String(DisableBannersVL))">Banners</include>
-				<!-- view id = 503 Landscape-->
-				<include condition="String.IsEmpty(Skin.String(DisableLandscapeVL))">MediaListView3</include>
-				<!-- view id = 504 Showcase DVD-->
-				<!-- view id = 511 -->
-				<include condition="String.IsEmpty(Skin.String(DisableLowListVL))">LowList</include>
-				<!-- view id = 57-->
-				<include condition="String.IsEmpty(Skin.String(DisableShiftVL))">ShiftView</include>
-				<!-- view id = 509-->
-				<include condition="String.IsEmpty(Skin.String(DisableShowCaseSquareVL))">ShowcaseQuadrate</include>
-				<!-- view id = 512-->
-				<include condition="String.IsEmpty(Skin.String(DisableInfoWallVL))">AddonWall</include>
-				<!--view id = 514-->
-				<include condition="String.IsEmpty(Skin.String(DisableEpisodeVL))">Viewtype_Episode</include>
-				<include condition="String.IsEmpty(Skin.String(DisablePanelVL))">Panel</include>
-				<include condition="String.IsEmpty(Skin.String(DisableInfoPanelVL))">Viewtype_FullscreenPanel</include>
-				<!--include>Oscars</include-->
-				<!--include>IMDb250</include-->
-				<include>Wall_Large</include>
-				<include>Video_RightList</include>
-				<include>VideoFanartList</include>
-				<include>VideoBannerInfo</include>
-				<include>KodiFlixView</include>
-				<include>KodiFlixViewTV</include>
-				<include>ViewSets</include>
-				<!--MAD - New View - WIP -->
-				<!--include>DirectoryView</include-->
-				<include>Shelf</include>
-				<include>Shelf3DR</include>
-			</control>
 <!-- 			<control type="button" id="1970">
 				<include>HiddenObject</include>
 				<visible>!Window.IsActive(DialogVideoInfo.xml)</visible>
@@ -1110,13 +1063,17 @@
 					<visible>[!Skin.HasSetting(NoFloorLabelMovies) + Skin.HasSetting(movielogosfloor) + Container.Content(movies)] | [Container.Content(tvshows) + !Skin.HasSetting(NoFloorLabelTVshows) + Skin.HasSetting(tvshowlogosfloor)] | [Container.Content(sets) + !Skin.HasSetting(NoFloorLabelMovies)]</visible>
 				</control>
 			</control> -->
+		<!-- Media Menu -->
+		<include>MediaMenu_MouseOverlay</include>
+		<control type="group">
+			<include>MediaMenu_Common</include>
+			<control type="grouplist" id="9000">
+				<usecontrolcoords>true</usecontrolcoords>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
+				<onright>50</onright>
+				<onback>50</onback>
+				<include>MediaMenu_MyVideoNav_Common</include>
+			</control>
 		</control>
-		<include content="TopBar">
-			<param name="breadcrumbs_icon" value="$VAR[BreadcrumbsVideoIconVar]" />
-			<param name="breadcrumbs_label" value="$VAR[BreadcrumbsVideoVar]" />
-			<param name="visible" value="true" />
-		</include>
-		<include>Media_Menu</include>
-		<include>ContextMenuOverlay</include>
 	</controls>
 </window>

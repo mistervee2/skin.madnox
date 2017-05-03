@@ -224,26 +224,26 @@
 		<param name="width">480</param>
 		<param name="glowleft">471</param>
 		<definition>
-		<control type="button">
-			<include>FullscreenDimensions</include>
-			<font />
-			<texturefocus />
-			<texturenofocus />
-			<onclick>Action(close)</onclick>
-		</control>
-		<control type="image">
-			<left>0</left>
-			<width>$PARAM[width]</width>
-			<height>1080</height>
-			<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/mediamenu-back.png</texture>
-		</control>
-		<control type="image">
-			<left>$PARAM[glowleft]</left>
-			<width>20</width>
-			<height>1080</height>
-			<texture colordiffuse="$VAR[GlowColorVar]">dialog/glow-right.png</texture>
-		</control>
-	</definition>
+			<control type="button">
+				<include>FullscreenDimensions</include>
+				<font />
+				<texturefocus />
+				<texturenofocus />
+				<onclick>Action(close)</onclick>
+			</control>
+			<control type="image">
+				<left>0</left>
+				<width>$PARAM[width]</width>
+				<height>1080</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/mediamenu-back.png</texture>
+			</control>
+			<control type="image">
+				<left>$PARAM[glowleft]</left>
+				<width>20</width>
+				<height>1080</height>
+				<texture colordiffuse="$VAR[GlowColorVar]">dialog/glow-right.png</texture>
+			</control>
+		</definition>
 	</include>
 	<!-- Settings -->
 	<include name="MediaMenu_Settings">
@@ -355,7 +355,59 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 	</include>
-	<!-- ????? CONTENT -->
+	<!-- My Menu -->
+	<include name="MediaMenu_MyVideoNav_Common">
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="9001" />
+			<param name="icon" value="icon/mediamenu/view.png" />
+			<param name="label" value="$INFO[Container.Viewmode]" />
+			<param name="onclick" value="ActivateWindow(1124)" />
+			<!-- <param name="visible" value="Integer.IsGreater(Container.ViewCount,1)" /> -->
+		</include>
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="9002" />
+			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="label" value="$LOCALIZE[31384]" />
+			<param name="onclick" value="ActivateWindow(1122)" />
+		</include>
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="3" />
+			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="label" value="$INFO[Container.SortMethod]" />
+		</include>
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="4" />
+			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="label" value="$INFO[Container.SortOrder]" />
+		</include>
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="19" />
+			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="label" value="$LOCALIZE[137]" />
+			<param name="visible" value="Container.CanFilter + !Container.CanFilterAdvanced" />
+		</include>
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="199" />
+			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="label" value="$LOCALIZE[587]" />
+			<param name="visible" value="Container.CanFilterAdvanced" />
+		</include>
+	</include>
+	<include name="MediaMenu_MyVideoNav">
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="9010" />
+			<param name="icon" value="icon/mediamenu/image.png" />
+			<param name="label" value="$LOCALIZE[14018]" />
+			<param name="onclick" value="ActivateWindow(1122)" />
+		</include>
+		<include content="MediaMenu_Icon_Button">
+			<param name="id" value="9011" />
+			<param name="icon" value="icon/mediamenu/arrowleft.png" />
+			<param name="label" value="$LOCALIZE[31633]" />
+			<param name="onclick" value="ActivateWindow(1113)" />
+			<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
+		</include>
+	</include>
 
 
 
