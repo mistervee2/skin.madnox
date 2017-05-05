@@ -16,6 +16,7 @@
 		<param name="sideshade">true</param>
 		<param name="fullshade">false</param>
 		<param name="bottomshade">false</param>
+		<param name="imagepath"></param>
 		<definition>
 			<control type="group">
 				<visible>$EXP[Fanart_Visible_MediaPlaying]</visible>

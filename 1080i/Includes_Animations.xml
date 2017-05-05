@@ -14,6 +14,10 @@
 		<animation effect="fade" time="400">WindowOpen</animation>
 		<animation effect="fade" time="160">WindowClose</animation>
 	</include>
+	<include name="Animation_VisibleFade">
+		<animation effect="fade" time="160">Visible</animation>
+		<animation effect="fade" time="160">Hidden</animation>
+	</include>
 	<include name="Animation_Dialog_Popup">
 		<animation type="WindowOpen" reversible="false">
 			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />

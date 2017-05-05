@@ -22,10 +22,12 @@
 	<include file="IncludesVideoLyrics.xml" />
 	<include file="Includes_NowPayingBottom.xml" />
 
-	<include file="Includes_Viewtypes.xml"/>
+	<!-- <include file="Includes_Viewtypes.xml"/> -->
+
+	<include file="Includes_Views.xml"/> -->
 
 	<include file="View_50_List.xml"/>
-	<include file="View_52_TriPanel.xml"/>
+	<!-- <include file="View_52_TriPanel.xml"/>
 	<include file="View_53_TriPanelSquare.xml"/>
 	<include file="View_499_Wall_Large.xml" />
 	<include file="View_500_Wall.xml"/>
@@ -57,7 +59,7 @@
 	<include file="View_810_MusicFlix.xml" />
 	<include file="View_812_List_Xtra.xml" />
 	<include file="View_820_KodiFlix_TV.xml" />
-	<include file="View_900_ViewsSets.xml" />
+	<include file="View_900_ViewsSets.xml" /> -->
 
 	<constant name="AutoScrollTime">2000</constant>
 	<constant name="FanartCrossfadeTime">500</constant>

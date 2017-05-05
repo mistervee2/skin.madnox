@@ -321,26 +321,51 @@
 					<onleft>8000</onleft>
 					<onright>60</onright>
 					<visible>Container(8000).Hasfocus(4)</visible>
-					<!-- <control type="radiobutton" id="302">
-                		<label>Colored Icons</label>
-                		<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
-                		<selected>Skin.HasSetting(ColoredIcons)</selected>
-                		<include>Settings_RadioButton</include>
-                	</control>
-                	<control type="radiobutton" id="303">
-                		<include>Settings_RadioButton</include>
-                		<label>Colored Media Flags</label>
-                		<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
-                		<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
-                	</control> -->
-                	<control type="radiobutton" id="401">
-                		<include>Settings_RadioButton</include>
-                		<selected>Skin.HasSetting(UpdateArtworkDownloader)</selected>
-                		<onclick>Skin.ToggleSetting(UpdateArtworkDownloader)</onclick>
-                		<label>$LOCALIZE[31216]</label>
-                		<visible>System.HasAddon(script.artwork.downloader)</visible>
-                	</control>
-                	<control type="radiobutton" id="17112">
+					<control type="radiobutton" id="401">
+						<include>Settings_RadioButton</include>
+						<selected>Skin.HasSetting(UpdateArtworkDownloader)</selected>
+						<onclick>Skin.ToggleSetting(UpdateArtworkDownloader)</onclick>
+						<label>$LOCALIZE[31216]</label>
+						<visible>System.HasAddon(script.artwork.downloader)</visible>
+					</control>
+					<control type="radiobutton" id="402">
+						<label>Colored Icons</label>
+						<onclick>Skin.ToggleSetting(ColoredIcons)</onclick>
+						<selected>Skin.HasSetting(ColoredIcons)</selected>
+						<include>Settings_RadioButton</include>
+					</control>
+					<control type="radiobutton" id="403">
+						<include>Settings_RadioButton</include>
+						<label>Colored Media Flags</label>
+						<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
+						<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
+					</control>
+					<control type="button" id="404">
+						<label>Studio Icons</label>
+                		<label2>$INFO[Skin.String(StudioIcons.name)]</label2>
+						<include>Settings_Button</include>
+						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=StudioIcons,addontype=resource.images.studios)</onclick>
+					</control>
+					<control type="button" id="405">
+						<label>Record Label Icons</label>
+                		<label2>$INFO[Skin.String(RecordLabelIcons.name)]</label2>
+						<include>Settings_Button</include>
+						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=RecordLabelIcons,addontype=resource.images.recordlabels)</onclick>
+					</control>
+					<control type="button" id="405">
+						<label>Language Flags</label>
+                		<label2>$INFO[Skin.String(LanguageFlagIcons.name)]</label2>
+						<include>Settings_Button</include>
+						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=LanguageFlagIcons,addontype=resource.images.languageflags)</onclick>
+					</control>
+					<control type="button" id="405">
+						<label>Country Icons</label>
+                		<label2>$INFO[Skin.String(CountryIcons.name)]</label2>
+						<include>Settings_Button</include>
+						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=CountryIcons,addontype=resource.images.moviecountryicons)</onclick>
+					</control>
+
+                	<!-- <control type="radiobutton" id="17112">
                 		<include>Settings_RadioButton</include>
                 		<label>31292</label>
                 		<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
@@ -351,43 +376,14 @@
                 		<label>31469</label>
                 		<onclick>Skin.ToggleSetting(SkinHelperAnimations)</onclick>
                 		<selected>Skin.HasSetting(SkinHelperAnimations)</selected>
-                	</control>
-                	<control type="button" id="401">
+                	</control> -->
+                	<control type="button" id="405">
                 		<label>Backgrounds</label>
                 		<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
                 		<include>Settings_Button</include>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=SkinBackgrounds&amp;type=resource.images.skinbackgrounds)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	</control>
-                	<!-- <control type="radiobutton" id="300">
-                		<label>Coloured Media Flags</label>
-                		<radioposx>1274</radioposx>
-                		<include>Settings_Button</include>
-                		<onclick>Skin.ToggleSetting(colormediaflags)</onclick>
-                		<selected>!Skin.HasSetting(colormediaflags)</selected>
-                	</control>
-                	<control type="button" id="301">
-                		<label>Backgrounds</label>
-                		<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
-                		<include>Settings_Button</include>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=SkinBackgrounds&amp;type=resource.images.skinbackgrounds)</onclick>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	</control>
-                	<control type="button" id="302">
-                		<label>Studio Icons</label>
-                		<label2>$INFO[Skin.String(StudioIcons.name)]</label2>
-                		<include>Settings_Button</include>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=StudioIcons&amp;type=resource.images.studios)</onclick>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	</control>
-                	<control type="button" id="303">
-                		<label>Record Label Icons</label>
-                		<label2>$INFO[Skin.String(RecordLabelIcons.name)]</label2>
-                		<include>Settings_Button</include>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=RecordLabelIcons&amp;type=resource.images.recordlabels)</onclick>
-                		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	</control>
-                -->
                 <control type="button" id="406">
                 	<label>Video genre icons</label>
                 	<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
@@ -416,7 +412,7 @@
                 	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
                 	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 </control>
-                	<!-- <control type="button" id="307">
+                	<control type="button" id="307">
                 		<label>Video genre fanart</label>
                 		<label2>$INFO[Skin.String(VideoGenreFanart.Name)]</label2>
                 		<include>Settings_Button</include>
@@ -430,7 +426,7 @@
                 		<include>Settings_Button</include>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreFanart&amp;type=resource.images.musicgenrefanart)</onclick>
-                	</control> -->
+                	</control>
                 </control>
                 <!--  Colors -->
                 <control type="grouplist" id="8005">

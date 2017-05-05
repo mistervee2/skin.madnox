@@ -747,7 +747,7 @@
 						<top>22</top>
 						<width>363</width>
 						<height>80</height>
-						<texture border="10" colordiffuse="$VAR[DialogColorVar]">button/keyboard-nofocus.png</texture>
+						<texture border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>22</left>
@@ -767,7 +767,7 @@
 							<top>22</top>
 							<width>363</width>
 							<height>80</height>
-							<texture border="10" colordiffuse="$VAR[DialogColorVar]">button/keyboard-nofocus.png</texture>
+							<texture border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texture>
 						</control>
 						<control type="image">
 							<width>406</width>
@@ -791,18 +791,18 @@
 			<control type="group">
 				<visible>Control.IsVisible(313)</visible>
 				<left>22</left>
-				<top>22</top>
+				<top>575</top>
 				<include>Animation_CommonFade</include>
 				<control type="image">
 					<width>1080</width>
 					<height>80</height>
-					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
+					<texture border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texture>
 				</control>
 				<control type="image">
 					<top>75</top>
 					<width>1080</width>
 					<height>80</height>
-					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/keyboard-nofocus.png</texture>
+					<texture border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texture>
 				</control>
 				<control type="label" id="314">
 					<top>75</top>
@@ -816,7 +816,7 @@
 			</control>
 			<control type="label" id="313">
 				<left>22</left>
-				<top>22</top>
+				<top>575</top>
 				<width>1080</width>
 				<height>80</height>
 				<font>Font29_Cond</font>

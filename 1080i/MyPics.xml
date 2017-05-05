@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,509,500,501,505,511,512,517,560</views>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
-	<onload condition="!Skin.HasSetting(ExplainMediaMenu)">ActivateWindow(1123)</onload>
+	<views>50</views>
+	<menucontrol>9000</menucontrol>
 	<controls>
-		<control type="multiimage">
+		<control type="group">
+			<include>Animation_CommonFade</include>
+			<include>View_50_List</include>
+		</control>
+		<!-- <control type="multiimage">
 			<aspectratio align="center" aligny="top">scale</aspectratio>
 			<imagepath background="true">$VAR[PicturesFanartVar]</imagepath>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -27,23 +30,17 @@
 			<visible>!Control.IsVisible(517)</visible>
 			<include>Furniture_Showcase</include>
 		</control>
-		<include>WallPanel</include>
-		<control type="group">
+		<include>WallPanel</include> -->
+		<!-- <control type="group">
 			<animation effect="slide" end="0,650" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
 			<control type="group">
-				<visible>!String.Contains(Container.FolderPath,\comics\)</visible>
-				<!-- view id = 50 -->
-				<include>ShowcaseQuadrate</include>
-				<!-- view id = 51 -->
-				<include>Stripshow</include>
+				
 			</control>
 			<include>CommonRootView</include>
 			<include>Viewtype_Wall</include>
 			<include>AddonWall</include>
 			<control type="group">
-				<visible>String.Contains(Container.FolderPath,\comics\)</visible>
-				<!-- view id = 500 -->
-				<include>Showcase</include>
+				
 			</control>
 			<control type="button" id="7000">
 				<include>HiddenObject</include>
@@ -64,6 +61,6 @@
 		</control>
 		<include>Furniture_NowPlayingWidget</include>
 		<include>Media_Menu</include>
-		<include>ContextMenuOverlay</include>
+		<include>ContextMenuOverlay</include> -->
 	</controls>
 </window>

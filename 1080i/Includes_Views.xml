@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<includes>
+	<include name="Alphabetscroll_Vertical">
+		<control type="panel" id="6000">
+			<left>1240</left>
+			<top>143</top>
+			<bottom>132</bottom>
+			<width>40</width>
+			<orientation>vertical</orientation>
+			<itemlayout height="31" width="40">
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>white</textcolor>
+					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+				</control>
+			</itemlayout>
+			<focusedlayout height="31" width="40">
+				<control type="label">
+					<label>$INFO[ListItem.Label]</label>
+					<textcolor>$VAR[HighlightColorVar]</textcolor>
+					<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
+				</control>
+			</focusedlayout>
+			<content>plugin://script.skin.helper.service/?action=alphabet&amp;reload=$INFO[Container.NumItems]</content>
+		</control>
+	</include>
+</includes>
