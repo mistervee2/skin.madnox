@@ -7,6 +7,8 @@
 		<textcolor>white2</textcolor>
 		<disabledcolor>disabled</disabledcolor>
 		<selectedcolor>$VAR[HighlightColorVar]</selectedcolor>
+		<scrollsuffix> • </scrollsuffix>
+		<scrollspeed>40</scrollspeed>
 		<scroll>false</scroll>
 	</default>
 	<default type="fadelabel">
@@ -15,7 +17,7 @@
 		<textcolor>white2</textcolor>
 		<selectedcolor>$VAR[HighlightColorVar]</selectedcolor>
 		<scrollspeed>40</scrollspeed>
-		<pauseatend>7000</pauseatend>
+		<pauseatend>5000</pauseatend>
 		<scrollout>false</scrollout>
 	</default>
 	<default type="edit">

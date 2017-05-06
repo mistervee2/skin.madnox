@@ -24,7 +24,7 @@
 				<param name="closecondition">true</param>
 			</include>
 			<include content="Animation_FurnitureShift">
-				<param name="slidetopbarcondition">Skin.HasSetting(view50HideTopBar)</param>
+				<param name="slidetopbarcondition">Skin.HasSetting(View50HideTopBar)</param>
 				<param name="slidefloorcondition">!Skin.HasSetting(View50HideTopBar) + Skin.HasSetting(View50HideFloor)</param>
 			</include>
 			<include content="Panel_Background_Default">
@@ -32,17 +32,13 @@
 				<param name="reflect">!Skin.HasSetting(View50HideFloor)</param>
 			</include>
 			<control type="image">
-				<left>990</left>
+				<left>953</left>
 				<top>145</top>
-				<width>190</width>
+				<width>200</width>
 				<height>800</height>
 				<texture colordiffuse="$VAR[PanelColorVar]" border="40">panel/list-detail-underlay.png</texture>
+				<visible>Container.Content(movies) | Container.Content(actors) | Container.Content(directors) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
 			</control>
-
-
-
-
-			
 			<control type="list" id="50">
 				<left>100</left>
 				<top>145</top>
@@ -59,260 +55,156 @@
 					<control type="image">
 						<left>20</left>
 						<top>8</top>
-						<width>150</width>
+						<width>120</width>
 						<height>84</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ViewListIconVar]</texture>
+						<texture fallback="DefaultFile.png">$VAR[ViewListIconVar]</texture>
 					</control>
 					<control type="label">
-						<left>190</left>
+						<left>160</left>
 						<top>12</top>
-						<width>720</width>
+						<width>693</width>
 						<height>40</height>
-						<label fallback="..">$VAR[ViewListLabel1Var]</label>
+						<label fallback="..">$VAR[ViewTitleLabelVar]</label>
 						<font>Font38_Reg</font>
 						<textcolor>white2</textcolor>
 						<visible>String.IsEqual(listitem.dbtype,movie) | String.IsEqual(listitem.dbtype,tvshow) | String.IsEqual(listitem.dbtype,season) | String.IsEqual(listitem.dbtype,episode) | String.IsEqual(listitem.dbtype,artist) | String.IsEqual(listitem.dbtype,album) | String.IsEqual(listitem.dbtype,song) | String.IsEqual(listitem.dbtype,musicvideo)</visible>
 					</control>
 					<control type="label">
-						<left>190</left>
-						<width>720</width>
+						<left>160</left>
+						<width>693</width>
 						<height>100</height>
-						<label fallback="..">$VAR[ViewListLabel1Var]</label>
+						<label fallback="..">$VAR[ViewTitleLabelVar]</label>
 						<font>Font38_Reg</font>
 						<textcolor>white2</textcolor>
 						<visible>!String.IsEqual(listitem.dbtype,movie) + !String.IsEqual(listitem.dbtype,tvshow) + !String.IsEqual(listitem.dbtype,season) + !String.IsEqual(listitem.dbtype,episode) + !String.IsEqual(listitem.dbtype,artist) + !String.IsEqual(listitem.dbtype,album) + !String.IsEqual(listitem.dbtype,song) + !String.IsEqual(listitem.dbtype,musicvideo)</visible>
 					</control>
 					<control type="label">
-						<left>190</left>
+						<left>160</left>
 						<top>52</top>
-						<width>720</width>
+						<width>693</width>
 						<height>30</height>
 						<font>Font28_Reg</font>
-						<label>$VAR[ViewListLabel2Var]</label>
+						<label>$VAR[ViewSubTitleLabelVar]</label>
 						<textcolor>grey</textcolor>
 					</control>
 					<control type="label">
-						<left>899</left>
-						<top>3</top>
-						<width>170</width>
-						<height>48</height>
+						<right>85</right>
+						<top>12</top>
+						<width>190</width>
+						<height>40</height>
 						<align>center</align>
-						<label>$VAR[ListLabel2Var]</label>
+						<label>$VAR[ViewLabel2Var]</label>
 						<font>Font29_Cond</font>
 						<textcolor>grey</textcolor>
+						<visible>!String.IsEqual(listitem.dbtype,actor) + !String.IsEqual(listitem.dbtype,director) + !String.IsEqual(listitem.dbtype,files) + !Container.Content(images)</visible>
+					</control>
+					<control type="label">
+						<right>85</right>
+						<width>190</width>
+						<height>100</height>
+						<align>center</align>
+						<label>$VAR[ViewLabel2Var]</label>
+						<font>Font29_Cond</font>
+						<textcolor>grey</textcolor>
+						<visible>String.IsEqual(listitem.dbtype,actor) | String.IsEqual(listitem.dbtype,director) | String.IsEqual(listitem.dbtype,files) | Container.Content(images)</visible>
 					</control>
 					<control type="image">
-						<left>900</left>
-						<top>54</top>
-						<width>170</width>
-						<height>27</height>
+						<right>85</right>
+						<top>52</top>
+						<width>190</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ListImage2Var]</texture>
+						<texture>$VAR[ViewImageRatingVar]</texture>
 						<colordiffuse>grey</colordiffuse>
 					</control>
 					<control type="image">
-						<left>1072</left>
-						<top>28</top>
-						<width>45</width>
-						<height>45</height>
+						<right>20</right>
+						<width>40</width>
+						<height>100</height>
+						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
 						<texture colordiffuse="$VAR[ColorDiffuseVar]">$VAR[WatchedIconVar]</texture>
 						<visible>!Container.Content(songs)</visible>
 					</control>
-					<!-- <control type="image">
-						<left>925</left>
-						<top>8</top>
-						<width>45</width>
-						<height>42</height>
-						<aspectratio>keep</aspectratio>
-						<texture>flags/discnumber/$INFO[ListItem.DiscNumber,,.png]</texture>
-						<colordiffuse>white</colordiffuse>
-						<visible>Container.Content(songs)</visible>
+				</itemlayout>
+				<focusedlayout height="100" condition="true">
+					<control type="image">
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
 					</control>
-					<control type="label">
-						<left>52</left>
-						<width>82</width>
-						<height>98</height>
-						<align>center</align>
-						<label>$VAR[ListLabel5Var]</label>
-						<font>Font_Bold56</font>
-						<textcolor>grey2</textcolor>
-					</control> -->
-					
-					<!-- <control type="label">
-						<left>158</left>
-						<top>54</top>
-						<width>680</width>
-						<height>36</height>
-						<align>left</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>Font_Info</font>
-						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
-						<textcolor>grey2</textcolor>
-					</control> -->
-<!-- 					
-					<control type="label">
-						<left>899</left>
-						<top>54</top>
-						<width>170</width>
-						<height>36</height>
-						<align>center</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>Font_Info</font>
-						<visible>Window.IsActive(programs) + !Container.Content(addons)</visible>
-						<textcolor>grey2</textcolor>
-					</control>
-				-->
-
-			</itemlayout>
-			<focusedlayout height="100" condition="true">
-				<control type="image">
-					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
-					<animation effect="fade" start="100" end="25" tween="sine" easing="inout" time="240" condition="!Control.HasFocus(50)">Conditional</animation>
-				</control>
-				<control type="image">
-					<left>20</left>
-					<top>8</top>
-					<width>150</width>
-					<height>84</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ViewListIconVar]</texture>
-				</control>
-				<control type="label">
-					<left>190</left>
-					<top>12</top>
-					<width>720</width>
-					<height>40</height>
-					<label fallback="..">$VAR[ViewListLabel1Var]</label>
-					<font>Font38_Reg</font>
-					<visible>String.IsEqual(listitem.dbtype,movie) | String.IsEqual(listitem.dbtype,tvshow) | String.IsEqual(listitem.dbtype,season) | String.IsEqual(listitem.dbtype,episode) | String.IsEqual(listitem.dbtype,artist) | String.IsEqual(listitem.dbtype,album) | String.IsEqual(listitem.dbtype,song) | String.IsEqual(listitem.dbtype,musicvideo)</visible>
-				</control>
-				<control type="label">
-					<left>190</left>
-					<width>720</width>
-					<height>100</height>
-					<label fallback="..">$VAR[ViewListLabel1Var]</label>
-					<font>Font38_Reg</font>
-					<visible>!String.IsEqual(listitem.dbtype,movie) + !String.IsEqual(listitem.dbtype,tvshow) + !String.IsEqual(listitem.dbtype,season) + !String.IsEqual(listitem.dbtype,episode) + !String.IsEqual(listitem.dbtype,artist) + !String.IsEqual(listitem.dbtype,album) + !String.IsEqual(listitem.dbtype,song) + !String.IsEqual(listitem.dbtype,musicvideo)</visible>
-				</control>
-				<control type="label">
-					<left>190</left>
-					<top>52</top>
-					<width>720</width>
-					<height>30</height>
-					<font>Font28_Reg</font>
-					<textcolor>white2</textcolor>
-					<label>$VAR[ViewListLabel2Var]</label>
-				</control>
-				<control type="label">
-					<left>899</left>
-					<top>3</top>
-					<width>170</width>
-					<height>48</height>
-					<align>center</align>
-					<label>$VAR[ListLabel2Var]</label>
-					<font>Font29_Cond</font>
-				</control>
-				<control type="image">
-					<left>900</left>
-					<top>54</top>
-					<width>170</width>
-					<height>27</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$VAR[ListImage2Var]</texture>
-				</control>
-				<control type="image">
-					<left>1072</left>
-					<top>28</top>
-					<width>45</width>
-					<height>45</height>
-					<aspectratio>keep</aspectratio>
-					<texture colordiffuse="$VAR[ColorDiffuseVar]">$VAR[WatchedIconVar]</texture>
-					<visible>!Container.Content(songs)</visible>
-				</control>
-
-					<!-- <control type="image">
-						<left>22</left>
+					<control type="image">
+						<left>20</left>
 						<top>8</top>
 						<width>120</width>
-						<height>82</height>
+						<height>84</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ListLeftImageVar]</texture>s
-					</control>
-					<control type="image">
-						<left>925</left>
-						<top>8</top>
-						<width>45</width>
-						<height>42</height>
-						<aspectratio>keep</aspectratio>
-						<texture>flags/discnumber/$INFO[ListItem.DiscNumber,,.png]</texture>
-						<colordiffuse>white</colordiffuse>
-						<visible>Container.Content(songs)</visible>
+						<texture fallback="DefaultFile.png">$VAR[ViewListIconVar]</texture>
 					</control>
 					<control type="label">
-						<left>52</left>
-						<width>82</width>
-						<height>98</height>
+						<left>160</left>
+						<top>12</top>
+						<width>693</width>
+						<height>40</height>
+						<label fallback="..">$VAR[ViewTitleLabelVar]</label>
+						<font>Font38_Reg</font>
+						<visible>String.IsEqual(listitem.dbtype,movie) | String.IsEqual(listitem.dbtype,tvshow) | String.IsEqual(listitem.dbtype,season) | String.IsEqual(listitem.dbtype,episode) | String.IsEqual(listitem.dbtype,artist) | String.IsEqual(listitem.dbtype,album) | String.IsEqual(listitem.dbtype,song) | String.IsEqual(listitem.dbtype,musicvideo)</visible>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<width>693</width>
+						<height>100</height>
+						<label fallback="..">$VAR[ViewTitleLabelVar]</label>
+						<font>Font38_Reg</font>
+						<visible>!String.IsEqual(listitem.dbtype,movie) + !String.IsEqual(listitem.dbtype,tvshow) + !String.IsEqual(listitem.dbtype,season) + !String.IsEqual(listitem.dbtype,episode) + !String.IsEqual(listitem.dbtype,artist) + !String.IsEqual(listitem.dbtype,album) + !String.IsEqual(listitem.dbtype,song) + !String.IsEqual(listitem.dbtype,musicvideo)</visible>
+					</control>
+					<control type="label">
+						<left>160</left>
+						<top>52</top>
+						<width>693</width>
+						<height>30</height>
+						<font>Font28_Reg</font>
+						<textcolor>white2</textcolor>
+						<label>$VAR[ViewSubTitleLabelVar]</label>
+					</control>
+					<control type="label">
+						<right>85</right>
+						<top>12</top>
+						<width>190</width>
+						<height>40</height>
 						<align>center</align>
-						<label>$VAR[ListLabel5Var]</label>
-						<font>Font_Bold56</font>
+						<label>$VAR[ViewLabel2Var]</label>
+						<font>Font29_Cond</font>
+						<textcolor>grey</textcolor>
+						<visible>!String.IsEqual(listitem.dbtype,actor) + !String.IsEqual(listitem.dbtype,director) + !String.IsEqual(listitem.dbtype,files) + !Container.Content(images)</visible>
 					</control>
 					<control type="label">
-						<left>158</left>
-						<top>1</top>
-						<width>720</width>
-						<height>48</height>
-						<label fallback="..">$VAR[ListLabel1Var]</label>
-						<font>Font_Reg38</font>
-					</control>
-					<control type="label">
-						<left>158</left>
-						<top>54</top>
-						<width>720</width>
-						<height>36</height>
-						<label>$VAR[ListLabel2Var]</label>
-						<visible>!Container.Content(movies) + !Container.Content(tvshows)</visible>
-					</control>
-					<control type="label">
-						<left>899</left>
-						<top>3</top>
-						<width>170</width>
-						<height>48</height>
+						<right>85</right>
+						<width>190</width>
+						<height>100</height>
 						<align>center</align>
-						<label>$VAR[ListLabel3Var]</label>
-						<font>Font_Info</font>
-						<animation effect="slide" end="26" time="0" condition="Container.Content(songs) + !String.IsEmpty(ListItem.DiscNumber)">Conditional</animation>
-						<animation effect="slide" end="0,18" time="0" condition="Container.Content(seasons)">Conditional</animation>
-					</control>
-					<control type="label">
-						<left>158</left>
-						<top>54</top>
-						<width>680</width>
-						<height>36</height>
-						<align>left</align>
-						<label>$INFO[ListItem.Genre]</label>
-						<font>Font_Info</font>
-						<visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+						<label>$VAR[ViewLabel2Var]</label>
+						<font>Font29_Cond</font>
+						<textcolor>grey</textcolor>
+						<visible>String.IsEqual(listitem.dbtype,actor) | String.IsEqual(listitem.dbtype,director) | String.IsEqual(listitem.dbtype,files) | Container.Content(images)</visible>
 					</control>
 					<control type="image">
-						<left>900</left>
-						<top>54</top>
-						<width>170</width>
-						<height>27</height>
+						<right>85</right>
+						<top>52</top>
+						<width>190</width>
+						<height>30</height>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[ListImage2Var]</texture>
-						<colordiffuse>white6</colordiffuse>
+						<texture>$VAR[ViewImageRatingVar]</texture>
 					</control>
 					<control type="image">
-						<left>1072</left>
-						<top>28</top>
-						<width>45</width>
-						<height>45</height>
+						<right>20</right>
+						<width>40</width>
+						<height>100</height>
+						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture>$VAR[WatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[ColorDiffuseVar]">$VAR[WatchedIconVar]</texture>
 						<visible>!Container.Content(songs)</visible>
-					</control> -->
+					</control>
 				</focusedlayout>
 			</control>
 			<control type="scrollbar" id="60">
@@ -359,8 +251,6 @@
 				</control>
 			</control>
 		</control>
-
-
 		<!-- Topbar -->
 		<control type="group">
 			<visible>!Skin.HasSetting(View50HideTopBar)</visible>

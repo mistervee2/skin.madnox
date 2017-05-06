@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
-	<!-- START REWOR VARIABLES -->
+	<!-- START REWORK VARIABLES -->
 	<!-- Fanart -->
 	<variable name="ViewTypeFanartVar">
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
@@ -20,20 +20,19 @@
 	</variable>
 	<!-- Art -->
 	<variable name="PosterVar">
-		<value condition="String.IsEqual(listitem.dbtype,genre) + [String.Contains(ListItem.FolderPath,musicdb) | String.Contains(ListItem.FolderPath,musicvideos)]">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),coloured)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,country)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + [String.Contains(ListItem.FolderPath,musicdb) | String.Contains(ListItem.FolderPath,musicvideos)]">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),coloured)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,country)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>
 		<value condition="Skin.HasSetting(SkinHelperAnimationedPoster) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
-		<value condition="String.IsEqual(listitem.dbtype,episode) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
-		<value condition="String.IsEqual(listitem.dbtype,season) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,season) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
 		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-
 	<variable name="VideoGenrePosterVar">
 		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-coloured)">resource://resource.images.moviegenreicons.madnox-coloured/</value>
 		<value condition="String.Contains(Skin.String(VideoGenreIcons.path),madnox-bw)">resource://resource.images.moviegenreicons.madnox-bw/</value>
@@ -60,54 +59,42 @@
 		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
 		<value>.png</value>
 	</variable>
-
 	<!-- Views -->
 	<variable name="ViewListIconVar">
-		<value condition="String.IsEqual(listitem.dbtype,genre) + [String.Contains(ListItem.FolderPath,musicdb) | String.Contains(ListItem.FolderPath,musicvideos)]">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>
-		<value condition="String.IsEqual(listitem.dbtype,genre)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
-		<value condition="String.IsEqual(listitem.dbtype,movie) | String.IsEqual(listitem.dbtype,tvshow) | String.IsEqual(listitem.dbtype,season)">$VAR[StudioImageVar]</value>
-		<value condition="String.IsEqual(listitem.dbtype,music) | String.IsEqual(listitem.dbtype,musicvideo)">$VAR[RecordLabelImageVar]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),coloured)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
-		<value condition="String.IsEqual(listitem.dbtype,set)">flag/colored/set.png</value>
-		<value condition="String.IsEqual(listitem.dbtype,country)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>
-
-
-
-		<value condition="!String.isempty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + [String.Contains(ListItem.FolderPath,musicdb) | String.Contains(ListItem.FolderPath,musicvideos)]">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre)">$VAR[VideoGenrePosterVar]$INFO[ListItem.Label]$VAR[VideoGenreExtPosterVar]</value>
+		<value condition="!String.IsEmpty(ListItem.Studio) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)]">$VAR[StudioImageVar]</value>
+		<value condition="!String.IsEmpty(ListItem.Property(Album_Label)) + String.IsEqual(ListItem.DBTYPE,album)">$VAR[StudioImageVar]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),white)">$INFO[ListItem.Label,resource://resource.images.studios.white/,.png]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,studio) + !ListItem.IsParentFolder + String.Contains(Skin.String(StudioIcons),coloured)">$INFO[ListItem.Label,resource://resource.images.studios.coloured/,.png]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,country)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>
+		<value condition="!String.IsEmpty(ListItem.Thumb)">$INFO[ListItem.Thumb]</value>
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
-
-	<variable name="ListImageVar">
-		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(albums)">$VAR[StudioImageVar]</value>
-		<value condition="!ListItem.IsParentFolder">$INFO[ListItem.Icon]</value>
-		<value>$INFO[ListItem.Icon]</value>
+	<variable name="ViewImageRatingVar">
+		<value condition="!String.IsEmpty(ListItem.UserRating) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,musicvideo)]">flag/rating/$INFO[ListItem.UserRating]r.png</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,musicvideo)">flag/rating/$INFO[ListItem.Rating]r.png</value>
 	</variable>
-	<variable name="ViewListLabel1Var">
-		<value condition="[Container.Content(songs) | Container.Content(episodes)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
+	<variable name="ViewTitleLabelVar">
+		<value condition="[String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,episode)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
 		<value>$INFO[ListItem.Label]</value>
 	</variable>
+	<variable name="ViewSubTitleLabelVar">
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,musicvideo)">$INFO[ListItem.Genre]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.TVShowTitle]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$INFO[ListItem.AlbumArtist]</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,song)">$INFO[ListItem.Artist]</value>
+	</variable>
 
-	<variable name="ListLabel2Var">
+	<variable name="ViewLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
-		<value condition="!String.isempty(ListItem.Appearances)">$LOCALIZE[38026][CR]$INFO[ListItem.Appearances]</value>
+		<value condition="!String.IsEmpty(ListItem.Appearances)">$LOCALIZE[38026]$INFO[ListItem.Appearances, ]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
 
 
-
-	<variable name="ViewListLabel2Var">
-		<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(musicvideos)">$INFO[ListItem.Genre]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(episodes)">$INFO[ListItem.TVShowTitle]</value>
-		<value condition="Container.Content(albums)">$INFO[ListItem.AlbumArtist]</value>
-		<value condition="Container.Content(songs)">$INFO[ListItem.Artist]</value>
-	</variable>
-
-
-	
-
-<!-- 
+	<!-- 
 	<variable name="ListLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
@@ -116,18 +103,20 @@
 	</variable>
 -->
 
-
+<variable name="ListImageVar">
+	<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(albums)">$VAR[StudioImageVar]</value>
+	<value condition="!ListItem.IsParentFolder">$INFO[ListItem.Icon]</value>
+	<value>$INFO[ListItem.Icon]</value>
+</variable>
 <variable name="StudioImageVar">
+	<value condition="String.IsEqual(ListItem.DBTYPE,set) + String.Contains(Skin.String(StudioIcons),coloured)">flag/colored/set.png</value>
+	<value condition="String.IsEqual(ListItem.DBTYPE,set) + String.Contains(Skin.String(StudioIcons),white)">flag/default/set.png</value>
+	<value condition="String.IsEqual(ListItem.DBTYPE,album) + String.Contains(Skin.String(RecordLabelIcons),white)">$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</value>
 	<value condition="String.Contains(Skin.String(StudioIcons),white)">$INFO[ListItem.Studio,resource://resource.images.studios.white/,.png]</value>
 	<value condition="String.Contains(Skin.String(StudioIcons),coloured)">$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</value>
+	<value />
+</variable>
 
-	<value />
-</variable>
-<variable name="RecordLabelImageVar">
-	<value condition="Container.Content(musicvideos) + String.Contains(Skin.String(RecordLabelIcons),white)">$INFO[ListItem.Studio,resource://resource.images.recordlabels.white/,.png]</value>
-	<value condition="String.Contains(Skin.String(RecordLabelIcons),white)">$INFO[ListItem.Property(Album_Label),resource://resource.images.recordlabels.white/,.png]</value>
-	<value />
-</variable>
 
 
 <!-- Dialogs -->
@@ -711,7 +700,7 @@
 	<value>$INFO[ListItem.Label]</value>
 </variable>
 <variable name="DialogVideoInfoButtonLabelVar">
-	<value condition="String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season)">$LOCALIZE[1024]</value>
+	<value condition="String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season)">$LOCALIZE[1024]</value>
 	<value>$LOCALIZE[208]</value>
 </variable>
 <variable name="InfoWallPreviewTextureVar">
@@ -2134,11 +2123,7 @@
 	<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | [Window.IsActive(programs) + !Container.Content(addons)]">$VAR[StudioImageVar]</value>
 	<value condition="Container.Content(albums)">flags/music/recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</value>
 </variable>
-<variable name="ListImage2Var">
-	<value condition="Container.Content(albums) | Container.Content(songs) + String.IsEmpty(ListItem.Rating) + !ListItem.IsParentFolder">stars/0.0.png</value>
-	<value condition="Container.Content(albums) | Container.Content(songs)">$INFO[ListItem.Rating,stars/,.png]</value>
-	<value condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)">$INFO[ListItem.Rating,flag/rating/,.png]</value>
-</variable>
+
 	<!-- <variable name="BreadcrumbsLabel2Var">
 		<value condition="String.IsEqual(Container.Folderpath,special://skin/extras/playlists/MoviesInProgress.xsp)">/ $LOCALIZE[31335]</value>
 		<value condition="Container.Content(seasons)">$INFO[Container.FolderName, / ]</value>

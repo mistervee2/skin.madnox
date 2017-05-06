@@ -1076,29 +1076,31 @@
 					<!-- Watched Toggle -->
 					<include content="MediaMenu_Icon_Button">
 						<param name="id" value="10" />
-						<param name="icon" value="icon/mediamenu/settings.png" />
-						<param name="label" value="$LOCALIZE[20367]$INFO[Container.NumItems, :]" />
+						<param name="icon" value="icon/mediamenu/eye.png" />
+						<param name="label" value="$INFO[Control.GetLabel(10)]$INFO[Container.NumItems,: ]" />
 						<param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons) | Container.Content(episodes)" />
 					</include>
 					<!-- PartyMode -->
-					<include content="MediaMenu_Icon_RadioButton">
+					<include content="MediaMenu_Icon_Button">
 						<param name="id" value="16" />
-						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="icon" value="icon/mediamenu/play.png" />
 						<param name="label" value="$LOCALIZE[589]" />
 						<param name="visible" value="Container.Content(MusicVideos)" />
 					</include>
 					<!-- Unlock Shares -->
 					<include content="MediaMenu_Icon_RadioButton">
 						<param name="id" value="11" />
-						<param name="icon" value="icon/mediamenu/settings.png" />
-						<param name="label" value="system.haslocks" />
-						<param name="selected">System.ismaster</param>
-						<param name="visible">system.haslocks</param>
+						<param name="iconon" value="icon/mediamenu/unlock.png" />
+						<param name="iconoff" value="icon/mediamenu/lock.png" />
+						<param name="label" value="$LOCALIZE[20336]" />
+						<param name="selected">System.IsMaster</param>
+						<param name="onclick" value="mastermode" />
+						<param name="visible">System.HasLocks</param>
 					</include>
 					<!-- Update Library -->
 					<include content="MediaMenu_Icon_ToggleButton">
-						<param name="id" value="11" />
-						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="id" value="20" />
+						<param name="icon" value="icon/mediamenu/refresh.png" />
 						<param name="label" value="$LOCALIZE[653]" />
 						<param name="altlabel" value="$LOCALIZE[13353]" />
 						<param name="onclick" value="UpdateLibrary(video)" />

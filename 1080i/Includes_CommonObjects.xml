@@ -294,7 +294,7 @@
 					<midtexture colordiffuse="$VAR[HighlightColorVar]">color/white20.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture />
-					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying)</visible>
+					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) + !String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
 				</control>
 				<control type="progress">
 					<description>Progressbar</description>
@@ -306,7 +306,31 @@
 					<midtexture colordiffuse="$VAR[HighlightColorVar]">color/white20.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture />
-					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying)</visible>
+					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) +  !String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<width>1920</width>
+					<height>87</height>
+					<info>Player.ProgressCache</info>
+					<texturebg>panel/topbar-shadow-empty.png</texturebg>
+					<lefttexture />
+					<midtexture colordiffuse="$VAR[HighlightColorVar]">panel/topbar-shadow20.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture />
+					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) + String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<width>1920</width>
+					<height>87</height>
+					<info>Player.Progress</info>
+					<texturebg>panel/topbar-shadow-empty.png</texturebg>
+					<lefttexture />
+					<midtexture colordiffuse="$VAR[HighlightColorVar]">panel/topbar-shadow20.png</midtexture>
+					<righttexture></righttexture>
+					<overlaytexture />
+					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) +  String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
 				</control>
 				<control type="button">
 					<top>0</top>
@@ -422,12 +446,6 @@
 						<include>BreadcrumbsLabel</include>
 						<visible>Player.HasAudio + String.IsEmpty(Musicplayer.Artist)</visible>
 					</control>
-					<control type="label">
-						<label>$INFO[Player.Title]</label>
-						<scroll>true</scroll>
-						<include>BreadcrumbsLabel</include>
-						<visible>Player.HasVideo</visible>
-					</control>
 					<control type="fadelabel">
 						<label>$INFO[Videoplayer.Title]</label>
 						<label>$INFO[Videoplayer.TVShowTitle]</label>
@@ -438,10 +456,16 @@
 						<label>$INFO[Videoplayer.Title]</label>
 						<visible>Player.HasVideo + !String.IsEmpty(VideoPlayer.ChannelName)</visible>
 					</control>
+					<control type="fadelabel">
+						<label>$INFO[Videoplayer.Title]</label>
+						<label>$INFO[VideoPlayer.Artist]</label>
+						<include>BreadcrumbsLabel</include>
+						<visible>Player.HasVideo + !String.IsEmpty(Videoplayer.Artist)</visible>
+					</control>
 					<control type="label">
 						<label>$INFO[Videoplayer.Title]</label>
 						<include>BreadcrumbsLabel</include>
-						<visible>Player.HasVideo + String.IsEmpty(Videoplayer.TVShowTitle) + String.IsEmpty(VideoPlayer.ChannelName)</visible>
+						<visible>Player.HasVideo + String.IsEmpty(Videoplayer.TVShowTitle) + String.IsEmpty(VideoPlayer.ChannelName) + String.IsEmpty(Videoplayer.Artist)</visible>
 					</control>
 				</control>
 				<control type="grouplist">
@@ -569,7 +593,7 @@
 	<include name="BreadcrumbsLabel">
 		<font>Font28_Reg</font>
 		<height>38</height>
-		<width min="1" max="832">auto</width>
+		<width min="1" max="590">auto</width>
 	</include>
 	<!-- Settings -->
 	<include name="Settings_Button">
