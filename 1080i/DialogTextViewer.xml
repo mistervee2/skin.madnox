@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">60</defaultcontrol>
+	<defaultcontrol always="true">8000</defaultcontrol>
 	<controls>
-		<include>Dialog_Furniture_BackgroundFade</include> <!-- THIS FADES THE BACKGROUND -->
-		<include>Dialog_Furniture_Close_Onclick</include> <!-- THIS LETS YOU TAP WITH A TOUCH SCREEN OR CLICK IN THE EMPTY SPACE AROUND THE DIALOG TO CLOSE -->
+		<include>Dialog_Furniture_BackgroundFade</include>
+		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
-			<include content="Dialog_Furniture_Background"> <!-- CHANGE AND REMOVE WHAT IS NEEDED SEE THE WIKI ON PARAMS -->
-				<param name="width">1114</param>
-				<param name="height">588</param>
-				<param name="label">$INFO[ListItem.AddonName,$LOCALIZE[24003] - ]</param>
-				<param name="labelleft">70</param>
-				<param name="labelright">470</param>
-				<param name="labelalign">left</param>
+			<include content="Dialog_Furniture_Background">
+				<param name="height">598</param>
 				<param name="labelid">1</param>
-				<param name="bottomseparatorvisible">true</param>
-				<param name="bottomleftlabel"></param>
-				<param name="bottomrightlabel"></param>
 			</include>
 			<control type="image">
 				<centerleft>50%</centerleft>
@@ -26,19 +18,14 @@
 				<include>Animation_CommonFade</include>
 				<visible>Container(5).HasNext</visible>
 			</control>
-
-			<!-- INSERT CONTENT HERE -->
-            
 			<control type="textbox" id="5">
 				<left>70</left>
 				<right>70</right>
 				<top>98</top>
 				<bottom>92</bottom>
-				<label/>
 				<pagecontrol>60</pagecontrol>
 			</control>
-
-			<control type="grouplist" id="8000"> <!-- THESE ARE THE DEFAULT BUTTONS -->
+			<control type="grouplist" id="8000">
 				<right>60</right>
 				<top>28</top>
 				<width>400</width>
