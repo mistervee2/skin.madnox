@@ -374,7 +374,7 @@
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9002" />
-			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="icon" value="icon/mediamenu/viewsettings.png" />
 			<param name="label" value="$LOCALIZE[31384]" />
 			<param name="onclick" value="ActivateWindow(1122)" />
 		</include>

@@ -72,8 +72,8 @@
 		<value>$INFO[ListItem.Icon]</value>
 	</variable>
 	<variable name="ViewImageRatingVar">
-		<value condition="!String.IsEmpty(ListItem.UserRating) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,musicvideo)]">flag/rating/$INFO[ListItem.UserRating]r.png</value>
-		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,musicvideo)">flag/rating/$INFO[ListItem.Rating]r.png</value>
+		<value condition="!String.IsEmpty(ListItem.UserRating) + [String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,musicvideo)]">flag/rating/$INFO[ListItem.UserRating]r.png</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,movie) | String.IsEqual(ListItem.DBTYPE,tvshow) | String.IsEqual(ListItem.DBTYPE,set) | String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode) | String.IsEqual(ListItem.DBTYPE,artist) | String.IsEqual(ListItem.DBTYPE,album) | String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,musicvideo)">flag/rating/$INFO[ListItem.Rating]r.png</value>
 	</variable>
 	<variable name="ViewTitleLabelVar">
 		<value condition="[String.IsEqual(ListItem.DBTYPE,song) | String.IsEqual(ListItem.DBTYPE,episode)] + !String.IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
@@ -84,13 +84,16 @@
 		<value condition="String.IsEqual(ListItem.DBTYPE,season) | String.IsEqual(ListItem.DBTYPE,episode)">$INFO[ListItem.TVShowTitle]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,album)">$INFO[ListItem.AlbumArtist]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,song)">$INFO[ListItem.Artist]</value>
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonSummary]</value>
 	</variable>
-
 	<variable name="ViewLabel2Var">
 		<value condition="String.IsEmpty(Container.PluginName) + Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Property(WatchedEpisodes)]$INFO[ListItem.Property(TotalEpisodes), / ,]</value>
 		<value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[556])">$INFO[ListItem.Year]</value>
 		<value condition="!String.IsEmpty(ListItem.Appearances)">$LOCALIZE[38026]$INFO[ListItem.Appearances, ]</value>
 		<value>$INFO[ListItem.Label2]</value>
+	</variable>
+	<variable name="ViewLabel3Var">
+		<value condition="Container.Content(addons)">$INFO[ListItem.AddonVersion,v]</value>
 	</variable>
 
 

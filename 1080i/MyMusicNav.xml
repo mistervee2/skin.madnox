@@ -8,7 +8,7 @@
 			<include>Animation_CommonFade</include>
 			<include>View_50_List</include>
 		</control>
-	
+
 
 
 
@@ -497,5 +497,77 @@
 			</control>
 		</control>
 		<include>ContextMenuOverlay</include> -->
+		<!-- Topbar -->
+		<control type="group">
+			<visible>!Skin.HasSetting(MusicHideTopBar)</visible>
+			<include content="Animation_Slide_Top">
+				<param name="slide">90</param>
+<!-- 				<param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
+				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param> -->
+			</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label">$VAR[BreadcrumbsVideoVar]</param>
+				<param name="breadcrumbs_icon">video.png</param>
+			</include>
+		</control>
+		<!-- Media Menu -->
+		<include>MediaMenu_MouseOverlay</include>
+		<control type="group">
+			<include>MediaMenu_Common</include>
+			<control type="grouplist" id="9000">
+				<usecontrolcoords>true</usecontrolcoords>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
+				<onright>50</onright>
+				<onback>50</onback>
+				<include>MediaMenu_MyXML_Common</include>
+				<!-- Update Library -->
+				<include content="MediaMenu_Icon_ToggleButton">
+					<param name="id" value="20" />
+					<param name="icon" value="icon/mediamenu/refresh.png" />
+					<param name="label" value="$LOCALIZE[653]" />
+					<param name="altlabel" value="$LOCALIZE[13353]" />
+					<param name="onclick" value="UpdateLibrary(music)" />
+					<param name="visible">!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</param>
+				</include>
+				<!-- PartyMode -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="16" />
+					<param name="icon" value="icon/mediamenu/play.png" />
+					<param name="label" value="$LOCALIZE[589]" />
+				</include>
+				<!-- Go to playlist -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="612" />
+					<param name="icon" value="icon/mediamenu/playlist.png" />
+					<param name="label" value="$LOCALIZE[559]" />
+					<param name="onclick" value="ActivateWindow(musicplaylist)" />
+					<param name="visible">Integer.IsGreater(Playlist.Length(music),0)</param>
+				</include>
+				<!-- Get more -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="621" />
+					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="label" value="$LOCALIZE[21452]" />
+					<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/audio/,return)" />
+					<param name="visible">Container.Content(addons)</param>
+				</include>
+				<!-- Open Settings -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="624" />
+					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="label" value="$LOCALIZE[10140]" />
+					<param name="onclick" value="Addon.OpenSettings($INFO[Container.PluginName])" />
+					<param name="visible">!String.IsEmpty(Container.PluginName)</param>
+				</include>
+				<!-- Quicknav -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="9011" />
+					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="label" value="$LOCALIZE[31633]" />
+					<param name="onclick" value="ActivateWindow(1113)" />
+					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
+				</include>
+			</control>
+		</control>
 	</controls>
 </window>
