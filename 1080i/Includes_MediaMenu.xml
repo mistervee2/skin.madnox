@@ -91,6 +91,7 @@
 		<param name="label"></param>
 		<param name="onclick"></param>
 		<param name="onfocus"></param>
+		<param name="selected"></param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="radiobutton" id="$PARAM[id]">
@@ -107,6 +108,7 @@
 				<textureradiooffnofocus colordiffuse="grey">icon/mediamenu/cancel.png</textureradiooffnofocus>
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
+				<selected>$PARAM[selected]</selected>
 				<onclick>$PARAM[onclick]</onclick>
 				<onfocus>$PARAM[onfocus]</onfocus>.
 				<visible>$PARAM[visible]</visible>
@@ -216,6 +218,12 @@
 	</include>
 	<include name="MediaMenu_Button_ViewSettings">
 		<width>470</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<font>Font28_Reg</font>
+	</include>
+	<include name="MediaMenu_Button_ViewType">
+		<width>230</width>
 		<height>60</height>
 		<textoffsetx>15</textoffsetx>
 		<font>Font28_Reg</font>
@@ -355,14 +363,13 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 	</include>
-	<!-- My Menu -->
-	<include name="MediaMenu_MyVideoNav_Common">
+	<!-- MyXML Common -->
+	<include name="MediaMenu_MyXML_Common">
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9001" />
 			<param name="icon" value="icon/mediamenu/view.png" />
 			<param name="label" value="$INFO[Container.Viewmode]" />
 			<param name="onclick" value="ActivateWindow(1124)" />
-			<!-- <param name="visible" value="Integer.IsGreater(Container.ViewCount,1)" /> -->
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9002" />
@@ -372,12 +379,12 @@
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="3" />
-			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="icon" value="icon/mediamenu/list.png" />
 			<param name="label" value="$INFO[Container.SortMethod]" />
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="4" />
-			<param name="icon" value="icon/mediamenu/settings.png" />
+			<param name="icon" value="icon/mediamenu/arrowdown.png" />
 			<param name="label" value="$INFO[Container.SortOrder]" />
 		</include>
 		<include content="MediaMenu_Icon_Button">
@@ -390,25 +397,16 @@
 			<param name="id" value="199" />
 			<param name="icon" value="icon/mediamenu/settings.png" />
 			<param name="label" value="$LOCALIZE[587]" />
+			<param name="onclick" value="Filter" />
 			<param name="visible" value="Container.CanFilterAdvanced" />
 		</include>
 	</include>
-	<include name="MediaMenu_MyVideoNav">
-		<include content="MediaMenu_Icon_Button">
-			<param name="id" value="9010" />
-			<param name="icon" value="icon/mediamenu/image.png" />
-			<param name="label" value="$LOCALIZE[14018]" />
-			<param name="onclick" value="ActivateWindow(1122)" />
-		</include>
-		<include content="MediaMenu_Icon_Button">
-			<param name="id" value="9011" />
-			<param name="icon" value="icon/mediamenu/arrowleft.png" />
-			<param name="label" value="$LOCALIZE[31633]" />
-			<param name="onclick" value="ActivateWindow(1113)" />
-			<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
-		</include>
+	<include name="MediaMenu_Viewsettings_View50">
+		<control type="label" id="101">
+			<label>$LOCALIZE[20445]</label>
+			<include>MediaMenu_Label_ViewSettings</include>
+		</control>
 	</include>
-
 
 
 

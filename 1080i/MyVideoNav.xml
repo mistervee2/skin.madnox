@@ -1063,17 +1063,80 @@
 					<visible>[!Skin.HasSetting(NoFloorLabelMovies) + Skin.HasSetting(movielogosfloor) + Container.Content(movies)] | [Container.Content(tvshows) + !Skin.HasSetting(NoFloorLabelTVshows) + Skin.HasSetting(tvshowlogosfloor)] | [Container.Content(sets) + !Skin.HasSetting(NoFloorLabelMovies)]</visible>
 				</control>
 			</control> -->
-		<!-- Media Menu -->
-		<include>MediaMenu_MouseOverlay</include>
-		<control type="group">
-			<include>MediaMenu_Common</include>
-			<control type="grouplist" id="9000">
-				<usecontrolcoords>true</usecontrolcoords>
-				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
-				<onright>50</onright>
-				<onback>50</onback>
-				<include>MediaMenu_MyVideoNav_Common</include>
+			<!-- Media Menu -->
+			<include>MediaMenu_MouseOverlay</include>
+			<control type="group">
+				<include>MediaMenu_Common</include>
+				<control type="grouplist" id="9000">
+					<usecontrolcoords>true</usecontrolcoords>
+					<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
+					<onright>50</onright>
+					<onback>50</onback>
+					<include>MediaMenu_MyXML_Common</include>
+					<!-- Watched Toggle -->
+					<include content="MediaMenu_Icon_Button">
+						<param name="id" value="10" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="$LOCALIZE[20367]$INFO[Container.NumItems, :]" />
+						<param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons) | Container.Content(episodes)" />
+					</include>
+					<!-- PartyMode -->
+					<include content="MediaMenu_Icon_RadioButton">
+						<param name="id" value="16" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="$LOCALIZE[589]" />
+						<param name="visible" value="Container.Content(MusicVideos)" />
+					</include>
+					<!-- Unlock Shares -->
+					<include content="MediaMenu_Icon_RadioButton">
+						<param name="id" value="11" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="system.haslocks" />
+						<param name="selected">System.ismaster</param>
+						<param name="visible">system.haslocks</param>
+					</include>
+					<!-- Update Library -->
+					<include content="MediaMenu_Icon_ToggleButton">
+						<param name="id" value="11" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="$LOCALIZE[653]" />
+						<param name="altlabel" value="$LOCALIZE[13353]" />
+						<param name="onclick" value="UpdateLibrary(video)" />
+						<param name="visible">!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</param>
+					</include>
+					<!-- Go to playlist -->
+					<include content="MediaMenu_Icon_Button">
+						<param name="id" value="11" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="$LOCALIZE[31056]" />
+						<param name="onclick" value="ActivateWindow(videoplaylist)" />
+						<param name="visible">nteger.IsGreater(Playlist.Length(video),0)</param>
+					</include>
+					<!-- Get more -->
+					<include content="MediaMenu_Icon_Button">
+						<param name="id" value="621" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="$LOCALIZE[21452]" />
+						<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/video/,return)" />
+						<param name="visible">Container.Content(addons)</param>
+					</include>
+					<!-- Open Settings -->
+					<include content="MediaMenu_Icon_Button">
+						<param name="id" value="624" />
+						<param name="icon" value="icon/mediamenu/settings.png" />
+						<param name="label" value="$LOCALIZE[10140]" />
+						<param name="onclick" value="Addon.OpenSettings($INFO[Container.PluginName])" />
+						<param name="visible">!String.IsEmpty(Container.PluginName)</param>
+					</include>
+					<!-- Quicknav -->
+					<include content="MediaMenu_Icon_Button">
+						<param name="id" value="9011" />
+						<param name="icon" value="icon/mediamenu/arrowleft.png" />
+						<param name="label" value="$LOCALIZE[31633]" />
+						<param name="onclick" value="ActivateWindow(1113)" />
+						<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
+					</include>
+				</control>
 			</control>
-		</control>
-	</controls>
-</window>
+		</controls>
+	</window>
