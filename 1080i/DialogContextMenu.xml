@@ -1,31 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">996</defaultcontrol>
+	<defaultcontrol>996</defaultcontrol>
 	<controls>
 		<include>Dialog_Furniture_BackgroundFade</include>
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
-			<include content="Dialog_Furniture_Background">
-				<param name="width">500</param>
-				<param name="height">646</param>
-			</include>
+			<include>Animation_Dialog_Popup</include>
+			<width>500</width>
+			<height>540</height>
+			<control type="image" id="999">
+				<left>0</left>
+				<top>-20</top>
+				<width>500</width>
+				<height>540</height>
+				<bordersize>0</bordersize>
+				<bordertexture colordiffuse="$VAR[GlowColorVar]" border="40">dialog/dialog-glow.png</bordertexture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialog/dialog-back.png</texture>
+			</control>
 			<control type="image">
-				<centerleft>50%</centerleft>
-				<bottom>30</bottom>
+				<top>2</top>
+				<left>20</left>
+				<width>460</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<left>230</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
+				<texture flipy="true" colordiffuse="$VAR[HighlightColorVar]">icon/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(996).HasPrevious</visible>
+			</control>
+			<control type="image">
+				<left>230</left>
+				<top>460</top>
 				<width>40</width>
 				<height>40</height>
 				<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
-				<visible>Container().HasNext</visible>
+				<visible>Container(996).HasNext</visible>
 			</control>
 			<control type="grouplist" id="996">
-				<top>86</top>
+				<top>40</top>
+				<bottom>20</bottom>
 				<left>20</left>
+				<width>460</width>
+				<height max="420">auto</height>
+				<usecontrolcoords>true</usecontrolcoords>
 			</control>
 			<control type="button" id="1000">
 				<width>460</width>
 				<height>60</height>
 				<align>center</align>
+				<textoffsetx>20</textoffsetx>
 			</control>
 		</control>
 	</controls>
