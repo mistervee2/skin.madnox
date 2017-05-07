@@ -8,50 +8,52 @@
 			<include>Animation_CommonFade</include>
 			<include>View_50_List</include>
 		</control>
-		<!-- <control type="label" id="4421">
-			<label>$VAR[InfoPanelVar]</label>
-			<include>HiddenObject</include>
-		</control>
-		<control type="multiimage">
-			<imagepath background="true">$VAR[AddonBrowserFanartVar]</imagepath>
-			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-		</control>
-		<include>VideoBackground</include>
-		<include>Furniture_Glow</include>
-		<include>Furniture_Showcase</include>
-		<include>WallPanel</include>
-		<control type="button" id="199">
-			<include>HiddenObject</include>
-			<visible>[!Container.OnNext + !Container.OnPrevious + [Window.IsActive(programs) + !Container.Content(addons)] + Skin.HasSetting(infopaneautolauncher)] | [!Skin.HasSetting(infopaneautolauncher) + [Window.IsActive(programs) + !Container.Content(addons)]]</visible>
-			<include>DelayAnimations</include>
-		</control> -->
-	<!-- 	<control type="group">
-			<animation effect="slide" end="0,650" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
-			<control type="button" id="7000">
-				<include>HiddenObject</include>
-				<onfocus condition="Skin.HasSetting(infopaneautolauncher)">SetFocus(9000)</onfocus>
-				<onup>9000</onup>
-				<onleft condition="Control.IsVisible(509)">Control.Move(509,-1)</onleft>
-				<onleft condition="Control.IsVisible(501)">Control.Move(501,-1)</onleft>
-				<onright condition="Control.IsVisible(509)">Control.Move(509,1)</onright>
-				<onright condition="Control.IsVisible(501)">Control.Move(501,1)</onright>
-				<onleft>50</onleft>
-				<onright>50</onright>
-				<ondown>50</ondown>
-				<onback>50</onback>
-			</control>
-			<include>FloorLabels</include>
-			<include>Furniture_DarkGradient</include>
-		</control>
+		<!-- Top Bar -->
 		<control type="group">
-			<include>Animation_HideBreadCrumbs</include>
-			<include>Breadcrumbs_BackBar</include>
-			<include>BreadcrumbsContent</include>
-			<include>Breadcrumbs_Furniture</include>
+			<visible>!Skin.HasSetting(ProgramsHideTopBar)</visible>
+			<include content="Animation_Slide_Top">
+				<param name="slide">90</param>
+			</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label">$LOCALIZE[10001]</param>
+				<param name="breadcrumbs_icon">program.png</param>
+			</include>
 		</control>
-		<include>Furniture_NowPlayingWidget</include>
-		<include>Media_Menu</include>
-		<include>ContextMenuOverlay</include> -->
+		<!-- Media Menu -->
+		<include>MediaMenu_MouseOverlay</include>
+		<control type="group">
+			<include>MediaMenu_Common</include>
+			<control type="grouplist" id="9000">
+				<usecontrolcoords>true</usecontrolcoords>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
+				<onright>50</onright>
+				<onback>50</onback>
+				<include>MediaMenu_MyXML_Common</include>
+				<!-- Get more -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="621" />
+					<param name="icon" value="icon/mediamenu/add.png" />
+					<param name="label" value="$LOCALIZE[21452]" />
+					<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/executable/,return)" />
+					<param name="visible">Container.Content(addons)</param>
+				</include>
+				<!-- Open Settings -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="624" />
+					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="label" value="$LOCALIZE[10140]" />
+					<param name="onclick" value="Addon.OpenSettings($INFO[Container.PluginName])" />
+					<param name="visible">!String.IsEmpty(Container.PluginName)</param>
+				</include>
+				<!-- Quicknav -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="9011" />
+					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="label" value="$LOCALIZE[31633]" />
+					<param name="onclick" value="ActivateWindow(1113)" />
+					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
+				</include>
+			</control>
+		</control>
 	</controls>
 </window>

@@ -8,59 +8,74 @@
 			<include>Animation_CommonFade</include>
 			<include>View_50_List</include>
 		</control>
-		<!-- <control type="multiimage">
-			<aspectratio align="center" aligny="top">scale</aspectratio>
-			<imagepath background="true">$VAR[PicturesFanartVar]</imagepath>
-			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
-		</control>
-		<control type="image">
-			<texture background="true">$INFO[ListItem.FilenameAndPath]</texture>
-			<include>CommonFanartVarsSingle</include>
-			<visible>!Listitem.Isfolder</visible>
-		</control>
-		<control type="multiimage">
-			<imagepath background="true">$INFO[ListItem.FolderPath]</imagepath>
-			<include>CommonFanartVarsSingle</include>
-			<visible>Listitem.Isfolder + !String.IsEmpty(Container.FolderPath) + !ListItem.IsParentFolder + !String.Contains(Container.FolderPath,plugin://)</visible>
-		</control>
-		<include>VideoBackground</include>
-		<include>Furniture_Glow</include>
+		<!-- Top Bar -->
 		<control type="group">
-			<visible>!Control.IsVisible(517)</visible>
-			<include>Furniture_Showcase</include>
+			<visible>!Skin.HasSetting(PicturesHideTopBar)</visible>
+			<include content="Animation_Slide_Top">
+				<param name="slide">90</param>
+			</include>
+			<include content="TopBar">
+				<param name="breadcrumbs_label">$LOCALIZE[1213]</param>
+				<param name="breadcrumbs_icon">picture.png</param>
+			</include>
 		</control>
-		<include>WallPanel</include> -->
-		<!-- <control type="group">
-			<animation effect="slide" end="0,650" time="560" tween="quadratic" condition="Control.HasFocus(109)">Conditional</animation>
-			<control type="group">
-				
-			</control>
-			<include>CommonRootView</include>
-			<include>Viewtype_Wall</include>
-			<include>AddonWall</include>
-			<control type="group">
-				
-			</control>
-			<control type="button" id="7000">
-				<include>HiddenObject</include>
-				<onfocus>SetFocus(9000)</onfocus>
-				<visible>Control.IsVisible(509) | Control.IsVisible(517) | Control.IsVisible(501)</visible>
-			</control>
-			<include>FloorLabels</include>
-			<control type="group">
-				<visible>!Control.IsVisible(517)</visible>
-				<include>Furniture_DarkGradient</include>
-			</control>
-		</control>
+		<!-- Media Menu -->
+		<include>MediaMenu_MouseOverlay</include>
 		<control type="group">
-			<include>Animation_HideBreadCrumbs</include>
-			<include>Breadcrumbs_BackBar</include>
-			<include>BreadcrumbsContent</include>
-			<include>Breadcrumbs_Furniture</include>
+			<include>MediaMenu_Common</include>
+			<control type="grouplist" id="9000">
+				<usecontrolcoords>true</usecontrolcoords>
+				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
+				<onright>50</onright>
+				<onback>50</onback>
+				<include>MediaMenu_MyXML_Common</include>
+				<!-- Slideshow -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="6" />
+					<param name="icon" value="icon/mediamenu/image.png" />
+					<param name="label" value="$LOCALIZE[13317]" />
+					<param name="visible">Container.Content(images)</param>
+				</include>
+				<!-- Recursive slideshow -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="7" />
+					<param name="icon" value="icon/mediamenu/repeat.png" />
+					<param name="label" value="$LOCALIZE[13318]" />
+					<param name="visible">Container.Content(images)</param>
+				</include>
+				<!-- Randomise -->
+				<include content="MediaMenu_Icon_RadioButton">
+					<param name="id" value="9" />
+					<param name="iconon" value="icon/mediamenu/random.png" />
+					<param name="iconoff" value="icon/mediamenu/randomoff.png" />
+					<param name="label" value="$LOCALIZE[13319]" />
+					<param name="visible">Container.Content(images)</param>
+				</include>
+				<!-- Get more -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="621" />
+					<param name="icon" value="icon/mediamenu/add.png" />
+					<param name="label" value="$LOCALIZE[21452]" />
+					<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/image/,return)" />
+					<param name="visible">Container.Content(addons)</param>
+				</include>
+				<!-- Open Settings -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="624" />
+					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="label" value="$LOCALIZE[10140]" />
+					<param name="onclick" value="Addon.OpenSettings($INFO[Container.PluginName])" />
+					<param name="visible">!String.IsEmpty(Container.PluginName)</param>
+				</include>
+				<!-- Quicknav -->
+				<include content="MediaMenu_Icon_Button">
+					<param name="id" value="9011" />
+					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="label" value="$LOCALIZE[31633]" />
+					<param name="onclick" value="ActivateWindow(1113)" />
+					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
+				</include>
+			</control>
 		</control>
-		<include>Furniture_NowPlayingWidget</include>
-		<include>Media_Menu</include>
-		<include>ContextMenuOverlay</include> -->
 	</controls>
 </window>

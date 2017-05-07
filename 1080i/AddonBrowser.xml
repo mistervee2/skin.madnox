@@ -7,13 +7,11 @@
 			<include>Animation_CommonFade</include>
 			<include>View_50_List</include>
 		</control>
-		<!-- Media Menu -->
+		<!-- Top bar -->
 		<control type="group">
 			<visible>!Skin.HasSetting(AddonHideTopBar)</visible>
 			<include content="Animation_Slide_Top">
 				<param name="slide">90</param>
-				<!-- <param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
-				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param> -->
 			</include>
 			<include content="TopBar">
 				<param name="breadcrumbs_label">$LOCALIZE[24001]</param>

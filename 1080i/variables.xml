@@ -59,6 +59,15 @@
 		<value condition="String.Contains(Skin.String(MusicGenreIcons.ext),jpg)">.jpg</value>
 		<value>.png</value>
 	</variable>
+	<!-- Icons -->
+	<variable name="PlaylistRepeatIconVar">
+		<value condition="String.Contains(Control.GetLabel(26),$LOCALIZE[593])">icon/mediamenu/repeat.png</value>
+		<value condition="String.Contains(Control.GetLabel(26),$LOCALIZE[592])">icon/mediamenu/repeatone.png</value>
+		<value>icon/mediamenu/repeatoff.png</value>
+	</variable>
+
+
+
 	<!-- Views -->
 	<variable name="ViewListIconVar">
 		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + [String.Contains(ListItem.FolderPath,musicdb) | String.Contains(ListItem.FolderPath,musicvideos)]">$VAR[MusicGenrePosterVar]$INFO[ListItem.Label]$VAR[MusicGenreExtPosterVar]</value>

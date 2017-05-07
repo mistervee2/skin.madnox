@@ -1068,8 +1068,6 @@
 				<visible>!Skin.HasSetting(VideoHideTopBar)</visible>
 				<include content="Animation_Slide_Top">
 					<param name="slide">90</param>
-				<!-- <param name="opencondition">$EXP[Settings_Animation_OpenCondition]</param>
-				<param name="closecondition">$EXP[Settings_Animation_CloseCondition]</param> -->
 			</include>
 			<include content="TopBar">
 				<param name="breadcrumbs_label">$VAR[BreadcrumbsVideoVar]</param>
@@ -1121,7 +1119,7 @@
 				</include>
 				<!-- Go to playlist -->
 				<include content="MediaMenu_Icon_Button">
-					<param name="id" value="11" />
+					<param name="id" value="612" />
 					<param name="icon" value="icon/mediamenu/playlist.png" />
 					<param name="label" value="$LOCALIZE[559]" />
 					<param name="onclick" value="ActivateWindow(videoplaylist)" />
