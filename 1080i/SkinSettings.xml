@@ -355,18 +355,12 @@
 						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=LanguageFlagIcons&amp;type=resource.images.languageflags)</onclick>
 						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					</control>
-                	<!-- <control type="radiobutton" id="17112">
-                		<include>Settings_RadioButton</include>
-                		<label>31292</label>
-                		<onclick>Skin.ToggleSetting(SkinHelper.EnableExtraFanart)</onclick>
-                		<selected>Skin.HasSetting(SkinHelper.EnableExtraFanart)</selected>
-                	</control>
                 	<control type="radiobutton" id="17114">
                 		<include>Settings_RadioButton</include>
-                		<label>31469</label>
-                		<onclick>Skin.ToggleSetting(SkinHelperAnimations)</onclick>
-                		<selected>Skin.HasSetting(SkinHelperAnimations)</selected>
-                	</control> -->
+                		<label>$LOCALIZE[31469]</label>
+                		<onclick>Skin.ToggleSetting(SkinHelperAnimatedPoster)</onclick>
+                		<selected>Skin.HasSetting(SkinHelperAnimatedPoster)</selected>
+                	</control>
                 	<control type="button" id="406">
                 		<label>Backgrounds</label>
                 		<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>

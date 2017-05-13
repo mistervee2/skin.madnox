@@ -64,7 +64,7 @@
 						<width>598</width>
 						<height>60</height>
 						<font>Font_Reg30_2</font>
-						<textcolor>white3</textcolor>
+						
 						<label>$VAR[ListLabel1Var]</label>
 					</control>
 					<control type="image">
@@ -135,7 +135,7 @@
 						<width>698</width>
 						<height>37</height>
 						<font>Font_Reg30_2</font>
-						<textcolor>white3</textcolor>
+						
 						<label>$VAR[ListLabel1Var]</label>
 					</control>
 				</itemlayout>

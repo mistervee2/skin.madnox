@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>50</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+	
 	<views>50</views>
 	<controls>
 		<include>PVRCommonBackground</include>
@@ -105,7 +105,7 @@
 						<label>$INFO[Container(50).ListItem.Plot]</label>
 						<font>Font_Reg30_2</font>
 						<shadowcolor>black</shadowcolor>
-						<textcolor>white6</textcolor>
+						
 						<autoscroll time="5000" delay="2000" repeat="5000">true</autoscroll>
 					</control>
 				</control>

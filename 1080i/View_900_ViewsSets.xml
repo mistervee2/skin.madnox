@@ -142,7 +142,7 @@
 				<width>135</width>
 				<height>82</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime2</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>floor</colordiffuse>
 				<animation effect="fade" time="200">VisibleChange</animation>
 			</control>
@@ -191,7 +191,7 @@
 				<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
 				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 				<include>Animation_VisibleChange200</include>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 			<control type="image">
 				<top>915</top>
@@ -202,7 +202,7 @@
 				<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
 				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 				<include>Animation_VisibleChange200</include>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 			<control type="image">
 				<top>915</top>
@@ -214,7 +214,7 @@
 				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
 				<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 				<include>Animation_VisibleChange200</include>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 			<control type="label">
 				<include>SetsLabel</include>
@@ -340,7 +340,7 @@
 				<top>506</top>
 				<height>362</height>
 				<width>603</width>
-				<fadetime>200</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[Container(5801).ListItem.Art(fanart)]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
@@ -355,7 +355,7 @@
 				<width>603</width>
 				<aspectratio>scale</aspectratio>
 				<randomize>true</randomize>
-				<fadetime>500</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 				<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 
@@ -368,7 +368,7 @@
 				<top>506</top>
 				<height>362</height>
 				<width>603</width>
-				<fadetime>FanartCrossFadeTime</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left">keep</aspectratio>
 				<texture fallback="DefaultExtraThumbs.png" background="true">$INFO[Container(5801).ListItem.Art(landscape)]</texture>
 				<bordertexture border="-2">black.png</bordertexture>
@@ -388,7 +388,7 @@
 						<top>222</top>
 						<width>230</width>
 						<height>345</height>
-						<fadetime>FanartCrossFadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<aspectratio align="right" aligny="bottom">stretch</aspectratio>
 						<texture fallback="DefaultVideoPoster.png" background="true">$VAR[PosterVar]</texture>
 						<bordertexture border="-2">black.png</bordertexture>
@@ -643,7 +643,7 @@
 						<width>260</width>
 						<height>260</height>
 						<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
-						<fadetime>FanartCrossFadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<aspectratio align="center" aligny="center">keep</aspectratio>
 						<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 						<include>Animation_ViewsCDart</include>
@@ -706,7 +706,7 @@
 						<font>Hand_16</font>
 						<visible>String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<label> $INFO[ListItem.Label]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="group">
 						<animation effect="rotate" start="02" end="-360" center="217,167" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
@@ -906,7 +906,7 @@
 							<width>260</width>
 							<height>260</height>
 							<texture diffuse="cdart_diffuse.png" background="true">$INFO[ListItem.Art(discart)]</texture>
-							<fadetime>FanartCrossFadeTime</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<aspectratio align="center" aligny="center">keep</aspectratio>
 							<animation effect="rotate" start="0" end="-360" center="auto" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>
 							<include>Animation_ViewsCDart</include>
@@ -969,7 +969,7 @@
 							<font>Hand_16</font>
 							<visible>String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label> $INFO[ListItem.Label]</label>
-							<textcolor>black</textcolor>
+							
 						</control>
 						<control type="group">
 							<animation effect="rotate" start="02" end="-360" center="217,167" time="4000" delay="500" loop="true" reversible="false" condition="!Player.HasVideo">Conditional</animation>

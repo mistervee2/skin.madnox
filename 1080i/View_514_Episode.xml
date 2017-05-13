@@ -127,7 +127,7 @@
 				<height>142</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[LogoVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>![Skin.HasSetting(episodelogo) + Container.Content(tvshows)]</visible>
 				<animation type="Conditional" condition="Window.IsActive(music)">
 					<effect type="zoom" end="130" center="auto" time="320" tween="cubic" easing="inout" />
@@ -818,7 +818,7 @@
 				<!--aspectratio aligny="bottom">keep</aspectratio-->
 				<visible>Skin.Hassetting(EpisodeDiscArt) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 				<label> $INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				
 			</control>
 			<control type="group">
 				<animation effect="slide" end="210,0" start="0,0" time="240" tween="cubic" easing="inout">VisibleChange</animation>
@@ -961,7 +961,7 @@
 					<height>800</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_poster_tp.png">$VAR[ListPosterBackupVar]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<visible>String.IsEmpty(Control.GetLabel(3822))</visible>
@@ -973,7 +973,7 @@
 					<height>800</height>
 					<aspectratio aligny="bottom">stretch</aspectratio>
 					<texture background="true">$VAR[PosterVar]</texture>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 					<bordersize>20</bordersize>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
@@ -1222,7 +1222,7 @@
 					<height>132</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[LayoutLogoVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="group">
 					<visible>String.IsEmpty(ListItem.Art(clearlogo))</visible>
@@ -1264,7 +1264,7 @@
 					<height>225</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
-					<fadetime>200</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<left>-11.5</left>

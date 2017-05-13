@@ -52,7 +52,7 @@
 						<width>908</width>
 						<height>48</height>
 						<font>Font_Info</font>
-						<textcolor>white6</textcolor>
+						
 						<info>ListItem.Label</info>
 					</control>
 				</focusedlayout>

@@ -10,7 +10,7 @@
 		<!-- background -->
 		<control type="multiimage" id="75">
 			<imagepath background="true" fallback="special://skin/backgrounds/programs/">$INFO[ListItem.Property(background)]</imagepath>
-			<fadetime>600</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<include>FullscreenDimensions</include>
 			<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 			<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
@@ -73,7 +73,7 @@
 					<align>center</align>
 					<label>$INFO[ListItem.Tagline]</label>
 					<font>Font_Reg26</font>
-					<textcolor>white3</textcolor>
+					
 					<scroll>true</scroll>
 					<visible>Container.Content(movies)</visible>
 				</control>
@@ -88,7 +88,7 @@
 						<height>454</height>
 						<aspectratio align="center">keep</aspectratio>
 						<texture background="true" fallback="special://skin/backgrounds/programs/programs.jpg">$INFO[ListItem.property(background)]</texture>
-						<fadetime>FanartCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
 					</control>
@@ -205,7 +205,7 @@
 							<width>652</width>
 							<height>220</height>
 							<label fallback="31006">$INFO[ListItem.Property(plot)]</label>
-							<textcolor>white6</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
@@ -1230,7 +1230,7 @@
 							<width>570</width>
 							<height>20</height>
 							<label>$INFO[ListItem.Property(genre)]</label>
-							<textcolor>white3</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 						<control type="group">
@@ -1263,7 +1263,7 @@
 							<height>350</height>
 							<label fallback="31006">$INFO[ListItem.Property(plot)]</label>
 							<font>Font_Reg30_2</font>
-							<textcolor>white6</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
@@ -1285,7 +1285,7 @@
 							<height>322</height>
 							<aspectratio align="center">keep</aspectratio>
 							<texture background="true" fallback="special://skin/backgrounds/programs/programs.jpg">$INFO[ListItem.Property(gameinfobig)]</texture>
-							<fadetime>IconCrossfadeTime</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>!Player.Hasvideo</visible>
 							<include>Animation_VisibleChange200</include>
 						</control>
@@ -2436,7 +2436,7 @@
 						<height>780</height>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
 					</control>
@@ -2446,7 +2446,7 @@
 						<height>765</height>
 						<aspectratio aligny="top">keep</aspectratio>
 						<texture diffuse="thumbs/diffuse_mirror3.png" flipy="true" background="true">$INFO[ListItem.Icon]</texture>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 				</control>
 			</control>
@@ -3122,7 +3122,7 @@
 			<width>680</width>
 			<height>10</height>
 			<font>font10</font>
-			<textcolor>white6</textcolor>
+			
 			<scroll>true</scroll>
 		</control>
 		<control type="button">

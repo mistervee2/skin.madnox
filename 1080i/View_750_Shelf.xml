@@ -149,7 +149,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio aligny="top">scale</aspectratio>
 					<imagepath background="true">$INFO[Container.ListItem.Path,,/extrafanart/]</imagepath>
 				</control>
@@ -159,7 +159,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio aligny="top">scale</aspectratio>
 					<visible>String.IsEmpty(Control.GetLabel(4208))</visible>
 					<imagepath background="true">$INFO[Container.ListItem.Path,,extrathumbs/]</imagepath>
@@ -459,7 +459,7 @@
 						<width>140</width>
 						<height>115</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>250</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="200">VisibleChange</animation>
 					</control>
 					<control type="label">
@@ -816,7 +816,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio aligny="top">scale</aspectratio>
 					<imagepath background="true">$VAR[MusicExtraFanartVar]</imagepath>
 				</control>
@@ -826,7 +826,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio aligny="top">scale</aspectratio>
 					<visible>String.IsEmpty(Control.GetLabel(4208))</visible>
 					<imagepath background="true">$INFO[ListItem.Path,,extrathumbs/]</imagepath>

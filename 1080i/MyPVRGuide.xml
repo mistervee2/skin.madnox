@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol always="true">10</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+	
 	<views>10,11,12,13</views>
 	<controls>
 		<include>PVRCommonBackground</include>
@@ -268,7 +268,7 @@
 						<width>450</width>
 						<height>240</height>
 						<aspectratio align="center" aligny="top">keep</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
 						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>
@@ -279,7 +279,7 @@
 						<width>300</width>
 						<height>300</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture>$INFO[Container(10).ListItem.Icon]</texture>
 						<visible>!Control.IsVisible(82)</visible>
 					</control>

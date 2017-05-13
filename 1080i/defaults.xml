@@ -45,7 +45,7 @@
 		<texture />
 	</default>
 	<default type="multiimage">
-		<fadetime>500</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<timeperimage>7000</timeperimage>
 	</default>
 	<default type="button">

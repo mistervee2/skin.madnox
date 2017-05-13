@@ -502,7 +502,7 @@
 				<aligny>top</aligny>
 				<label> $INFO[ListItem.Artist]</label>
 				<visible>String.IsEmpty(Control.GetLabel(8888)) + !Container.Content(artists) + !Container.Content(genres) + Skin.HasSetting(cdartinvis) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-				<textcolor>black</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
 					<effect type="slide" start="0,0" end="-1600,0" delay="0" time="1800" tween="cubic" easing="inout" />
@@ -519,7 +519,7 @@
 				<aligny>top</aligny>
 				<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
 				<visible>String.IsEmpty(Control.GetLabel(8888)) + !Container.Content(artists) + !Container.Content(genres) + Skin.HasSetting(cdartinvis) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-				<textcolor>black</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
 					<effect type="slide" start="0,0" end="-1600,0" delay="0" time="1800" tween="cubic" easing="inout" />
@@ -599,7 +599,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[cdARTVarDisc2]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="0,0" end="-1500,0" delay="500" time="1800" tween="cubic" easing="inout" />
 					<effect type="rotate" start="0" center="auto" end="720" delay="500" time="1800" tween="cubic" easing="inout" />
@@ -616,7 +616,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" flipy="true">$VAR[cdARTVarDisc2]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>22FFFFFF</colordiffuse>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="0,0" end="-1500,0" delay="500" time="1800" tween="cubic" easing="inout" />
@@ -634,7 +634,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[cdARTVarDisc3]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="0,0" end="-1400,0" delay="1000" time="1800" tween="cubic" easing="inout" />
 					<effect type="rotate" start="0" center="auto" end="720" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -651,7 +651,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" flipy="true">$VAR[cdARTVarDisc3]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>22FFFFFF</colordiffuse>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="0,0" end="-1400,0" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -669,7 +669,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[cdARTVarDisc4]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="-1400,0" end="0,0" delay="1000" time="1800" tween="cubic" easing="inout" />
 					<effect type="rotate" start="0" center="auto" end="-720" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -686,7 +686,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" flipy="true">$VAR[cdARTVarDisc4]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>22FFFFFF</colordiffuse>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="-1400,0" end="0,0" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -704,7 +704,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[cdARTVarDisc5]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="-1500,0" end="0,0" delay="1000" time="1800" tween="cubic" easing="inout" />
 					<effect type="rotate" start="0" center="auto" end="-720" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -721,7 +721,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" flipy="true">$VAR[cdARTVarDisc5]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>22FFFFFF</colordiffuse>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="-1500,0" end="0,0" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -739,7 +739,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[cdARTVarDisc6]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="-1500,0" end="0,0" delay="1000" time="1800" tween="cubic" easing="inout" />
 					<effect type="rotate" start="0" center="auto" end="-720" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -756,7 +756,7 @@
 				<height>280</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" flipy="true">$VAR[cdARTVarDisc6]</texture>
-				<fadetime>3700</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>22FFFFFF</colordiffuse>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="true">
 					<effect type="slide" start="-1500,0" end="0,0" delay="1000" time="1800" tween="cubic" easing="inout" />
@@ -1103,7 +1103,7 @@
 		<height>342</height>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<texture background="true">thumbs/boxes/cd_glass_reflect.png</texture>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<colordiffuse>d1FFFFFF</colordiffuse>
 		<animation effect="fade" start="50" end="50" time="0" condition="true">Conditional</animation>
 		<visible>Skin.HasSetting(usecasescd) + Container.Content(albums)</visible>
@@ -1158,7 +1158,7 @@
 		<width>383</width>
 		<height>383</height>
 		<aspectratio scalediffuse="false">scale</aspectratio>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<bordersize>16</bordersize>
 		<bordertexture border="16">thumbs/cd_shadow.png</bordertexture>
 	</include>
@@ -1176,7 +1176,7 @@
 	</include>
 	<include name="MusicShowcaseThumbReflection">
 		<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<include>MusicShowcaseThumbReflectionDimensions</include>
 		<colordiffuse>d1FFFFFF</colordiffuse>
 		<animation effect="slide" start="0,00" end="0,10" time="0" condition="Skin.HasSetting(usecasescd) + [Container.Content(albums) | Container.Content(songs) | Container.Content(artists)]">Conditional</animation>
@@ -1184,7 +1184,7 @@
 	</include>
 	<include name="MusicShowcaseThumbReflectionMain">
 		<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<include>MusicShowcaseThumbReflectionDimensions</include>
 		<animation effect="slide" start="0,00" end="0,10" time="0" condition="Skin.HasSetting(usecasescd) + [Container.Content(albums) | Container.Content(songs) | Container.Content(artists)]">Conditional</animation>
 		<colordiffuse>52FFFFFF</colordiffuse>
@@ -1249,7 +1249,7 @@
 				<height>310</height>
 				<aspectratio aligny="bottom">keep</aspectratio>
 				<imagepath background="true" fallback="empty.png">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist]/cdart/</imagepath>
-				<fadetime>300</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation effect="fade" time="100">Visible</animation>
 				<animation effect="fade" time="100">Hidden</animation>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
@@ -1288,7 +1288,7 @@
 				<aligny>top</aligny>
 				<label> $INFO[ListItem.Artist]</label>
 				<visible>Control.IsVisible(509) + String.IsEmpty(Control.GetLabel(159357)) + !String.IsEmpty(ListItem.Title) + Skin.HasSetting(cdartinvis) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-				<textcolor>black</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
 					<effect type="slide" start="0,0" end="-1110,0" delay="500" time="1500" tween="cubic" easing="inout"/>
@@ -1306,7 +1306,7 @@
 				<aligny>top</aligny>
 				<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
 				<visible>Control.IsVisible(509) + String.IsEmpty(Control.GetLabel(159357)) + !String.IsEmpty(ListItem.Title) + Skin.HasSetting(cdartinvis) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-				<textcolor>black</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
 					<effect type="slide" start="0,0" end="-1110,0" delay="500" time="1500" tween="cubic" easing="inout"/>

@@ -364,7 +364,7 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 	</include>
-	<!-- MyXML Common -->
+	<!-- MyXML Common media window settings -->
 	<include name="MediaMenu_MyXML_Common">
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9001" />
@@ -406,7 +406,8 @@
 			<param name="visible" value="Container.CanFilterAdvanced" />
 		</include>
 	</include>
-	<include name="MediaMenu_Viewsettings_Movies">
+	<!-- Videos common view settings -->
+	<include name="MediaMenu_CommonViewsettings_Videos">
 		<control type="label" id="201">
 			<label>$LOCALIZE[128]</label>
 			<include>MediaMenu_Label_ViewSettings</include>
@@ -419,7 +420,7 @@
 		</control>
 		<control type="button" id="203">
 			<label>$LOCALIZE[31298]</label>
-			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[342],home)</onclick>
+			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[3],home)</onclick>
 			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>

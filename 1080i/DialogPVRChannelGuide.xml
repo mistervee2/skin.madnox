@@ -34,7 +34,7 @@
 				<label>$INFO[System.Date(DDD)], $INFO[System.Date(d)] $INFO[System.Date(mmm)] $INFO[System.Date(yyyy)] • $INFO[System.Time]</label>
 				<font>Font_Reg25</font>
 				<shadowcolor>black</shadowcolor>
-				<textcolor>white6</textcolor>
+				
 			</control>
 		</control>
 		<control type="image">

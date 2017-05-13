@@ -23,7 +23,7 @@
 			<control type="image">
 				<aspectratio align="center" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="special://skin/backgrounds/speakergrill.jpg">$VAR[LiveBGBackground]</texture>
-				<fadetime>600</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include>FullscreenDimensions</include>
 				<include>Animation_WindowFade250</include>
 				<animation effect="fade" time="400">Visible</animation>
@@ -48,7 +48,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -71,7 +71,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -94,7 +94,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -117,7 +117,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -140,7 +140,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -163,7 +163,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -186,7 +186,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -209,7 +209,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -232,7 +232,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -255,7 +255,7 @@
 							<top>9</top>
 							<width>223</width>
 							<height>335</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<align>center</align>
 							<!-- MikeBZH44 Scale to Stretch for poster -->
 							<aspectratio scalediffuse="false">stretch</aspectratio>
@@ -287,14 +287,14 @@
 						<animation effect="rotate" center="auto" start="9" end="9" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG1]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG1]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -319,14 +319,14 @@
 						<animation effect="rotate" center="auto" start="65" end="65" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG2]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG2]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -352,14 +352,14 @@
 						<animation effect="rotate" center="auto" start="10" end="10" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG3]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG3]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -385,14 +385,14 @@
 						<animation effect="rotate" center="auto" start="-20" end="-20" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG4]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG4]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -418,14 +418,14 @@
 						<animation effect="rotate" center="auto" start="25" end="25" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG5]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG5]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -451,14 +451,14 @@
 						<animation effect="rotate" center="auto" start="75" end="75" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG6]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG6]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -484,14 +484,14 @@
 						<animation effect="rotate" center="auto" start="45" end="45" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG7]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG7]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -517,14 +517,14 @@
 						<animation effect="rotate" center="auto" start="-15" end="-15" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG8]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG8]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -550,14 +550,14 @@
 						<animation effect="rotate" center="auto" start="-10" end="-10" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG9]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG9]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -583,14 +583,14 @@
 						<animation effect="rotate" center="auto" start="3" end="3" time="0" condition="true">Conditional</animation>
 						<control type="image">
 							<include>LiveCDCasesBGDim1</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG10]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + !String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + !Skin.HasSetting(LiveBGCDCase)]</visible>
 						</control>
 						<control type="image">
 							<include>LiveCDCasesBGDim2</include>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG10]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<visible>[Window.IsVisible(Home) + String.EndsWith(Container(9000).ListItem.Property(backgroundCase),Clear)] | [!Window.IsVisible(Home) + Skin.HasSetting(LiveBGCDCase)]</visible>
@@ -630,7 +630,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.1.Path)]</texture>
 							</control>
 							<control type="image">
@@ -647,7 +647,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.2.Path)]</texture>
 							</control>
 							<control type="image">
@@ -663,7 +663,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.3.Path)]</texture>
 							</control>
 							<control type="image">
@@ -679,7 +679,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.4.Path)]</texture>
 							</control>
 							<control type="image">
@@ -695,7 +695,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.5.Path)]</texture>
 							</control>
 							<control type="image">
@@ -711,7 +711,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.6.Path)]</texture>
 							</control>
 							<control type="image">
@@ -727,7 +727,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.7.Path)]</texture>
 							</control>
 							<control type="image">
@@ -743,7 +743,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.8.Path)]</texture>
 							</control>
 							<control type="image">
@@ -759,7 +759,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.9.Path)]</texture>
 							</control>
 							<control type="image">
@@ -775,7 +775,7 @@
 							<control type="image">
 								<include>PicturePos</include>
 								<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
-								<fadetime>IconCrossfadeTime</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true" diffuse="thumbs/boxes/polaroid_mask.png">$INFO[Window(home).Property(MyPicsDBRandom.10.Path)]</texture>
 							</control>
 							<control type="image">
@@ -808,7 +808,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG1Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -822,7 +822,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG2Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -837,7 +837,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG3Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -852,7 +852,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG4Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -867,7 +867,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG5Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -882,7 +882,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG6Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -897,7 +897,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG7Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -912,7 +912,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG8Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -927,7 +927,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG9Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 					<control type="group">
@@ -942,7 +942,7 @@
 							<height>400</height>
 							<aspectratio scalediffuse="false">keep</aspectratio>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png" fallback="DefaultAudio.png">$VAR[LiveBG10Picture]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 						</control>
 					</control>
 				</control>

@@ -5,12 +5,6 @@
 	<onload condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onload>
 	<onload condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onload>
 	<onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|madnox-quicknav)</onload>
-	<onload>Skin.SetString(SkinHelper.RandomFanartDelay,7)</onload>
-	<onload condition="!Skin.HasSetting(backendmode)">Skin.SetBool(backendmode)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableAnimatedPosters)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableAddonsLookups)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
-	<onload>Skin.SetBool(SkinHelper.EnableExtendedArt)</onload>
 	<onunload>ClearProperty(SkinHelper.WidgetContainer,home)</onunload>
 	<onunload>ClearProperty(Widget.CaseHome,home)</onunload>
 	<controls>
@@ -25,7 +19,7 @@
 			<control type="multiimage">
 				<aspectratio align="center" aligny="top">scale</aspectratio>
 				<imagepath background="true">$VAR[HomeMenuFanartVar]</imagepath>
-				<fadetime>600</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation effect="fade" time="480">Visible</animation>
 				<animation effect="fade" time="480">Hidden</animation>
 				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" delay="480" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
@@ -294,7 +288,7 @@
 				<control type="multiimage">
 					<aspectratio>keep</aspectratio>
 					<imagepath>$INFO[Window(weather).Property(MapPath)]</imagepath>
-					<fadetime>0</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>FullscreenDimensions</include>
 					<timeperimage>500</timeperimage>
 					<pauseatend>1000</pauseatend>

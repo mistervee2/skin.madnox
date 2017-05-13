@@ -139,7 +139,7 @@
 				<width>246</width>
 				<height>350</height>
 				<texture colordiffuse="11FFFFFF">back.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | String.Contains(Window(Home).Property(Widget.CaseHome),-)</visible>
@@ -148,7 +148,7 @@
 				<width>206</width>
 				<height>310</height>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | String.Contains(Window(Home).Property(Widget.CaseHome),-)</visible>
 			</control>
 			<control type="image">
@@ -157,7 +157,7 @@
 				<width>196</width>
 				<height>298</height>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.Contains(Window(Home).Property(Widget.CaseHome),glass)</visible>
 			</control>
 			<control type="image">
@@ -166,7 +166,7 @@
 				<width>196</width>
 				<height>279</height>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.Contains(Window(Home).Property(Widget.CaseHome),/case)</visible>
 			</control>
 			<control type="image">
@@ -175,7 +175,7 @@
 				<width>197</width>
 				<height>276</height>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.Contains(Window(Home).Property(Widget.CaseHome),bdcase)</visible>
 			</control>
 			<control type="image">
@@ -184,14 +184,14 @@
 				<width>192</width>
 				<height>298</height>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.Contains(Window(Home).Property(Widget.CaseHome),clearcase)</visible>
 			</control>
 			<control type="image">
 				<width>206</width>
 				<height>310</height>
 				<texture background="true">$VAR[HomeWidget$PARAM[id]InfoCaseVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>!String.IsEmpty(Window(Home).Property(Widget.CaseHome))</visible>
 			</control>
 		</control>
@@ -204,7 +204,7 @@
 				<width>350</width>
 				<height>350</height>
 				<texture colordiffuse="11FFFFFF">back.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordertexture border="20">thumbs/thumb_shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | String.Contains(Window(Home).Property(Widget.CaseHome),-)</visible>
@@ -214,7 +214,7 @@
 				<height>310</height>
 				<aspectratio aligny="$PARAM[Align]">$PARAM[Aspect]</aspectratio>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.IsEmpty(Window(Home).Property(Widget.CaseHome)) | String.Contains(Window(Home).Property(Widget.CaseHome),-)</visible>
 			</control>
 			<control type="image">
@@ -224,7 +224,7 @@
 				<height>298</height>
 				<aspectratio aligny="$PARAM[Align]">$PARAM[Aspect]</aspectratio>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.Contains(Window(Home).Property(Widget.CaseHome),glass)</visible>
 			</control>
 			<control type="image">
@@ -234,14 +234,14 @@
 				<height>302</height>
 				<aspectratio aligny="$PARAM[Align]">$PARAM[Aspect]</aspectratio>
 				<texture background="true">$PARAM[Texture]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>String.Contains(Window(Home).Property(Widget.CaseHome),case)</visible>
 			</control>
 			<control type="image">
 				<width>310</width>
 				<height>310</height>
 				<texture background="true">$VAR[HomeWidget$PARAM[id]InfoCaseVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>!String.IsEmpty(Window(Home).Property(Widget.CaseHome))</visible>
 			</control>
 		</control>
@@ -2264,7 +2264,7 @@
 					<aligny>top</aligny>
 					<label>$VAR[NowPlayingTextBoxLabelVar]</label>
 					<font>Font_Reg26</font>
-					<textcolor>white6</textcolor>
+					
 					<autoscroll delay="5000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 				</control>
 				<control type="group">
@@ -2287,7 +2287,7 @@
 						<height>354</height>
 						<aspectratio>scale</aspectratio>
 						<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$INFO[Container(5222).ListItem.Icon]</imagepath>
-						<fadetime>750</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<timeperimage>5000</timeperimage>
 					</control>
 					<control type="image">
@@ -2385,7 +2385,7 @@
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
 						<texture background="true" fallback="common/cdart/bd.png">$INFO[Player.Art(discart)]</texture>
-						<fadetime>300</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 					</control>
 					<control type="image">
@@ -2395,7 +2395,7 @@
 						<height>390</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture diffuse="thumbs/movieposter_mask.png" background="true" fallback="DefaultVideoBigPoster.png">$VAR[PlayerPosterVar]</texture>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<left>10.5</left>
@@ -2429,7 +2429,7 @@
 						<height>300</height>
 						<aspectratio>keep</aspectratio>
 						<texture fallback="DefaultVideo.png">$INFO[VideoPlayer.Cover]</texture>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>!String.IsEmpty(VideoPlayer.Cover)</visible>
 					</control>
 				</control>
@@ -2460,7 +2460,7 @@
 					<aligny>top</aligny>
 					<label>$INFO[VideoPlayer.TVShowTitle,, - ]$INFO[VideoPlayer.ChannelName,, - ]$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year, (,)]</label>
 					<font>Font_Reg37_Caps</font>
-					<textcolor>white3</textcolor>
+					
 					<scroll>true</scroll>
 				</control>
 			</control>
@@ -2516,7 +2516,7 @@
 						<width>360</width>
 						<height>360</height>
 						<aligny>top</aligny>
-						<fadetime>300</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 						<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[MusicPlayer.Cover]</texture>
 						<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
@@ -2528,7 +2528,7 @@
 						<height>360</height>
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
-						<fadetime>300</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 						<include>cdarthome</include>
 						<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
@@ -2540,7 +2540,7 @@
 						<height>360</height>
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
-						<fadetime>300</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 						<texture background="true">$VAR[mviscdARTVar]</texture>
 						<visible>String.IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
@@ -2555,7 +2555,7 @@
 						<aligny>top</aligny>
 						<label> $INFO[MusicPlayer.AlbumArtist]</label>
 						<visible>String.IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-						<textcolor>black</textcolor>
+						
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 					</control>
@@ -2569,7 +2569,7 @@
 						<aligny>top</aligny>
 						<label>[CR][CR][CR][CR][CR] $INFO[MusicPlayer.Album]</label>
 						<visible>String.IsEmpty(Control.GetLabel(298629)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-						<textcolor>black</textcolor>
+						
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 					</control>
@@ -2580,7 +2580,7 @@
 						<height>360</height>
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
-						<fadetime>300</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 						<include>vinylart</include>
 						<visible>Skin.HasSetting(vinylart)</visible>
@@ -2592,7 +2592,7 @@
 						<height>360</height>
 						<aligny>top</aligny>
 						<aspectratio>keep</aspectratio>
-						<fadetime>300</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="!Player.Paused">Conditional</animation>
 						<include>blurayart</include>
 						<visible>Skin.HasSetting(blurayart)</visible>
@@ -2655,7 +2655,7 @@
 					<top>768</top>
 					<label>$INFO[MusicPlayer.Album]</label>
 					<font>Font_Reg28_Caps</font>
-					<textcolor>white3</textcolor>
+					
 					<include>Furniture_HomeNowPlayingMetrics</include>
 					<animation effect="slide" time="320" tween="cubic" easing="inout" end="98" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
 				</control>
@@ -2665,7 +2665,7 @@
 					<width>309</width>
 					<height>108</height>
 					<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<animation effect="fade" start="100" end="0" time="0" condition="String.Contains(Control.GetLabel(8308),empty.png)">Conditional</animation>
 					<visible>!String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
 					<animation effect="slide" time="320" tween="cubic" easing="inout" end="-98" condition="Skin.HasSetting(disablecdart)">Conditional</animation>
@@ -2696,7 +2696,7 @@
 					<aligny>bottom</aligny>
 					<label>$INFO[MusicPlayer.Title]</label>
 					<font>Font_Reg37_Caps</font>
-					<textcolor>white3</textcolor>
+					
 					<wrapmultiline>true</wrapmultiline>
 					<animation effect="slide" time="320" tween="cubic" easing="inout" end="82" condition="!Skin.HasSetting(disablecdart)">Conditional</animation>
 				</control>
@@ -2730,7 +2730,7 @@
 				<height>354</height>
 				<aspectratio>scale</aspectratio>
 				<imagepath background="true" diffuse="thumbs/boxes/cdcover_mask.png">$VAR[NowPlayingMultiImageVar]</imagepath>
-				<fadetime>750</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<timeperimage>5000</timeperimage>
 			</control>
 			<control type="image">

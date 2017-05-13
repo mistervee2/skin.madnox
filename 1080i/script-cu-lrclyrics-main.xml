@@ -199,7 +199,7 @@
 						<top>-1</top>
 						<include>line1</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)] $INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,1)</visible>
@@ -209,7 +209,7 @@
 						<top>2</top>
 						<include>line1</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)] $INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,1)</visible>
@@ -229,7 +229,7 @@
 						<top>-1</top>
 						<include>line1</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)] $INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,6)</visible>
@@ -239,7 +239,7 @@
 						<top>2</top>
 						<include>line1</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)] $INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,6)</visible>
@@ -265,7 +265,7 @@
 						<include>line3</include>
 						<left>-1</left>
 						<top>-1</top>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,3)</visible>
@@ -275,7 +275,7 @@
 						<include>line3</include>
 						<left>3</left>
 						<top>3</top>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,3)</visible>
@@ -295,7 +295,7 @@
 						<include>line3</include>
 						<left>-1</left>
 						<top>-1</top>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,8)</visible>
@@ -305,7 +305,7 @@
 						<include>line3</include>
 						<left>3</left>
 						<top>3</top>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,8)</visible>
@@ -335,7 +335,7 @@
 						<font>lyrsh50</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,5)</visible>
@@ -349,7 +349,7 @@
 						<font>lyrsh50</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,5)</visible>
@@ -377,7 +377,7 @@
 						<font>lyrsh50</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,0)</visible>
@@ -391,7 +391,7 @@
 						<font>lyrsh50</font>
 						<align>center</align>
 						<aligny>center</aligny>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,0)</visible>
@@ -421,7 +421,7 @@
 						<top>-1</top>
 						<include>line7</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,7)</visible>
@@ -431,7 +431,7 @@
 						<top>2</top>
 						<include>line7</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,7)</visible>
@@ -451,7 +451,7 @@
 						<top>-1</top>
 						<include>line7</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,2)</visible>
@@ -461,7 +461,7 @@
 						<top>2</top>
 						<include>line7</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,2)</visible>
@@ -487,7 +487,7 @@
 						<top>-1</top>
 						<include>line9</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,9)</visible>
@@ -497,7 +497,7 @@
 						<top>2</top>
 						<include>line9</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,9)</visible>
@@ -517,7 +517,7 @@
 						<top>-1</top>
 						<include>line9</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,4)</visible>
@@ -527,7 +527,7 @@
 						<top>2</top>
 						<include>line9</include>
 						<label>$INFO[Container(110).ListItem.Property(part1)] $INFO[Container(110).ListItem.Property(part2)] $INFO[Container(110).ListItem.Property(part3)][CR]$INFO[Container(110).ListItem.Property(part4)]</label>
-						<textcolor>black</textcolor>
+						
 					</control>
 					<control type="textbox">
 						<visible>!Container(110).OnNext + !Container(110).OnPrevious + String.EndsWith(Container(110).Currentitem,4)</visible>

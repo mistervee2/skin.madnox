@@ -11,7 +11,7 @@
 				<height>427</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">wall/wall_bg.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 			<control type="image">    <!-- GLOW BACKROUND -->
 				<top>355</top>
@@ -32,7 +32,7 @@
 				<height>423</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>[[!Skin.Hassetting(WallLargeCases) + Container.Content(movies)] | [Container.Content(movies) + !Skin.Hassetting(usecases) + !Skin.Hassetting(clearcases)]]</visible>
 			</control>
 			<control type="image">
@@ -42,7 +42,7 @@
 				<height>423</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>ListItem.IsCollection | Container.Content(tvshows) | Container.Content(seasons)</visible>
 			</control>
 			<control type="image">
@@ -52,7 +52,7 @@
 				<height>376</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + Skin.Hassetting(usecases) + !Skin.Hassetting(clearcases) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
@@ -62,7 +62,7 @@
 				<height>408</height>
 				<aspectratio>stretch</aspectratio>
 				<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<visible>Skin.Hassetting(WallLargeCases) + Container.Content(movies) + Skin.Hassetting(usecases) + Skin.Hassetting(clearcases) + !ListItem.IsCollection</visible>
 			</control>
 			<control type="image">
@@ -213,7 +213,7 @@
 				<posy>751</posy>
 				<width>645</width>
 				<height>15</height>
-				<textcolor>white6</textcolor>
+				
 				<label>$INFO[Window(0).Property(Set.Movies.Director)]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
@@ -224,7 +224,7 @@
 				<posy>784</posy>
 				<width>120</width>
 				<height>15</height>
-				<textcolor>white6</textcolor>
+				
 				<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[2050]:[/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
@@ -235,7 +235,7 @@
 				<posy>784</posy>
 				<width>100</width>
 				<height>15</height>
-				<textcolor>white6</textcolor>
+				
 				<label>$INFO[ListItem.Duration]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
@@ -246,7 +246,7 @@
 				<posy>784</posy>
 				<width>220</width>
 				<height>15</height>
-				<textcolor>white6</textcolor>
+				
 				<label>[COLOR $VAR[FocusTextureColorVar]]$LOCALIZE[515]:[/COLOR]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
@@ -257,7 +257,7 @@
 				<posy>784</posy>
 				<width>525</width>
 				<height>15</height>
-				<textcolor>white6</textcolor>
+				
 				<label>$INFO[ListItem.Genre]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
@@ -268,7 +268,7 @@
 				<posy>784</posy>
 				<width>525</width>
 				<height>15</height>
-				<textcolor>white6</textcolor>
+				
 				<label>$INFO[Window(0).Property(Set.Movies.Genre)]</label>
 				<font>Font_18A</font>
 				<scroll>true</scroll>
@@ -504,7 +504,7 @@
 						<width>185</width>
 						<height>275</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>4</bordersize>
 						<colordiffuse>BAffffff</colordiffuse>
@@ -514,7 +514,7 @@
 						<width>185</width>
 						<height>275</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>4</bordersize>
 						<visible>!Skin.Hassetting(WallLargeTransparentPoster)</visible>
@@ -636,7 +636,7 @@
 							<aligny>top</aligny>
 							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
-							<textcolor>black</textcolor>
+							
 						</control>
 						<control type="group">
 							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
@@ -659,7 +659,7 @@
 							<width>182</width>
 							<height>263</height>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordersize>8</bordersize>
 							<visible>Skin.Hassetting(WallLargeCases) + !Skin.HasSetting(clearcases) + [Container.Content(movies) | Container.Content(sets) | Container.Content(genres)]</visible>
 						</control>
@@ -670,7 +670,7 @@
 							<width>186</width>
 							<height>271</height>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordersize>9</bordersize>
 							<visible>Skin.Hassetting(WallLargeCases) + Skin.HasSetting(clearcases) + [Container.Content(movies) | Container.Content(sets) | Container.Content(genres)]</visible>
 						</control>
@@ -681,7 +681,7 @@
 							<width>182</width>
 							<height>268</height>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>9</bordersize>
 							<visible>Container.Content(genres)</visible>
@@ -704,7 +704,7 @@
 							<width>182</width>
 							<height>268</height>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="8">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>7</bordersize>
 							<visible>[!Skin.Hassetting(WallLargeCases) + Container.Content(movies)] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
@@ -836,7 +836,7 @@
 						<width>139</width>
 						<height>207</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="2">thumbs/panel_border.png</bordertexture>
 						<bordersize>3</bordersize>
 						<colordiffuse>BAffffff</colordiffuse>
@@ -846,7 +846,7 @@
 						<width>139</width>
 						<height>207</height>
 						<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="3">thumbs/panel_border.png</bordertexture>
 						<bordersize>3</bordersize>
 						<visible>!Skin.Hassetting(WallLargeTransparentPoster)</visible>
@@ -968,7 +968,7 @@
 							<aligny>top</aligny>
 							<visible>Skin.HasSetting(WallLargeCDart) + String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 							<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
-							<textcolor>black</textcolor>
+							
 						</control>
 						<control type="group">
 							<animation type="focus" condition="Skin.Hassetting(WallLargeCDart) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(Container.ListItem.Art(discart))" reversible="false">
@@ -991,7 +991,7 @@
 							<height>192</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordersize>8</bordersize>
 							<visible>Skin.Hassetting(WallLargeCases) + !Skin.HasSetting(clearcases) + [Container.Content(movies) | Container.Content(sets) | Container.Content(genres)]</visible>
 						</control>
@@ -1002,7 +1002,7 @@
 							<height>199</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordersize>9</bordersize>
 							<visible>Skin.Hassetting(WallLargeCases) + Skin.HasSetting(clearcases) + [Container.Content(movies) | Container.Content(sets) | Container.Content(genres)]</visible>
 						</control>
@@ -1013,7 +1013,7 @@
 							<height>197.5</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="2">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>9</bordersize>
 							<visible>Container.Content(genres)</visible>
@@ -1036,7 +1036,7 @@
 							<width>126</width>
 							<height>188</height>
 							<texture background="true" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-							<fadetime>200</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="2">thumbs/thumbnail_focused.png</bordertexture>
 							<bordersize>7</bordersize>
 							<visible>[!Skin.Hassetting(WallLargeCases) + Container.Content(movies)] | [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>

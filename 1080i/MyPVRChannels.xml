@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>50</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+	
 	<views>50,51,52</views>
 	<controls>
 		<include>PVRCommonBackground</include>
@@ -376,7 +376,7 @@
 						<label>$INFO[Container(50).ListItem.Plot]</label>
 						<font>Font_Reg30</font>
 						<shadowcolor>black</shadowcolor>
-						<textcolor>white6</textcolor>
+						
 						<autoscroll time="1500" delay="11000" repeat="11000">true</autoscroll>
 					</control>
 				</control>
@@ -645,7 +645,7 @@
 						<label>$INFO[Container(51).ListItem.Plot]</label>
 						<font>Font_Reg30</font>
 						<shadowcolor>black</shadowcolor>
-						<textcolor>white6</textcolor>
+						
 						<autoscroll time="1500" delay="11000" repeat="11000">true</autoscroll>
 						<visible>!Control.IsVisible(76)</visible>
 					</control>
@@ -655,7 +655,7 @@
 						<label>$INFO[Container(51).ListItem.Plot]</label>
 						<font>Font_Reg30</font>
 						<shadowcolor>black</shadowcolor>
-						<textcolor>white6</textcolor>
+						
 						<autoscroll time="1500" delay="11000" repeat="11000">true</autoscroll>
 						<visible>Control.IsVisible(76)</visible>
 					</control>
@@ -996,7 +996,7 @@
 							<height>30</height>
 							<font>Font_Reg28</font>
 							<align>left</align>
-							<textcolor>grey3</textcolor>
+							
 							<selectedcolor>grey2</selectedcolor>
 							<label>$INFO[ListItem.NextStartTime] - $INFO[ListItem.NextTitle]</label>
 							<visible>true</visible>
@@ -1031,7 +1031,7 @@
 						<height>59</height>
 						<aspectratio align="right">keep</aspectratio>
 						<texture background="true" fallback="new_pvr/blank.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>500</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="label">
 						<left>14</left>
@@ -1105,7 +1105,7 @@
 						<width>400</width>
 						<height>220</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture>$INFO[ListItem.PlotOutline]</texture>
 						<visible>String.StartsWith(ListItem.PlotOutline,"http://") | String.StartsWith(ListItem.PlotOutline,"https://")</visible>
 					</control>

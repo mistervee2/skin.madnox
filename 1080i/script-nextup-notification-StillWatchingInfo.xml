@@ -41,7 +41,7 @@
 					<top>-126</top>
 					<width>334</width>
 					<height>486</height>
-					<fadetime>350</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="label" description="still watching question">

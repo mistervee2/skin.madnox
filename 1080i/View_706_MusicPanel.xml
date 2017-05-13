@@ -108,7 +108,7 @@
 					<height>350</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(-1).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -116,7 +116,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(-2).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -124,7 +124,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(-3).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -155,7 +155,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(-3).Label,Container(706).ListItemNoWrap(-3).Label)</visible>
@@ -165,7 +165,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(-2).Label,Container(706).ListItemNoWrap(-2).Label)</visible>
@@ -175,7 +175,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(-1).Label,Container(706).ListItemNoWrap(-1).Label)</visible>
@@ -185,7 +185,7 @@
 					<height>360</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 		<!-- "Top" Album Covers -->
@@ -208,7 +208,7 @@
 					<height>100</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(-4).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(-4).Label,Container(706).ListItemNoWrap(-4).Label)</visible>
@@ -218,7 +218,7 @@
 					<height>110</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<top>-30</top>
@@ -227,7 +227,7 @@
 					<height>150</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(-3).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(-3).Label,Container(706).ListItemNoWrap(-3).Label)</visible>
@@ -237,7 +237,7 @@
 					<height>160</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<top>-15</top>
@@ -246,7 +246,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(-2).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(-2).Label,Container(706).ListItemNoWrap(-2).Label)</visible>
@@ -256,7 +256,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<top>0</top>
@@ -274,7 +274,7 @@
 					<height>260</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 		<!-- "Bottom" Artist Art -->
@@ -296,7 +296,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(1).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -304,7 +304,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(2).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -312,7 +312,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(3).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -320,7 +320,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(4).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 		<!-- "Bottom" Artist Art overlay -->
@@ -341,7 +341,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(3).Label,Container(706).ListItemNoWrap(3).Label)</visible>
@@ -351,7 +351,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(2).Label,Container(706).ListItemNoWrap(2).Label)</visible>
@@ -361,7 +361,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(1).Label,Container(706).ListItemNoWrap(1).Label)</visible>
@@ -371,7 +371,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 		<!-- "Bottom" Album Art -->
@@ -393,7 +393,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(1).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -401,7 +401,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(2).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -409,7 +409,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(3).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="80" condition="true">Conditional</animation>
@@ -417,7 +417,7 @@
 					<height>200</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture background="true">$INFO[Container(706).ListItemNoWrap(4).Icon]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 		<!-- "Bottom" Album Art overlay -->
@@ -438,7 +438,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(3).Label,Container(706).ListItemNoWrap(3).Label)</visible>
@@ -448,7 +448,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(2).Label,Container(706).ListItemNoWrap(2).Label)</visible>
@@ -458,7 +458,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<visible>String.IsEqual(ListItem(1).Label,Container(706).ListItemNoWrap(1).Label)</visible>
@@ -468,7 +468,7 @@
 					<height>210</height>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<texture>mooviz/square.png</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 		<!-- FixedList BG -->
@@ -512,7 +512,7 @@
 				<aligny>top</aligny>
 				<label>[CR] $INFO[ListItem.AlbumArtist]</label>
 				<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(MusicPanelvinyl) + !Skin.HasSetting(MusicFakeDisc) + !Container.Content(artists)</visible>
-				<textcolor>black</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -528,7 +528,7 @@
 				<aligny>top</aligny>
 				<label>[CR][CR][CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
 				<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(MusicPanelvinyl) + !Skin.HasSetting(MusicFakeDisc) + !Container.Content(artists)</visible>
-				<textcolor>black</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -562,7 +562,7 @@
 				<width>380</width>
 				<height>380</height>
 				<aspectratio align="right">keep</aspectratio>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</texture>
 				<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -595,7 +595,7 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true" diffuse="thumbs/cdcover_mask.png">common/bgcolor.png</texture>
-					<fadetime>0</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<top>255</top>
@@ -603,7 +603,7 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true" diffuse="thumbs/cdcover_mask.png" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<top>686</top>
@@ -611,7 +611,7 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
 					<texture diffuse="thumbs/cdcover_mask_reflect.png" flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<visible>Skin.HasSetting(MusicPanelDown)</visible>
 				</control>
@@ -639,7 +639,7 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true">common/bgcolor.png</texture>
-					<fadetime>0</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<top>255</top>
@@ -647,7 +647,7 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<texture background="true" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<animation effect="fade" end="10" condition="!Skin.HasSetting(MusicPanelDown)">Conditional</animation>
@@ -656,7 +656,7 @@
 					<height>410</height>
 					<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
 					<texture flipy="true" background="true" fallback="DefaultAlbumCover.png">$VAR[PosterVar]</texture>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<colordiffuse>d0FFFFFF</colordiffuse>
 					<visible>Skin.HasSetting(MusicPanelDown)</visible>
 				</control>
@@ -816,7 +816,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml.32</font>
 						<label fallback="N/A">$INFO[ListItem.Duration]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>Container.Content(songs)</visible>
 					</control>
@@ -850,7 +850,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml</font>
 						<label fallback="N/A">$VAR[MusicGenreVar]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>!Container.Content(songs)</visible>
 					</control>
@@ -859,7 +859,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml.26</font>
 						<label fallback="N/A">$VAR[MusicGenreVar]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>Container.Content(songs)</visible>
 					</control>
@@ -894,7 +894,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml</font>
 						<label fallback="N/A">$VAR[MusicMoodPlaycountVar]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>!Container.Content(songs)</visible>
 					</control>
@@ -903,7 +903,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml.26</font>
 						<label fallback="N/A">$VAR[MusicMoodPlaycountVar]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>Container.Content(songs)</visible>
 					</control>
@@ -937,7 +937,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml</font>
 						<label fallback="N/A">$VAR[MusicStyleLastPlayedVar]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>!Container.Content(songs)</visible>
 					</control>
@@ -946,7 +946,7 @@
 						<aligny>bottom</aligny>
 						<font>font.ml</font>
 						<label fallback="N/A">$VAR[MusicStyleLastPlayedVar]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>Container.Content(songs)</visible>
 					</control>

@@ -544,7 +544,7 @@
 					<width>821</width>
 					<height>173</height>
 					<aspectratio align="center">scale</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<texture background="true" fallback="thumbs/fallback_banner_tp_solid.jpg">$VAR[BannerVar]</texture>
 					<bordertexture border="8">thumbs/poster_shadow6.png</bordertexture>
 					<bordersize>15</bordersize>
@@ -610,7 +610,7 @@
 					<width>821</width>
 					<height>173</height>
 					<aspectratio align="center">scale</aspectratio>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<texture background="true" fallback="thumbs/fallback_banner_tp_solid.jpg">$VAR[BannerVar]</texture>
 					<bordersize>15</bordersize>
 				</control>

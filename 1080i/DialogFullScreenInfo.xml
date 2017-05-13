@@ -432,7 +432,7 @@
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Subtitle.png</texture>
 					<visible>!String.IsEmpty(VideoPlayer.SubtitlesLanguage)</visible>
 				</control>
@@ -442,7 +442,7 @@
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<texture colordiffuse="white2" fallback="">special://skin/extras/BigIcons/Speaker.png</texture>
 					<visible>!String.IsEmpty(VideoPlayer.AudioLanguage)</visible>
 					<visible>!String.Contains(VideoPlayer.AudioLanguage,und)</visible>
@@ -453,7 +453,7 @@
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.AudioLanguage,,.png]</texture>
 				</control>
 				<control type="image">
@@ -462,7 +462,7 @@
 					<width>30</width>
 					<height>30</height>
 					<aspectratio>keep</aspectratio>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<texture colordiffuse="white2" fallback="">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.SubtitlesLanguage,,.png]</texture>
 					<animation effect="fade" time="200">VisibleChange</animation>
 				</control>
@@ -548,7 +548,7 @@
 							<height>35</height>
 							<aspectratio aligny="center" align="left">keep</aspectratio>
 							<texture colordiffuse="white2" background="true">$VAR[ColorFlagsLanguage]$INFO[VideoPlayer.Country,,.png]</texture>
-							<fadetime>200</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>!String.IsEmpty(Control.GetLabel(12020))</visible>
 							<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
 						</control>
@@ -957,7 +957,7 @@
 				<width>1050</width>
 				<label>$INFO[Player.filenameandpath]</label>
 				<font>Font_Info</font>
-				<textcolor>white5</textcolor>
+				
 				<scroll>true</scroll>
 				<haspath>true</haspath>
 			</control>

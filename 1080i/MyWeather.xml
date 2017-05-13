@@ -69,7 +69,7 @@
 						<aspectratio align="right" aligny="center">keep</aspectratio>
 						<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Current.FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
 						<timeperimage>50</timeperimage>
-						<fadetime>1</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<randomize>false</randomize>
 						<loop>true</loop>
 					</control>
@@ -512,7 +512,7 @@
 								<imagepath>special://profile/addon_data/weather.ozweather/currentloop/$INFO[Window(weather).Property(Radar)]/</imagepath>
 								<timeperimage>500</timeperimage>
 								<pauseatend>1000</pauseatend>
-								<fadetime>0</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<randomize>false</randomize>
 							</control>
 						</control>

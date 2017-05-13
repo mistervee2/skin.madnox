@@ -26,7 +26,7 @@
 				<font>Font_Reg30</font>
 				<label>19047</label>
 				<align>center</align>
-				<textcolor>dialogheader</textcolor>
+				
 			</control>
 			<control type="image">
 				<left>30</left>
@@ -68,7 +68,7 @@
 							<width>738</width>
 							<height>45</height>
 							<font>Font_Reg28</font>
-							<textcolor>context</textcolor>
+							
 							<label>$INFO[ListItem.Label2]</label>
 							<textoffsetx>15</textoffsetx>
 						</control>
@@ -144,7 +144,7 @@
 					<font>Font_Reg28</font>
 					<align>justify</align>
 					<shadowcolor>black</shadowcolor>
-					<textcolor>white6</textcolor>
+					
 					<pagecontrol>60</pagecontrol>
 					<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(60)</autoscroll>
 					<label fallback="161">$INFO[ListItem.Plot]</label>

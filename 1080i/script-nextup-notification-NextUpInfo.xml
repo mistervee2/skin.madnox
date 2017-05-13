@@ -19,7 +19,7 @@
 					<visible>false</visible>
 				</control>
 				<control type="image" id="3008" description="landscape">
-					<fadetime>350</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 				</control>
 				<control type="image" id="3012">
@@ -140,7 +140,7 @@
 						<disabledcolor>B3dddddd</disabledcolor>
 						<selectedcolor>FF000000</selectedcolor>
 						<height>25</height>
-						<textcolor>black</textcolor>
+						
 						<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="5">box.png</texturefocus>
 						<texturenofocus colordiffuse="FFFFFFFF" border="5">box.png</texturenofocus>
 					</control>

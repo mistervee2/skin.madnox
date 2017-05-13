@@ -55,7 +55,7 @@
 						<align>center</align>
 						<font>Font28_Reg</font>
 						<textoffsetx>10</textoffsetx>
-						<textcolor>white6</textcolor>
+						
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">

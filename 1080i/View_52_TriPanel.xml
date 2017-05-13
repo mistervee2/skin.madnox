@@ -108,7 +108,7 @@
 						<width>350</width>
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelValue1Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -138,7 +138,7 @@
 						<width>395</width>
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelValue2Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -168,7 +168,7 @@
 						<width>350</width>
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelValue3Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -200,7 +200,7 @@
 					<top>286</top>
 					<width>434</width>
 					<height>550</height>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				
 				<control type="textbox">
@@ -242,7 +242,7 @@
 						<top>77</top>
 						<width>508</width>
 						<height>287</height>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<visible>!String.IsEqual(container.folderpath,special://skin/extras/Playlists/oscars/bestpicture.xsp) + !String.IsEqual(container.folderpath,special://skin/extras/Playlists/oscars/bestdirector.xsp) + !String.IsEqual(container.folderpath,special://skin/extras/Playlists/oscars/bestactor.xsp) +
@@ -262,7 +262,7 @@
 						<top>77</top>
 						<width>508</width>
 						<height>287</height>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(TriPanelDisableAnimatedFanart)</visible>
@@ -273,7 +273,7 @@
 						<top>77</top>
 						<width>508</width>
 						<height>287</height>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<left>-9</left>
@@ -302,7 +302,7 @@
 					<width>530</width>
 					<height>795</height>
 					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image" id="3822">
@@ -311,7 +311,7 @@
 					<width>530</width>
 					<height>795</height>
 					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image" id="3822">
@@ -320,7 +320,7 @@
 					<width>530</width>
 					<height>795</height>
 					<texture background="true" diffuse="views/tripanel/poster_diffuse.png">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image" id="3822">
@@ -329,7 +329,7 @@
 					<width>530</width>
 					<height>795</height>
 					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -393,7 +393,7 @@
 					<width>487</width>
 					<height>732</height>
 					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -402,7 +402,7 @@
 					<width>487</width>
 					<height>732</height>
 					<texture background="true" flipy="true" diffuse="views/tripanel/poster_diffuse_ref.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -411,7 +411,7 @@
 					<width>487</width>
 					<height>732</height>
 					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -420,7 +420,7 @@
 					<width>487</width>
 					<height>732</height>
 					<texture background="true" diffuse="views/tripanel/poster_diffuse.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -485,7 +485,7 @@
 						<width>350</width>
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelValue1Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -505,7 +505,7 @@
 						<width>435</width>
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelValue2Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -525,7 +525,7 @@
 						<width>350</width>
 						<aligny>bottom</aligny>
 						<label fallback="N/A">$VAR[TriPanelValue3Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -557,7 +557,7 @@
 					<top>290</top>
 					<width>480</width>
 					<height>550</height>
-					<fadetime>IconCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				
 				<control type="textbox">
@@ -591,7 +591,7 @@
 						<height>287</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture background="true" diffuse="thumbs/multiplex_tvmask.png" fallback="thumbs/fallback_episode_tp.png">$VAR[InfoWallPreviewTextureVar]</texture>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordersize>9</bordersize>
 					</control>
 					<control type="image">
@@ -601,7 +601,7 @@
 						<height>287</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
-						<fadetime>IconCrossfadeTime</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordersize>9</bordersize>
 						<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(TriPanelDisableAnimatedFanart)</visible>
 					</control>
@@ -1071,7 +1071,7 @@
 							<height>49</height>
 							<label>$VAR[ListLabel1Var]</label>
 							<font>Font_Reg30_2</font>
-							<textcolor>white6</textcolor>
+							
 						</control>
 						<control type="label">
 							<left>120</left>

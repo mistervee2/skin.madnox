@@ -8,44 +8,11 @@
   <color name="shadow">88000000</color><!-- only for shadow under text -->
   <color name="disabled">33FFFFFF</color><!-- only for use in defaults.xml for disabled item -->
   <color name="invalid">ABCE4421</color><!-- only for use in defaults.xml for invalid item -->
-
-  <!-- skin wide default colors - fallbacks for script.skin.helper.colorpicker - see Variables_Colors.xml -->
+  <!-- skin wide default colors BELOW - fallbacks for script.skin.helper.colorpicker - see Variables_Colors.xml -->
   <color name="highlight">FF6DB9EF</color>
   <color name="panel">FF6DB9EF</color>
   <color name="glow">FF000000</color>
   <color name="topbar">FFFFFFFF</color>
   <color name="floor">FF6DB9EF</color>
   <color name="background">FF000000</color>
-
-  <!--  old colors (will be deleted over time otherwise breakage will occour) -->
-  <color name="white3">abFFFFFF</color>
-  <color name="white4">FFdfdfdf</color>
-  <color name="white5">48FFFFFF</color>
-  <color name="white6">d0FFFFFF</color>
-  <color name="grey3">33FFFFFF</color>
-  <color name="base">ee114076</color>
-  <color name="base1">dd114076</color>
-  <color name="black">FF000000</color>
-  <color name="dialogheader">DDced8da</color>
-  <color name="green">FF00FF00</color>
-  <color name="yellow">FFFFFF00</color>
-  <color name="orange">FFFEAF33</color>
-  <color name="orange2">88DAA520</color>
-  <color name="default">FFFFFFFF</color>
-  <color name="rss_headline">FF0055be</color>
-  <color name="floorshadow">00000000</color>
-  <color name="vignette">FFFFFFFF</color>
-  <color name="osdseek">FFececec</color>
-  <color name="context">abFFFFFF</color>
-  <color name="bclabel">88ffffff</color>
-  <color name="bcicon">80ffffff</color>
-  <color name="bcshadow">00ffffff</color>
-  <color name="time">FFe5e5e5</color>
-  <color name="clock">FFFFFFFF</color>
-  <color name="floorlabel">abFFFFFF</color>
-  <color name="diffuse_white">FF6db9e5</color>
-  <color name="backgroundcolor">FF000000</color>
-  <color name="labelheader">FF6db9e5</color>
-  <color name="themecolor_transparent">886db9e5</color>
-  <color name="ocean">FF69f5ee</color>
 </colors>

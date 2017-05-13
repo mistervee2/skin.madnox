@@ -36,7 +36,7 @@
 				<height>40</height>
 				<font>font15_title</font>
 				<align>center</align>
-				<textcolor>dialogheader</textcolor>
+				
 				<label>$INFO[Container(100).ListItem.Label]</label>
 			</control>
 			<control type="image">

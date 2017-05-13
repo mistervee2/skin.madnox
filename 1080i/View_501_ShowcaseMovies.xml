@@ -928,7 +928,7 @@
 		<height>180</height>
 		<aspectratio scalediffuse="false">scale</aspectratio>
 		<texture background="true">thumbs/boxes/poster_glass_reflect.png</texture>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<colordiffuse>d1FFFFFF</colordiffuse>
 		<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 		<visible>Skin.HasSetting(usecases) + Skin.HasSetting(clearcases) + [container.content(movies) | Container.Content(musicvideos)]</visible>
@@ -939,7 +939,7 @@
 		<width>320</width>
 		<height>440</height>
 		<align>center</align>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<bordertexture border="18">thumbs/poster_shadow.png</bordertexture>
 		<bordersize>18</bordersize>
 		<visible>Skin.HasSetting(ClearCaseTvshow) + [Container.Content(TvShows) | Container.Content(seasons)]</visible>
@@ -951,7 +951,7 @@
 		<top>-22</top>
 		<width>324</width>
 		<height>437</height>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<visible>Skin.HasSetting(usecases) + [container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 	</include>
 	<include name="MovieShowcaseDVDCoverVarsSets">
@@ -959,7 +959,7 @@
 		<top>-22</top>
 		<width>324</width>
 		<height>437</height>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<!-- <visible>Skin.HasSetting(usecases) + [container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible> -->
 	</include>
 
@@ -1001,7 +1001,7 @@
 		<align>center</align>
 		<!-- MikeBZH44 : scale -> stretch aspect -->
 		<aspectratio scalediffuse="false">stretch</aspectratio>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<bordertexture border="18">thumbs/poster_shadow.png</bordertexture>
 		<bordersize>18</bordersize>
 	</include>
@@ -1011,7 +1011,7 @@
 		<width>320</width>
 		<height>440</height>
 		<align>center</align>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<bordertexture border="18">thumbs/poster_shadow.png</bordertexture>
 		<bordersize>18</bordersize>
 		<visible>Skin.HasSetting(ClearCaseTvshow) + [Container.Content(TvShows) | Container.Content(seasons)]</visible>
@@ -1019,14 +1019,14 @@
 	<include name="MovieShowcaseThumbReflectionMain">
 		<!-- MikeBZH44 : scale -> stretch aspect -->
 		<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<include>MovieShowcaseThumbReflectionDimensions</include>
 		<colordiffuse>52FFFFFF</colordiffuse>
 	</include>
 	<include name="MovieShowcaseThumbReflection">
 		<!-- MikeBZH44 : scale -> stretch aspect -->
 		<aspectratio scalediffuse="false" aligny="top">stretch</aspectratio>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<include>MovieShowcaseThumbReflectionDimensions</include>
 		<colordiffuse>d1FFFFFF</colordiffuse>
 		<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
@@ -1039,7 +1039,7 @@
 		<width>325</width>
 		<height>180</height>
 		<colordiffuse>d1FFFFFF</colordiffuse>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<animation effect="fade" start="70" end="70" time="0" condition="true">Conditional</animation>
 	</include>
 
@@ -1049,7 +1049,7 @@
 		<top>9</top>
 		<width>90</width>
 		<height>90</height>
-		<fadetime>0</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<animation effect="slide" start="0,0" end="6,-3" time="0" condition="Skin.HasSetting(usecases) + [container.content(movies) | Container.Content(sets) | Container.Content(musicvideos)]">Conditional</animation>
 		<animation effect="slide" start="0,0" end="-10,11" time="0" condition="[container.content(movies) | Container.Content(sets) | Container.Content(musicvideos)] + Skin.HasSetting(usecases) + !Skin.HasSetting(clearcases)">Conditional</animation>
 	</include>
@@ -2776,7 +2776,7 @@
 			<height>240</height>
 			<aspectratio>keep</aspectratio>
 			<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-			<fadetime>4000</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<!-- MikeBZH44 Add !Skin.HasSetting(OpenCase) condition -->
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
@@ -2791,7 +2791,7 @@
 			<height>240</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[ListItem.Art(poster)]</texture>
-			<fadetime>4000</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
 			</animation>
@@ -2804,7 +2804,7 @@
 			<height>240</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture background="true">$VAR[FakeDiscArtOverlay]</texture>
-			<fadetime>4000</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<!-- MikeBZH44 Add !Skin.HasSetting(OpenCase) condition -->
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
@@ -2818,7 +2818,7 @@
 			<height>240</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture background="true">$VAR[FakeDischand]</texture>
-			<fadetime>4000</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<!-- MikeBZH44 Add !Skin.HasSetting(OpenCase) condition -->
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
@@ -2832,7 +2832,7 @@
 			<height>240</height>
 			<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 			<texture background="true">$VAR[FakeDischandcolor]</texture>
-			<fadetime>4000</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<!-- MikeBZH44 Add !Skin.HasSetting(OpenCase) condition -->
 			<animation type="Conditional" condition="Control.IsVisible(961) + !Control.IsVisible(6000) + Skin.HasSetting(OpenCase)" reversible="true">
 				<effect type="rotate" start="0" center="auto" end="720" delay="2500" time="4300" tween="cubic" easing="inout"/>
@@ -2850,7 +2850,7 @@
 			<font>Hand_18</font>
 			<align>center</align>
 			<aligny>top</aligny>
-			<textcolor>black</textcolor>
+			
 			<visible>Skin.Hassetting(noflow) + String.IsEmpty(ListItem.Art(discart)) + Skin.HasSetting(OpenCase) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<label>[CR][CR][CR][CR][CR] $INFO[ListItem.Title]</label>
 		</control>
@@ -2952,7 +2952,7 @@
 			<aligny>top</aligny>
 			<visible>Skin.HasSetting(usecases) + Skin.HasSetting(OpenCase) + String.IsEmpty(ListItem.Art(discart)) + !String.IsEmpty(ListItem.Art(poster)) + !ListItem.IsCollection + Container.Content(movies) + Skin.Hassetting(Fakedischandwriting) + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 			<label>[CR][CR][CR][CR][CR] $INFO[ListItem.Label]</label>
-			<textcolor>black</textcolor>
+			
 		</control>
 		<control type="image">
 			<animation type="Conditional" condition="Control.IsVisible(1970)" reversible="false">
@@ -3136,7 +3136,7 @@
 						<top>-20</top>
 						<width>290</width>
 						<height>435</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/backset.png" diffuse="thumbs/sets/backset.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3173,7 +3173,7 @@
 						<top>-20</top>
 						<width>290</width>
 						<height>435</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/disc3.png" diffuse="thumbs/sets/disc3.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3211,7 +3211,7 @@
 						<top>-20</top>
 						<width>290</width>
 						<height>435</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/disc2.png" diffuse="thumbs/sets/disc2.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3249,7 +3249,7 @@
 						<top>-20</top>
 						<width>290</width>
 						<height>435</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/disc1.png" diffuse="thumbs/sets/disc1.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3260,7 +3260,7 @@
 						<top>-22</top>
 						<width>117</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>Skin.HasSetting(usecases) + [container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<texture background="true">thumbs/sets/div.png</texture>
@@ -3271,7 +3271,7 @@
 						<top>-22</top>
 						<width>117</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<texture background="true">thumbs/sets/div.png</texture>
@@ -3291,7 +3291,7 @@
 						<top>-20</top>
 						<width>250</width>
 						<height>433</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/backset.png" diffuse="thumbs/sets/backset.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3328,7 +3328,7 @@
 						<top>-20</top>
 						<width>250</width>
 						<height>433</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc3.png" diffuse="thumbs/sets/disc3.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3366,7 +3366,7 @@
 						<top>-20</top>
 						<width>250</width>
 						<height>433</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc2.png" diffuse="thumbs/sets/disc2.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3404,7 +3404,7 @@
 						<top>-20</top>
 						<width>250</width>
 						<height>433</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc1.png" diffuse="thumbs/sets/disc1.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3417,7 +3417,7 @@
 							<top>-20</top>
 							<width>220</width>
 							<height>433</height>
-							<fadetime>0</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 							<texture background="true" flipx="true">thumbs/sets/brochure.png</texture>
 						</control>
@@ -3452,7 +3452,7 @@
 								<aligny>top</aligny>
 								<label>$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</label>
 								<font>Font_Reg10</font>
-								<textcolor>black</textcolor>
+								
 							</control>
 						</control>
 						<control type="image">
@@ -3460,7 +3460,7 @@
 							<top>-20</top>
 							<width>250</width>
 							<height>433</height>
-							<fadetime>0</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 							<aspectratio scalediffuse="false" align="left" aligny="top">scale</aspectratio>
 							<texture background="true" flipx="true" fallback="thumbs/sets/brochurecover.png" diffuse="thumbs/sets/brochurecover.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3479,7 +3479,7 @@
 						<top>-22</top>
 						<width>270</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="center" aligny="top">scale</aspectratio>
 						<texture background="true" fallback="thumbs/sets/backset.png" diffuse="thumbs/sets/backset.png">$INFO[ListItem.Art(fanart)]</texture>
@@ -3497,7 +3497,7 @@
 						<top>-22</top>
 						<width>250</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/backset.png" diffuse="thumbs/sets/backset.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3534,7 +3534,7 @@
 						<top>-22</top>
 						<width>250</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc3.png" diffuse="thumbs/sets/disc3.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3572,7 +3572,7 @@
 						<top>-20</top>
 						<width>250</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc2.png" diffuse="thumbs/sets/disc2.png">$INFO[ListItem.Art(extrafanart1)]</texture>
@@ -3610,7 +3610,7 @@
 						<top>-22</top>
 						<width>250</width>
 						<height>437</height>
-						<fadetime>0</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[container.content(sets) | container.content(movies) | Container.Content(musicvideos)]</visible>
 						<aspectratio scalediffuse="false" align="right" aligny="top">scale</aspectratio>
 						<texture background="true" flipx="true" fallback="thumbs/sets/disc1.png" diffuse="thumbs/sets/disc1.png">$INFO[ListItem.Art(extrafanart1)]</texture>

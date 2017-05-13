@@ -53,7 +53,7 @@
 						<height>673</height>
 						<aspectratio aligny="top">scale</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-						<fadetime>600</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<width>1260</width>
@@ -61,7 +61,7 @@
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Icon]</texture>
 						<visible>String.IsEmpty(ListItem.Art(fanart))</visible>
-						<fadetime>600</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<left>1142</left>
@@ -76,7 +76,7 @@
 						<top>1</top>
 						<width>120</width>
 						<height>120</height>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<include>OverlayVisibility0</include>
 						<include>Animation_VisibleChange200</include>
 					</control>
@@ -85,7 +85,7 @@
 						<top>1</top>
 						<width>120</width>
 						<height>120</height>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<include>Animation_VisibleChange200</include>
 						<texture>overlayprogress.png</texture>
 						<visible>Container.ListItem(0).IsResumable + Skin.HasSetting(InProgressFlag)</visible>
@@ -164,7 +164,7 @@
 							<aligny>bottom</aligny>
 							<label>$INFO[ListItem.Tagline]</label>
 							<font>Font_Reg29</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -185,7 +185,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Genre]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>!ListItem.IsCollection</visible>
 						</control>
@@ -194,7 +194,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Window(home).Property(Set.Movies.Genre)]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>ListItem.IsCollection</visible>
 						</control>
@@ -216,7 +216,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Director]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>!ListItem.IsCollection</visible>
 						</control>
@@ -225,7 +225,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Window(home).Property(Set.Movies.Director)]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>ListItem.IsCollection</visible>
 						</control>
@@ -247,7 +247,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Writer]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>!ListItem.IsCollection</visible>
 						</control>
@@ -256,7 +256,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Window(home).Property(Set.Movies.Writer)]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>ListItem.IsCollection</visible>
 						</control>
@@ -278,7 +278,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Rating]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -299,7 +299,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Year]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -320,7 +320,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Duration,, $LOCALIZE[12391]]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible> + !ListItem.IsCollection</visible>
 						</control>
@@ -342,7 +342,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Studio]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>!ListItem.IsCollection</visible>
 						</control>
@@ -351,7 +351,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[Window(home).Property(Set.Movies.Studio)]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<visible>ListItem.IsCollection</visible>
 						</control>
@@ -373,7 +373,7 @@
 							<aligny>bottom</aligny>
 							<label fallback="N/A">$INFO[ListItem.Mpaa]</label>
 							<font>Font_Reg32</font>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 							<wrapmultiline>true</wrapmultiline>
 						</control>
@@ -386,7 +386,7 @@
 					<height>610</height>
 					<aspectratio aligny="top" align="right">keep</aspectratio>
 					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp.png">$VAR[PosterVar]</texture>
-					<fadetime>200</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordertexture border="19.5">thumbs/poster_shadow.png</bordertexture>
 					<bordersize>19</bordersize>
 				</control>
@@ -412,7 +412,7 @@
 					<top>98</top>
 					<width>95</width>
 					<height>95</height>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>OverlayVisibility0</include>
 					<include>Animation_VisibleChange200</include>
 				</control>
@@ -421,7 +421,7 @@
 					<top>98</top>
 					<width>95</width>
 					<height>95</height>
-					<fadetime>IconCrossfadeTime2</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>Animation_VisibleChange200</include>
 					<texture>overlayprogress.png</texture>
 					<visible>Container.ListItem(0).IsResumable + Skin.HasSetting(InProgressFlag)</visible>

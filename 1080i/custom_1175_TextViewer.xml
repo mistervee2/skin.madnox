@@ -33,7 +33,7 @@
 				<height>40</height>
 				<font>font30_title</font>
 				<align>center</align>
-				<textcolor>dialogheader</textcolor>
+				
 				<label>$INFO[Window(Home).Property(TextViewerHeader)]</label>
 			</control>
 			<control type="label">

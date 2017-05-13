@@ -12,7 +12,7 @@
 			<control type="multiimage">
 				<aspectratio align="center" aligny="top">keep</aspectratio>
 				<imagepath background="true">$VAR[NowPlayingBackGroundVar]</imagepath>
-				<fadetime>600</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include>Animation_VisibleChange400</include>
 				<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>
 				<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbghome)">Conditional</animation>

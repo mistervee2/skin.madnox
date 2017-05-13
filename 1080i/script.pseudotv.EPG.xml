@@ -73,7 +73,7 @@
 				<aligny>top</aligny>
 				<label>Show Description</label>
 				<font>Font_Reg32</font>
-				<textcolor>white6</textcolor>
+				
 				<wrapmultiline>true</wrapmultiline>
 				<scroll>true</scroll>
 			</control>

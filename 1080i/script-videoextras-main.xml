@@ -16,7 +16,7 @@
 			</control>
 			<control type="multiimage" id="4001">
 				<imagepath background="true">$INFO[ListItem.Path,,extrafanart/]</imagepath>
-				<fadetime>350</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include>FullscreenDimensions</include>
 				<randomize>true</randomize>
 				<include>Animation_VisibleChange400</include>

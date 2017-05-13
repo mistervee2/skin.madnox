@@ -62,7 +62,7 @@
 							<height>281</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$VAR[TVShowClearArtVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>Skin.HasSetting(lowlistclearart)</visible>
 							<include>Animation_VisibleChange400</include>
 							<visible>Container.Content(sets) | Container.Content(movies) | Container.Content(tvshows)</visible>
@@ -75,7 +75,7 @@
 							<height>155</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$VAR[LogoVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<include>Animation_VisibleChange400</include>
 							<visible>!Skin.HasSetting(lowlistclearart) + [Container.Content(episodes) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(movies) | Container.Content(sets)]</visible>
 						</control>
@@ -159,7 +159,7 @@
 							<height>360</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[Container.ListItem.Art(fanart)]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
 							<visible>!ListItem.IsCollection</visible>
@@ -171,7 +171,7 @@
 							<height>360</height>
 							<aspectratio>scale</aspectratio>
 							<texture background="true">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
 							<visible>ListItem.IsCollection</visible>
@@ -183,7 +183,7 @@
 							<height>346</height>
 							<aspectratio>scale</aspectratio>
 							<imagepath background="true">$INFO[Container.ListItem.Path]/extrathumbs/</imagepath>
-							<fadetime>1000</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<timeperimage>8000</timeperimage>
 							<visible>!ListItem.IsCollection</visible>
 						</control>
@@ -195,7 +195,7 @@
 						<height>360</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true">$INFO[Container.ListItem.Thumb]</texture>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 						<bordersize>7</bordersize>
 						<visible>Container.Content(episodes)</visible>
@@ -208,7 +208,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Title]</label>
 						<font>Font_Reg42_Caps</font>
-						<textcolor>white3</textcolor>
+						
 					</control>
 					<control type="label">
 						<left>450</left>
@@ -226,7 +226,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue1Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -245,7 +245,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue2Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -264,7 +264,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue4Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 						<visible>String.IsEmpty(ListItem.Top250)</visible>
 					</control>
@@ -276,7 +276,7 @@
 						<aligny>top</aligny>
 						<label fallback="31006">$INFO[ListItem.Top250,$LOCALIZE[13409] #]</label>
 						<label fallback="31006">$INFO[ListItem.RatingAndVotes]</label>
-						<textcolor>white6</textcolor>
+						
 						<visible>!String.IsEmpty(ListItem.Top250)</visible>
 					</control>
 					<control type="label">
@@ -295,7 +295,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue5Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 					<control type="label">
@@ -314,7 +314,7 @@
 						<height>38</height>
 						<aligny>top</aligny>
 						<label fallback="31006">$VAR[FanartPanelValue6Var]</label>
-						<textcolor>white6</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 					<control type="textbox">
@@ -324,7 +324,7 @@
 						<height>367</height>
 						<label>$VAR[GlobalPlotVar]</label>
 						<font>Font_Reg30_2</font>
-						<textcolor>white6</textcolor>
+						
 						<pagecontrol>7002</pagecontrol>
 						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
@@ -367,7 +367,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[FanartPanelValue1Var]</label>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -385,7 +385,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[FanartPanelValue2Var]</label>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -403,7 +403,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[LowListInfoValue3]</label>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -421,7 +421,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[LowListInfoValue5]</label>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 						<control type="label">
@@ -439,7 +439,7 @@
 							<width>420</width>
 							<height>20</height>
 							<label fallback="31006">$VAR[LowListInfoValue4]</label>
-							<textcolor>white6</textcolor>
+							
 							<scroll>true</scroll>
 						</control>
 					</control>
@@ -452,7 +452,7 @@
 							<height>237</height>
 							<label>$VAR[GlobalPlotVar]</label>
 							<font>Font_Reg30</font>
-							<textcolor>white6</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>Skin.HasSetting(nohighlist)</visible>
 						</control>
@@ -463,7 +463,7 @@
 							<height>196</height>
 							<label>$VAR[GlobalPlotVar]</label>
 							<font>Font_Reg30_2</font>
-							<textcolor>white6</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
 						</control>
@@ -474,7 +474,7 @@
 							<height>399</height>
 							<label>$VAR[GlobalPlotVar]</label>
 							<font>Font_Reg30_2</font>
-							<textcolor>white6</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<visible>!Skin.HasSetting(LowListPlotOnly) + !Skin.HasSetting(nohighlist)</visible>
 						</control>
@@ -599,7 +599,7 @@
 				<aligny>top</aligny>
 				<visible>Skin.Hassetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !Skin.Hassetting(Fakehandtop)</visible>
 				<label> $INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				
 			</control>
 			<control type="textbox">
 				<animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
@@ -619,7 +619,7 @@
 				<aligny>top</aligny>
 				<visible>Skin.Hassetting(listcdart) + String.IsEmpty(Container.ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(Container.ListItem.Art(clearlogo)) + Skin.Hassetting(Fakehandtop)</visible>
 				<label> $INFO[ListItem.Label]</label>
-				<textcolor>black</textcolor>
+				
 			</control>
 			<control type="group">
 				<animation effect="slide" end="-40,0" time="320" easing="inout" tween="cubic" condition="Control.HasFocus(69)">Conditional</animation>
@@ -735,7 +735,7 @@
 						<height>300</height>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">$VAR[PosterVar]</texture>
-						<fadetime>50</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="slide" end="0,23" time="50" easing="inout" tween="cubic" condition="Skin.HasSetting(usecaseslowlist)">Conditional</animation>
 						<visible>Skin.HasSetting(genrethumbs)</visible>
 					</control>
@@ -746,7 +746,7 @@
 						<height>384</height>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/movieposter_mask_reflect.png">thumbs/boxes/$VAR[lowlistCasePathVar]/$VAR[GlobalCaseVar]</texture>
-						<fadetime>50</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[Skin.HasSetting(usecaseslowlist) + Container.Content(movies)] | [[Container.Content(tvshows) | Container.Content(seasons)] + Skin.Hassetting(TVshowCases)]</visible>
 						<include>Animation_VisibleChange200</include>
 					</control>
@@ -757,7 +757,7 @@
 						<height>684</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture background="true">thumbs/boxes/$VAR[lowlistCasePathVar]/$VAR[GlobalCaseVar]</texture>
-						<fadetime>50</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>[Skin.HasSetting(usecaseslowlist) + Container.Content(movies)] | [[Container.Content(tvshows) | Container.Content(seasons)] + Skin.Hassetting(TVshowCases)]</visible>
 						<include>Animation_VisibleChange200</include>
 					</control>
@@ -798,7 +798,7 @@
 							<height>90</height>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 							<texture diffuse="thumbs/banner_mask.png" background="true">$INFO[Container.ListItem.Art(tvshow.banner)]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>Skin.HasSetting(lowlistbanner)</visible>
 						</control>
 						<control type="image">
@@ -814,7 +814,7 @@
 							<height>90</height>
 							<aspectratio scalediffuse="false">stretch</aspectratio>
 							<texture diffuse="thumbs/banner_mask.png" background="true" fallback="empty.png">$VAR[BannerVar]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<visible>!Skin.HasSetting(lowlistbanner)</visible>
 						</control>
 					</control>

@@ -211,7 +211,7 @@
 				<top>25</top>
 				<width>490</width>
 				<height>210</height>
-				<fadetime>100</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[LogoVar]</texture>
 				<visible>Skin.HasSetting(NetFiixShowLogoAsTtile) + !String.IsEmpty(Container.ListItem.Art(clearlogo))</visible>
@@ -237,7 +237,7 @@
 				<top>-35</top>
 				<width>490</width>
 				<height>210</height>
-				<fadetime>100</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[BannerVar]</texture>
 				<visible>Skin.HasSetting(NetFiixShowLogoAsTtile) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !String.IsEmpty(Container.ListItem.Art(banner))</visible>
@@ -326,7 +326,7 @@
 				<top>25</top>
 				<width>490</width>
 				<height>210</height>
-				<fadetime>100</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$VAR[LogoVar]</texture>
 				<visible>Skin.HasSetting(NetFiixShowLogoAsTtile) + String.IsEmpty(Container.ListItem.Art(clearlogo)) + !String.IsEmpty(Container.ListItem.Art(tvshow.clearlogo)) + [!Container.Content(episodes) | !Skin.HasSetting(NetFlixMoviesHideFilmInfo)]</visible>
@@ -1203,7 +1203,7 @@
 						<height>175</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-						<fadetime>4000</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation type="focus" condition="Control.IsVisible(800) + Skin.HasSetting(KodiFlixOpenCase)" reversible="false">
 							<effect type="rotate" start="720" center="auto" end="0" delay="2500" time="4300" tween="cubic" easing="inout"/>
 						</animation>
@@ -2052,7 +2052,7 @@
 						<height>175</height>
 						<aspectratio>keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-						<fadetime>4000</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation type="focus" condition="Control.IsVisible(800) + Skin.HasSetting(KodiFlixOpenCase)" reversible="false">
 							<effect type="rotate" start="720" center="auto" end="0" delay="2500" time="4300" tween="cubic" easing="inout"/>
 						</animation>
@@ -2194,7 +2194,7 @@
 						<top>135</top>
 						<width>240</width>
 						<height>50</height>
-						<fadetime>100</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<aspectratio>stretch</aspectratio>
 						<include>KodiFlixDimAnimation</include>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
@@ -2218,7 +2218,7 @@
 							<height>180</height>
 							<aspectratio>keep</aspectratio>
 							<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-							<fadetime>4000</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<animation type="Conditional" condition="!String.IsEmpty(ListItem.Art(discart)) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)" reversible="true">
 								<effect type="slide" start="-60,0" end="30,0" delay="2200" time="1120" tween="quadratic" easing="out"/> <!-- CHANGED by Schimi -->
 							</animation>
@@ -2377,7 +2377,7 @@
 								<top>135</top>
 								<width>230</width>
 								<height>50</height>
-								<fadetime>100</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<aspectratio>stretch</aspectratio>
 								<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 								<animation effect="rotate" center="auto" start="" end="-90" time="0" condition="true">Conditional</animation>
@@ -2388,7 +2388,7 @@
 								<top>-5</top>
 								<width>67</width>
 								<height>329</height>
-								<fadetime>100</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 								<texture background="true">views/boxsets/lines.png</texture>
 								<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 							</control>
@@ -2702,7 +2702,7 @@
 						<texture>$VAR[ColorFlagsLanguage]$INFO[ListItem.Property(AudioLanguage.1),,.png]</texture>
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
 						<include>Animation_VisibleChange200</include>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<width>26</width>
@@ -2712,7 +2712,7 @@
 						<visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
 						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.2))</visible>
 						<include>Animation_VisibleChange200</include>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<width>26</width>
@@ -2723,7 +2723,7 @@
 						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.1),ListItem.Property(AudioLanguage.3))</visible>
 						<visible>!String.IsEqual(ListItem.Property(AudioLanguage.2),ListItem.Property(AudioLanguage.3))</visible>
 						<include>Animation_VisibleChange200</include>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 				</control>
 			</control>
@@ -2798,7 +2798,7 @@
 				<focusedlayout height="41" width="40">
 					<!--control type="label">
 						<label>$INFO[ListItem.Label]</label>
-						<textcolor>green</textcolor>
+						
 						<animation effect="fade" start="100" end="20" time="0" condition="!String.IsEmpty(ListItem.Property(NotAvailable))">Conditional</animation>
 					</control-->
 					<control type="image">
@@ -2929,7 +2929,7 @@
 				<height>322</height>
 				<aspectratio>scale</aspectratio>
 				<texture background="true">wall/wall_bg.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 			<control type="image">
 				<posy>570</posy>
@@ -2954,7 +2954,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
 					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
@@ -2963,7 +2963,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
 					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
@@ -2972,7 +2972,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
 					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
@@ -2981,7 +2981,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
 					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
@@ -2990,7 +2990,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
 					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))">KodiFlixExtrasDiscChange</include>
 				</control>
@@ -2999,7 +2999,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscAnimation</include>
 					<include condition="!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt)) | !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.Disc))">KodiFlixExtrasDiscChange</include>
 				</control>
@@ -3014,7 +3014,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt))</visible>
 				</control>
@@ -3023,7 +3023,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt))</visible>
 				</control>
@@ -3032,7 +3032,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt))</visible>
 				</control>
@@ -3041,7 +3041,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt))</visible>
 				</control>
@@ -3050,7 +3050,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt))</visible>
 				</control>
@@ -3059,7 +3059,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>KodiFlixExtrasDiscNext</include>
 					<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.11.Art.DiscArt))</visible>
 				</control>
@@ -3071,7 +3071,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.0.Art.Poster)]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.Poster))</visible>
@@ -3083,7 +3083,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.0.Resolution)]p.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6601)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.Poster))</visible>
@@ -3095,7 +3095,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.1.Art.Poster)]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.Poster))</visible>
@@ -3107,7 +3107,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.1.Resolution)]p.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6602)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.Poster))</visible>
@@ -3119,7 +3119,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.2.Art.Poster)]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))</visible>
@@ -3131,7 +3131,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.2.Resolution)]p.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6603)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.Poster))</visible>
@@ -3143,7 +3143,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.3.Art.Poster)]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))</visible>
@@ -3155,7 +3155,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.3.Resolution)]p.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6604)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.Poster))</visible>
@@ -3167,7 +3167,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.4.Art.Poster)]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))</visible>
@@ -3179,7 +3179,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="common/discart/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.4.Resolution)]p.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6605)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.Poster))</visible>
@@ -3191,7 +3191,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$INFO[Window(home).Property(SkinHelper.ListItem.5.Art.Poster)]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))</visible>
@@ -3203,7 +3203,7 @@
 				<height>266</height>
 				<aspectratio scalediffuse="false" aligny="top">scale</aspectratio>
 				<texture background="true" fallback="thumbs/boxes/movies/p.png">common/discart/$INFO[Window(home).Property(SkinHelper.ListItem.5.Resolution)]p.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordersize>7</bordersize>
 				<include>KodiFlixExtrasDiscAnimation</include>
 				<visible>String.IsEmpty(Control.GetLabel(6606)) + ListItem.IsCollection + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.Poster))</visible>
@@ -3254,7 +3254,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(movies) + !ListItem.IsCollection</visible>
 				</control>
 				<control type="image">
@@ -3262,7 +3262,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(characterart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
@@ -3270,7 +3270,7 @@
 					<height>254</height>
 					<aspectratio>stretch</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(tvshow.characterart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="image">
@@ -3278,14 +3278,14 @@
 					<height>254</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(fanart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 				<control type="image">
 					<width>404</width>
 					<height>254</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(landscape)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
@@ -3293,7 +3293,7 @@
 					<height>254</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(tvshow.landscape)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 			</control>
@@ -3334,7 +3334,7 @@
 					<height>154</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(clearart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
@@ -3342,7 +3342,7 @@
 					<height>154</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(tvshow.clearart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 				<control type="image">
@@ -3351,7 +3351,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(banner)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)</visible>
 				</control>
 				<control type="image">
@@ -3360,7 +3360,7 @@
 					<align>center</align>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$INFO[ListItem.Art(tvshow.banner)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Container.Content(seasons)</visible>
 				</control>
 			</control>
@@ -3513,7 +3513,7 @@
 				<effect type="slide" start="0,0" end="1343,110" delay="8400" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.10.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -3542,7 +3542,7 @@
 				<effect type="slide" start="0,0" end="1343,110" delay="8400" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -3622,7 +3622,7 @@
 				<effect type="slide" start="0,0" end="1280,110" delay="8200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.9.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -3651,7 +3651,7 @@
 				<effect type="slide" start="0,0" end="1280,110" delay="8200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -3731,7 +3731,7 @@
 				<effect type="slide" start="0,0" end="1215,110" delay="8000" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.8.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -3760,7 +3760,7 @@
 				<effect type="slide" start="0,0" end="1215,110" delay="8000" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -3840,7 +3840,7 @@
 				<effect type="slide" start="0,0" end="1140,110" delay="7800" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.7.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -3869,7 +3869,7 @@
 				<effect type="slide" start="0,0" end="1140,110" delay="7800" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -3949,7 +3949,7 @@
 				<effect type="slide" start="0,0" end="1063,112" delay="7600" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.6.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -3978,7 +3978,7 @@
 				<effect type="slide" start="0,0" end="1063,112" delay="7600" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4058,7 +4058,7 @@
 				<effect type="slide" start="0,0" end="983,112" delay="7400" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.5.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -4087,7 +4087,7 @@
 				<effect type="slide" start="0,0" end="983,112" delay="7400" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4115,7 +4115,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4141,7 +4141,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4169,7 +4169,7 @@
 				<effect type="slide" start="0,0" end="890,110" delay="7200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.4.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
@@ -4198,7 +4198,7 @@
 				<effect type="slide" start="0,0" end="890,110" delay="7200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetExtraFilms)</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4225,7 +4225,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4249,7 +4249,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4276,7 +4276,7 @@
 				<effect type="slide" start="0,0" end="800,110" delay="2800" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.3.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4304,7 +4304,7 @@
 				<effect type="slide" start="0,0" end="800,110" delay="2800" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4330,7 +4330,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4354,7 +4354,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4381,7 +4381,7 @@
 				<effect type="slide" start="0,0" end="663,110" delay="2600" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.2.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4409,7 +4409,7 @@
 				<effect type="slide" start="0,0" end="665,110" delay="2600" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4435,7 +4435,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4459,7 +4459,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4486,7 +4486,7 @@
 				<effect type="slide" start="0,0" end="505,110" delay="2400" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.1.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4514,7 +4514,7 @@
 				<effect type="slide" start="0,0" end="505,110" delay="2400" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4540,7 +4540,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4564,7 +4564,7 @@
 			</animation>
 			<animation effect="rotatey" start="-4" end="20" time="0" condition="true">Conditional</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4591,7 +4591,7 @@
 				<effect type="slide" start="0,0" end="340,109" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>!String.IsEmpty(Window(home).Property(SkinHelper.ListItem.0.Art.DiscArt)) + Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs)</visible>
 			<visible>!ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
@@ -4619,7 +4619,7 @@
 				<effect type="slide" start="0,0" end="340,109" delay="2200" time="1120" tween="quadratic" easing="out"/>
 			</animation>
 			<camera x="1640" y="610"/>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetDiscs) + !ListItem.IsParentFolder + [Container.Content(sets) | ListItem.IsCollection]</visible>
 			<visible>Skin.HasSetting(KodiFlixMovieBoxsetsActiveMovieSetCases) + Skin.HasSetting(KodiFlixMovieBoxsets) + !Skin.HasSetting(KodiFlixMoviesCenterList) + !Skin.HasSetting(KodiFlixMoviesCenterFocus)</visible>
 		</control>
@@ -4650,7 +4650,7 @@
 			<top>725</top>
 			<width>280</width>
 			<height>50</height>
-			<fadetime>100</fadetime>
+			<fadetime>TextureFadeTime</fadetime>
 			<aspectratio>stretch</aspectratio>
 			<align>center</align>
 			<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>

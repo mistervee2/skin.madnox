@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol always="true">52</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+	
 	<coordinates>
 		<left>0</left>
 		<top>0</top>
@@ -60,7 +60,7 @@
 						<height>300</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture background="true" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<left>-12</left>
@@ -79,7 +79,7 @@
 						<height>300</height>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 				</control>
 			</itemlayout>
@@ -95,7 +95,7 @@
 						<height>300</height>
 						<aspectratio scalediffuse="false">scale</aspectratio>
 						<texture background="true" diffuse="thumbs/cdcover_mask.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 					</control>
 					<control type="image">
 						<left>-12</left>
@@ -114,7 +114,7 @@
 						<height>300</height>
 						<aspectratio aligny="top" scalediffuse="false">scale</aspectratio>
 						<texture background="true" flipy="true" diffuse="thumbs/cdcover_mask_reflect.png">$INFO[ListItem.Icon]</texture>
-						<fadetime>200</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" start="100" end="30" time="160">Focus</animation>
 						<animation effect="fade" start="30" end="100" time="160">UnFocus</animation>
 					</control>

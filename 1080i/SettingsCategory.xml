@@ -2,10 +2,8 @@
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<!-- Run any essential scripts or set a setting on skin change (should also be added to startup.xml) -->
-	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<!-- END Essential scripts or settings -->
-	<controls>
+	<include condition="Window.IsActive(interfacesettings)">OnLoad_SkinSettings</include>
+		<controls>
 		<!-- Backdrop -->
 		<include>Background_Nowplaying</include>
 		<include content="Background_Fanart_Default">

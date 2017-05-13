@@ -58,7 +58,7 @@
 							<width>515</width>
 							<height>338</height>
 							<label>$VAR[InfoWallTextboxVar]</label>
-							<textcolor>white3</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<animation effect="fade" start="100" end="0" time="40" condition="Control.HasFocus(7002)">Conditional</animation>
 							<visible>Skin.HasSetting(lowlist)</visible>
@@ -69,7 +69,7 @@
 							<width>515</width>
 							<height>503</height>
 							<label>$VAR[InfoWallTextboxVar]</label>
-							<textcolor>white3</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 							<animation effect="fade" start="100" end="0" time="40" condition="Control.HasFocus(7002)">Conditional</animation>
 							<visible>!Skin.HasSetting(lowlist)</visible>
@@ -135,7 +135,7 @@
 						<height>360</height>
 						<aspectratio>scale</aspectratio>
 						<texture background="true" fallback="special://skin/backgrounds/fallback_music.jpg">$INFO[ListItem.Art(fanart)]</texture>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<bordersize>7</bordersize>
 					</control>
 					<control type="multiimage">
@@ -162,7 +162,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Album]</label>
 						<font>Font_Bold46_Caps</font>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="fadelabel">
@@ -173,7 +173,7 @@
 						<align>center</align>
 						<label>$INFO[ListItem.Artist]</label>
 						<font>Font_Bold46_Caps</font>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(albums)</visible>
 					</control>
 					<control type="fadelabel">
@@ -183,7 +183,7 @@
 						<height>105</height>
 						<label>$INFO[ListItem.Label]</label>
 						<font>Font_OSDTitle2_Caps</font>
-						<textcolor>white3</textcolor>
+						
 					</control>
 					<control type="label">
 						<left>458</left>
@@ -191,7 +191,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[515]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(songs) | Container.Content(albums)</visible>
 					</control>
 					<control type="label">
@@ -200,7 +200,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[21900]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(artists)</visible>
 					</control>
 					<control type="label">
@@ -228,7 +228,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[21897]/$LOCALIZE[21896]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(artists)</visible>
 					</control>
 					<control type="label">
@@ -247,7 +247,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[567]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="label">
@@ -265,7 +265,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[21898]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(artists)</visible>
 					</control>
 					<control type="label">
@@ -284,7 +284,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[568]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(songs)</visible>
 					</control>
 					<control type="label">
@@ -302,7 +302,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[21899]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(albums)</visible>
 					</control>
 					<control type="label">
@@ -321,7 +321,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[563]:</label>
-						<textcolor>white3</textcolor>
+						
 						<animation effect="slide" end="0,75" time="120" condition="Container.Content(songs)">Conditional</animation>
 						<visible>Container.Content(songs) | Container.Content(albums)</visible>
 					</control>
@@ -341,7 +341,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[515]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(artists)</visible>
 					</control>
 					<control type="label">
@@ -360,7 +360,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[467]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(albums)</visible>
 					</control>
 					<control type="label">
@@ -378,7 +378,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[176]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(artists)</visible>
 					</control>
 					<control type="label">
@@ -397,7 +397,7 @@
 						<width>390</width>
 						<height>38</height>
 						<label>$LOCALIZE[345]:</label>
-						<textcolor>white3</textcolor>
+						
 						<visible>Container.Content(songs) | Container.Content(albums)</visible>
 					</control>
 					<control type="label">
@@ -415,7 +415,7 @@
 						<width>405</width>
 						<height>348</height>
 						<label fallback="547">$VAR[InfoWallTextboxVar]</label>
-						<textcolor>white3</textcolor>
+						
 						<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 					</control>
 				</control>
@@ -450,7 +450,7 @@
 						<width>390</width>
 						<height>150</height>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<visible>!String.IsEmpty(Skin.String(ArtistsLogosPath))</visible>
 					</control>
 				</control>
@@ -462,14 +462,14 @@
 						<width>135</width>
 						<height>88</height>
 						<texture>$VAR[ColorFlagsAudio]audio/$INFO[ListItem.FileExtension,,.png]</texture>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<colordiffuse>white2</colordiffuse>
 					</control>
 					<control type="image">
 						<width>135</width>
 						<height>88</height>
 						<texture fallback="flags/source/defaultsource.png">flags/music/recordlabel/$INFO[ListItem.Property(Album_Label),,.png]</texture>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<colordiffuse>white2</colordiffuse>
 						<visible>!String.IsEmpty(ListItem.Album) + Container.Content(albums)</visible>
 					</control>
@@ -492,7 +492,7 @@
                         <width>412</width>
                         <height>412</height>
                         <aspectratio>keep</aspectratio>
-                        <fadetime>IconCrossfadeTime2</fadetime>
+                        <fadetime>TextureFadeTime</fadetime>
                         <include condition="!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)">cdartlibrary</include>
                         <include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
                         <include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
@@ -504,7 +504,7 @@
 						<width>412</width>
 						<height>412</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture background="true">$VAR[colorcdARTVar]</texture>
 						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -520,7 +520,7 @@
 						<aligny>top</aligny>
 						<label> $INFO[ListItem.Artist]</label>
 						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + !Skin.HasSetting(MusicFakeDisc)</visible>
-						<textcolor>black</textcolor>
+						
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -534,7 +534,7 @@
 						<font>Hand_26</font>
 						<label>[CR][CR][CR][CR][CR][CR] $INFO[ListItem.Album]</label>
 						<visible>String.IsEmpty(Control.GetLabel(417291)) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
-						<textcolor>black</textcolor>
+						
 						<wrapmultiline>true</wrapmultiline>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
 						<animation effect="rotate" end="-360" center="auto" time="2000" loop="false" delay="1500" reversible="false" condition="!Container.OnNext + !Container.OnPrevious + !String.IsEmpty(ListItem.Thumb) + !Container.Content(songs)">Conditional</animation>
@@ -544,7 +544,7 @@
 						<top>8</top>
 						<width>412</width>
 						<height>412</height>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture background="true" diffuse="thumbs/sets/cdart-mask.png">$VAR[PosterVar]</texture>
 						<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart) + Skin.HasSetting(MusicFakeDisc)</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -556,7 +556,7 @@
 						<width>412</width>
 						<height>412</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture background="true">$VAR[cdARTVar]</texture>
 						<visible>!Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -568,7 +568,7 @@
 						<width>412</width>
 						<height>412</height>
 						<aspectratio align="center">keep</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</texture>
 						<visible>Skin.HasSetting(rightlistCD) + Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -580,7 +580,7 @@
 						<width>412</width>
 						<height>412</height>
 						<aspectratio align="center">keep</aspectratio>
-						<fadetime>400</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.DiscArt)]</texture>
 						<visible>Skin.HasSetting(rightlistCD) + !Skin.HasSetting(vinylart) + !Skin.HasSetting(blurayart)</visible>
 						<animation effect="rotate" end="-360" center="auto" time="4800" loop="true" reversible="false" condition="String.IsEqual(ListItem.Album,MusicPlayer.Album) + !String.IsEmpty(ListItem.Thumb) + Player.HasAudio">Conditional</animation>
@@ -592,7 +592,7 @@
 						<width>412</width>
 						<height>412</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<include condition="Skin.HasSetting(vinylart)">vinylartlibrary</include>
 						<include condition="Skin.HasSetting(blurayart)">blurayartlibrary</include>
 						<visible>String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.DiscArt))</visible>

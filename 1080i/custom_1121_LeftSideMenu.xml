@@ -593,7 +593,7 @@
 					<height>60</height>
 					<align>center</align>
 					<font>Font_Reg26_Caps</font>
-					<textcolor>white3</textcolor>
+					
 					<info>ListItem.Label</info>
 				</control>
 			</itemlayout>

@@ -512,7 +512,7 @@
 						<height>40</height>
 						<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Weather.FanartCode]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
 						<timeperimage>050</timeperimage>
-						<fadetime>1</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<randomize>false</randomize>
 						<loop>true</loop>
 						<visible>!Skin.HasSetting(DisableTopbarWeather) + !String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
@@ -913,7 +913,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Daily.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
 				<timeperimage>050</timeperimage>
-				<fadetime>1</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<randomize>false</randomize>
 				<loop>true</loop>
 				<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
@@ -954,7 +954,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(36Hour.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
 				<timeperimage>050</timeperimage>
-				<fadetime>1</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<randomize>false</randomize>
 				<loop>true</loop>
 				<visible>!String.IsEmpty(Window(weather).Property(36Hour.$PARAM[item].Heading))</visible>
@@ -995,7 +995,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Weekend.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
 				<timeperimage>050</timeperimage>
-				<fadetime>1</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<randomize>false</randomize>
 				<loop>true</loop>
 				<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
@@ -1036,7 +1036,7 @@
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Window(weather).Property(Hourly.$PARAM[item].FanartCode)]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
 				<timeperimage>050</timeperimage>
-				<fadetime>1</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<randomize>false</randomize>
 				<loop>true</loop>
 				<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>

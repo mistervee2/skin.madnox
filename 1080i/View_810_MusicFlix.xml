@@ -18,7 +18,7 @@
 				<top>25</top>
 				<width>490</width>
 				<height>210</height>
-				<fadetime>100</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist,,/logo.png]</texture>
 			</control>
@@ -27,7 +27,7 @@
 				<top>25</top>
 				<width>490</width>
 				<height>210</height>
-				<fadetime>100</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<aspectratio align="left" aligny="bottom">keep</aspectratio>
 				<texture background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
 				<!--texture background="true">$INFO[Skin.String(ArtistsLogosPath)]$INFO[ListItem.Artist,,/logo.png]</texture-->

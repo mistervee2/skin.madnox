@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
 	<defaultcontrol>50</defaultcontrol>
-	<include condition="!Skin.HasSetting(firstrun4.0)">AutoConfig</include>
+	
 	<views>50</views>
 	<controls>
 		<include>PVRCommonBackground</include>
@@ -138,7 +138,7 @@
 									<width>285</width>
 									<height>52</height>
 									<font>Font_Reg32</font>
-									<textcolor>white6</textcolor>
+									
 									<info>ListItem.ChannelName</info>
 								</control>
 								<control type="label">
@@ -235,7 +235,7 @@
 									<width>285</width>
 									<height>52</height>
 									<font>Font_Reg32</font>
-									<textcolor>white6</textcolor>
+									
 									<info>ListItem.ChannelName</info>
 								</control>
 								<control type="label">

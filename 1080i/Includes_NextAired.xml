@@ -266,7 +266,7 @@
 				<height>240</height>
 				<aspectratio>keep</aspectratio>
 				<texture>$INFO[ListItem.Property(Art(characterart))]</texture>
-				<fadetime>IconCrossfadeTime2</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<animation effect="fade" time="200">VisibleChange</animation>
 				<animation type="Conditional" condition="!Skin.HasSetting(NextAiredLogo)">
 					<effect type="slide" end="0,150" time="0" />
@@ -1072,7 +1072,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(200).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -1247,7 +1247,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(201).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -1422,7 +1422,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(202).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -1597,7 +1597,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(203).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -1772,7 +1772,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(204).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -1947,7 +1947,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(205).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -2122,7 +2122,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(206).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -4393,7 +4393,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(200).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -4568,7 +4568,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(201).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -4743,7 +4743,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(202).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -4918,7 +4918,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(203).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -5093,7 +5093,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(204).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -5268,7 +5268,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(205).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -5443,7 +5443,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(206).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -5618,7 +5618,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(207).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -5793,7 +5793,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(208).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -5968,7 +5968,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(209).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -6143,7 +6143,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(210).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -6318,7 +6318,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(211).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -6493,7 +6493,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(212).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -6668,7 +6668,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(213).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -6843,7 +6843,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(214).ListItem.Property(Network),,.png]</texture>
 					</control>
@@ -7018,7 +7018,7 @@
 						<height>90</height>
 						<aspectratio>keep</aspectratio>
 						<colordiffuse>floor</colordiffuse>
-						<fadetime>IconCrossfadeTime2</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="250">VisibleChange</animation>
 						<texture fallback="flags/studios/default-studio.png">flags/studios/$INFO[Container(215).ListItem.Property(Network),,.png]</texture>
 					</control>

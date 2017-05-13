@@ -105,7 +105,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!ListItem.IsCollection</visible>
 					<aspectratio aligny="top">scale</aspectratio>
 					<imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
@@ -116,7 +116,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!ListItem.IsCollection</visible>
 					<aspectratio aligny="top">scale</aspectratio>
 					<visible>String.IsEmpty(Control.GetLabel(70801))</visible>
@@ -151,7 +151,7 @@
 					<width>662</width>
 					<height>360</height>
 					<timeperimage>3250</timeperimage>
-					<fadetime>650</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>ListItem.IsCollection</visible>
 					<aspectratio aligny="top">scale</aspectratio>
 					<imagepath background="true">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</imagepath>
@@ -185,7 +185,7 @@
 						<width>140</width>
 						<height>115</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>250</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<colordiffuse>white</colordiffuse>
 						<animation effect="fade" time="200">VisibleChange</animation>
 					</control>
@@ -236,7 +236,7 @@
 						<width>75</width>
 						<height>55</height>
 						<aspectratio>keep</aspectratio>
-						<fadetime>250</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" time="200">VisibleChange</animation>
 						<left>450</left>
 						<top>6</top>
@@ -251,7 +251,7 @@
 						<top>16</top>
 						<width>150</width>
 						<height>58</height>
-						<fadetime>100</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
 						<visible>!Container.Content(seasons)</visible>
@@ -262,7 +262,7 @@
 						<top>-44</top>
 						<width>160</width>
 						<height>120</height>
-						<fadetime>200</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<aspectratio aligny="bottom">keep</aspectratio>
 						<texture background="true">$INFO[ListItem.Art(tvshow.clearlogo)]</texture>
 						<visible>Container.Content(seasons)</visible>

@@ -3,7 +3,6 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
-	<onload>Skin.SetBool(SkinHelper.EnableMusicArt)</onload>
 	<controls>
 		<control type="group">
 			<include>Animation_CommonFade</include>
@@ -22,7 +21,7 @@
 			<control type="group">
 				<control type="multiimage">
 					<imagepath background="true" fallback="special://skin/backgrounds/music/">$VAR[MusicFanartVar]</imagepath>
-					<fadetime>FanartCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<animation effect="fade" start="100" end="50" time="640">Hidden</animation>
@@ -30,7 +29,7 @@
 				</control>
 				<control type="multiimage">
 					<imagepath background="true">$VAR[MusicExtraFanartVar]</imagepath>
-					<fadetime>FanartCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true" condition="Skin.HasSetting(animatedbg)">Conditional</animation>
 					<visible>String.StartsWith(Container.FolderPath,musicdb://)</visible>
@@ -53,7 +52,7 @@
 							<top>17</top>
 							<width>302</width>
 							<height>302</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.10.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
@@ -82,7 +81,7 @@
 							<top>17</top>
 							<width>302</width>
 							<height>302</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.9.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
@@ -113,7 +112,7 @@
 							<width>302</width>
 							<height>302</height>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.8.Thumb)]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
@@ -142,7 +141,7 @@
 							<top>17</top>
 							<width>302</width>
 							<height>302</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.7.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
@@ -173,7 +172,7 @@
 							<width>302</width>
 							<height>302</height>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.6.Thumb)]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
@@ -202,7 +201,7 @@
 							<top>17</top>
 							<width>302</width>
 							<height>302</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.5.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
@@ -232,7 +231,7 @@
 							<top>17</top>
 							<width>302</width>
 							<height>302</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.4.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
@@ -261,7 +260,7 @@
 							<left>54</left>
 							<top>17</top>
 							<width>302</width>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<height>302</height>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.2.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
@@ -292,7 +291,7 @@
 							<top>17</top>
 							<width>302</width>
 							<height>302</height>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.3.Thumb)]</texture>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
@@ -323,7 +322,7 @@
 							<width>302</width>
 							<height>302</height>
 							<texture background="true" diffuse="thumbs/boxes/cdcover_mask_aa.png">$INFO[Window(home).Property(Artist.Album.1.Thumb)]</texture>
-							<fadetime>600</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<aspectratio scalediffuse="false">scale</aspectratio>
 						</control>
 						<control type="image">
@@ -409,7 +408,7 @@
 				<height>105</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true" fallback="empty.png">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ClearLogo)]</texture>
-				<fadetime>200</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include>Animation_OpenCloseZoom_New</include>
 				<animation effect="slide" end="-50,0" time="320" easing="inout" tween="circle" condition="Skin.HasSetting(smallshiftview) + Control.IsVisible(57)">Conditional</animation>
 				<animation effect="slide" end="-642,0" time="320" easing="inout" tween="circle" condition="Control.IsVisible(57)">Conditional</animation>

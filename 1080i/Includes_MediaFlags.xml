@@ -188,7 +188,7 @@
 	<include name="MediaFlagImage">
 		<width>125</width>
 		<height>90</height>
-		<fadetime>400</fadetime>
+		<fadetime>TextureFadeTime</fadetime>
 		<colordiffuse>grey</colordiffuse>
 		<aspectratio align="center" aligny="center">keep</aspectratio>
 	</include>

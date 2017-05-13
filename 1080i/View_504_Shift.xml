@@ -400,7 +400,7 @@
 						<font>Hand_28</font>
 						<visible>String.IsEmpty(ListItem.Art(discart)) + Container.Content(movies) + Skin.HasSetting(Fakedischandwriting) + !ListItem.IsCollection + String.IsEmpty(ListItem.Art(clearlogo))</visible>
 						<label> $INFO[ListItem.Label]</label>
-						<textcolor>black</textcolor>
+						
 						<animation effect="slide" end="0,-40" time="320" easing="inout" tween="cubic" condition="Skin.HasSetting(usecases)">Conditional</animation>
 						<animation effect="slide" delay="1600" end="0,-260" time="320" tween="quadratic">Focus</animation>
 						<animation effect="slide" start="0,-260" end="0" time="160" tween="quadratic" easing="in">Unfocus</animation>
@@ -549,7 +549,7 @@
 				<width>135</width>
 				<height>90</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime2</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>floor</colordiffuse>
 				<visible>Skin.HasSetting(smallshiftview) + Container.Content(tvshows)</visible>
 			</control>
@@ -560,7 +560,7 @@
 				<width>135</width>
 				<height>90</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime2</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>floor</colordiffuse>
 				<visible>!Skin.HasSetting(smallshiftview) + Container.Content(tvshows)</visible>
 			</control>
@@ -571,7 +571,7 @@
 				<width>135</width>
 				<height>90</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime2</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>floor</colordiffuse>
 				<visible>Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
 			</control>
@@ -582,7 +582,7 @@
 				<width>135</width>
 				<height>90</height>
 				<aspectratio>keep</aspectratio>
-				<fadetime>IconCrossfadeTime2</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<colordiffuse>floor</colordiffuse>
 				<visible>!Skin.HasSetting(smallshiftview) + Container.Content(movies)</visible>
 			</control>

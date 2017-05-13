@@ -64,7 +64,7 @@
 			</control>
 			<control type="multiimage" id="4002">
 				<imagepath background="true">$VAR[VideoExtraFanartVar]</imagepath>
-				<fadetime>350</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include>FullscreenDimensions</include>
 				<randomize>true</randomize>
 				<include>Animation_VisibleChange400</include>
@@ -72,7 +72,7 @@
 			</control>
 			<control type="multiimage" id="4001">
 				<imagepath background="true">$VAR[MovieFanartVar]</imagepath>
-				<fadetime>350</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<include>FullscreenDimensions</include>
 				<randomize>true</randomize>
 				<include>Animation_VisibleChange400</include>
@@ -136,7 +136,7 @@
 					<width>215</width>
 					<height>315</height>
 					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-					<fadetime>275</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -145,7 +145,7 @@
 					<width>215</width>
 					<height>315</height>
 					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$VAR[PosterVar]</texture>
-					<fadetime>275</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>!Skin.HasSetting(genrethumbs)</visible>
 				</control>
 				<control type="image">
@@ -167,7 +167,7 @@
 					<height>152</height>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_episode_tp.png">$VAR[BigFanIconVar]</texture>
-					<fadetime>300</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<animation effect="slide" end="0,-20" time="0" condition="Skin.HasSetting(bigfanlogo)">Conditional</animation>
 					<bordersize>7</bordersize>
 					<animation effect="fade" start="100" end="0" time="160">Hidden</animation>
@@ -180,7 +180,7 @@
 					<width>204</width>
 					<height>303</height>
 					<texture background="true" diffuse="thumbs/movieposter_mask.png" fallback="thumbs/fallback_poster_tp_solid.jpg">$INFO[ListItem.Art(poster)]</texture>
-					<fadetime>275</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<visible>String.IsEqual(Window(home).Property(actualViewtype),BigFan) + ![Container.Content(movies) | Container.Content(tvshows) | Container.Content(genres) | Container.Content(sets)] | Container.Content(seasons)</visible>
 				</control>
 			</control>
@@ -220,7 +220,7 @@
 					<height>48</height>
 					<label>$INFO[ListItem.Label]</label>
 					<font>Font_ShowcaseMainLabel2_Caps</font>
-					<textcolor>white6</textcolor>
+					
 					<scroll>true</scroll>
 				</control>
 				<control type="image">
@@ -228,7 +228,7 @@
 					<width>55</width>
 					<height>55</height>
 					<texture colordiffuse="$VAR[FocusTextureColorVar]">$VAR[WatchedIconVar]</texture>
-					<fadetime>0</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 			<control type="label">
@@ -237,7 +237,7 @@
 				<width>720</width>
 				<height>52</height>
 				<label>$VAR[TriPanelValue2Var]</label>
-				<textcolor>white3</textcolor>
+				
 				<scroll>true</scroll>
 				<visible>!Container.Content(seasons)</visible>
 			</control>
@@ -247,7 +247,7 @@
 				<width>720</width>
 				<height>52</height>
 				<label>$INFO[ListItem.TvShowTitle]</label>
-				<textcolor>white3</textcolor>
+				
 				<scroll>true</scroll>
 				<visible>Container.Content(seasons)</visible>
 			</control>
@@ -257,7 +257,7 @@
 				<width>700</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Year]$INFO[ListItem.Duration, • , $LOCALIZE[12391]]$INFO[ListItem.RatingAndVotes, • ]</label>
-				<textcolor>white3</textcolor>
+				
 				<scroll>true</scroll>
 				<visible>[Container.Content(movies) | Container.Content(sets)]</visible>
 			</control>
@@ -267,7 +267,7 @@
 				<width>1500</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Label2] [LOWERCASE]$INFO[ListItem.Property(UnWatchedEpisodes),($LOCALIZE[16101]: ,)][/LOWERCASE]</label>
-				<textcolor>white3</textcolor>
+				
 				<scroll>true</scroll>
 				<visible>Container.Content(tvshows)</visible>
 			</control>
@@ -277,7 +277,7 @@
 				<width>1500</width>
 				<height>52</height>
 				<label>$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]$INFO[ListItem.Property(UnWatchedEpisodes), ($LOCALIZE[16101]: ,)]</label>
-				<textcolor>white3</textcolor>
+				
 				<scroll>true</scroll>
 				<visible>Container.Content(seasons)</visible>
 			</control>

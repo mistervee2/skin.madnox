@@ -2,8 +2,7 @@
 <includes>
 	<!-- START REWORK VARIABLES -->
 	<!-- Fanart -->
-	<variable name="ViewTypeFanartVar">
-		<value >http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
+	<variable name="MovieFanartVar">
 		<value condition="String.IsEqual(Skin.String(MovieFanart),None)"></value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + !String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>
@@ -14,6 +13,18 @@
 		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
 		<value>special://skin/extras/backgrounds/default.jpg</value>
 	</variable>
+	<!-- <variable name="MovieFanartVar">
+		<value >http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),None)"></value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + !String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + String.IsEmpty(Skin.String(MovieFanartFallback.Path)) + !String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + String.IsEmpty(Skin.String(MovieFanartFallback.Path))">special://skin/extras/backgrounds/default.jpg</value>
+		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="!String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value>special://skin/extras/backgrounds/default.jpg</value>
+	</variable> -->
 	<variable name="WeatherFanartVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherFanart)) + [String.Contains(Skin.String(WeatherFanart),.jpg) | String.Contains(Skin.String(WeatherFanart),.png)]">$INFO[Skin.String(WeatherFanart)]</value>
 		<value condition="!String.IsEmpty(Skin.String(WeatherFanart))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Weather.fanartcode]$INFO[Skin.String(WeatherFanart.ext)]</value>
@@ -34,7 +45,7 @@
 
 	<variable name="PosterVar">
 		<value condition="String.IsEqual(ListItem.DBTYPE,country)">$INFO[ListItem.Label,resource://resource.images.moviecountryicons.flags/,.png]</value>
-		<value condition="Skin.HasSetting(SkinHelperAnimationedPoster) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
+		<value condition="Skin.HasSetting(SkinHelperAnimatedPoster) + !String.IsEmpty(ListItem.Art(animatedposter))">$INFO[ListItem.Art(animatedposter)]</value>
 		<value condition="!String.IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,episode) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,season) + !String.IsEmpty(ListItem.Art(season.poster))">$INFO[ListItem.Art(season.poster)]</value>

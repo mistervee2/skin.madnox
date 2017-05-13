@@ -273,7 +273,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[Container.ListItem.Art(fanart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>2</bordersize>
 				</control>
@@ -283,7 +283,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[Container.ListItem.Art(landscape)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>2</bordersize>
 				</control>
@@ -292,7 +292,7 @@
 					<width>693</width>
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
-					<fadetime>FanartCrossfadeTime</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 					<include condition="!Window.IsActive(pictures)">Aspectratio_Scale</include>
 					<timeperimage>3000</timeperimage>
@@ -313,7 +313,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true" fallback="thumbs/fallback_episode_tp.png">$INFO[Container.ListItem.Art(thumb)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordertexture border="2">thumbs/panel_border3.png</bordertexture>
 					<bordersize>2</bordersize>
 				</control>
@@ -323,7 +323,7 @@
 					<height>390</height>
 					<aspectratio>scale</aspectratio>
 					<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 				</control>
 			</control>
 			<control type="group">
@@ -547,7 +547,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>grey3</textcolor>
+								
 								<textoffsetx>18</textoffsetx>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
@@ -699,7 +699,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>grey3</textcolor>
+								
 								<textoffsetx>18</textoffsetx>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>
@@ -827,7 +827,7 @@
 								<align>center</align>
 								<aligny>center</aligny>
 								<label>$VAR[ListOverlayEpisodesVar]</label>
-								<textcolor>grey3</textcolor>
+								
 								<textoffsetx>18</textoffsetx>
 								<visible>Integer.IsGreater(ListItem.Property(UnWatchedEpisodes),0)</visible>
 							</control>

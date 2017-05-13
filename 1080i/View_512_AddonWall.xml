@@ -50,7 +50,7 @@
 								<height>40</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>white3</textcolor>
+								
 								<font>Font_Reg22_Caps</font>
 							</control>
 						</control>
@@ -88,7 +88,7 @@
 								<height>40</height>
 								<align>center</align>
 								<label>$INFO[ListItem.Label]</label>
-								<textcolor>white3</textcolor>
+								
 								<font>Font_Reg22_Caps</font>
 							</control>
 						</control>
@@ -1415,7 +1415,7 @@
 						<height>95</height>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<texture background="true" diffuse="thumbs/banner_mask.png" fallback="empty.png">$INFO[Container.ListItem.Art(banner)]</texture>
-						<fadetime>200</fadetime>
+						<fadetime>TextureFadeTime</fadetime>
 						<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
 						<animation effect="fade" delay="160" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8827),empty.png)">Conditional</animation>
 						<visible>Skin.HasSetting(tvshowbannersfloor) + Container.Content(tvshows)</visible>
@@ -1452,7 +1452,7 @@
 							<height>248</height>
 							<font>Font_Reg19</font>
 							<label>$VAR[InfoWallTextboxVar]</label>
-							<textcolor>white6</textcolor>
+							
 							<autoscroll delay="8000" time="2000" repeat="8000">Skin.HasSetting(AutoScroll)</autoscroll>
 						</control>
 					</control>
@@ -1473,7 +1473,7 @@
 						<control type="image">
 							<width>790</width>
 							<height>444</height>
-							<fadetime>300</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 							<include condition="!Window.IsActive(pictures)">Aspectratio_stretch</include>
 							<texture background="true" fallback="special://skin/backgrounds/curtains.jpg">$VAR[InfoWallPreviewTextureVar]</texture>
@@ -1488,7 +1488,7 @@
 							<height>458</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true">$INFO[Container.ListItem.Art(extrafanart1)]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
 							<visible>ListItem.IsCollection</visible>
@@ -1498,7 +1498,7 @@
 							<width>790</width>
 							<height>444</height>
 							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 							<include condition="!Window.IsActive(pictures)">Aspectratio_stretch</include>
 							<timeperimage>3000</timeperimage>
@@ -1515,7 +1515,7 @@
 							<height>458</height>
 							<aspectratio>stretch</aspectratio>
 							<texture background="true">$INFO[Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)]</texture>
-							<fadetime>400</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<bordertexture border="7">thumbs/thumbshadow.png</bordertexture>
 							<bordersize>7</bordersize>
 							<visible>Skin.HasSetting(SkinHelperAnimations) + !String.IsEmpty(Window(home).Property(SkinHelper.ListItem.Art.AnimatedFanart)) + !Skin.HasSetting(InfoWallDisableAnimatedFanart)</visible>
@@ -1538,7 +1538,7 @@
 							<width>790</width>
 							<height>444</height>
 							<aspectratio>stretch</aspectratio>
-							<fadetime>FanartCrossfadeTime</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<include condition="Window.IsActive(pictures)">Aspectratio_Keep</include>
 							<include condition="!Window.IsActive(pictures)">Aspectratio_stretch</include>
 							<timeperimage>3000</timeperimage>
@@ -1572,7 +1572,7 @@
 							<width>790</width>
 							<height>444</height>
 							<imagepath background="true">$VAR[MusicExtraFanartVar]</imagepath>
-							<fadetime>FanartCrossfadeTime</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<animation effect="zoom" start="110" end="130" center="auto" time="12000" pulse="true">Conditional</animation>
 							<animation effect="slide" start="-15,-15" end="15,15" time="6000" pulse="true">Conditional</animation>
 							<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs)</visible>
@@ -1598,7 +1598,7 @@
 							<left>-5</left>
 							<width>800</width>
 							<height>454</height>
-							<fadetime>300</fadetime>
+							<fadetime>TextureFadeTime</fadetime>
 							<texture>fanartframe.png</texture>
 							<visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)</visible>
 							<include>Animation_VisibleChange200</include>

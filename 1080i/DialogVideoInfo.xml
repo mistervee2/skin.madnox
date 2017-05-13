@@ -129,7 +129,7 @@
 									<width>120</width>
 									<height>120</height>
 									<label>$INFO[ListItem.Top250]</label>
-									<textcolor>black</textcolor>
+									
 									<align>center</align>
 									<font>Font_Bold28</font>
 									<visible>Integer.IsGreater(ListItem.Top250,3)</visible>
@@ -168,7 +168,7 @@
 										<height>35</height>
 										<aspectratio aligny="center" align="left">keep</aspectratio>
 										<texture colordiffuse="AAFFFFFF" background="true">$VAR[CountryFlagVar]</texture>
-										<fadetime>200</fadetime>
+										<fadetime>TextureFadeTime</fadetime>
 										<visible>!String.IsEmpty(Control.GetLabel(12020))</visible>
 									</control>
 									<control type="label">
@@ -999,7 +999,7 @@
 								<height>240</height>
 								<texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio aligny="center">scale</aspectratio>
-								<fadetime>0</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 							</control>
 						</itemlayout>
 						<focusedlayout height="290" width="222">
@@ -1017,7 +1017,7 @@
 								<height>240</height>
 								<texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
 								<aspectratio aligny="center">scale</aspectratio>
-								<fadetime>0</fadetime>
+								<fadetime>TextureFadeTime</fadetime>
 							</control>
 						</focusedlayout>
 					</control>
@@ -1072,7 +1072,7 @@
 									<height>240</height>
 									<texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
 									<aspectratio aligny="center">scale</aspectratio>
-									<fadetime>0</fadetime>
+									<fadetime>TextureFadeTime</fadetime>
 								</control>
 								<control type="image">
 									<width>190</width>
@@ -1118,7 +1118,7 @@
 									<height>240</height>
 									<texture fallback="DefaultActor.png">$INFO[ListItem.Thumb]</texture>
 									<aspectratio aligny="center">scale</aspectratio>
-									<fadetime>0</fadetime>
+									<fadetime>TextureFadeTime</fadetime>
 								</control>
 								<control type="image">
 									<width>190</width>

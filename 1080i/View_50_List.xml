@@ -1085,7 +1085,7 @@
 					<right>35</right>
 					<width>497</width>
 					<height>497</height>
-					<fadetime>100</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[MusicDiscArtVar]</texture>
 				</control>
@@ -1095,7 +1095,7 @@
 					<right>15</right>
 					<width>537</width>
 					<height>268</height>
-					<fadetime>250</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio>keep</aspectratio>
 					<texture background="true">$VAR[MusicClearLogoVar]</texture>
 				</control>
@@ -1103,7 +1103,7 @@
 					<bottom>117</bottom>
 					<width>567</width>
 					<height>567</height>
-					<fadetime>250</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordersize>15</bordersize>
 					<aspectratio aligny="top">scale</aspectratio>
 					<bordertexture border="30">thumbs/poster-frame.png</bordertexture>
@@ -1113,7 +1113,7 @@
 					<bottom>-420</bottom>
 					<width>567</width>
 					<height>567</height>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordersize>15</bordersize>
 					<aspectratio aligny="top">scale</aspectratio>
 					<texture flipy="true" diffuse="thumbs/poster-flipmask.png" fallback="DefaultMusicArtists.png" background="true">$VAR[MusicPosterVar]</texture>
@@ -1126,7 +1126,7 @@
 					<bottom>132</bottom>
 					<width>537</width>
 					<height>805</height>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<texture fallback="special://skin/extras/moviegenreicons/Default.png" diffuse="thumbs/poster-mask.png" background="true">$INFO[ListItem.Label,special://skin/extras/moviegenreicons/,.jpg]</texture>
 				</control>
@@ -1135,7 +1135,7 @@
 					<bottom>-673</bottom>
 					<width>537</width>
 					<height>805</height>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture fallback="special://skin/extras/moviegenreicons/Default.png" flipy="true" diffuse="thumbs/poster-flipmask.png" background="true">$INFO[ListItem.Label,special://skin/extras/moviegenreicons/,.jpg]</texture>
 				</control>
@@ -1146,7 +1146,7 @@
 					<bottom>117</bottom>
 					<width>567</width>
 					<height>835</height>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordersize>15</bordersize>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<bordertexture border="30">thumbs/poster-frame.png</bordertexture>
@@ -1156,7 +1156,7 @@
 					<bottom>-688</bottom>
 					<width>567</width>
 					<height>835</height>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordersize>15</bordersize>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture fallback="special://skin/extras/genreicons/music/Music.jpg" flipy="true" diffuse="thumbs/poster-flipmask.png" background="true">$INFO[ListItem.Label,special://skin/extras/genreicons/music/,.jpg]</texture>
@@ -1178,7 +1178,7 @@
 					<bottom>-688</bottom>
 					<width>567</width>
 					<height>835</height>
-					<fadetime>400</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<bordersize>15</bordersize>
 					<aspectratio aligny="top">keep</aspectratio>
 					<texture flipy="true" diffuse="thumbs/poster-flipmask.png" background="true">$VAR[PosterVar]</texture>

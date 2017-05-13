@@ -11,7 +11,7 @@
 				<height>561</height>
 				<align>center</align>
 				<aspectratio scalediffuse="true">keep</aspectratio>
-				<fadetime>0</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 				<bordertexture border="18">thumbs/poster_shadow.png</bordertexture>
 				<bordersize>18</bordersize>
 				<texture background="true" diffuse="thumbs/posterdiffuse.png">$INFO[ListItem.Icon]</texture>
@@ -488,7 +488,7 @@
 				<height>142</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">$VAR[VideoExtraLogo]</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 			<control type="group">
 				<control type="image">
@@ -534,7 +534,7 @@
 				<height>105</height>
 				<aspectratio>keep</aspectratio>
 				<texture background="true">videoextras/extras.png</texture>
-				<fadetime>400</fadetime>
+				<fadetime>TextureFadeTime</fadetime>
 			</control>
 		</control>
 

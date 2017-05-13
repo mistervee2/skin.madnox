@@ -62,7 +62,7 @@
 						<height>42</height>
 						<aligny>center</aligny>
 						<font>Font32_Reg</font>
-						<textcolor>white6</textcolor>
+						
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
@@ -81,7 +81,7 @@
 						<height>42</height>
 						<align>right</align>
 						<font>Font32_Reg</font>
-						<textcolor>white6</textcolor>
+						
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
@@ -109,7 +109,7 @@
 						<height>42</height>
 						<aligny>center</aligny>
 						<font>Font32_Reg</font>
-						<textcolor>white6</textcolor>
+						
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
@@ -128,7 +128,7 @@
 						<height>42</height>
 						<align>right</align>
 						<font>Font32_Reg</font>
-						<textcolor>white6</textcolor>
+						
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>

@@ -202,7 +202,7 @@
 					<height>245</height>
 					<aspectratio>keep</aspectratio>
 					<texture background="true" fallback="empty.png">$VAR[LogoVar]</texture>
-					<fadetime>200</fadetime>
+					<fadetime>TextureFadeTime</fadetime>
 					<include>Animation_OpenCloseZoom_New</include>
 					<animation effect="fade" delay="240" time="240" reversible="false">Hidden</animation>
 					<animation effect="fade" delay="160" end="100" time="240" condition="!String.IsEqual(Control.GetLabel(8822),empty.png)">Conditional</animation>

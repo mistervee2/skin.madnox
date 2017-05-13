@@ -178,7 +178,7 @@
 						<label>$INFO[ListItem.Property(year)]$INFO[ListItem.Property(genre), • ]</label>
 						<font>Font_Reg57</font>
 						<shadowcolor>black</shadowcolor>
-						<textcolor>white3</textcolor>
+						
 						<scroll>true</scroll>
 					</control>
 				</control>
@@ -325,7 +325,7 @@
 			<width>680</width>
 			<height>10</height>
 			<font>font10</font>
-			<textcolor>white6</textcolor>
+			
 			<scroll>true</scroll>
 		</control>
 	</controls>
