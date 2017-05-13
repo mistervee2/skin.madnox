@@ -1078,7 +1078,7 @@
 				<param name="slidefloorcondition">!Skin.HasSetting(View50HideTopBar) + Skin.HasSetting(View50HideFloor)</param>
 			</include>
 			<control type="group">
-				<visible>Container.Content(artists) | Container.Content(albums) | ontainer.Content(songs) | Container.Content(musicvideos)</visible>
+				<visible>Container.Content(artists) | Container.Content(albums) | Container.Content(songs) | Container.Content(musicvideos)</visible>
 				<control type="image">
 					<visible>!Container.Content(artists)</visible>
 					<top>173</top>
