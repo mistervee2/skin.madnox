@@ -68,10 +68,10 @@
 
 	<include name="onunload_SkinSettings">
 		<onunload condition="Window.IsActive(startup) + System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onunload>
-		<onunload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(RunScript(script.tv.show.next.aired,backend=True))</onunload>
 		<onunload condition="!Skin.HasSetting(SkinHelper.EnableMusicArt)">Skin.SetBool(SkinHelper.EnableMusicArt)</onunload>
 		<onunload condition="!Skin.HasSetting(SkinHelper.EnableExtraFanart)">Skin.SetBool(SkinHelper.EnableExtraFanart)</onunload>
 		<onunload condition="!Skin.HasSetting(SkinHelper.EnableExtendedArt)">Skin.SetBool(SkinHelper.EnableExtendedArt)</onunload>
+		<onunload condition="!Skin.HasSetting(SkinHelper.EnableAddonsLookups)">Skin.SetBool(SkinHelper.EnableAddonsLookups)</onunload>
 		<onunload condition="!Skin.HasSetting(SkinHelper.RandomFanartDelay)">Skin.SetString(SkinHelper.RandomFanartDelay,10)</onunload>
 	</include>
 </includes>

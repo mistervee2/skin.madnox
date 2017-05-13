@@ -3,6 +3,8 @@
 	<!-- START REWORK VARIABLES -->
 	<!-- Fanart -->
 	<variable name="MovieFanartVar">
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + String.Contains(ListItem.FolderPath,movie)">http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + String.Contains(ListItem.FolderPath,tvshows)">http://localhost:52307/gettvshowgenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),None)"></value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + !String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>
@@ -14,7 +16,13 @@
 		<value>special://skin/extras/backgrounds/default.jpg</value>
 	</variable>
 	<!-- <variable name="MovieFanartVar">
-		<value >http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
+
+		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + String.Contains(ListItemm.FolderPath,tvshow)">http://localhost:52307/gettvshowgenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
+
+
+
+
+
 		<value condition="String.IsEqual(Skin.String(MovieFanart),None)"></value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + !String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>

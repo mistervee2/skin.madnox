@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol>3</defaultcontrol>
 	<menucontrol>9000</menucontrol>
-	<include condition="Window.IsActive(interfacesettings)">OnLoad_SkinSettings</include>
+	<include condition="Window.IsActive(interfacesettings)">onunload_SkinSettings</include>
 		<controls>
 		<!-- Backdrop -->
 		<include>Background_Nowplaying</include>

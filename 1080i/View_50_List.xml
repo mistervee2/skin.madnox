@@ -1120,28 +1120,7 @@
 				</control>
 			</control>
 			<control type="group">
-				<visible>Container.Content(genres) + !String.Contains(ListItem.FolderPath,music)</visible>
-				<control type="image">
-					<right>15</right>
-					<bottom>132</bottom>
-					<width>537</width>
-					<height>805</height>
-					<fadetime>TextureFadeTime</fadetime>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="special://skin/extras/moviegenreicons/Default.png" diffuse="thumbs/poster-mask.png" background="true">$INFO[ListItem.Label,special://skin/extras/moviegenreicons/,.jpg]</texture>
-				</control>
-				<control type="image">
-					<right>15</right>
-					<bottom>-673</bottom>
-					<width>537</width>
-					<height>805</height>
-					<fadetime>TextureFadeTime</fadetime>
-					<aspectratio aligny="top">keep</aspectratio>
-					<texture fallback="special://skin/extras/moviegenreicons/Default.png" flipy="true" diffuse="thumbs/poster-flipmask.png" background="true">$INFO[ListItem.Label,special://skin/extras/moviegenreicons/,.jpg]</texture>
-				</control>
-			</control>
-			<control type="group">
-				<visible>Container.Content(genres) + String.Contains(ListItem.FolderPath,music)</visible>
+				<visible>Container.Content(genres)</visible>
 				<control type="image">
 					<bottom>117</bottom>
 					<width>567</width>
@@ -1150,7 +1129,7 @@
 					<bordersize>15</bordersize>
 					<aspectratio aligny="bottom">keep</aspectratio>
 					<bordertexture border="30">thumbs/poster-frame.png</bordertexture>
-					<texture fallback="special://skin/extras/genreicons/music/Music.jpg" diffuse="thumbs/poster-mask.png" background="true">$INFO[ListItem.Label,special://skin/extras/genreicons/music/,.jpg]</texture>
+					<texture fallback="DefaultGenre.png" diffuse="thumbs/poster-mask.png" background="true">$VAR[GenrePosterVar]</texture>
 				</control>
 				<control type="image">
 					<bottom>-688</bottom>
@@ -1159,7 +1138,7 @@
 					<fadetime>TextureFadeTime</fadetime>
 					<bordersize>15</bordersize>
 					<aspectratio aligny="top">keep</aspectratio>
-					<texture fallback="special://skin/extras/genreicons/music/Music.jpg" flipy="true" diffuse="thumbs/poster-flipmask.png" background="true">$INFO[ListItem.Label,special://skin/extras/genreicons/music/,.jpg]</texture>
+					<texture fallback="DefaultGenre.png" flipy="true" diffuse="thumbs/poster-flipmask.png" background="true">$VAR[GenrePosterVar]</texture>
 				</control>
 			</control>
 			<control type="group">
