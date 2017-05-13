@@ -10,16 +10,18 @@
 				<param name="labelright">350</param>
 				<param name="label">$LOCALIZE[21421]</param>
 				<param name="labelid">2</param>
+				<param name="bottomseparatorvisible">false</param>
 			</include>
-			<control type="grouplist">
+			<control type="grouplist" id="8000">
 				<left>20</left>
 				<top>88</top>
 				<width>814</width>
+				<onright>8001</onright>
 				<control type="button" id="20">
 					<label>$LOCALIZE[1024]</label>
 					<include>Dialog_Button_Narrow</include>
 				</control>
-				<control type="label">
+				<control type="label" id="8002">
 					<label>$LOCALIZE[21422]</label>
 					<include>Dialog_Label_Narrow</include>
 				</control>
@@ -38,18 +40,18 @@
 				<right>60</right>
 				<top>28</top>
 				<width>400</width>
-				<onleft>3</onleft>
-				<ondown>3</ondown>
+				<onleft>8000</onleft>
+				<ondown>8000</ondown>
 				<align>right</align>
 				<itemgap>10</itemgap>
 				<orientation>horizontal</orientation>
 				<include content="Dialog_Button_TopRight">
 					<param name="id">18</param>
-					<param name="label" value="$LOCALIZE[186]" />
+					<param name="label">$LOCALIZE[186]</param>
 				</include>
 				<include content="Dialog_Button_TopRight">
 					<param name="id">19</param>
-					<param name="label" value="$LOCALIZE[222]" />
+					<param name="label">$LOCALIZE[222]</param>
 				</include>
 			</control>
 		</control>

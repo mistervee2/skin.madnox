@@ -28,36 +28,9 @@
 				<onright>8001</onright>
 				<scrolltime>200</scrolltime>
 				<pagecontrol>60</pagecontrol>
-				<itemlayout height="60">
-					<control type="image">
-						<width>1074</width>
-						<height>60</height>
-						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
-					</control>
-					<control type="label">
-						<width>1074</width>
-						<height>60</height>
-						<textoffsetx>50</textoffsetx>
-						<font>Font30_Reg</font>
-						<textcolor>grey</textcolor>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="60">
-					<control type="image">
-						<width>1074</width>
-						<height>60</height>
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
-						<animation effect="fade" start="100" end="30" time="40" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-					</control>
-					<control type="label">
-						<width>1074</width>
-						<height>60</height>
-						<textoffsetx>50</textoffsetx>
-						<font>Font30_Reg</font>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</focusedlayout>
+				<include content="Dialog_List_Default">
+					<param name="id">3</param>
+				</include>
 			</control>
 			<control type="list" id="6">
 				<left>20</left>

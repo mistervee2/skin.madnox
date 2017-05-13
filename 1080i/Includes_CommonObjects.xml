@@ -115,6 +115,60 @@
 			</control>
 		</definition>
 	</include>
+	<include name="Dialog_List_Default">
+		<param name="id"></param>
+		<param name="width">1074</param>
+		<definition>
+			<itemlayout height="60">
+				<control type="image">
+					<width>$PARAM[width]</width>
+					<height>60</height>
+					<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
+				</control>
+				<control type="label">
+					<width>$PARAM[width]</width>
+					<height>60</height>
+					<textoffsetx>50</textoffsetx>
+					<font>Font30_Reg</font>
+					<textcolor>grey</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+			</itemlayout>
+			<focusedlayout height="60">
+				<control type="group">
+					<visible>Control.HasFocus($PARAM[id])</visible>
+					<control type="image">
+						<width>$PARAM[width]</width>
+						<height>60</height>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
+					</control>
+					<control type="label">
+						<width>$PARAM[width]</width>
+						<height>60</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font30_Reg</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</control>
+				<control type="group">
+					<visible>!Control.HasFocus($PARAM[id])</visible>
+					<control type="image">
+						<width>$PARAM[width]</width>
+						<height>60</height>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<width>$PARAM[width]</width>
+						<height>60</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font30_Reg</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</control>
+			</focusedlayout>
+		</definition>
+	</include>
 	<include name="Dialog_Button_Default">
 		<width>1074</width>
 		<height>60</height>

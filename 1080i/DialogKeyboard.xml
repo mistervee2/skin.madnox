@@ -720,7 +720,7 @@
 			</control>
 			<control type="group">
 				<top>553</top>
-				<visible>Control.IsVisible(313) | Control.IsVisible(8010)</visible>
+				<visible>Control.IsVisible(313) | [Control.IsVisible(8010) + Integer.IsGreater(Container(8010).NumItems,0)]</visible>
 				<include>Animation_CommonFade</include>
 				<control type="image">
 					<width>1124</width>
