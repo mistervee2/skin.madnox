@@ -116,7 +116,7 @@
 					<item id="1">
 						<label>31335</label>
 						<label2>$INFO[Container(8014).ListItem.Label]</label2>
-						<thumb>dialog/circle/p$INFO[Container(8014).ListItem.PercentPlayed].png</thumb>
+						<thumb>dialogs/circle/p$INFO[Container(8014).ListItem.PercentPlayed].png</thumb>
 						<onclick>Dialog.Close(1159)</onclick>
 						<onclick>ActivateWindow(videos,special://skin/extras/Playlists/MoviesInProgress.xsp,return)</onclick>
 						<visible>Integer.IsGreater(Container(8014).NumItems,0)</visible>
@@ -202,7 +202,7 @@
                 <width>45</width>
                 <height>45</height>
                 <colordiffuse>white</colordiffuse>
-                <texture>dialog/circle/p$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed)].png</texture>
+                <texture>dialogs/circle/p$INFO[Window(Home).Property(RecommendedMovie.1.PercentPlayed)].png</texture>
             </control> -->
 		</control>
 		<control type="wraplist" id="8014">

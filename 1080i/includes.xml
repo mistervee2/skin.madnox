@@ -22,9 +22,7 @@
 	<include file="IncludesVideoLyrics.xml" />
 	<include file="Includes_NowPayingBottom.xml" />
 
-	<!-- <include file="Includes_Viewtypes.xml"/> -->
-
-	<include file="Includes_Views.xml"/> -->
+	<include file="Includes_Views.xml"/>
 
 	<include file="View_50_List.xml"/>
 	<!-- <include file="View_52_TriPanel.xml"/>

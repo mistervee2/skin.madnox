@@ -16,8 +16,11 @@
 	<!--  Dialogs -->
 	<include name="Dialog_Furniture_BackgroundFade">
 		<control type="image">
-			<include>FullscreenDimensions</include>
-			<texture colordiffuse="FF000000">color/white50.png</texture>
+			<left>-1920</left>
+			<top>-1080</top>
+			<width>3840</width>
+			<height>2160</height>
+			<texture colordiffuse="FF000000">colors/white50.png</texture>
 			<visible>!Skin.HasSetting(DisableDialogBackground)</visible>
 			<include>Animation_Dialog_BackgroundFade</include>
 		</control>
@@ -25,7 +28,7 @@
 	<include name="Dialog_Furniture_BackgroundFade_Forced">
 		<control type="image">
 			<include>FullscreenDimensions</include>
-			<texture colordiffuse="FF000000">color/white50.png</texture>
+			<texture colordiffuse="FF000000">colors/white50.png</texture>
 			<include>Animation_Dialog_BackgroundFade</include>
 		</control>
 	</include>
@@ -46,11 +49,12 @@
 		<param name="labelright">470</param>
 		<param name="labelalign">left</param>
 		<param name="labelid"></param>
+		<param name="font">Font33_Bold</param>
 		<param name="bottomseparatorvisible">true</param>
 		<param name="bottomleftlabel"></param>
 		<param name="bottomrightlabel"></param>
 		<definition>
-			<include>Animation_DialogPopup</include>
+			<include>Animation_Dialog_Popup</include>
 			<centertop>50%</centertop>
 			<centerleft>50%</centerleft>
 			<width>$PARAM[width]</width>
@@ -58,12 +62,12 @@
 			<control type="image">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$VAR[GlowColorVar]" border="40">dialog/dialog-glow.png</texture>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="40">dialogs/dialog-glow.png</texture>
 			</control>
 			<control type="image">
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialog/dialog-back.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialogs/dialog-back.png</texture>
 			</control>
 			<control type="label" id="$PARAM[labelid]">
 				<top>28</top>
@@ -72,7 +76,7 @@
 				<height>60</height>
 				<align>$PARAM[labelalign]</align>
 				<label>$PARAM[label]</label>
-				<font>Font33_Bold</font>
+				<font>$PARAM[font]</font>
 				<textcolor>$VAR[HighlightColorVar]</textcolor>
 			</control>
 			<control type="image">
@@ -80,14 +84,14 @@
 				<left>20</left>
 				<right>20</right>
 				<height>68</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
 			</control>
 			<control type="image">
 				<bottom>80</bottom>
 				<left>20</left>
 				<right>20</right>
 				<height>60</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
 				<visible>$PARAM[bottomseparatorvisible]</visible>
 			</control>
 			<control type="label">
@@ -111,51 +115,6 @@
 			</control>
 		</definition>
 	</include>
-	<include name="Dialog_DefaultList">
-		<param name="id"></param>
-		<param name="width">1074</param>
-		<param name="height">420</param>
-		<definition>
-			<left>20</left>
-			<top>88</top>
-			<width>$PARAM[width]</width>
-			<height>$PARAM[height]</height>
-			<onleft>60</onleft>
-			<onright>9001</onright>
-			<scrolltime>200</scrolltime>
-			<pagecontrol>60</pagecontrol>
-			<itemlayout height="60">
-				<control type="image">
-					<width>$PARAM[width]</width>
-					<height>60</height>
-					<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
-				</control>
-				<control type="label">
-					<width>$PARAM[width]</width>
-					<height>60</height>
-					<textoffsetx>50</textoffsetx>
-					<font>Font30_Reg</font>
-					<textcolor>grey</textcolor>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</itemlayout>
-			<focusedlayout height="60">
-				<control type="image">
-					<width>$PARAM[width]</width>
-					<height>60</height>
-					<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
-					<animation effect="fade" start="100" end="30" time="40" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
-				</control>
-				<control type="label">
-					<width>$PARAM[width]</width>
-					<height>60</height>
-					<textoffsetx>50</textoffsetx>
-					<font>Font30_Reg</font>
-					<label>$INFO[ListItem.Label]</label>
-				</control>
-			</focusedlayout>
-		</definition>
-	</include>
 	<include name="Dialog_Button_Default">
 		<width>1074</width>
 		<height>60</height>
@@ -166,6 +125,25 @@
 		<height>60</height>
 		<textwidth>902</textwidth>
 		<radioposx>963</radioposx>
+		<textoffsetx>50</textoffsetx>
+	</include>
+	<include name="Dialog_Label_Narrow">
+		<width>814</width>
+		<height>60</height>
+		<font>Font28_Bold</font>
+		<textcolor>$VAR[HighlightColorVar]</textcolor>
+		<textoffsetx>50</textoffsetx>
+	</include>
+	<include name="Dialog_Button_Narrow">
+		<width>814</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
+	</include>
+	<include name="Dialog_RadioButton_Narrow">
+		<width>814</width>
+		<height>60</height>
+		<textwidth>642</textwidth>
+		<radioposx>703</radioposx>
 		<textoffsetx>50</textoffsetx>
 	</include>
 	<include name="Dialog_Button_Left">
@@ -186,10 +164,17 @@
 		<textwidth>890</textwidth>
 		<radioposx>949</radioposx>
 	</include>
+	<include name="Dialog_Button_ContextMenu">
+		<width>460</width>
+		<height>60</height>
+		<align>center</align>
+		<textoffsetx>20</textoffsetx>
+	</include>
 	<include name="Dialog_Button_TopRight">
 		<param name="id"></param>
 		<param name="label"></param>
 		<param name="onclick"></param>
+		<param name="onclick2"></param>
 		<param name="visible">true</param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
@@ -201,6 +186,7 @@
 				<label>$PARAM[label]</label>
 				<font>Font33_Bold</font>
 				<onclick>$PARAM[onclick]</onclick>
+				<onclick>$PARAM[onclick2]</onclick>
 				<visible>$PARAM[visible]</visible>
 			</control>
 		</definition>
@@ -217,37 +203,27 @@
 				<textoffsetx>20</textoffsetx>
 				<font>Font28_Reg</font>
 				<align>center</align>
-				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">button/button-select-focus.png</texturefocus>
-				<texturenofocus border="20">button/button-select-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">buttons/button-select-focus.png</texturefocus>
+				<texturenofocus border="20">buttons/button-select-nofocus.png</texturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
 			</control>
 		</definition>
 	</include>
-	<include name="Dialog_Button_ColorSetting">
-		<width>814</width>
-		<height>60</height>
-		<textoffsetx>50</textoffsetx>
-	</include>
-	<include name="Dialog_Button_Left">
-		<width>340</width>
-		<height>60</height>
-		<textoffsetx>50</textoffsetx>
-	</include>
 	<include name="Dialog_KeyboardButton">
 		<width>80</width>
 		<height>80</height>
-		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturefocus>
-		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturenofocus>
+		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">buttons/keyboard-nofocus.png</texturefocus>
+		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">buttons/keyboard-nofocus.png</texturenofocus>
 		<align>center</align>
 		<textoffsetx>10</textoffsetx>
 	</include>
 	<include name="Dialog_KeyboardToggleButton">
 		<width>180</width>
 		<height>80</height>
-		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturefocus>
-		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</texturenofocus>
-		<alttexturefocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</alttexturefocus>
-		<alttexturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">button/keyboard-nofocus.png</alttexturenofocus>
+		<texturefocus border="10" colordiffuse="$VAR[PanelColorVar]">buttons/keyboard-nofocus.png</texturefocus>
+		<texturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">buttons/keyboard-nofocus.png</texturenofocus>
+		<alttexturefocus border="10" colordiffuse="$VAR[PanelColorVar]">buttons/keyboard-nofocus.png</alttexturefocus>
+		<alttexturenofocus border="10" colordiffuse="$VAR[PanelColorVar]">buttons/keyboard-nofocus.png</alttexturenofocus>
 		<align>center</align>
 		<textoffsetx>10</textoffsetx>
 	</include>
@@ -263,7 +239,7 @@
 				<left>$PARAM[left]</left>
 				<width>$PARAM[width]</width>
 				<height>$PARAM[height]</height>
-				<texture colordiffuse="$VAR[HighlightColorVar]" border="35">button/keyboard-highlight.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]" border="35">buttons/keyboard-highlight.png</texture>
 				<align>center</align>
 				<aligny>center</aligny>
 				<visible>Control.HasFocus($PARAM[id])</visible>
@@ -272,7 +248,7 @@
 	</include>
 	<!--  Topbar -->
 	<include name="TopBar">
-		<param name="breadcrumbs_icon">icon/mediamenu/cancel.png</param>
+		<param name="breadcrumbs_icon">icons/mediamenu/cancel.png</param>
 		<param name="breadcrumbs_label"></param>
 		<definition>
 			<control type="group">
@@ -289,9 +265,9 @@
 					<width>1920</width>
 					<height>40</height>
 					<info>Player.ProgressCache</info>
-					<texturebg>color/none.png</texturebg>
+					<texturebg>colors/none.png</texturebg>
 					<lefttexture />
-					<midtexture colordiffuse="$VAR[HighlightColorVar]">color/white20.png</midtexture>
+					<midtexture colordiffuse="$VAR[HighlightColorVar]">colors/white20.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture />
 					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) + !String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
@@ -301,9 +277,9 @@
 					<width>1920</width>
 					<height>40</height>
 					<info>Player.Progress</info>
-					<texturebg>color/none.png</texturebg>
+					<texturebg>colors/none.png</texturebg>
 					<lefttexture />
-					<midtexture colordiffuse="$VAR[HighlightColorVar]">color/white20.png</midtexture>
+					<midtexture colordiffuse="$VAR[HighlightColorVar]">colors/white20.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture />
 					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) +  !String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
@@ -313,9 +289,9 @@
 					<width>1920</width>
 					<height>87</height>
 					<info>Player.ProgressCache</info>
-					<texturebg>panel/topbar-shadow-empty.png</texturebg>
+					<texturebg>panels/topbar-shadow-empty.png</texturebg>
 					<lefttexture />
-					<midtexture colordiffuse="$VAR[HighlightColorVar]">panel/topbar-shadow20.png</midtexture>
+					<midtexture colordiffuse="$VAR[HighlightColorVar]">panels/topbar-shadow20.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture />
 					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) + String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
@@ -325,9 +301,9 @@
 					<width>1920</width>
 					<height>87</height>
 					<info>Player.Progress</info>
-					<texturebg>panel/topbar-shadow-empty.png</texturebg>
+					<texturebg>panels/topbar-shadow-empty.png</texturebg>
 					<lefttexture />
-					<midtexture colordiffuse="$VAR[HighlightColorVar]">panel/topbar-shadow20.png</midtexture>
+					<midtexture colordiffuse="$VAR[HighlightColorVar]">panels/topbar-shadow20.png</midtexture>
 					<righttexture></righttexture>
 					<overlaytexture />
 					<visible>Player.HasMedia + !Skin.HasSetting(DisableTopbarNowPlaying) +  String.IsEqual(Skin.String(TopBarStyle),shadow)</visible>
@@ -352,13 +328,13 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/$PARAM[breadcrumbs_icon]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/$PARAM[breadcrumbs_icon]</texture>
 						<visible>!Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>icon/colored/$PARAM[breadcrumbs_icon]</texture>
+						<texture>icons/colored/$PARAM[breadcrumbs_icon]</texture>
 						<visible>Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label">
@@ -408,25 +384,25 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/play.png</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/play.png</texture>
 						<visible>Player.Playing + !Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>icon/colored/play.png</texture>
+						<texture>icons/colored/play.png</texture>
 						<visible>Player.Playing + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/pause.png</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/pause.png</texture>
 						<visible>Player.Paused + !Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>icon/colored/pause.png</texture>
+						<texture>icons/colored/pause.png</texture>
 						<visible>Player.Paused + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label" id="7700">
@@ -485,12 +461,12 @@
 						<fadetime>1</fadetime>
 						<randomize>false</randomize>
 						<loop>true</loop>
-						<visible>!Skin.HasSetting(DisableTopbarWeather)</visible>
+						<visible>!Skin.HasSetting(DisableTopbarWeather) + !String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 					</control>
 					<control type="label">
 						<label>$INFO[Window(weather).Property(Current.Temperature), ]$INFO[System.TemperatureUnits]</label>
 						<include>BreadcrumbsLabel</include>
-						<visible>!Skin.HasSetting(DisableTopbarWeather)</visible>
+						<visible>!Skin.HasSetting(DisableTopbarWeather) + !String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
 					</control>
 					<control type="label">
 						<textcolor>grey2</textcolor>
@@ -511,7 +487,7 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>icon/mute.png</texture>
+						<texture>icons/mute.png</texture>
 						<visible>Player.Muted</visible>
 					</control>
 				</control>
@@ -527,13 +503,13 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/list.png</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/list.png</texture>
 						<visible>Integer.IsGreater(Container.NumItems,0) + !Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>icon/colored/list.png</texture>
+						<texture>icons/colored/list.png</texture>
 						<visible>Integer.IsGreater(Container.NumItems,0) + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label">
@@ -543,13 +519,13 @@
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/pages.png</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/pages.png</texture>
 						<visible>Integer.IsGreater(Container.NumPages,1) + !Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="image">
 						<width>40</width>
 						<height>40</height>
-						<texture>icon/colored/pages.png</texture>
+						<texture>icons/colored/pages.png</texture>
 						<visible>Integer.IsGreater(Container.NumPages,1) + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label">
@@ -570,12 +546,12 @@
 				<control type="image">
 					<width>134</width>
 					<height>134</height>
-					<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/volume-back.png</texture>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialogs/volume-back.png</texture>
 				</control>
 				<control type="image">
 					<width>134</width>
 					<height>134</height>
-					<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialog/scan-glow.png</texture>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialogs/scan-glow.png</texture>
 				</control>
 				<control type="label">
 					<left>12</left>
@@ -640,19 +616,19 @@
 			<top>870</top>
 			<width>1920</width>
 			<height>210</height>
-			<texture colordiffuse="$VAR[FloorColorVar]" border="1">panel/floor.png</texture>
+			<texture colordiffuse="$VAR[FloorColorVar]" border="1">panels/floor.png</texture>
 		</control>
 		<control type="image">
 			<top>882</top>
 			<width>1920</width>
 			<height>198</height>
-			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor-spot-full.png</texture>
+			<texture colordiffuse="$VAR[FloorColorVar]">panels/floor-spot-full.png</texture>
 		</control>
 		<control type="image">
 			<top>862</top>
 			<width>1920</width>
 			<height>20</height>
-			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panels/floor-glow.png</texture>
 		</control>
 	</include>
 	<include name="Floor_Background_Left">
@@ -660,19 +636,19 @@
 			<top>870</top>
 			<width>1920</width>
 			<height>210</height>
-			<texture flipx="true" colordiffuse="$VAR[FloorColorVar]">panel/floor-right.png</texture>
+			<texture flipx="true" colordiffuse="$VAR[FloorColorVar]">panels/floor-right.png</texture>
 		</control>
 		<control type="image">
 			<top>882</top>
 			<width>880</width>
 			<height>198</height>
-			<texture flipx="true" colordiffuse="$VAR[FloorColorVar]">panel/floor-spot-right.png</texture>
+			<texture flipx="true" colordiffuse="$VAR[FloorColorVar]">panels/floor-spot-right.png</texture>
 		</control>
 		<control type="image">
 			<top>862</top>
 			<width>1920</width>
 			<height>20</height>
-			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panels/floor-glow.png</texture>
 		</control>
 	</include>
 	<include name="Floor_Background_Right">
@@ -680,20 +656,20 @@
 			<top>870</top>
 			<width>1920</width>
 			<height>210</height>
-			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor-right.png</texture>
+			<texture colordiffuse="$VAR[FloorColorVar]">panels/floor-right.png</texture>
 		</control>
 		<control type="image">
 			<left>1040</left>
 			<top>882</top>
 			<width>880</width>
 			<height>198</height>
-			<texture colordiffuse="$VAR[HighlightColorVar]">panel/floor-spot-right.png</texture>
+			<texture colordiffuse="$VAR[HighlightColorVar]">panels/floor-spot-right.png</texture>
 		</control>
 		<control type="image">
 			<top>862</top>
 			<width>1920</width>
 			<height>20</height>
-			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panels/floor-glow.png</texture>
 		</control>
 	</include>
 	<include name="Floor_Background_Middle">
@@ -701,20 +677,20 @@
 			<top>870</top>
 			<width>1920</width>
 			<height>210</height>
-			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor.png</texture>
+			<texture colordiffuse="$VAR[FloorColorVar]">panels/floor.png</texture>
 		</control>
 		<control type="image">
 			<left>215</left>
 			<top>882</top>
 			<width>1490</width>
 			<height>198s</height>
-			<texture colordiffuse="$VAR[FloorColorVar]">panel/floor-spot-middle.png</texture>
+			<texture colordiffuse="$VAR[FloorColorVar]">panels/floor-spot-middle.png</texture>
 		</control>
 		<control type="image">
 			<top>862</top>
 			<width>1920</width>
 			<height>20</height>
-			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panel/floor-glow.png</texture>
+			<texture colordiffuse="$VAR[GlowColorVar]" border="1">panels/floor-glow.png</texture>
 		</control>
 	</include>
 	<!-- Panels -->
@@ -734,21 +710,21 @@
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[GlowColorVar]" border="50">panel/panel-glow.png</texture>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="50">panels/panel-glow.png</texture>
 				</control>
 				<control type="image">
 					<left>$PARAM[left]</left>
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[PanelColorVar]" border="60">panel/panel-back.png</texture>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="60">panels/panel-back.png</texture>
 				</control>
 				<control type="image">
 					<left>$PARAM[left]</left>
 					<top>$PARAM[reflecttop]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture flipy="true" diffuse="panel/reflect.png" colordiffuse="$VAR[PanelColorVar]" border="60">panel/panel-back.png</texture>
+					<texture flipy="true" diffuse="panels/reflect.png" colordiffuse="$VAR[PanelColorVar]" border="60">panels/panel-back.png</texture>
 					<visible>$PARAM[reflect]</visible>
 				</control>
 			</control>
@@ -766,7 +742,7 @@
 			<control type="image">
 				<width>1920</width>
 				<height>1080</height>
-				<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
+				<texture colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texture>
 				<visible>![$PARAM[visible]]</visible>
 			</control>
 			<control type="group">
@@ -776,21 +752,21 @@
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[GlowColorVar]" border="50">panel/panel-glow.png</texture>
+					<texture colordiffuse="$VAR[GlowColorVar]" border="50">panels/panel-glow.png</texture>
 				</control>
 				<control type="image">
 					<left>$PARAM[left]</left>
 					<top>$PARAM[top]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture colordiffuse="$VAR[PanelColorVar]" border="340,40,40,40">panel/panel-settings-back.png</texture>
+					<texture colordiffuse="$VAR[PanelColorVar]" border="340,40,40,40">panels/panel-settings-back.png</texture>
 				</control>
 				<control type="image">
 					<left>$PARAM[left]</left>
 					<top>$PARAM[reflecttop]</top>
 					<width>$PARAM[width]</width>
 					<height>$PARAM[height]</height>
-					<texture flipy="true" diffuse="panel/reflect.png" colordiffuse="$VAR[PanelColorVar]" border="340,40,40,40">panel/panel-settings-back.png</texture>
+					<texture flipy="true" diffuse="panels/reflect.png" colordiffuse="$VAR[PanelColorVar]" border="340,40,40,40">panels/panel-settings-back.png</texture>
 					<visible>$PARAM[reflect]</visible>
 				</control>
 				<control type="image">
@@ -799,7 +775,7 @@
 					<width>323</width>
 					<height>172</height>
 					<aspectratio>keep</aspectratio>
-					<texture>icon/logo.png</texture>
+					<texture>icons/logo.png</texture>
 				</control>
 			</control>
 		</definition>
@@ -822,7 +798,7 @@
 				<pagecontrol>$PARAM[scrollbar_id]</pagecontrol>
 				<itemlayout height="67">
 					<control type="image">
-						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<left>45</left>
@@ -840,7 +816,7 @@
 				</itemlayout>
 				<focusedlayout height="67">
 					<control type="image">
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
 					</control>
 					<control type="label">
@@ -871,8 +847,8 @@
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Daily.$PARAM[item].LongDay),, ][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Daily.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Daily.$PARAM[item].WindDirection)]</label>
 				<font>Font31_Cond_08</font>
-				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="10">button/list-select-focus.png</texturefocus>
-				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="30">button/list-select-nofocus.png</texturenofocus>
+				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="10">buttons/list-select-focus.png</texturefocus>
+				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="30">buttons/list-select-nofocus.png</texturenofocus>
 				<visible>!String.IsEmpty(Window(weather).Property(Daily.$PARAM[item].Outlook))</visible>
 			</control>
 			<control type="multiimage" id="10$PARAM[item]01">
@@ -912,7 +888,7 @@
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(36Hour.$PARAM[item].Heading)][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(36Hour.$PARAM[item].WindSpeed)]</label>
 				<font>Font31_Cond_08</font>
-				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanels/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
 				<visible>!String.IsEmpty(Window(weather).Property(36Hour.$PARAM[item].Heading))</visible>
 			</control>
@@ -953,7 +929,7 @@
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Weekend.$PARAM[item].LongDay),, ][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Weekend.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Weekend.$PARAM[item].WindDirection)]</label>
 				<font>Font31_Cond_08</font>
-				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanels/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
 				<visible>!String.IsEmpty(Window(weather).Property(Weekend.$PARAM[item].LongDay))</visible>
 			</control>
@@ -993,7 +969,7 @@
 				<focusedcolor>grey</focusedcolor>
 				<textoffsetx>156</textoffsetx>
 				<label>[COLOR white][UPPERCASE]$INFO[Window(weather).Property(Hourly.$PARAM[item].Time)][/UPPERCASE][/COLOR][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].Outlook)][CR]$INFO[Window(weather).Property(Hourly.$PARAM[item].WindSpeed),$LOCALIZE[404] , ]$INFO[Window(weather).Property(Hourly.$PARAM[item].WindDirection)]</label>
-				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
+				<texturefocus colordiffuse="$VAR[WeatherHighlightColorVar]" border="8">views/tripanels/listselect_fo.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[WeatherPanelColorVar]" border="8">osd/osd_settings_buttonnf.png</texturenofocus>
 				<font>Font31_Cond_08</font>
 				<visible>!String.IsEmpty(Window(weather).Property(Hourly.$PARAM[item].Outlook))</visible>

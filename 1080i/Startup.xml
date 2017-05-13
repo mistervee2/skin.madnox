@@ -4,7 +4,7 @@
 
 
 	<!-- Run any essential scripts or set a setting on startup (should also be added to settingscategory.xml) -->
-	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<onload condition="System.HasAddon(script.tv.show.next.aired)">RunScript(script.tv.show.next.aired,silent=True)</onload>
 	<!-- END Essential scripts or settings -->
 
 

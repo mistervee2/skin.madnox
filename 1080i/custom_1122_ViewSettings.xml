@@ -22,6 +22,7 @@
 				<include condition="Window.IsActive(weather)">MediaMenu_Viewsettings_Weather</include>
 				<include condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">MediaMenu_Viewsettings_Settings</include>
 				<include condition="String.IsEqual(Container.Viewmode,$LOCALIZE[535])">MediaMenu_Viewsettings_View50</include>
+				<include condition="String.IsEqual(Container.Viewmode,$LOCALIZE[535])">MediaMenu_Viewsettings_Movies</include>
 			</control>
 		</control>
 	</controls>

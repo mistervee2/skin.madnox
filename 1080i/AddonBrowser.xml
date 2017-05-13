@@ -43,19 +43,19 @@
 				<!-- Check for repository updates -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9" />
-					<param name="icon" value="icon/mediamenu/refresh.png" />
+					<param name="icon" value="icons/mediamenu/refresh.png" />
 					<param name="label" value="$LOCALIZE[24034]" />
 				</include>
 				<!-- Addon Settings -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="5" />
-					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="icon" value="icons/mediamenu/settings.png" />
 					<param name="label" value="$LOCALIZE[10004]" />
 				</include>
 				<!-- Quicknav -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9011" />
-					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="icon" value="icons/mediamenu/arrowleft.png" />
 					<param name="label" value="$LOCALIZE[31633]" />
 					<param name="onclick" value="ActivateWindow(1113)" />
 					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />

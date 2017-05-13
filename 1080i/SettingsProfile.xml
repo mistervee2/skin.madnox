@@ -53,7 +53,7 @@
 					<control type="image">
 						<width>323</width>
 						<height>68</height>
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(8000)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -111,7 +111,7 @@
 						<control type="image">
 							<width>1393</width>
 							<height>68</height>
-							<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+							<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
 						</control>
 						<control type="label">
 							<left>45</left>
@@ -133,7 +133,7 @@
 						<control type="image">
 							<width>1393</width>
 							<height>68</height>
-							<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+							<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 							<animation effect="fade" start="100" end="0" time="40" condition="!Control.HasFocus(2)">Conditional</animation>
 						</control>
 						<control type="label">

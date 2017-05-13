@@ -192,7 +192,7 @@
 					<textoffsety>18</textoffsety>
 					<texturenofocus>-</texturenofocus>
 					<label>518</label>
-					<font>Font_Bold34</font>
+					
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>
@@ -204,7 +204,7 @@
 					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24020</label>
-					<font>Font_Bold34</font>
+				
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>
@@ -216,7 +216,7 @@
 					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24069</label>
-					<font>Font_Bold34</font>
+				
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>
@@ -228,7 +228,7 @@
 					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24022</label>
-					<font>Font_Bold34</font>
+					
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>
@@ -240,7 +240,7 @@
 					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24021</label>
-					<font>Font_Bold34</font>
+				
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>
@@ -252,7 +252,7 @@
 					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus colordiffuse="$VAR[FocusTextureColorVar]" border="3">osd/osd_settings_buttonnf.png</texturenofocus>
 					<label>21340</label>
-					<font>Font_Bold34</font>
+				
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>
@@ -264,7 +264,7 @@
 					<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 					<texturenofocus>-</texturenofocus>
 					<label>24036</label>
-					<font>Font_Bold34</font>
+				
 					<textcolor>grey</textcolor>
 					<focusedcolor>white2</focusedcolor>
 				</control>

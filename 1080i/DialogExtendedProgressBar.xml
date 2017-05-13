@@ -13,10 +13,10 @@
 			<width>730</width>
 			<visible>!Window.IsActive(notification)</visible>
 			<control type="image">
-				<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialog/scan-glow.png</texture>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialogs/scan-glow.png</texture>
 			</control>
 			<control type="image">
-				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/scan-back.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialogs/scan-back.png</texture>
 			</control>
 			<control type="image">
 				<top>27</top>
@@ -24,7 +24,7 @@
 				<width>80</width>
 				<height>80</height>
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" condition="true">Conditional</animation>
-				<texture colordiffuse="$VAR[HighlightColorVar]">dialog/spinner.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]">dialogs/spinner.png</texture>
 			</control>
 			<control type="grouplist">
 				<top>12</top>

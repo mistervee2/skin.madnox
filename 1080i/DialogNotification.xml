@@ -9,10 +9,10 @@
 			<height>134</height>
 			<width>730</width>
 			<control type="image">
-				<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialog/scan-glow.png</texture>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="20">dialogs/scan-glow.png</texture>
 			</control>
 			<control type="image">
-				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialog/scan-back.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialogs/scan-back.png</texture>
 			</control>
 			<control type="image" id="400">
 				<top>22</top>
@@ -26,7 +26,7 @@
 				<left>26</left>
 				<width>90</width>
 				<height>90</height>
-				<texture>icon/exclamation.png</texture>
+				<texture>icons/exclamation.png</texture>
 				<animation effect="fade" start="50" time="800" condition="true" pulse="true">Conditional</animation>
 				<visible>String.IsEmpty(Control.GetLabel(400))</visible>
 			</control>

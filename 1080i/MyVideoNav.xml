@@ -3,7 +3,14 @@
 	<defaultcontrol always="true">50</defaultcontrol>
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
+	<onload>Skin.SetBool(SkinHelper.EnableExtraFanart)</onload>
+	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<controls>
+		<!-- Backdrop -->
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[ViewTypeFanartVar]</param>
+		</include>
 		<control type="group">
 			<include>Animation_VisibleFade</include>
 			<include>View_50_List</include>
@@ -1087,22 +1094,22 @@
 				<!-- Watched Toggle -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="10" />
-					<param name="icon" value="icon/mediamenu/eye.png" />
+					<param name="icon" value="icons/mediamenu/eye.png" />
 					<param name="label" value="$INFO[Control.GetLabel(10)]$INFO[Container.NumItems,: ]" />
 					<param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons) | Container.Content(episodes)" />
 				</include>
 				<!-- PartyMode -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="16" />
-					<param name="icon" value="icon/mediamenu/play.png" />
+					<param name="icon" value="icons/mediamenu/play.png" />
 					<param name="label" value="$LOCALIZE[589]" />
 					<param name="visible" value="Container.Content(MusicVideos)" />
 				</include>
 				<!-- Unlock Shares -->
 				<include content="MediaMenu_Icon_RadioButton">
 					<param name="id" value="11" />
-					<param name="iconon" value="icon/mediamenu/unlock.png" />
-					<param name="iconoff" value="icon/mediamenu/lock.png" />
+					<param name="iconon" value="icons/mediamenu/unlock.png" />
+					<param name="iconoff" value="icons/mediamenu/lock.png" />
 					<param name="label" value="$LOCALIZE[20336]" />
 					<param name="selected">System.IsMaster</param>
 					<param name="onclick" value="mastermode" />
@@ -1111,7 +1118,7 @@
 				<!-- Update Library -->
 				<include content="MediaMenu_Icon_ToggleButton">
 					<param name="id" value="20" />
-					<param name="icon" value="icon/mediamenu/refresh.png" />
+					<param name="icon" value="icons/mediamenu/refresh.png" />
 					<param name="label" value="$LOCALIZE[653]" />
 					<param name="altlabel" value="$LOCALIZE[13353]" />
 					<param name="onclick" value="UpdateLibrary(video)" />
@@ -1120,7 +1127,7 @@
 				<!-- Go to playlist -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="612" />
-					<param name="icon" value="icon/mediamenu/playlist.png" />
+					<param name="icon" value="icons/mediamenu/playlist.png" />
 					<param name="label" value="$LOCALIZE[559]" />
 					<param name="onclick" value="ActivateWindow(videoplaylist)" />
 					<param name="visible">Integer.IsGreater(Playlist.Length(video),0)</param>
@@ -1128,7 +1135,7 @@
 				<!-- Get more -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="621" />
-					<param name="icon" value="icon/mediamenu/add.png" />
+					<param name="icon" value="icons/mediamenu/add.png" />
 					<param name="label" value="$LOCALIZE[21452]" />
 					<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/video/,return)" />
 					<param name="visible">Container.Content(addons)</param>
@@ -1136,7 +1143,7 @@
 				<!-- Open Settings -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="624" />
-					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="icon" value="icons/mediamenu/settings.png" />
 					<param name="label" value="$LOCALIZE[10140]" />
 					<param name="onclick" value="Addon.OpenSettings($INFO[Container.PluginName])" />
 					<param name="visible">!String.IsEmpty(Container.PluginName)</param>
@@ -1144,7 +1151,7 @@
 				<!-- Quicknav -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9011" />
-					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="icon" value="icons/mediamenu/arrowleft.png" />
 					<param name="label" value="$LOCALIZE[31633]" />
 					<param name="onclick" value="ActivateWindow(1113)" />
 					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />

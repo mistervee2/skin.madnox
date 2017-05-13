@@ -20,34 +20,39 @@
 		<definition>
 			<control type="group">
 				<visible>$EXP[Fanart_Visible_MediaPlaying]</visible>
-				<animation effect="fade" time="240" condition="$PARAM[opencondition]">WindowOpen</animation>
-				<animation effect="fade" time="240" condition="$PARAM[closecondition]">WindowClose</animation>
+				<animation effect="fade" time="240" tween="cubic" condition="$PARAM[opencondition]">WindowOpen</animation>
+				<animation effect="fade" time="240" tween="cubic" easing="in" condition="$PARAM[closecondition]">WindowClose</animation>
 				<control type="multiimage">
 					<include>FullscreenDimensions</include>
 					<aspectratio>scale</aspectratio>
 					<imagepath background="true">$PARAM[imagepath]</imagepath>
 					<randomize>true</randomize>
 					<fadetime>600</fadetime>
-					<animation type="Conditional" condition="Skin.HasSetting(AnimatedBackground)">
-						<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
-						<effect type="zoom" start="110" end="130" center="auto" time="12000" pulse="true" />
+					<animation type="Conditional" pulse="true" condition="Skin.HasSetting(MovieAnimatedBackground)">
+						<effect type="zoom" start="110" end="130" center="auto" time="12000"/>
+						<effect type="slide" start="-15,-15" end="15,15" time="6000"/>
 					</animation>
 				</control>
 				<control type="image">
 					<include>FullscreenDimensions</include>
-					<texture colordiffuse="$VAR[BackgroundColorVar]">panel/sideshade.png</texture>
+					<texture colordiffuse="FF000000">colors/white50.png</texture>
+					<visible>Skin.HasSetting(MovieDarkenBackground)</visible>
+				</control>
+				<control type="image">
+					<include>FullscreenDimensions</include>
+					<texture colordiffuse="$VAR[BackgroundColorVar]">panels/sideshade.png</texture>
 					<visible>$PARAM[sideshade]</visible>
 				</control>
 				<control type="image">
 					<include>FullscreenDimensions</include>
-					<texture colordiffuse="$VAR[BackgroundColorVar]">color/white50.png</texture>
+					<texture colordiffuse="$VAR[BackgroundColorVar]">colors/white50.png</texture>
 					<visible>$PARAM[fullshade]</visible>
 				</control>
 				<control type="image">
 					<top>880</top>
 					<width>1920</width>
 					<height>200</height>
-					<texture colordiffuse="$VAR[BackgroundColorVar]">panel/floor-gradient.png</texture>
+					<texture colordiffuse="$VAR[BackgroundColorVar]">panels/floor-gradient.png</texture>
 					<visible>$PARAM[bottomshade]</visible>
 				</control>
 			</control>

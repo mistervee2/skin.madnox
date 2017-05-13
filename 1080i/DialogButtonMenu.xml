@@ -1,229 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<window type="buttonMenu" id="111">
-	<onload condition="Window.IsActive(1126)">Dialog.Close(1126)</onload>
-	<onload condition="Window.IsActive(1121)">Dialog.Close(1121)</onload>
-	<onload condition="Skin.HasSetting(quicklistmenu)">ActivateWindow(1121)</onload>
-	<defaultcontrol always="true">800</defaultcontrol>
-	<coordinates>
-		<left>0</left>
-		<top>0</top>
-		<system>1</system>
-	</coordinates>
-	<include>Animation_DialogZoom</include>
+<window>
+	<defaultcontrol>9000</defaultcontrol>
 	<controls>
-		<include>DialogBackFade</include>
+		<include>Dialog_Furniture_BackgroundFade</include>
+		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
-			<left>40</left>
-			<control type="grouplist" id="800">
-				<left>670</left>
-				<width>550</width>
-				<height>1080</height>
-				<align>center</align>
-				<onleft>800</onleft>
-				<onright>800</onright>
-				<onup>800</onup>
-				<ondown>800</ondown>
-				<orientation>vertical</orientation>
-				<control type="image" id="18">
-					<top>-39</top>
-					<width>488</width>
-					<height>39</height>
-					<texture colordiffuse="$VAR[SpotColorVar2]">$VAR[ShutdownTopVar]</texture>
+			<include>Animation_Dialog_Popup</include>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<width>500</width>
+			<height>540</height>
+			<control type="image">
+				<top>-20</top>
+				<width>500</width>
+				<height>540</height>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="40">dialogs/dialog-glow.png</texture>
+			</control>
+			<control type="image">
+				<top>-20</top>
+				<width>500</width>
+				<height>540</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialogs/context-back.png</texture>
+			</control>
+			<control type="image">
+				<top>2</top>
+				<left>20</left>
+				<width>460</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
+			</control>
+			<control type="image">
+				<left>230</left>
+				<top>0</top>
+				<width>40</width>
+				<height>40</height>
+				<texture flipy="true" colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(9000).HasPrevious</visible>
+			</control>
+			<control type="image">
+				<left>230</left>
+				<top>460</top>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(9000).HasNext</visible>
+			</control>
+			<control type="grouplist" id="9000">
+				<top>40</top>
+				<bottom>20</bottom>
+				<left>20</left>
+				<width>460</width>
+				<height>420</height>
+				<usecontrolcoords>true</usecontrolcoords>
+				<control type="button" id="101">
+					<label>$LOCALIZE[5]</label>
+					<onclick>ActivateWindow(Settings,return)</onclick>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="1">
+				<control type="button" id="102">
 					<label>$LOCALIZE[13012]</label>
-					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Quit()</onclick>
 					<visible>System.ShowExitButton</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="2">
+				<control type="button" id="103">
 					<label>$LOCALIZE[13016]</label>
-					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Powerdown()</onclick>
 					<visible>System.CanPowerDown</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="3">
-					<label>$LOCALIZE[31899]</label>
-					<include>Objects_ShutdownMenuButton</include>
+				<control type="button" id="104">
+					<label>$LOCALIZE[20150]</label>
 					<onclick>AlarmClock(shutdowntimer,Shutdown())</onclick>
-					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
 					<visible>!System.HasAlarm(shutdowntimer)</visible>
+					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="15">
-					<label>$LOCALIZE[31428] [B]$INFO[System.Alarmpos][/B]</label>
-					<include>Objects_ShutdownMenuButton</include>
+				<control type="button" id="105">
+					<label>$LOCALIZE[20151] $INFO[System.AlarmPos,(,)]</label>
 					<onclick>CancelAlarm(shutdowntimer)</onclick>
 					<visible>System.HasAlarm(shutdowntimer)</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="5">
+				<control type="button" id="106">
 					<label>$LOCALIZE[13011]</label>
-					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Suspend()</onclick>
 					<visible>System.CanSuspend</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="10">
+				<control type="button" id="107">
 					<label>$LOCALIZE[13010]</label>
-					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Hibernate()</onclick>
-					<visible>System.CanHibernate + !System.CanSuspend</visible>
+					<visible>System.CanHibernate</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="6">
+				<control type="button" id="108">
 					<label>$LOCALIZE[13013]</label>
-					<include>Objects_ShutdownMenuButton</include>
 					<onclick>Reset()</onclick>
 					<visible>System.CanReboot</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="4">
-					<label>$LOCALIZE[13391]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>EjectTray()</onclick>
-					<visible>System.HasMediadvd + System.Platform.ATV2</visible>
-				</control>
-				<control type="button" id="7">
-					<label>$INFO[system.profilename,$LOCALIZE[20126] ]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>Dialog.Close(all,true)</onclick>
+				<control type="button" id="109">
+					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+					<onclick>dialog.close(all,true)</onclick>
 					<onclick>System.LogOff</onclick>
 					<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
 					<visible>System.Loggedon</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="togglebutton" id="8">
+				<control type="togglebutton" id="110">
 					<label>$LOCALIZE[20046]</label>
 					<altlabel>$LOCALIZE[20045]</altlabel>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>xbmc.mastermode</onclick>
 					<usealttexture>!System.IsMaster</usealttexture>
+					<onclick>mastermode</onclick>
 					<visible>System.HasLocks</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="9">
-					<label>$LOCALIZE[5]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>ActivateWindow(Settings,return)</onclick>
-				</control>
-				<control type="button" id="17">
-					<label>$LOCALIZE[20077]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>ActivateWindow(skinsettings)</onclick>
-				</control>
-				<control type="button" id="12">
-					<label>$LOCALIZE[10003]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>ActivateWindow(FileManager)</onclick>
-				</control>
-				<control type="button" id="14">
-					<label>$LOCALIZE[1036]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>ActivateWindow(Favourites)</onclick>
-				</control>
-				<control type="button" id="13">
+				<control type="button" id="111">
 					<label>$LOCALIZE[13017]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
+					<onclick>InhibitIdleShutdown(true)</onclick>
 					<visible>System.HasShutdown +!System.IsInhibit</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
-				<control type="button" id="16">
+				<control type="button" id="112">
 					<label>$LOCALIZE[13018]</label>
-					<include>Objects_ShutdownMenuButton</include>
-					<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
+					<onclick>InhibitIdleShutdown(false)</onclick>
 					<visible>System.HasShutdown + System.IsInhibit</visible>
-				</control>
-				<control type="image" id="19">
-					<top>699</top>
-					<width>488</width>
-					<height>41</height>
-					<texture colordiffuse="$VAR[SpotColorVar2]">$VAR[ContextBottomVar]</texture>
-				</control>
-			</control>
-			<control type="grouplist">
-				<left>714</left>
-				<top>0</top>
-				<width>550</width>
-				<height>1080</height>
-				<align>center</align>
-				<itemgap>12</itemgap>
-				<orientation>vertical</orientation>
-				<control type="image">
-					<width>63</width>
-					<height>63</height>
-					<aspectratio aligny="top">scale</aspectratio>
-					<texture>special://skin/extras/BigIcons/exit.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(1)">Conditional</animation>
-					<visible>System.ShowExitButton</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Power.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(2)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.CanPowerDown</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/AlarmClock.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(3) + !Control.HasFocus(15)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.CanPowerDown</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Battery.png</texture>
-					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(10) + !Control.HasFocus(5)">Conditional</animation>
-					<visible>System.CanHibernate | System.CanSuspend</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/pre.png</texture>
-					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(6)">Conditional</animation>
-					<visible>System.CanReboot</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/CD-DVD.png</texture>
-					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(4)">Conditional</animation>
-					<visible>System.HasMediadvd + System.Platform.ATV2</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Lock.png</texture>
-					<include>Objects_ShutdownMenuIcon</include>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(7)">Conditional</animation>
-					<visible>System.HasLoginScreen | Integer.IsGreater(System.ProfileCount,1)</visible>
-					<visible>System.Loggedon</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Key.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(8)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.HasLocks</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Controlpanel.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(9)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/set.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(17)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Cabinet.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(12)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Star.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(14)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Gears.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(13)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.HasShutdown +!System.IsInhibit</visible>
-				</control>
-				<control type="image">
-					<texture>special://skin/extras/BigIcons/Clock.png</texture>
-					<animation effect="fade" start="100" end="55" time="0" condition="!Control.HasFocus(16)">Conditional</animation>
-					<include>Objects_ShutdownMenuIcon</include>
-					<visible>System.HasShutdown + System.IsInhibit</visible>
+					<include>Dialog_Button_ContextMenu</include>
 				</control>
 			</control>
 		</control>

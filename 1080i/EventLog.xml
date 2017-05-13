@@ -45,7 +45,7 @@
 				<itemlayout height="114">
 					<control type="image">
 						<height>114</height>
-						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
 					</control>
 					<control type="image">
 						<left>45</left>
@@ -87,11 +87,11 @@
 				</itemlayout>
 				<focusedlayout height="114">
 					<control type="image">
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 						<visible>Control.HasFocus(50)</visible>
 					</control>
 					<control type="image">
-						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
 						<visible>!Control.HasFocus(50)</visible>
 					</control>
 					<control type="image">
@@ -166,11 +166,11 @@
 					<param name="id">4</param>
 					<param name="label">$LOCALIZE[584]</param>
 					<param name="altlabel">$LOCALIZE[585]</param>
-					<param name="icon">icon/mediamenu/arrowdown.png</param>
+					<param name="icon">icons/mediamenu/arrowdown.png</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">21</param>
-					<param name="icon">icon/mediamenu/level.png</param>
+					<param name="icon">icons/mediamenu/level.png</param>
 					<param name="label">$INFO[Control.GetLabel(21)]</param>
 				</include>
 				<include content="MediaMenu_Icon_RadioButton">
@@ -180,12 +180,12 @@
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">20</param>
-					<param name="icon">icon/mediamenu/remove.png</param>
+					<param name="icon">icons/mediamenu/remove.png</param>
 					<param name="label">$LOCALIZE[192]</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">501</param>
-					<param name="icon">icon/mediamenu/skinsettings.png</param>
+					<param name="icon">icons/mediamenu/skinsettings.png</param>
 					<param name="label">$LOCALIZE[5]</param>
 					<param name="onclick">ActivateWindow(systemsettings,logging)</param>
 				</include>

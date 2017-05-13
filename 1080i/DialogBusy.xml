@@ -10,7 +10,7 @@
 			<include>Animation_Dialog_BackgroundFade</include>
 			<control type="image">
 				<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" condition="true">Conditional</animation>
-				<texture colordiffuse="$VAR[HighlightColorVar]">dialog/spinner.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]">dialogs/spinner.png</texture>
 			</control>
 		</control>
 	</controls>

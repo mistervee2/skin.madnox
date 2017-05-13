@@ -39,7 +39,7 @@
 					<control type="image">
 						<width>220</width>
 						<height>120</height>
-						<texture colordiffuse="$VAR[PanelColorVar]" border="30">button/list-select-nofocus.png</texture>
+						<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout height="120" width="220">
@@ -61,7 +61,7 @@
 					<control type="image">
 						<width>220</width>
 						<height>120</height>
-						<texture colordiffuse="$VAR[HighlightColorVar]" border="10">button/list-select-focus.png</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]" border="10">buttons/list-select-focus.png</texture>
 					</control>
 				</focusedlayout>
 				<content>

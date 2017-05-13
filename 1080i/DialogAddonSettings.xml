@@ -17,7 +17,7 @@
 				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[DialogColorVar]">icon/default/arrowdown.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Container(9).HasNext</visible>
 			</control>
@@ -26,7 +26,7 @@
 				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[DialogColorVar]">icon/default/arrowdown.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Container(2).HasNext</visible>
 			</control>
@@ -46,14 +46,14 @@
 				<top>88</top>
 				<width>4</width>
 				<height>421</height>
-				<texture colordiffuse="$VAR[PanelColorVar]">panel/line-vertical.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]">panels/line-vertical.png</texture>
 			</control>
 			<control type="image">
 				<left>20</left>
 				<top>507</top>
 				<width>320</width>
 				<height>4</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="30,0,0,0">panel/line-horizontal-leftfade.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30,0,0,0">panels/line-horizontal-leftfade.png</texture>
 			</control>
 			<!-- Right menu -->
 			<control type="grouplist" id="2">
@@ -70,7 +70,7 @@
 				<top>507</top>
 				<width>1060</width>
 				<height>4</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" flipx="true" border="0,0,30,0">panel/line-horizontal-leftfade.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" flipx="true" border="0,0,30,0">panels/line-horizontal-leftfade.png</texture>
 			</control>
 			<control type="label" id="7">
 				<font>Font30_Reg</font>

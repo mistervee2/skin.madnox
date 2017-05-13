@@ -44,7 +44,7 @@
 						<height>228</height>
 						<aspectratio>scale</aspectratio>
 						<texture>$INFO[ListItem.Icon]</texture>
-						<bordertexture border="4" colordiffuse="55FFFFFF">button/list-select-focus.png</bordertexture>
+						<bordertexture border="4" colordiffuse="55FFFFFF">buttons/list-select-focus.png</bordertexture>
 						<bordersize>4</bordersize>
 					</control>
 					<control type="label">
@@ -64,7 +64,7 @@
 							<height>228</height>
 							<aspectratio>scale</aspectratio>
 							<texture colordiffuse="$VAR[HighlightColorVar]">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="4" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</bordertexture>
+							<bordertexture border="4" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</bordertexture>
 							<bordersize>4</bordersize>
 						</control>
 						<control type="label">
@@ -80,73 +80,73 @@
 					<item>
 						<label>$LOCALIZE[14207]</label>
 						<onclick>ActivateWindow(InterfaceSettings)</onclick>
-						<icon>icon/settings/interface.jpg</icon>
+						<icon>icons/settings/interface.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[20077]</label>
 						<onclick>ActivateWindow(SkinSettings)</onclick>
-						<icon>icon/settings/skinsettings.jpg</icon>
+						<icon>icons/settings/skinsettings.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14201]</label>
 						<onclick>ActivateWindow(PlayerSettings)</onclick>
-						<icon>icon/settings/player.jpg</icon>
+						<icon>icons/settings/player.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14212]</label>
 						<onclick>ActivateWindow(MediaSettings)</onclick>
-						<icon>icon/settings/media.jpg</icon>
+						<icon>icons/settings/media.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[24001]</label>
 						<onclick>ActivateWindow(addonbrowser)</onclick>
-						<icon>icon/settings/addons.jpg</icon>
+						<icon>icons/settings/addons.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14208]</label>
 						<onclick>ActivateWindow(ServiceSettings)</onclick>
-						<icon>icon/settings/network.jpg</icon>
+						<icon>icons/settings/network.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14209]</label>
 						<onclick>ActivateWindow(SystemSettings)</onclick>
-						<icon>icon/settings/system.jpg</icon>
+						<icon>icons/settings/system.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14205]</label>
 						<onclick>ActivateWindow(PVRSettings)</onclick>
-						<icon>icon/settings/livetv.jpg</icon>
+						<icon>icons/settings/livetv.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[15016]</label>
 						<onclick>ActivateWindow(GameSettings)</onclick>
-						<icon>icon/settings/games.jpg</icon>
+						<icon>icons/settings/games.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14210]</label>
 						<onclick>ActivateWindow(Profiles)</onclick>
-						<icon>icon/settings/profiles.jpg</icon>
+						<icon>icons/settings/profiles.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[10003]</label>
 						<onclick>ActivateWindow(filemanager)</onclick>
-						<icon>icon/settings/filemanager.jpg</icon>
+						<icon>icons/settings/filemanager.jpg</icon>
 					</item>
 					<item>
 						<label>LibreELEC</label>
 						<onclick>RunAddon(service.libreelec.settings)</onclick>
-						<icon>icon/settings/libreelec.jpg</icon>
+						<icon>icons/settings/libreelec.jpg</icon>
 						<visible>System.HasAddon(service.libreelec.settings)</visible>
 					</item>
 					<item>
 						<label>$LOCALIZE[138]</label>
 						<onclick>ActivateWindow(systeminfo)</onclick>
-						<icon>icon/settings/sysinfo.jpg</icon>
+						<icon>icons/settings/sysinfo.jpg</icon>
 					</item>
 					<item>
 						<label>$LOCALIZE[14114]</label>
 						<onclick>ActivateWindow(eventlog)</onclick>
-						<icon>icon/settings/eventlog.jpg</icon>
+						<icon>icons/settings/eventlog.jpg</icon>
 					</item>
 				</content>
 			</control>

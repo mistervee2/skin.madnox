@@ -1,0 +1,5 @@
+<includes>
+	<variable name="MovieFanart">
+		<value>$INFO[Window(Home).Property(SkinHelper.AllMoviesBackground)]</value>
+	</variable>
+</includes>

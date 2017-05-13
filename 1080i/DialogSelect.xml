@@ -15,14 +15,49 @@
 				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[DialogColorVar]">icon/default/arrowdown.png</texture>
+				<texture colordiffuse="$VAR[DialogColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Container(3).HasNext | Container(5).HasNext</visible>
 			</control>
 			<control type="list" id="3">
-				<include content="Dialog_DefaultList">
-					<param name="id">3</param>
-				</include>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>420</height>
+				<onleft>60</onleft>
+				<onright>8001</onright>
+				<scrolltime>200</scrolltime>
+				<pagecontrol>60</pagecontrol>
+				<itemlayout height="60">
+					<control type="image">
+						<width>1074</width>
+						<height>60</height>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
+					</control>
+					<control type="label">
+						<width>1074</width>
+						<height>60</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font30_Reg</font>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="60">
+					<control type="image">
+						<width>1074</width>
+						<height>60</height>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
+						<animation effect="fade" start="100" end="30" time="40" condition="!Control.HasFocus($PARAM[id])">Conditional</animation>
+					</control>
+					<control type="label">
+						<width>1074</width>
+						<height>60</height>
+						<textoffsetx>50</textoffsetx>
+						<font>Font30_Reg</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</focusedlayout>
 			</control>
 			<control type="list" id="6">
 				<left>20</left>
@@ -36,7 +71,7 @@
 					<control type="image">
 						<width>654</width>
 						<height>84</height>
-						<texture border="30" colordiffuse="$VAR[PanelColorVar]">button/list-select-nofocus.png</texture>
+						<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
 					</control>
 					<control type="label">
 						<top>10</top>
@@ -61,7 +96,7 @@
 					<control type="image">
 						<width>654</width>
 						<height>84</height>
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 						<animation effect="fade" start="100" end="30" time="40" condition="!Control.HasFocus(6)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -90,7 +125,7 @@
 				<height>440</height>
 				<aspectratio align="center" aligny="center">keep</aspectratio>
 				<texture>$INFO[Container(6).Listitem.Icon]</texture>
-				<bordertexture border="20" colordiffuse="FF000000">thumb/shadow-square.png</bordertexture>
+				<bordertexture border="20" colordiffuse="FF000000">thumbs/shadow-square.png</bordertexture>
 				<bordersize>20</bordersize>
 				<visible>Control.IsVisible(6)</visible>
 			</control>

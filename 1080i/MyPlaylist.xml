@@ -32,8 +32,8 @@
 				<!-- Shuffle -->
 				<include content="MediaMenu_Icon_RadioButton">
 					<param name="id" value="20" />
-					<param name="iconon" value="icon/mediamenu/random.png" />
-					<param name="iconoff" value="icon/mediamenu/randomoff.png" />
+					<param name="iconon" value="icons/mediamenu/random.png" />
+					<param name="iconoff" value="icons/mediamenu/randomoff.png" />
 					<param name="label" value="$LOCALIZE[191]" />
 				</include>
 				<!-- Repeat -->
@@ -45,19 +45,19 @@
 				<!-- Save -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="21" />
-					<param name="icon" value="icon/mediamenu/save.png" />
+					<param name="icon" value="icons/mediamenu/save.png" />
 					<param name="label" value="$LOCALIZE[190]" />
 				</include>
 				<!-- Clear -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="22" />
-					<param name="icon" value="icon/mediamenu/remove.png" />
+					<param name="icon" value="icons/mediamenu/remove.png" />
 					<param name="label" value="$LOCALIZE[192]" />
 				</include>
 				<!-- Quicknav -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9011" />
-					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="icon" value="icons/mediamenu/arrowleft.png" />
 					<param name="label" value="$LOCALIZE[31633]" />
 					<param name="onclick" value="ActivateWindow(1113)" />
 					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />

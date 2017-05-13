@@ -90,7 +90,7 @@
 			<top>20</top>
 			<width>45</width>
 			<height>45</height>
-			<texture>dialog/circle/p46.png</texture>
+			<texture>dialogs/circle/p46.png</texture>
 			<visible>ListItem.IsResumable</visible>
 		</control>
 		<control type="image">
@@ -148,7 +148,7 @@
 			<top>20</top>
 			<width>45</width>
 			<height>45</height>
-			<texture>dialog/circle/p46.png</texture>
+			<texture>dialogs/circle/p46.png</texture>
 			<visible>ListItem.IsResumable</visible>
 		</control>
 
@@ -307,7 +307,7 @@
 						<top>43</top>
 						<width>45</width>
 						<height>45</height>
-						<texture>dialog/circle/p46.png</texture>
+						<texture>dialogs/circle/p46.png</texture>
 						<visible>ListItem.IsResumable</visible>
 					</control>
 					<control type="image">
@@ -421,7 +421,7 @@
 								<top>0</top>
 								<width>45</width>
 								<height>45</height>
-								<texture>dialog/circle/p46.png</texture>
+								<texture>dialogs/circle/p46.png</texture>
 								<visible>ListItem.IsResumable</visible>
 							</control>
 							<control type="image">

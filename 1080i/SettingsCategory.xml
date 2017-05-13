@@ -125,7 +125,7 @@
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="20" />
 					<param name="label" value="$LOCALIZE[31217]: $INFO[Control.GetLabel(20)]" />
-					<param name="icon" value="icon/mediamenu/skinsettings.png" />
+					<param name="icon" value="icons/mediamenu/skinsettings.png" />
 					<param name="onclick" value="SettingsLevelChange" />
 					<param name="visible" value="Window.IsActive(SettingsCategory.xml)" />
 				</include>

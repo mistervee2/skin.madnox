@@ -57,7 +57,7 @@
 					<control type="image">
 						<width>323</width>
 						<height>68</height>
-						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">button/list-select-focus.png</texture>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(8000)">Conditional</animation>
 					</control>
 					<control type="label">
@@ -336,35 +336,25 @@
 					</control>
 					<control type="radiobutton" id="403">
 						<include>Settings_RadioButton</include>
-						<label>Colored Media Flags</label>
-						<onclick>Skin.ToggleSetting(ColoredMediaFlags)</onclick>
+						<label>Colored media flags</label>
+						<onclick condition="!System.HasAddon(resource.images.studios.coloured)">InstallAddon(resource.images.studios.coloured)</onclick>
+						<onclick condition="System.HasAddon(resource.images.studios.coloured)">Skin.ToggleSetting(ColoredMediaFlags)</onclick>
 						<selected>Skin.HasSetting(ColoredMediaFlags)</selected>
 					</control>
-					<control type="button" id="404">
-						<label>Studio Icons</label>
-                		<label2>$INFO[Skin.String(StudioIcons.name)]</label2>
-						<include>Settings_Button</include>
-						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=StudioIcons,addontype=resource.images.studios)</onclick>
-					</control>
-					<control type="button" id="405">
-						<label>Record Label Icons</label>
-                		<label2>$INFO[Skin.String(RecordLabelIcons.name)]</label2>
-						<include>Settings_Button</include>
-						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=RecordLabelIcons,addontype=resource.images.recordlabels)</onclick>
+					<control type="radiobutton" id="404">
+						<include>Settings_RadioButton</include>
+						<label>Country icons</label>
+						<onclick condition="!System.HasAddon(resource.images.moviecountryicons.flags)">InstallAddon(resource.images.moviecountryicons.flags)</onclick>
+						<onclick condition="System.HasAddon(resource.images.moviecountryicons.flags)">Skin.ToggleSetting(CountryIconsFlags)</onclick>
+						<selected>Skin.HasSetting(CountryIconsFlags)</selected>
 					</control>
 					<control type="button" id="405">
 						<label>Language Flags</label>
-                		<label2>$INFO[Skin.String(LanguageFlagIcons.name)]</label2>
+						<label2>$INFO[Skin.String(LanguageFlagIcons.name)]</label2>
 						<include>Settings_Button</include>
-						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=LanguageFlagIcons,addontype=resource.images.languageflags)</onclick>
+						<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=LanguageFlagIcons&amp;type=resource.images.languageflags)</onclick>
+						<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
 					</control>
-					<control type="button" id="405">
-						<label>Country Icons</label>
-                		<label2>$INFO[Skin.String(CountryIcons.name)]</label2>
-						<include>Settings_Button</include>
-						<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=CountryIcons,addontype=resource.images.moviecountryicons)</onclick>
-					</control>
-
                 	<!-- <control type="radiobutton" id="17112">
                 		<include>Settings_RadioButton</include>
                 		<label>31292</label>
@@ -377,55 +367,26 @@
                 		<onclick>Skin.ToggleSetting(SkinHelperAnimations)</onclick>
                 		<selected>Skin.HasSetting(SkinHelperAnimations)</selected>
                 	</control> -->
-                	<control type="button" id="405">
+                	<control type="button" id="406">
                 		<label>Backgrounds</label>
                 		<label2>$INFO[Skin.String(SkinBackgrounds.name)]</label2>
                 		<include>Settings_Button</include>
                 		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=SkinBackgrounds&amp;type=resource.images.skinbackgrounds)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
                 	</control>
-                <control type="button" id="406">
-                	<label>Video genre icons</label>
-                	<label2>$INFO[Skin.String(VideoGenreIcons.Name)]</label2>
-                	<include>Settings_Button</include>
-                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreIcons&amp;type=resource.images.moviegenreicons)</onclick>
-                </control>
-                <control type="button" id="408">
-                	<label>Music genre icons</label>
-                	<label2>$INFO[Skin.String(MusicGenreIcons.Name)]</label2>
-                	<include>Settings_Button</include>
-                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreIcons&amp;type=resource.images.musicgenreicons)</onclick>
-                </control>
-                <control type="button" id="404">
-                	<label>Weather icons</label>
-                	<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
-                	<include>Settings_Button</include>
-                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
-                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                </control>
-                <control type="button" id="405">
-                	<label>Weather fanart</label>
-                	<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
-                	<include>Settings_Button</include>
-                	<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
-                	<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                </control>
-                	<control type="button" id="307">
-                		<label>Video genre fanart</label>
-                		<label2>$INFO[Skin.String(VideoGenreFanart.Name)]</label2>
+                	<control type="button" id="407">
+                		<label>Weather icons</label>
+                		<label2>$INFO[Skin.String(WeatherIcons.name)]</label2>
                 		<include>Settings_Button</include>
+                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherIcons&amp;type=resource.images.weathericons)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=VideoGenreFanart&amp;type=resource.images.moviegenrefanart)</onclick>
                 	</control>
-
-                	<control type="button" id="309">
-                		<label>Music genre fanart</label>
-                		<label2>$INFO[Skin.String(MusicGenreFanart.Name)]</label2>
+                	<control type="button" id="408">
+                		<label>Weather fanart</label>
+                		<label2>$INFO[Skin.String(WeatherFanart.name)]</label2>
                 		<include>Settings_Button</include>
+                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=WeatherFanart&amp;type=resource.images.weatherfanart)</onclick>
                 		<onclick condition="!System.HasAddon(script.image.resource.select)">InstallAddon(script.image.resource.select)</onclick>
-                		<onclick condition="System.HasAddon(script.image.resource.select)">RunScript(script.image.resource.select,property=MusicGenreFanart&amp;type=resource.images.musicgenrefanart)</onclick>
                 	</control>
                 </control>
                 <!--  Colors -->
@@ -445,7 +406,7 @@
                 		<include>Settings_Button</include>
                 	</control>
                 	<control type="button" id="302">
-                		<label>$ADDON[script.skin.helper.skinbackup 32020]</label>
+                		<label>$LOCALIZE[16106]</label>
                 		<onclick condition="System.HasAddon(script.skin.helper.skinbackup)">RunScript(script.skin.helper.skinbackup,action=colorthemes)</onclick>
                 		<onclick condition="!System.HasAddon(script.skin.helper.skinbackup)">InstallAddon(script.skin.helper.skinbackup)</onclick>
                 		<include>Settings_Button</include>
@@ -490,16 +451,9 @@
                 		<include>Settings_Button</include>
                 	</control>
                 	<control type="button" id="306">
-                		<description>Movies</description>
-                		<label>$LOCALIZE[342]</label>
-                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[342],home)</onclick>
-                		<onclick>ActivateWindow(1110)</onclick>
-                		<include>Settings_Button</include>
-                	</control>
-                	<control type="button" id="307">
-                		<description>TV Shows</description>
-                		<label>$LOCALIZE[36903]</label>
-                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[36903],home)</onclick>
+                		<description>Videos</description>
+                		<label>$LOCALIZE[3]</label>
+                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[3],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
@@ -507,13 +461,6 @@
                 		<description>PVR and Live TV</description>
                 		<label>$LOCALIZE[14204]</label>
                 		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[14204],home)</onclick>
-                		<onclick>ActivateWindow(1110)</onclick>
-                		<include>Settings_Button</include>
-                	</control>
-                	<control type="button" id="309">
-                		<description>Music Videos</description>
-                		<label>$LOCALIZE[20389]</label>
-                		<onclick>SetProperty(CustomColorLabel,$LOCALIZE[20389],home)</onclick>
                 		<onclick>ActivateWindow(1110)</onclick>
                 		<include>Settings_Button</include>
                 	</control>
@@ -680,7 +627,7 @@
                 		<label>script.tv.show.next.aired</label>
                 		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
                 		<include>Settings_Button</include>
-                		<onclick>RunPlugin(script.tv.show.next.aired)</onclick>
+                		<onclick>InstallAddon(script.tv.show.next.aired)</onclick>
                 		<visible>!System.HasAddon(script.tv.show.next.aired)</visible>
                 	</control>
                 	<control type="button" id="414">
@@ -689,6 +636,20 @@
                 		<include>Settings_Button</include>
                 		<onclick>Addon.OpenSettings(script.tv.show.next.aired)</onclick>
                 		<visible>System.HasAddon(script.tv.show.next.aired)</visible>
+                	</control>
+                	<control type="button" id="420">
+                		<label>script.skin.info.service</label>
+                		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
+                		<include>Settings_Button</include>
+                		<onclick>InstallAddon(script.skin.info.service)</onclick>
+                		<visible>!System.HasAddon(script.skin.info.service)</visible>
+                	</control>
+                	<control type="button" id="421">
+                		<label>script.skin.info.service</label>
+                		<label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
+                		<include>Settings_Button</include>
+                		<onclick>Addon.OpenSettings(script.skin.info.service)</onclick>
+                		<visible>System.HasAddon(script.skin.info.service)</visible>
                 	</control>
                 	<!-- <control type="button" id="403">
                 		<label>script.tvtunes > TV/Movie Themes</label>
@@ -732,20 +693,7 @@
                 		<onclick>Addon.OpenSettings(script.toolbox)</onclick>
                 		<visible>System.HasAddon(script.toolbox)</visible>
                 	</control>
-                	<control type="button" id="420">
-                		<label>script.skin.info.service</label>
-                		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>
-                		<include>Settings_Button</include>
-                		<onclick>InstallAddon(script.skin.info.service)</onclick>
-                		<visible>!System.HasAddon(script.skin.info.service)</visible>
-                	</control>
-                	<control type="button" id="421">
-                		<label>script.skin.info.service</label>
-                		<label2>[COLOR green]$LOCALIZE[107][/COLOR]</label2>
-                		<include>Settings_Button</include>
-                		<onclick>Addon.OpenSettings(script.skin.info.service)</onclick>
-                		<visible>System.HasAddon(script.skin.info.service)</visible>
-                	</control>
+                	
                 	<control type="button" id="422">
                 		<label>script.cinemavision > trivia,intros and more</label>
                 		<label2>[COLOR red]$LOCALIZE[106][/COLOR]</label2>

@@ -1,81 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <includes>
 	<variable name="HighlightColorVar">
-		<value condition="Window.IsActive(home)">$VAR[HomeHighlightColorVar]</value>
-		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(Container.FolderPath,videodb://movies)">$VAR[MoviesHighlightColorVar]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,library://video/tvshows/) | String.StartsWith(Container.FolderPath,videodb://tvshows)">$VAR[TVShowsHighlightColorVar]</value>
-		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[PVRHighlightColorVar]</value>
-		<value condition="Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,library://video/musicvideos/) | String.StartsWith(Container.FolderPath,videodb://musicvideos)">$VAR[MusicVideosHighlightColorVar]</value>
-		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicHighlightColorVar]</value>
-		<value condition="Window.IsActive(games)">$VAR[GamesHighlightColorVar]</value>
-		<value condition="Window.IsActive(pictures)">$VAR[PicturesHighlightColorVar]</value>
-		<value condition="Window.IsActive(weather)">$VAR[WeatherHighlightColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)  | Window.IsActive(screencalibration)">$VAR[SystemHighlightColorVar]</value>
+		<value condition="Window.IsVisible(home)">$VAR[HomeHighlightColorVar]</value>
+		<value condition="Window.IsVisible(videos) | Window.IsVisible(fullscreenvideo)">$VAR[VideosHighlightColorVar]</value>
+		<value condition="Window.Visible(tvchannels) | Window.Visible(tvrecordings) | Window.Visible(tvguide) | Window.Visible(tvtimers) | Window.Visible(tvsearch) | Window.Visible(tvtimerrules) | Window.Visible(fullscreenlivetv)">$VAR[PVRHighlightColorVar]</value>
+		<value condition="Window.Visible(music) | Window.Visible(musicplaylist) | Window.Visible(musicplaylisteditor) | Window.Visible(visualisation)">$VAR[MusicHighlightColorVar]</value>
+		<value condition="Window.Visible(games)">$VAR[GamesHighlightColorVar]</value>
+		<value condition="Window.Visible(pictures)">$VAR[PicturesHighlightColorVar]</value>
+		<value condition="Window.Visible(weather)">$VAR[WeatherHighlightColorVar]</value>
+		<value condition="Window.Visible(settings) | Window.Visible(SettingsCategory.xml) | Window.Visible(profiles) |  Window.Visible(skinsettings) | Window.Visible(eventlog) | Window.Visible(systeminfo) | Window.Visible(filemanager) | Window.Visible(script-skinshortcuts.xml)  | Window.Visible(screencalibration)">$VAR[SystemHighlightColorVar]</value>
 		<value>highlight</value>
 	</variable>
 	<variable name="PanelColorVar">
-		<value condition="Window.IsActive(home)">$VAR[HomePanelColorVar]</value>
-		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(Container.FolderPath,videodb://movies)">$VAR[MoviesPanelColorVar]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,library://video/tvshows/) | String.StartsWith(Container.FolderPath,videodb://tvshows)">$VAR[TVShowsPanelColorVar]</value>
-		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[PVRPanelColorVar]</value>
-		<value condition="Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,library://video/musicvideos/) | String.StartsWith(Container.FolderPath,videodb://musicvideos)">$VAR[MusicVideosPanelColorVar]</value>
-		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicPanelColorVar]</value>
-		<value condition="Window.IsActive(games)">$VAR[GamesPanelColorVar]</value>
-		<value condition="Window.IsActive(pictures)">$VAR[PicturesPanelColorVar]</value>
-		<value condition="Window.IsActive(weather)">$VAR[WeatherPanelColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">$VAR[SystemPanelColorVar]</value>
+		<value condition="Window.IsVisible(Panel)">$VAR[HomePanelColorVar]</value>
+		<value condition="Window.IsVisible(videos) | Window.IsVisible(fullscreenvideo)">$VAR[VideosPanelColorVar]</value>
+		<value condition="Window.Visible(tvchannels) | Window.Visible(tvrecordings) | Window.Visible(tvguide) | Window.Visible(tvtimers) | Window.Visible(tvsearch) | Window.Visible(tvtimerrules) | Window.Visible(fullscreenlivetv)">$VAR[PVRPanelColorVar]</value>
+		<value condition="Window.Visible(music) | Window.Visible(musicplaylist) | Window.Visible(musicplaylisteditor) | Window.Visible(visualisation)">$VAR[MusicPanelColorVar]</value>
+		<value condition="Window.Visible(games)">$VAR[GamesPanelColorVar]</value>
+		<value condition="Window.Visible(pictures)">$VAR[PicturesPanelColorVar]</value>
+		<value condition="Window.Visible(weather)">$VAR[WeatherPanelColorVar]</value>
+		<value condition="Window.Visible(settings) | Window.Visible(SettingsCategory.xml) | Window.Visible(profiles) |  Window.Visible(skinsettings) | Window.Visible(eventlog) | Window.Visible(systeminfo) | Window.Visible(filemanager) | Window.Visible(script-skinshortcuts.xml)  | Window.Visible(screencalibration)">$VAR[SystemPanelColorVar]</value>
 		<value>panel</value>
 	</variable>
 	<variable name="GlowColorVar">
-		<value condition="Window.IsActive(home)">$VAR[HomeGlowColorVar]</value>
-		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(Container.FolderPath,videodb://movies)">$VAR[MoviesGlowColorVar]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,library://video/tvshows/) | String.StartsWith(Container.FolderPath,videodb://tvshows)">$VAR[TVShowsGlowColorVar]</value>
-		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[PVRGlowColorVar]</value>
-		<value condition="Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,library://video/musicvideos/) | String.StartsWith(Container.FolderPath,videodb://musicvideos)">$VAR[MusicVideosGlowColorVar]</value>
-		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicGlowColorVar]</value>
-		<value condition="Window.IsActive(games)">$VAR[GamesGlowColorVar]</value>
-		<value condition="Window.IsActive(pictures)">$VAR[PicturesGlowColorVar]</value>
-		<value condition="Window.IsActive(weather)">$VAR[WeatherGlowColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">$VAR[SystemGlowColorVar]</value>
+		<value condition="Window.IsVisible(home)">$VAR[HomeGlowColorVar]</value>
+		<value condition="Window.IsVisible(videos) | Window.IsVisible(fullscreenvideo)">$VAR[VideosGlowColorVar]</value>
+		<value condition="Window.Visible(tvchannels) | Window.Visible(tvrecordings) | Window.Visible(tvguide) | Window.Visible(tvtimers) | Window.Visible(tvsearch) | Window.Visible(tvtimerrules) | Window.Visible(fullscreenlivetv)">$VAR[PVRGlowColorVar]</value>
+		<value condition="Window.Visible(music) | Window.Visible(musicplaylist) | Window.Visible(musicplaylisteditor) | Window.Visible(visualisation)">$VAR[MusicGlowColorVar]</value>
+		<value condition="Window.Visible(games)">$VAR[GamesGlowColorVar]</value>
+		<value condition="Window.Visible(pictures)">$VAR[PicturesGlowColorVar]</value>
+		<value condition="Window.Visible(weather)">$VAR[WeatherGlowColorVar]</value>
+		<value condition="Window.Visible(settings) | Window.Visible(SettingsCategory.xml) | Window.Visible(profiles) |  Window.Visible(skinsettings) | Window.Visible(eventlog) | Window.Visible(systeminfo) | Window.Visible(filemanager) | Window.Visible(script-skinshortcuts.xml)  | Window.Visible(screencalibration)">$VAR[SystemGlowColorVar]</value>
 		<value>glow</value>
 	</variable>
 	<variable name="BackgroundColorVar">
-		<value condition="Window.IsActive(home)">$VAR[HomeBackgroundColorVar]</value>
-		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(Container.FolderPath,videodb://movies)">$VAR[MoviesBackgroundColorVar]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,library://video/tvshows/) | String.StartsWith(Container.FolderPath,videodb://tvshows)">$VAR[TVShowsBackgroundColorVar]</value>
-		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[PVRBackgroundColorVar]</value>
-		<value condition="Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,library://video/musicvideos/) | String.StartsWith(Container.FolderPath,videodb://musicvideos)">$VAR[MusicVideosBackgroundColorVar]</value>
-		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicBackgroundColorVar]</value>
-		<value condition="Window.IsActive(games)">$VAR[GamesBackgroundColorVar]</value>
-		<value condition="Window.IsActive(pictures)">$VAR[PicturesBackgroundColorVar]</value>
-		<value condition="Window.IsActive(weather)">$VAR[WeatherBackgroundColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">$VAR[SystemBackgroundColorVar]</value>
+		<value condition="Window.IsVisible(home)">$VAR[HomeBackgroundColorVar]</value>
+		<value condition="Window.IsVisible(videos) | Window.IsVisible(fullscreenvideo)">$VAR[VideosBackgroundColorVar]</value>
+		<value condition="Window.Visible(tvchannels) | Window.Visible(tvrecordings) | Window.Visible(tvguide) | Window.Visible(tvtimers) | Window.Visible(tvsearch) | Window.Visible(tvtimerrules) | Window.Visible(fullscreenlivetv)">$VAR[PVRBackgroundColorVar]</value>
+		<value condition="Window.Visible(music) | Window.Visible(musicplaylist) | Window.Visible(musicplaylisteditor) | Window.Visible(visualisation)">$VAR[MusicBackgroundColorVar]</value>
+		<value condition="Window.Visible(games)">$VAR[GamesBackgroundColorVar]</value>
+		<value condition="Window.Visible(pictures)">$VAR[PicturesBackgroundColorVar]</value>
+		<value condition="Window.Visible(weather)">$VAR[WeatherBackgroundColorVar]</value>
+		<value condition="Window.Visible(settings) | Window.Visible(SettingsCategory.xml) | Window.Visible(profiles) |  Window.Visible(skinsettings) | Window.Visible(eventlog) | Window.Visible(systeminfo) | Window.Visible(filemanager) | Window.Visible(script-skinshortcuts.xml)  | Window.Visible(screencalibration)">$VAR[SystemBackgroundColorVar]</value>
 		<value>background</value>
 	</variable>
 	<variable name="TopbarColorVar">
-		<value condition="Window.IsActive(home)">$VAR[HomeTopbarColorVar]</value>
-		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(Container.FolderPath,videodb://movies)">$VAR[MoviesTopbarColorVar]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,library://video/tvshows/) | String.StartsWith(Container.FolderPath,videodb://tvshows)">$VAR[TVShowsTopbarColorVar]</value>
-		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[PVRTopbarColorVar]</value>
-		<value condition="Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,library://video/musicvideos/) | String.StartsWith(Container.FolderPath,videodb://musicvideos)">$VAR[MusicVideosTopbarColorVar]</value>
-		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicTopbarColorVar]</value>
-		<value condition="Window.IsActive(games)">$VAR[GamesTopbarColorVar]</value>
-		<value condition="Window.IsActive(pictures)">$VAR[PicturesTopbarColorVar]</value>
-		<value condition="Window.IsActive(weather)">$VAR[WeatherTopbarColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">$VAR[SystemTopbarColorVar]</value>
+		<value condition="Window.IsVisible(home)">$VAR[HomeTopbarColorVar]</value>
+		<value condition="Window.IsVisible(videos) | Window.IsVisible(fullscreenvideo)">$VAR[VideosTopbarColorVar]</value>
+		<value condition="Window.Visible(tvchannels) | Window.Visible(tvrecordings) | Window.Visible(tvguide) | Window.Visible(tvtimers) | Window.Visible(tvsearch) | Window.Visible(tvtimerrules) | Window.Visible(fullscreenlivetv)">$VAR[PVRTopbarColorVar]</value>
+		<value condition="Window.Visible(music) | Window.Visible(musicplaylist) | Window.Visible(musicplaylisteditor) | Window.Visible(visualisation)">$VAR[MusicTopbarColorVar]</value>
+		<value condition="Window.Visible(games)">$VAR[GamesTopbarColorVar]</value>
+		<value condition="Window.Visible(pictures)">$VAR[PicturesTopbarColorVar]</value>
+		<value condition="Window.Visible(weather)">$VAR[WeatherTopbarColorVar]</value>
+		<value condition="Window.Visible(settings) | Window.Visible(SettingsCategory.xml) | Window.Visible(profiles) |  Window.Visible(skinsettings) | Window.Visible(eventlog) | Window.Visible(systeminfo) | Window.Visible(filemanager) | Window.Visible(script-skinshortcuts.xml)  | Window.Visible(screencalibration)">$VAR[SystemTopbarColorVar]</value>
 		<value>topbar</value>
 	</variable>
 	<variable name="FloorColorVar">
-		<value condition="Window.IsActive(home)">$VAR[HomeFloorColorVar]</value>
-		<value condition="Container.Content(movies) | String.StartsWith(container.folderpath,library://video/movies/) | String.StartsWith(Container.FolderPath,videodb://movies)">$VAR[MoviesFloorColorVar]</value>
-		<value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes) | String.StartsWith(Container.FolderPath,library://video/tvshows/) | String.StartsWith(Container.FolderPath,videodb://tvshows)">$VAR[TVShowsFloorColorVar]</value>
-		<value condition="Window.IsActive(tvchannels) | Window.IsActive(tvrecordings) | Window.IsActive(tvguide) | Window.IsActive(tvtimers) | Window.IsActive(tvsearch) | Window.IsActive(tvtimerrules) | Window.IsActive(fullscreenlivetv)">$VAR[PVRFloorColorVar]</value>
-		<value condition="Container.Content(musicvideos) | String.StartsWith(Container.FolderPath,library://video/musicvideos/) | String.StartsWith(Container.FolderPath,videodb://musicvideos)">$VAR[MusicVideosFloorColorVar]</value>
-		<value condition="Window.IsActive(music) | Window.IsActive(musicosd) | Window.IsActive(musicplaylist) | Window.IsActive(musicplaylisteditor) | Window.IsActive(visualisation)">$VAR[MusicFloorColorVar]</value>
-		<value condition="Window.IsActive(games)">$VAR[GamesFloorColorVar]</value>
-		<value condition="Window.IsActive(pictures)">$VAR[PicturesFloorColorVar]</value>
-		<value condition="Window.IsActive(weather)">$VAR[WeatherFloorColorVar]</value>
-		<value condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">$VAR[SystemFloorColorVar]</value>
+		<value condition="Window.IsVisible(home)">$VAR[HomeFloorColorVar]</value>
+		<value condition="Window.IsVisible(videos) | Window.IsVisible(fullscreenvideo)">$VAR[VideosFloorColorVar]</value>
+		<value condition="Window.Visible(tvchannels) | Window.Visible(tvrecordings) | Window.Visible(tvguide) | Window.Visible(tvtimers) | Window.Visible(tvsearch) | Window.Visible(tvtimerrules) | Window.Visible(fullscreenlivetv)">$VAR[PVRFloorColorVar]</value>
+		<value condition="Window.Visible(music) | Window.Visible(musicplaylist) | Window.Visible(musicplaylisteditor) | Window.Visible(visualisation)">$VAR[MusicFloorColorVar]</value>
+		<value condition="Window.Visible(games)">$VAR[GamesFloorColorVar]</value>
+		<value condition="Window.Visible(pictures)">$VAR[PicturesFloorColorVar]</value>
+		<value condition="Window.Visible(weather)">$VAR[WeatherFloorColorVar]</value>
+		<value condition="Window.Visible(settings) | Window.Visible(SettingsCategory.xml) | Window.Visible(profiles) |  Window.Visible(skinsettings) | Window.Visible(eventlog) | Window.Visible(systeminfo) | Window.Visible(filemanager) | Window.Visible(script-skinshortcuts.xml)  | Window.Visible(screencalibration)">$VAR[SystemFloorColorVar]</value>
 		<value>floor</value>
 	</variable>
 	<!-- Global default -->
@@ -188,125 +176,64 @@
 		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
-	<!-- Movies -->
-	<variable name="MoviesHighlightColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesHighlight.Color))">$INFO[Skin.String(MoviesHighlight.Color)]</value>
+	<!-- Videos -->
+	<variable name="VideosHighlightColorVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosHighlight.Color))">$INFO[Skin.String(VideosHighlight.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color))">$INFO[Skin.String(GlobalHighlight.Color)]</value>
 		<value>highlight</value>
 	</variable>
-	<variable name="MoviesHighlightColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesHighlight.Color))">$INFO[Skin.String(MoviesHighlight.Color)]</value>
+	<variable name="VideosHighlightColorLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosHighlight.Color))">$INFO[Skin.String(VideosHighlight.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
-	<variable name="MoviesPanelColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesPanel.Color))">$INFO[Skin.String(MoviesPanel.Color)]</value>
+	<variable name="VideosPanelColorVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosPanel.Color))">$INFO[Skin.String(VideosPanel.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color))">$INFO[Skin.String(GlobalPanel.Color)]</value>
 		<value>panel</value>
 	</variable>
-	<variable name="MoviesPanelColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesPanel.Color))">$INFO[Skin.String(MoviesPanel.Color)]</value>
+	<variable name="VideosPanelColorLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosPanel.Color))">$INFO[Skin.String(VideosPanel.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
-	<variable name="MoviesGlowColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesGlow.Color))">$INFO[Skin.String(MoviesGlow.Color)]</value>
+	<variable name="VideosGlowColorVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosGlow.Color))">$INFO[Skin.String(VideosGlow.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color))">$INFO[Skin.String(GlobalGlow.Color)]</value>
 		<value>glow</value>
 	</variable>
-	<variable name="MoviesGlowColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesGlow.Color))">$INFO[Skin.String(MoviesGlow.Color)]</value>
+	<variable name="VideosGlowColorLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosGlow.Color))">$INFO[Skin.String(VideosGlow.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
-	<variable name="MoviesBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesBackground.Color))">$INFO[Skin.String(MoviesBackground.Color)]</value>
+	<variable name="VideosBackgroundColorVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosBackground.Color))">$INFO[Skin.String(VideosBackground.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color))">$INFO[Skin.String(GlobalBackground.Color)]</value>
 		<value>background</value>
 	</variable>
-	<variable name="MoviesBackgroundColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesBackground.Color))">$INFO[Skin.String(MoviesBackground.Color)]</value>
+	<variable name="VideosBackgroundColorLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosBackground.Color))">$INFO[Skin.String(VideosBackground.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
-	<variable name="MoviesTopbarColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesTopbar.Color))">$INFO[Skin.String(MoviesTopbar.Color)]</value>
+	<variable name="VideosTopbarColorVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosTopbar.Color))">$INFO[Skin.String(VideosTopbar.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color))">$INFO[Skin.String(GlobalTopbar.Color)]</value>
 		<value>topbar</value>
 	</variable>
-	<variable name="MoviesTopbarColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesTopbar.Color))">$INFO[Skin.String(MoviesTopbar.Color)]</value>
+	<variable name="VideosTopbarColorLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosTopbar.Color))">$INFO[Skin.String(VideosTopbar.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
-	<variable name="MoviesFloorColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesFloor.Color))">$INFO[Skin.String(MoviesFloor.Color)]</value>
+	<variable name="VideosFloorColorVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosFloor.Color))">$INFO[Skin.String(VideosFloor.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$INFO[Skin.String(GlobalFloor.Color)]</value>
 		<value>floor</value>
 	</variable>
-	<variable name="MoviesFloorColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MoviesFloor.Color))">$INFO[Skin.String(MoviesFloor.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<!-- TV Shows -->
-	<variable name="TVShowsHighlightColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsHighlight.Color))">$INFO[Skin.String(TVShowsHighlight.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color))">$INFO[Skin.String(GlobalHighlight.Color)]</value>
-		<value>highlight</value>
-	</variable>
-	<variable name="TVShowsHighlightColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsHighlight.Color))">$INFO[Skin.String(TVShowsHighlight.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="TVShowsPanelColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsPanel.Color))">$INFO[Skin.String(TVShowsPanel.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color))">$INFO[Skin.String(GlobalPanel.Color)]</value>
-		<value>panel</value>
-	</variable>
-	<variable name="TVShowsPanelColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsPanel.Color))">$INFO[Skin.String(TVShowsPanel.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="TVShowsGlowColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsGlow.Color))">$INFO[Skin.String(TVShowsGlow.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color))">$INFO[Skin.String(GlobalGlow.Color)]</value>
-		<value>glow</value>
-	</variable>
-	<variable name="TVShowsGlowColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsGlow.Color))">$INFO[Skin.String(TVShowsGlow.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="TVShowsBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsBackground.Color))">$INFO[Skin.String(TVShowsBackground.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color))">$INFO[Skin.String(GlobalBackground.Color)]</value>
-		<value>background</value>
-	</variable>
-	<variable name="TVShowsBackgroundColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsBackground.Color))">$INFO[Skin.String(TVShowsBackground.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="TVShowsTopbarColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsTopbar.Color))">$INFO[Skin.String(TVShowsTopbar.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color))">$INFO[Skin.String(GlobalTopbar.Color)]</value>
-		<value>topbar</value>
-	</variable>
-	<variable name="TVShowsTopbarColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsTopbar.Color))">$INFO[Skin.String(TVShowsTopbar.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="TVShowsFloorColorVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsFloor.Color))">$INFO[Skin.String(TVShowsFloor.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$INFO[Skin.String(GlobalFloor.Color)]</value>
-		<value>floor</value>
-	</variable>
-	<variable name="TVShowsFloorColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(TVShowsFloor.Color))">$INFO[Skin.String(TVShowsFloor.Color)]</value>
+	<variable name="VideosFloorColorLabelVar">
+		<value condition="!String.IsEmpty(Skin.String(VideosFloor.Color))">$INFO[Skin.String(VideosFloor.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
@@ -368,67 +295,6 @@
 	</variable>
 	<variable name="PVRFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRFloor.Color))">$INFO[Skin.String(PVRFloor.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<!-- Music Videos -->
-	<variable name="MusicVideosHighlightColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosHighlight.Color))">$INFO[Skin.String(MusicVideosHighlight.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color))">$INFO[Skin.String(GlobalHighlight.Color)]</value>
-		<value>highlight</value>
-	</variable>
-	<variable name="MusicVideosHighlightColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosHighlight.Color))">$INFO[Skin.String(MusicVideosHighlight.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="MusicVideosPanelColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosPanel.Color))">$INFO[Skin.String(MusicVideosPanel.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color))">$INFO[Skin.String(GlobalPanel.Color)]</value>
-		<value>panel</value>
-	</variable>
-	<variable name="MusicVideosPanelColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosPanel.Color))">$INFO[Skin.String(MusicVideosPanel.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="MusicVideosGlowColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosGlow.Color))">$INFO[Skin.String(MusicVideosGlow.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color))">$INFO[Skin.String(GlobalGlow.Color)]</value>
-		<value>glow</value>
-	</variable>
-	<variable name="MusicVideosGlowColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosGlow.Color))">$INFO[Skin.String(MusicVideosGlow.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="MusicVideosBackgroundColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosBackground.Color))">$INFO[Skin.String(MusicVideosBackground.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color))">$INFO[Skin.String(GlobalBackground.Color)]</value>
-		<value>background</value>
-	</variable>
-	<variable name="MusicVideosBackgroundColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosBackground.Color))">$INFO[Skin.String(MusicVideosBackground.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="MusicVideosTopbarColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosTopbar.Color))">$INFO[Skin.String(MusicVideosTopbar.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color))">$INFO[Skin.String(GlobalTopbar.Color)]</value>
-		<value>topbar</value>
-	</variable>
-	<variable name="MusicVideosTopbarColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosTopbar.Color))">$INFO[Skin.String(MusicVideosTopbar.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color))">$LOCALIZE[31736]</value>
-		<value>$LOCALIZE[13278]</value>
-	</variable>
-	<variable name="MusicVideosFloorColorVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosFloor.Color))">$INFO[Skin.String(MusicVideosFloor.Color)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$INFO[Skin.String(GlobalFloor.Color)]</value>
-		<value>floor</value>
-	</variable>
-	<variable name="MusicVideosFloorColorLabelVar">
-		<value condition="!String.IsEmpty(Skin.String(MusicVideosFloor.Color))">$INFO[Skin.String(MusicVideosFloor.Color)]</value>
 		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color))">$LOCALIZE[31736]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>

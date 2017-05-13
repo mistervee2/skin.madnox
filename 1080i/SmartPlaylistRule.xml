@@ -5,84 +5,52 @@
 		<include>Dialog_Furniture_BackgroundFade</include>
 		<control type="group">
 			<include content="Dialog_Furniture_Background">
-				<param name="width">900</param>
-				<param name="height">330</param>
+				<param name="width">854</param>
+				<param name="height">408</param>
+				<param name="labelright">350</param>
 				<param name="label">$LOCALIZE[21421]</param>
-				<param name="labelright">0</param>
-				<param name="labelid">1</param>
-				<param name="bottomseparatorvisible">false</param>
+				<param name="labelid">2</param>
 			</include>
-			<control type="image">
-				<centerleft>50%</centerleft>
-				<bottom>30</bottom>
-				<width>40</width>
-				<height>40</height>
-				<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/arrowdown.png</texture>
-				<include>Animation_CommonFade</include>
-				<visible>Container().HasNext</visible>
-			</control>
 			<control type="grouplist">
-				<left>50</left>
-				<top>98</top>
-				<width>200</width>
-					<control type="button" id="18">
-						<height>60</height>
-						<onleft>16</onleft>
-						<onright>15</onright>
-						<onup>19</onup>
-						<ondown>19</ondown>
-						<label>186</label>
-					</control>
-					<control type="button" id="19">
-						<height>60</height>
-						<onleft>16</onleft>
-						<onright>15</onright>
-						<onup>18</onup>
-						<ondown>18</ondown>
-						<label>222</label>
-					</control>
-			</control>
-			<control type="button" id="15">
-					<height>60</height>
-					<left>300</left>
-					<top>98</top>
-					<width>290</width>
-					<onleft>18</onleft>
-					<onright>16</onright>
-					<onup>18</onup>
-					<ondown>17</ondown>
+				<left>20</left>
+				<top>88</top>
+				<width>814</width>
+				<control type="button" id="20">
+					<label>$LOCALIZE[1024]</label>
+					<include>Dialog_Button_Narrow</include>
+				</control>
+				<control type="label">
+					<label>$LOCALIZE[21422]</label>
+					<include>Dialog_Label_Narrow</include>
+				</control>
+				<control type="button" id="15">
+					<include>Dialog_Button_Narrow</include>
 				</control>
 				<control type="button" id="16">
-					<height>60</height>
-					<left>590</left>
-					<top>98</top>
-					<width>290</width>
-					<onleft>15</onleft>
-					<onright>18</onright>
-					<onup>18</onup>
-					<ondown>17</ondown>
+					<include>Dialog_Button_Narrow</include>
 				</control>
 				<control type="edit" id="17">
-				<left>300</left>
-				<top>158</top>
-				<width>560</width>
-				<height>60</height>
-				<hinttext>21420</hinttext>
-				<onup>15</onup>
-				<onleft>17</onleft>
-				<onright>18</onright>
-				<ondown>20</ondown>
+					<hinttext>31047</hinttext>
+					<include>Dialog_Button_Narrow</include>
+				</control>
 			</control>
-			<control type="button" id="20">
-				<left>300</left>
-				<top>218</top>
-				<width>580</width>
-				<height>60</height>
-				<label>1024</label>
-				<onup>17</onup>
-				<onleft>18</onleft>
-				<onright>18</onright>
-				<ondown>15</ondown>
+			<control type="grouplist" id="8001">
+				<right>60</right>
+				<top>28</top>
+				<width>400</width>
+				<onleft>3</onleft>
+				<ondown>3</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">18</param>
+					<param name="label" value="$LOCALIZE[186]" />
+				</include>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">19</param>
+					<param name="label" value="$LOCALIZE[222]" />
+				</include>
 			</control>
 		</control>
 	</controls>

@@ -32,29 +32,29 @@
 				<!-- Slideshow -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="6" />
-					<param name="icon" value="icon/mediamenu/image.png" />
+					<param name="icon" value="icons/mediamenu/image.png" />
 					<param name="label" value="$LOCALIZE[13317]" />
 					<param name="visible">Container.Content(images)</param>
 				</include>
 				<!-- Recursive slideshow -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="7" />
-					<param name="icon" value="icon/mediamenu/repeat.png" />
+					<param name="icon" value="icons/mediamenu/repeat.png" />
 					<param name="label" value="$LOCALIZE[13318]" />
 					<param name="visible">Container.Content(images)</param>
 				</include>
 				<!-- Randomise -->
 				<include content="MediaMenu_Icon_RadioButton">
 					<param name="id" value="9" />
-					<param name="iconon" value="icon/mediamenu/random.png" />
-					<param name="iconoff" value="icon/mediamenu/randomoff.png" />
+					<param name="iconon" value="icons/mediamenu/random.png" />
+					<param name="iconoff" value="icons/mediamenu/randomoff.png" />
 					<param name="label" value="$LOCALIZE[13319]" />
 					<param name="visible">Container.Content(images)</param>
 				</include>
 				<!-- Get more -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="621" />
-					<param name="icon" value="icon/mediamenu/add.png" />
+					<param name="icon" value="icons/mediamenu/add.png" />
 					<param name="label" value="$LOCALIZE[21452]" />
 					<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/image/,return)" />
 					<param name="visible">Container.Content(addons)</param>
@@ -62,7 +62,7 @@
 				<!-- Open Settings -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="624" />
-					<param name="icon" value="icon/mediamenu/settings.png" />
+					<param name="icon" value="icons/mediamenu/settings.png" />
 					<param name="label" value="$LOCALIZE[10140]" />
 					<param name="onclick" value="Addon.OpenSettings($INFO[Container.PluginName])" />
 					<param name="visible">!String.IsEmpty(Container.PluginName)</param>
@@ -70,7 +70,7 @@
 				<!-- Quicknav -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9011" />
-					<param name="icon" value="icon/mediamenu/arrowleft.png" />
+					<param name="icon" value="icons/mediamenu/arrowleft.png" />
 					<param name="label" value="$LOCALIZE[31633]" />
 					<param name="onclick" value="ActivateWindow(1113)" />
 					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />

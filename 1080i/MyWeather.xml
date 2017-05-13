@@ -31,7 +31,7 @@
 				<top>144</top>
 				<width>1</width>
 				<height>803</height>
-				<texture colordiffuse="$VAR[PanelColorVar]">panel/line-vertical.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]">panels/line-vertical.png</texture>
 			</control>
 			<control type="group">
 				<left>101</left>
@@ -446,8 +446,8 @@
 							<onup>7504</onup>
 							<ondown>7504</ondown>
 							<onleft>9000</onleft>
-							<texturefocus border="20" colordiffuse="$VAR[WeatherHighlightColorVar]">thumb/shadow-square.png</texturefocus>
-							<texturenofocus border="20" colordiffuse="FF111111">thumb/shadow-square.png</texturenofocus>
+							<texturefocus border="20" colordiffuse="$VAR[WeatherHighlightColorVar]">thumbs/shadow-square.png</texturefocus>
+							<texturenofocus border="20" colordiffuse="FF111111">thumbs/shadow-square.png</texturenofocus>
 							<visible>String.IsEqual(Window(weather).Property(Weather.CurrentView),map) | String.IsEqual(Window(weather).Property(Weather.CurrentView),map1) | String.IsEqual(Window(weather).Property(Weather.CurrentView),map2) | String.IsEqual(Window(weather).Property(Weather.CurrentView),map3)</visible>
 							<include>Animation_CommonFade</include>
 						</control>
@@ -558,84 +558,84 @@
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">3</param>
 					<param name="label">$INFO[Control.GetLabel(3)]</param>
-					<param name="icon">icon/mediamenu/pin.png</param>
+					<param name="icon">icons/mediamenu/pin.png</param>
 					<param name="onclick">Weather.LocationNext</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">2</param>
 					<param name="label">$LOCALIZE[184]</param>
-					<param name="icon">icon/mediamenu/refresh.png</param>
+					<param name="icon">icons/mediamenu/refresh.png</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9001</param>
-					<param name="icon">icon/mediamenu/settings.png</param>
+					<param name="icon">icons/mediamenu/settings.png</param>
 					<param name="label">$LOCALIZE[5]</param>
 					<param name="onclick">ActivateWindow(servicesettings,weather)</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9002</param>
-					<param name="icon">icon/mediamenu/weather.png</param>
+					<param name="icon">icons/mediamenu/weather.png</param>
 					<param name="label">$LOCALIZE[10508]</param>
 					<param name="onfocus">ClearProperty(Weather.CurrentView,weather)</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9003</param>
-					<param name="icon">icon/mediamenu/repeat.png</param>
+					<param name="icon">icons/mediamenu/repeat.png</param>
 					<param name="label">$LOCALIZE[33034]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,36hour)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(36hour.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9004</param>
-					<param name="icon">icon/mediamenu/calendar.png</param>
+					<param name="icon">icons/mediamenu/calendar.png</param>
 					<param name="label">$LOCALIZE[33037]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,weekend)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(Weekend.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9005</param>
-					<param name="icon">icon/mediamenu/time.png</param>
+					<param name="icon">icons/mediamenu/time.png</param>
 					<param name="label">$LOCALIZE[33036]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,hourly)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(Hourly.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9006</param>
-					<param name="icon">icon/mediamenu/map.png</param>
+					<param name="icon">icons/mediamenu/map.png</param>
 					<param name="label">$LOCALIZE[33035]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,map)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(Radar))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9007</param>
-					<param name="icon">icon/mediamenu/infrared.png</param>
+					<param name="icon">icons/mediamenu/infrared.png</param>
 					<param name="label">$INFO[Window(weather).Property(Map.1.Heading)]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,map1)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(Map.1.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9008</param>
-					<param name="icon">icon/mediamenu/satellite.png</param>
+					<param name="icon">icons/mediamenu/satellite.png</param>
 					<param name="label">$INFO[Window(weather).Property(Map.2.Heading)]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,map2)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(Map.2.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9009</param>
-					<param name="icon">icon/mediamenu/radar.png</param>
+					<param name="icon">icons/mediamenu/radar.png</param>
 					<param name="label">$INFO[Window(weather).Property(Map.3.Heading)]</param>
 					<param name="onfocus">SetProperty(Weather.CurrentView,map3)</param>
 					<param name="visible">!String.IsEmpty(Window(weather).Property(Map.3.Area)) + !String.IsEmpty(Window(weather).Property(Map.IsFetched))</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9010</param>
-					<param name="icon">icon/mediamenu/image.png</param>
+					<param name="icon">icons/mediamenu/image.png</param>
 					<param name="label">$LOCALIZE[14018]</param>
 					<param name="onclick">ActivateWindow(1122)</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9011</param>
-					<param name="icon">icon/mediamenu/arrowleft.png</param>
+					<param name="icon">icons/mediamenu/arrowleft.png</param>
 					<param name="label">$LOCALIZE[31633]</param>
 					<param name="onclick">ActivateWindow(1113)</param>
 					<param name="visible">!Skin.HasSetting(DisableQuickNav)</param>

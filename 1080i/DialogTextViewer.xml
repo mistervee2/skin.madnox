@@ -14,7 +14,7 @@
 				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[HighlightColorVar]">icon/default/arrowdown.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Container(5).HasNext</visible>
 			</control>
