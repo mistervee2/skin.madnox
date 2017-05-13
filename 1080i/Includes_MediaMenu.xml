@@ -406,7 +406,7 @@
 			<param name="visible" value="Container.CanFilterAdvanced" />
 		</include>
 	</include>
-	<!-- Videos common view settings -->
+	<!-- Common view settings -->
 	<include name="MediaMenu_CommonViewsettings_Videos">
 		<control type="label" id="201">
 			<label>$LOCALIZE[128]</label>
@@ -421,6 +421,24 @@
 		<control type="button" id="203">
 			<label>$LOCALIZE[31298]</label>
 			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[3],home)</onclick>
+			<onclick>ActivateWindow(1110)</onclick>
+			<include>MediaMenu_Button_ViewSettings</include>
+		</control>
+	</include>
+	<include name="MediaMenu_CommonViewsettings_Music">
+		<control type="label" id="201">
+			<label>$LOCALIZE[128]</label>
+			<include>MediaMenu_Label_ViewSettings</include>
+		</control>
+		<control type="button" id="202">
+			<label>$LOCALIZE[33069]</label>
+			<onclick>SetProperty(BackgroundsLabel,$LOCALIZE[2],home)</onclick>
+			<onclick>ActivateWindow(1127)</onclick>
+			<include>MediaMenu_Button_ViewSettings</include>
+		</control>
+		<control type="button" id="203">
+			<label>$LOCALIZE[31298]</label>
+			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[2],home)</onclick>
 			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>

@@ -15,24 +15,18 @@
 		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
 		<value>special://skin/extras/backgrounds/default.jpg</value>
 	</variable>
-	<!-- <variable name="MovieFanartVar">
-
-		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + String.Contains(ListItemm.FolderPath,tvshow)">http://localhost:52307/gettvshowgenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
-
-
-
-
-
-		<value condition="String.IsEqual(Skin.String(MovieFanart),None)"></value>
-		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
-		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + !String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>
-		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + String.IsEmpty(Skin.String(MovieFanartFallback.Path)) + !String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
-		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback) + String.IsEmpty(Skin.String(MovieFanartFallback.Path))">special://skin/extras/backgrounds/default.jpg</value>
+	<variable name="MusicFanartVar">
+		<value condition="String.IsEqual(Skin.String(MusicFanart),None)"></value>
+		<value condition="String.IsEqual(Skin.String(MusicFanart),ExtraFanart) + !String.IsEmpty(Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt))">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>
+		<value condition="String.IsEqual(Skin.String(MusicFanart),Fallback) + !String.IsEmpty(Skin.String(MusicFanartFallback.Path))">$INFO[Skin.String(MusicFanartFallback.Path)]</value>
+		<value condition="String.IsEqual(Skin.String(MusicFanart),Fallback) + String.IsEmpty(Skin.String(MusicFanartFallback.Path)) + !String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value condition="String.IsEqual(Skin.String(MusicFanart),Fallback) + String.IsEmpty(Skin.String(MusicFanartFallback.Path))">special://skin/extras/backgrounds/default.jpg</value>
 		<value condition="!String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
-		<value condition="!String.IsEmpty(Skin.String(MovieFanartFallback.Path))">$INFO[Skin.String(MovieFanartFallback.Path)]</value>
-		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]movies$INFO[Skin.String(SkinBackgrounds.ext)]</value>
+		<value condition="!String.IsEmpty(Skin.String(MusicFanartFallback.Path))">$INFO[Skin.String(MusicFanartFallback.Path)]</value>
+		<value condition="!String.IsEmpty(Skin.String(SkinBackgrounds.path))">$INFO[Skin.String(SkinBackgrounds.path)]music$INFO[Skin.String(SkinBackgrounds.ext)]</value>
 		<value>special://skin/extras/backgrounds/default.jpg</value>
-	</variable> -->
+	</variable>
+
 	<variable name="WeatherFanartVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherFanart)) + [String.Contains(Skin.String(WeatherFanart),.jpg) | String.Contains(Skin.String(WeatherFanart),.png)]">$INFO[Skin.String(WeatherFanart)]</value>
 		<value condition="!String.IsEmpty(Skin.String(WeatherFanart))">$INFO[Skin.String(WeatherFanart.path)]$INFO[Weather.fanartcode]$INFO[Skin.String(WeatherFanart.ext)]</value>

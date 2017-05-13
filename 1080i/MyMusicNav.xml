@@ -4,6 +4,11 @@
 	<views>50</views>
 	<menucontrol>9000</menucontrol>
 	<controls>
+		<!-- Backdrop -->
+		<include>Background_Nowplaying</include>
+		<include content="Background_Fanart_Default">
+			<param name="imagepath">$VAR[MusicFanartVar]</param>
+		</include>
 		<control type="group">
 			<include>Animation_CommonFade</include>
 			<include>View_50_List</include>

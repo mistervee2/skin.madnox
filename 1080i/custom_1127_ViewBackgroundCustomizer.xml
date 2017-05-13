@@ -72,6 +72,56 @@
 					<include>Dialog_RadioButton_Narrow</include>
 				</control>
 			</control>
+			<!-- Music Background Settings -->
+			<control type="grouplist" id="100">
+				<visible>String.IsEqual(Window(home).Property(BackgroundsLabel),$LOCALIZE[2])</visible>
+				<left>20</left>
+				<top>88</top>
+				<width>814</width>
+				<height>420</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>60</onleft>
+				<onright>9001</onright>
+				<onup>100</onup>
+				<ondown>100</ondown>
+				<control type="button" id="101">
+					<label>Fanart</label>
+					<label2>$VAR[DialogMusicBackgroundLabelVar]</label2>
+					<onclick condition="String.IsEmpty(Skin.String(MusicFanart))">Skin.SetString(MusicFanart,Extrafanart)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(MusicFanart),ExtraFanart)">Skin.SetString(MusicFanart,Fallback)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(MusicFanart),Fallback)">Skin.SetString(MusicFanart,None)</onclick>
+					<onclick condition="String.IsEqual(Skin.String(MusicFanart),None)">Skin.Reset(MusicFanart)</onclick>
+					<include>Dialog_Button_Narrow</include>
+				</control>
+				<control type="radiobutton" id="102">
+					<label>Darken</label>
+					<onclick>Skin.ToggleSetting(MovieDarkenBackground)</onclick>
+					<selected>Skin.HasSetting(MovieDarkenBackground)</selected>
+					<include>Dialog_RadioButton_Narrow</include>
+				</control>
+				<control type="radiobutton" id="103">
+					<label>Animated</label>
+					<onclick>Skin.ToggleSetting(MovieAnimatedBackground)</onclick>
+					<selected>Skin.HasSetting(MovieAnimatedBackground)</selected>
+					<include>Dialog_RadioButton_Narrow</include>
+				</control>
+				<control type="label" id="104">
+					<label>Fallback</label>
+					<include>Dialog_Label_Narrow</include>
+				</control>
+				<control type="radiobutton" id="105">
+					<label>$LOCALIZE[31113]</label>
+					<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=MusicFanartFallback,resourceaddon=resource.images.skinbackgrounds)</onclick>
+					<selected>String.Endswith(Skin.String(MusicFanartFallback.path),jpg)</selected>
+					<include>Dialog_RadioButton_Narrow</include>
+				</control>
+				<control type="radiobutton" id="106">
+					<label>$LOCALIZE[31114]</label>
+					<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=MusicFanartFallback,addontype=resource.images.skinbackgrounds)</onclick>
+					<selected>String.Endswith(Skin.String(MusicFanartFallback.path),/)</selected>
+					<include>Dialog_RadioButton_Narrow</include>
+				</control>
+			</control>
 			<control type="grouplist" id="9001">
 				<right>60</right>
 				<top>28</top>

@@ -23,6 +23,7 @@
 				<include condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">MediaMenu_Viewsettings_Settings</include>
 				<include condition="String.IsEqual(Container.Viewmode,$LOCALIZE[535])">MediaMenu_Viewsettings_View50</include>
 				<include condition="Window.IsVisible(videos)">MediaMenu_CommonViewsettings_Videos</include>
+				<include condition="Window.IsVisible(music)">MediaMenu_CommonViewsettings_Music</include>
 			</control>
 		</control>
 	</controls>
