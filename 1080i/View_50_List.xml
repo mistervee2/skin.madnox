@@ -126,7 +126,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows)">
@@ -203,7 +203,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(seasons)">
@@ -273,7 +273,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(seasons)">
@@ -344,7 +344,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(episodes)">
@@ -403,7 +403,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(episodes)">
@@ -463,7 +463,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(musicvideos)">
@@ -522,7 +522,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(musicvideos)">
@@ -578,7 +578,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(artists)">
@@ -627,7 +627,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(artists)">
@@ -674,7 +674,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(albums)">
@@ -733,7 +733,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(albums)">
@@ -790,7 +790,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(songs)">
@@ -849,7 +849,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(songs)">
@@ -905,7 +905,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</focusedlayout>
 				<itemlayout width="1133" height="100" condition="Container.Content(addons)">
@@ -954,7 +954,7 @@
 						<height>100</height>
 						<aligny>center</aligny>
 						<aspectratio>keep</aspectratio>
-						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListWatchedIconVar]</texture>
+						<texture colordiffuse="$VAR[HighlightColorVar]">$VAR[ListOverlayIconVar]</texture>
 					</control>
 				</itemlayout>
 				<focusedlayout width="1133" height="100" condition="Container.Content(addons)">

@@ -106,7 +106,7 @@
 		<value condition="!String.IsEmpty(ListItem.Appearances)">$LOCALIZE[38026]$INFO[ListItem.Appearances, ]</value>
 		<value>$INFO[ListItem.Label2]</value>
 	</variable>
-	<variable name="ListWatchedIconVar">
+	<variable name="ListOverlayIconVar">
 		<value condition="ListItem.IsPlaying">overlays/list/OverlayPlay.png</value>
 		<value condition="ListItem.IsResumable">$INFO[ListItem.PercentPlayed,dialogs/progress/p,.png]</value>
 		<value condition="!String.IsEqual(ListItem.Overlay,OverlayWatched.png) + !String.IsEmpty(ListItem.Top250)">overlays/list/OverlayIMDB.png</value>
