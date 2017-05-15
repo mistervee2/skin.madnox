@@ -31,7 +31,7 @@
 				<height>60</height>
 				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
 				<include>Animation_CommonFade</include>
-				<visible>[Control.IsVisible(450) + !Integer.IsLess(Container(450).NumItems,7)] | [Control.IsVisible(450) + !Integer.IsLess(Container(450).NumItems,7)]</visible>
+				<visible>[Control.IsVisible(450) + Integer.IsGreater(Container(450).NumItems,6)] | [Control.IsVisible(451) + !Integer.IsLess(Container(450).NumItems,7)]</visible>
 			</control>
 			<control type="list" id="450">
 				<left>20</left>
