@@ -42,7 +42,7 @@
 		</control>
 	</include>
 	<include name="Dialog_Furniture_Background">
-		<param name="width">1114</param>
+		<param name="width">1154</param>
 		<param name="height">588</param>
 		<param name="label"></param>
 		<param name="labelleft">70</param>
@@ -52,7 +52,9 @@
 		<param name="font">Font33_Bold</param>
 		<param name="bottomseparatorvisible">true</param>
 		<param name="bottomleftlabel"></param>
+		<param name="bottomleftlabelid"></param>
 		<param name="bottomrightlabel"></param>
+		<param name="haspath">false</param>
 		<definition>
 			<include>Animation_Dialog_Popup</include>
 			<centertop>50%</centertop>
@@ -94,19 +96,20 @@
 				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
 				<visible>$PARAM[bottomseparatorvisible]</visible>
 			</control>
-			<control type="label">
+			<control type="label" id="$PARAM[bottomleftlabelid]">
 				<bottom>20</bottom>
 				<left>70</left>
-				<right>380</right>
+				<right>620</right>
 				<height>60</height>
 				<label>$PARAM[bottomleftlabel]</label>
 				<font>Font25_Cond</font>
 				<textcolor>grey</textcolor>
+				<haspath>$PARAM[haspath]</haspath>
 			</control>
 			<control type="label">
 				<bottom>20</bottom>
 				<right>70</right>
-				<width>300</width>
+				<width>460</width>
 				<height>60</height>
 				<align>right</align>
 				<label>$PARAM[bottomrightlabel]</label>
@@ -117,7 +120,7 @@
 	</include>
 	<include name="Dialog_List_Default">
 		<param name="id"></param>
-		<param name="width">1074</param>
+		<param name="width">1124</param>
 		<definition>
 			<itemlayout height="60">
 				<control type="image">

@@ -207,6 +207,8 @@
 	<variable name="DialogItemsLabelVar">
 		<value condition="Control.IsVisible(3)">$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</value>
 		<value condition="Control.IsVisible(6)">$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</value>
+		<value condition="Control.IsVisible(450)">$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</value>
+		<value condition="Control.IsVisible(451)">$INFO[Container(451).NumItems,, $LOCALIZE[31025]]$INFO[Container(451).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(451).NumPages,/,)]</value>
 		<value condition="ControlGroup(100).HasFocus">$INFO[Container(100).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(100).NumItems,/]</value>
 		<value condition="!ControlGroup(100).HasFocus">$LOCALIZE[31025]$INFO[Container(100).NumItems, 1/]</value>
 	</variable>

@@ -15,14 +15,23 @@
 				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
-				<texture colordiffuse="$VAR[DialogColorVar]">icons/default/arrowdown.png</texture>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
-				<visible>Container(3).HasNext | Container(5).HasNext</visible>
+				<visible>Container(3).HasNext | Container(6).HasNext</visible>
+			</control>
+			<control type="image">
+				<bottom>80</bottom>
+				<left>640</left>
+				<right>20</right>
+				<height>60</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Control.IsVisible(6) + !Integer.IsLess(Container(6).NumItems,5)</visible>
 			</control>
 			<control type="list" id="3">
 				<left>20</left>
 				<top>88</top>
-				<width>1074</width>
+				<width>1114</width>
 				<height>420</height>
 				<onleft>60</onleft>
 				<onright>8001</onright>
@@ -92,7 +101,7 @@
 				</focusedlayout>
 			</control>
 			<control type="image">
-				<right>10</right>
+				<right>50</right>
 				<top>78</top>
 				<width>440</width>
 				<height>440</height>
@@ -123,7 +132,7 @@
 			<control type="scrollbar" id="60">
 				<left>1</left>
 				<top>88</top>
-				<height>420</height>
+				<bottom>80</bottom>
 				<onright condition="Control.IsVisible(3)">3</onright>
 				<onright condition="Control.IsVisible(6)">6</onright>
 			</control>
