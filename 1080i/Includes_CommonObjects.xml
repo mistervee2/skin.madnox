@@ -57,7 +57,7 @@
 		<param name="haspath">false</param>
 		<definition>
 			<include>Animation_Dialog_Popup</include>
-			<centertop>50%</centertop>
+			<centertop>50%</centertop>  
 			<centerleft>50%</centerleft>
 			<width>$PARAM[width]</width>
 			<height>$PARAM[height]</height>
