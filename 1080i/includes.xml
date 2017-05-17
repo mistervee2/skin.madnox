@@ -9,6 +9,17 @@
 	<include file="Includes_Backgrounds.xml"/>
 	<!-- <include file="Includes_LiveBG.xml" /> -->
 	<include file="Includes_MainMenu.xml"/>
+	<include condition="!Skin.HasSetting(HomeVertical)" file="Includes_HomeHorizontal_Common.xml" />
+	<include condition="Skin.HasSetting(HomeVertical)" file="Includes_HomeVertical_Common.xml" />
+	<include condition="String.IsEmpty(Skin.String(HomeLayoutType))" file="Includes_HomeHorizontal_Labels.xml" />
+	<include condition="Skin.String(HomeLayoutType,Icons)" file="Includes_HomeHorizontal_Icons.xml" />
+	<include condition="Skin.String(HomeLayoutType,LabelsIcons)" file="Includes_HomeHorizontal_LabelsIcons.xml" />
+	<include condition="Skin.String(HomeLayoutType,VerticalLabels)" file="Includes_HomeVertical_Labels.xml" />
+	<include condition="Skin.String(HomeLayoutType,VerticalLabelsIcons)" file="Includes_HomeVertical_LabelsIcons.xml" />
+	<include condition="Skin.String(HomeLayoutType,VerticalLabelsBigIcons)" file="Includes_HomeVertical_LabelsBigIcons.xml" />
+	<include condition="Skin.String(HomeLayoutType,VerticalLandscape)" file="Includes_HomeVertical_Landscape.xml" />
+	<include condition="Skin.String(HomeLayoutType,VerticalLabelsLandscape)" file="Includes_HomeVertical_LabelsLandscape.xml" />
+
 	<include file="Includes_Widgets.xml"/>
 	<include file="script-skinshortcuts-includes.xml" />
 	<include file="Includes_MediaFlags.xml"/>
