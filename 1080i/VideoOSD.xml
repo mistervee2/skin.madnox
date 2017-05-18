@@ -5,23 +5,28 @@
 		<include>Dialog_Furniture_BackgroundFade</include> 
 		<include>Dialog_Furniture_Close_Onclick</include> 
 		<control type="group">
-			<include>Animation_Dialog_Popup</include>
+			<include content="Animation_Slide_Top">
+		        <param name="slide">150</param>
+	        </include>
 			<control type="image">
-				<left>200</left>
-				<width>1500</width>
+				<left>130</left>
+				<width>1660</width>
 				<height>150</height>
-				<texture colordiffuse="$VAR[GlowColorVar]" border="40">dialogs/dialog-glow.png</texture>
+				<texture colordiffuse="$VAR[GlowColorVar]" border="10">dialogs/glow-top.png</texture>
 			</control>
 			<control type="image">
-			    <left>200</left>
-				<width>1500</width>
+			    <left>130</left>
+				<width>1660</width>
 				<height>150</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialogs/dialog-back.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="10">dialogs/osd-back.png</texture>
 			</control>
     	</control>
 		
 		<control type="group">
 		    <top>11</top>
+			<include content="Animation_Slide_Top">
+		        <param name="slide">135</param>
+	        </include>
 			<control type="grouplist" id="650">
 				<height>135</height>
 				<width>100%</width>
@@ -31,176 +36,131 @@
 				<onleft>650</onleft>
 				<onright>650</onright>
 				<visible>!VideoPlayer.Content(LiveTV)</visible>
-				<control type="button" id="600">
-					<texturefocus>osd/buttons/OSDBookMarksFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDBookMarksNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>ActivateWindow(videobookmarks)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-				</control>
-				<control type="button" id="601">
-					<texturefocus>osd/buttons/OSDAudioFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDAudioNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>ActivateWindow(osdaudiosettings)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-				</control>
-				<control type="button" id="602">
-					<texturefocus>osd/buttons/OSDVideoFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDVideoNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>ActivateWindow(osdvideosettings)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-				</control>
-				<control type="button" id="700">
-					<texturefocus>osd/buttons/OSDPrevTrackFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPrevTrackNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>PlayerControl(Previous)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
-				</control>
-				<control type="button" id="701">
-					<texturefocus>osd/buttons/OSDRewindFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDRewindNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick condition="!Player.TempoEnabled">PlayerControl(Rewind)</onclick>
-					<onclick condition="Player.TempoEnabled">PlayerControl(tempodown)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
-				</control>
-				<control type="button" id="702">
-					<texturefocus>osd/buttons/OSDStopFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDStopNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>PlayerControl(Stop)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
-				</control>
-				<control type="togglebutton" id="703">
-					<texturefocus>osd/buttons/OSDPauseFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDPauseNF.png</texturenofocus>
-					<alttexturefocus>osd/buttons/OSDPlayFO.png</alttexturefocus>
-					<alttexturenofocus>osd/buttons/OSDPlayNF.png</alttexturenofocus>
-					<label />
-					<altlabel>208</altlabel>
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-					<onclick>PlayerControl(Play)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
-				</control>
-				<control type="button" id="704">
-					<texturefocus>osd/buttons/OSDForwardFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDForwardNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick condition="!Player.TempoEnabled">PlayerControl(Forward)</onclick>
-					<onclick condition="Player.TempoEnabled">PlayerControl(tempoup)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
-				</control>
-				<control type="button" id="705">
-					<texturefocus>osd/buttons/OSDNextTrackFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDNextTrackNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>PlayerControl(Next)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>!Skin.HasSetting(Disable.PlayerControlButtons)</visible>
-				</control>
-				<control type="button" id="800">
-					<texturefocus>osd/buttons/OSDInfoFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDInfoNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>Close</onclick>
-					<onclick condition="!Window.IsActive(fullscreeninfo)">ActivateWindow(fullscreeninfo)</onclick>
-					<onclick condition="Window.IsActive(fullscreeninfo)">Dialog.Close(all,true)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-				</control>
-				<control type="button" id="801">
-					<texturefocus>osd/buttons/OSDSubtitlesFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDSubtitlesNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>ActivateWindow(SubtitleSearch)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-				</control>
-				<control type="button" id="802">
-					<texturefocus>osd/buttons/OSDDvdFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDDvdNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>PlayerControl(ShowVideoMenu)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>VideoPlayer.HasMenu</visible>
-				</control>
-				<control type="button" id="803">
-					<texturefocus>osd/buttons/OSDStereoscopicFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDStereoscopicNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>StereoMode</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-					<visible>VideoPlayer.IsStereoscopic</visible>
-				</control>
-				<control type="button" id="804">
-					<texturefocus>osd/buttons/OSDSkinFO.png</texturefocus>
-					<texturenofocus>osd/buttons/OSDSkinNF.png</texturenofocus>
-					<label />
-					<width>120</width>
-					<height>120</height>
-					<font />
-					<onclick>ActivateWindow(1118)</onclick>
-					<oninfo>Dialog.Close(all,true)</oninfo>
-				</control>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="600" />
+		            <param name="texture" value="osd/buttons/OSDBookMarksNF.png" />
+		            <param name="onclick" value="ActivateWindow(videobookmarks)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="601" />
+		            <param name="texture" value="osd/buttons/osdaudionf.png" />
+		            <param name="onclick" value="ActivateWindow(osdaudiosettings)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="602" />
+		            <param name="texture" value="osd/buttons/osdvideonf.png" />
+		            <param name="onclick" value="ActivateWindow(osdvideosettings)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="700" />
+		            <param name="texture" value="osd/buttons/osdprevtracknf.png" />
+		            <param name="onclick" value="PlayerControl(Previous)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="701" />
+		            <param name="texture" value="osd/buttons/osdrewindnf.png" />
+		            <param name="onclick" value="PlayerControl(Rewind)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="702" />
+		            <param name="texture" value="osd/buttons/osdstopnf.png" />
+		            <param name="onclick" value="PlayerControl(Stop)" />
+				</include>
+				<include content="Dialog_ToggleButton_OSD">
+		            <param name="id" value="703" />
+		            <param name="texture" value="osd/buttons/osdpausenf.png" />
+					<param name="alttexture" value="osd/buttons/osdplaynf.png" />
+					<param name="usealttexture" value="Player.Paused | Player.Forwarding | Player.Rewinding" />
+		            <param name="onclick" value="PlayerControl(Play)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="704" />
+		            <param name="texture" value="osd/buttons/osdforwardnf.png" />
+		            <param name="onclick" value="PlayerControl(Foward)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="705" />
+		            <param name="texture" value="osd/buttons/osdnexttracknf.png" />
+		            <param name="onclick" value="PlayerControl(Next)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="800" />
+		            <param name="texture" value="osd/buttons/osdinfonf.png" />
+		            <param name="onclick" value="ActivateWindow(fullscreeninfo)" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="801" />
+		            <param name="texture" value="osd/buttons/osdsubtitlesnf.png" />
+		            <param name="onclick" value="ActivateWindow(SubtitleSearch)" />
+				</include>				
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="802" />
+		            <param name="texture" value="osd/buttons/osddvdnf.png" />
+		            <param name="onclick" value="PlayerControl(ShowVideoMenu)" />
+					<param name="visible" value="VideoPalyer.HasMenu" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="803" />
+		            <param name="texture" value="osd/buttons/osd3dnf.png" />
+		            <param name="onclick" value="StereoMode" />
+					<param name="visible" value="VideoPalyer.IsStereoscopic" />
+				</include>
+				<include content="Dialog_Button_OSD">
+		            <param name="id" value="804" />
+		            <param name="texture" value="osd/buttons/osdskinnf.png" />
+		            <param name="onclick" value="ActivateWindow(1118)" />
+				</include>
 			</control>
 		</control>
 		
 		<control type="group">
-			<visible>!Window.IsActive(fullscreeninfo)</visible>
-			<animation type="Visible">
-				<effect type="fade" time="160" end="100"/>
-				<effect type="slide" time="160" start="0,98" end="0,0" tween="cubic"/>
-			</animation>
-			<animation type="Hidden">
-				<effect type="fade" time="160" start="100" end="0"/>
-				<effect type="slide" time="160" end="0,98" easing="in" tween="cubic"/>
-			</animation>
-			<include condition="!VideoPlayer.Content(LiveTV)">BottomProgressBar</include>
+			<visible>!Window.IsActive(fullscreeninfo) | !VideoPlayer.Content(LiveTV)</visible>
+    	    <include content="Animation_Slide_Bottom">
+	    	    <param name="slide">87</param>
+	        </include>		
+      		<top>993</top>
+			<control type="image">
+				<left>-80</left>
+				<width>2080</width>
+				<height>87</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="10" flipy="true">dialogs/osd_back.png</texture>
+			</control>
+			<control type="progress" id="23">
+				<left>150</left>
+				<top>57</top>
+				<width>1620</width>
+				<info>Player.ProgressCache</info>
+				<texturebg>dialogs/progress-control/progress-back-cache.png</texturebg>
+				<midtexture border="1">dialogs/progress-control/progress-mid-cache.png</midtexture>
+			</control>
+			<control type="progress" id="23">
+				<left>150</left>
+				<top>57</top>
+				<width>1620</width>
+				<info>Player.Progress</info>
+			</control>
+			<control type="slider" id="87">
+				<left>150</left>
+				<top>57</top>
+				<width>1620</width>
+				<height>20</height>
+				<action>seek</action>
+			</control>
+			<control type="label">
+				<left>-160</left>
+				<top>45</top>
+				<width>300</width>
+				<height>42</height>
+				<align>right</align>
+				<label>$INFO[Player.Time]</label>
+			</control>
+			<control type="label">
+				<left>135r</left>
+				<top>45</top>
+				<width>300</width>
+				<height>42</height>
+				<label>$INFO[Player.Duration]</label>
+			</control>
 		</control>
 	</controls>
 </window>
