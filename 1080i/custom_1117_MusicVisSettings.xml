@@ -18,7 +18,7 @@
 				<height>40</height>
 				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
-				<visible>Container().HasNext</visible>
+				<visible>Container(100).HasNext</visible>
 			</control>
 			<control type="grouplist" id="100">
 				<left>20</left>

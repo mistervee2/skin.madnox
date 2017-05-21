@@ -184,6 +184,11 @@
 		<radioposx>963</radioposx>
 		<textoffsetx>50</textoffsetx>
 	</include>
+	<include name="Dialog_RadioButton_Left">
+		<width>537</width>
+		<height>60</height>
+		<textoffsetx>50</textoffsetx>
+	</include>
 	<include name="Dialog_Label_Narrow">
 		<width>814</width>
 		<height>60</height>
