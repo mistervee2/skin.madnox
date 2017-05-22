@@ -5,23 +5,23 @@
 		<include>Dialog_Furniture_BackgroundFade</include>
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
-			<include content="Animation_Slide_Top">
-				<param name="slide">150</param>
+			<include content="Animation_Slide_Bottom">
+				<param name="slide">220</param>
 			</include>
+			<top>880</top>
 			<control type="image">
-				<top>140</top>
 				<width>1920</width>
 				<height>20</height>
 				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-top.png</texture>
 			</control>
 			<control type="image">
 				<width>1920</width>
-				<height>150</height>
+				<height>220</height>
 				<texture colordiffuse="$VAR[PanelColorVar]" border="10">dialogs/osd-back.png</texture>
 			</control>
 			<control type="grouplist" id="650">
-				<top>11</top>
-				<height>135</height>
+				<bottom>20</bottom>
+				<height>120</height>
 				<width>100%</width>
 				<align>center</align>
 				<scrolltime tween="sine">200</scrolltime>
@@ -102,66 +102,66 @@
 					<param name="onclick" value="ActivateWindow(1118)" />
 				</include>
 			</control>
-		</control>
-		<control type="group">
-			<visible>!Window.IsActive(fullscreeninfo) | !VideoPlayer.Content(LiveTV)</visible>
-			<include content="Animation_Slide_Bottom">
-				<param name="slide">87</param>
-			</include>
-			<bottom>0</bottom>
-			<width>1920</width>
-			<height>40</height>
-			<control type="image">
-				<top>40</top>
-				<width>1920</width>
-				<height>20</height>
-				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-top.png</texture>
-			</control>
-			<control type="image">
-				<top>-10</top>
-				<width>1920</width>
-				<height>50</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="10" flipy="true">dialogs/osd-back.png</texture>
-			</control>
-			<control type="progress">
-				<centerleft>50%</centerleft>
-				<top>10</top>
-				<width>1600</width>
-				<info>Player.ProgressCache</info>
-				<texturebg border="8">dialogs/progress-control/progress-back.png</texturebg>
-				<midtexture border="8">dialogs/progress-control/progress-mid-cache.png</midtexture>
-			</control>
-			<control type="progress">
-				<centerleft>50%</centerleft>
-				<top>10</top>
-				<width>1600</width>
-				<texturebg border="8">dialogs/progress-control/progress-back-cache.png</texturebg>
-				<info>Player.Progress</info>
-			</control>
-			<control type="slider">
-				<centerleft>50%</centerleft>
-				<top>10</top>
-				<width>1600</width>
-				<height>20</height>
-				<action>seek</action>
-				<texturesliderbar />
-				<textureslidernib />
-				<textureslidernibfocus />
-			</control>
-			<control type="label">
-				<width>150</width>
-				<height>40</height>
-				<align>right</align>
-				<font>Font28_Reg</font>
-				<label>$INFO[Player.Time]</label>
-			</control>
-			<control type="label">
-				<right>0</right>
-				<width>150</width>
-				<height>40</height>
-				<font>Font28_Reg</font>
-				<label>$INFO[Player.Duration]</label>
-			</control>
-		</control>
+		
+		    <control type="group">
+            	<bottom>0</bottom>
+			    <width>1920</width>
+			    <height>40</height>
+<!--			    <control type="image">
+				    <top>40</top>
+				    <width>1920</width>
+				    <height>20</height>
+				    <texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-top.png</texture>
+			    </control>
+			    <control type="image">
+				    <top>-10</top>
+				    <width>1920</width>
+				    <height>50</height>
+				    <texture colordiffuse="$VAR[PanelColorVar]" border="10" flipy="true">dialogs/osd-back.png</texture>
+			    </control> -->
+			    <control type="progress">
+				    <centerleft>50%</centerleft>
+				    <bottom>150</bottom>
+				    <width>1600</width>
+				    <info>Player.ProgressCache</info>
+				    <texturebg border="8">dialogs/progress-control/progress-back.png</texturebg>
+				    <midtexture border="8">dialogs/progress-control/progress-mid-cache.png</midtexture>
+			    </control>
+			    <control type="progress">
+				    <centerleft>50%</centerleft>
+				    <bottom>150</bottom>
+				    <width>1600</width>
+				    <texturebg border="8">dialogs/progress-control/progress-back-cache.png</texturebg>
+				    <info>Player.Progress</info>
+			    </control>
+			    <control type="slider">
+				    <centerleft>50%</centerleft>
+				    <bottom>150</bottom>
+				    <width>1600</width>
+				    <height>20</height>
+				    <action>seek</action>
+				    <texturesliderbar />
+				    <textureslidernib />
+				    <textureslidernibfocus />
+			    </control>
+			    <control type="label">
+				    <left>00</left>
+					<bottom>140</bottom>
+					<width>150</width>
+				    <height>40</height>
+				    <align>right</align>
+				    <font>Font28_Reg</font>
+				    <label>$INFO[Player.Time]</label>
+			    </control>
+			    <control type="label">
+				    <right>0</right>
+					<bottom>140</bottom>
+				    <width>150</width>
+				    <height>40</height>
+				    <font>Font28_Reg</font>
+				    <label>$INFO[Player.Duration]</label>
+			    </control>
+		    </control>
+		</control>	
 	</controls>
 </window>

@@ -316,8 +316,8 @@
 		<param name="visible"></param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
-				<width>120</width>
-				<height>120</height>
+				<width>110</width>
+				<height>110</height>
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[texture]</texturefocus>
 				<texturenofocus>$PARAM[texture]</texturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
@@ -335,8 +335,8 @@
 		<param name="visible"></param>
 		<definition>
 			<control type="togglebutton" id="$PARAM[id]">
-				<width>120</width>
-				<height>120</height>
+				<width>110</width>
+				<height>110</height>
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[texture]</texturefocus>
 				<texturenofocus>$PARAM[texture]</texturenofocus>
 				<alttexturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[alttexture]</alttexturefocus>
