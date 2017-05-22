@@ -313,6 +313,7 @@
 		<param name="id"></param>
 		<param name="texture"></param>
 		<param name="onclick"></param>
+		<param name="onclick2"></param>
 		<param name="visible"></param>
 		<definition>
 			<control type="button" id="$PARAM[id]">
@@ -321,6 +322,7 @@
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[texture]</texturefocus>
 				<texturenofocus>$PARAM[texture]</texturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
+				<onclick>$PARAM[onclick2]</onclick>
 				<visible>$PARAM[visible]</visible>
 				<oninfo>Dialog.Close(all,true)</oninfo>
 			</control>
