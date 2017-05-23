@@ -3,6 +3,7 @@
   <color name="white2">FFe5e5e5</color><!-- default label color not in the above, alt-heading or other so the main heading still stands out -->
   <color name="grey">88FFFFFF</color><!-- unfocused label in list, container or button -->
   <color name="grey2">FFa4a4a4</color><!-- sub-heading or other -->
+  <color name="grey3">48FFFFFF</color><!-- other and main menu nofocus-->
   <color name="red">FFCE4421</color><!-- for weather high temp -->
   <color name="blue">FF0084ff</color><!-- for weather low temp -->
   <color name="shadow">88000000</color><!-- only for shadow under text -->

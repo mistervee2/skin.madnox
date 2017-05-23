@@ -130,41 +130,6 @@
 						<include>Settings_Button</include>
 						<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					</control>
-					<control type="button" id="452">
-						<label>$LOCALIZE[31643]</label>
-						<include>Settings_Button</include>
-						<onclick>ActivateWindow(home)</onclick>
-						<onclick>ActivateWindow(1131)</onclick>
-					</control>
-					<control type="button" id="526">
-						<label>$LOCALIZE[31010]</label>
-						<include>Settings_Button</include>
-						<onclick>SetProperty(ReturnToHome,true,home)</onclick>
-						<onclick>ActivateWindow(home)</onclick>
-						<onclick>ActivateWindow(1120)</onclick>
-					</control>
-					<control type="button" id="457">
-						<label>31877</label>
-						<include>Settings_Button</include>
-						<onclick>ActivateWindow(1158)</onclick>
-					</control>
-					<control type="button" id="4579">
-						<label>Home Bottom NowPlaying Settings</label>
-						<include>Settings_Button</include>
-						<onclick>ActivateWindow(1176)</onclick>
-					</control>
-					<control type="button" id="453">
-						<label>$LOCALIZE[31610]</label>
-						<include>Settings_Button</include>
-						<onclick>ActivateWindow(home)</onclick>
-						<onclick>ActivateWindow(1128)</onclick>
-					</control>
-					<control type="button" id="455">
-						<label>$LOCALIZE[31961]</label>
-						<include>Settings_Button</include>
-						<onclick>SetProperty(FeaturedSetup,true,Home)</onclick>
-						<onclick>ActivateWindow(1147)</onclick>
-					</control>
 				</control>
 				<!-- General -->
 				<control type="grouplist" id="8002">
@@ -914,30 +879,6 @@
 						<label>$LOCALIZE[31455]</label>
 						<include>Settings_Button</include>
 						<onclick>ActivateWindow(1164)</onclick>
-					</control>
-					<control type="button" id="303">
-						<label>$LOCALIZE[31678]</label>
-						<label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(WeatherFanartDir)][/COLOR]</label2>
-						<include>Settings_Button</include>
-						<onclick>Skin.Reset(WeatherFanartDir)</onclick>
-						<onclick>Skin.SetPath(WeatherFanartDir)</onclick>
-					</control>
-					<control type="button" id="306">
-						<label>$LOCALIZE[31378]</label>
-						<label2>[COLOR $VAR[FontColorVar]]$INFO[Skin.String(ArtistsLogosPath)][/COLOR]</label2>
-						<include>Settings_Button</include>
-						<onclick>Skin.Reset(ArtistsLogosPath)</onclick>
-						<onclick>Skin.SetPath(ArtistsLogosPath)</onclick>
-					</control>
-					<control type="button" id="10">
-						<label>31459</label>
-						<label2>[COLOR $VAR[FontColorVar]]$VAR[LibraryStructureVar][/COLOR]</label2>
-						<include>Settings_Button</include>
-						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),1) | String.IsEmpty(Skin.String(LibraryStructure))">Skin.SetString(LibraryStructure,2)</onclick>
-						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),4)">Skin.SetString(LibraryStructure,1)</onclick>
-						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),3)">Skin.SetString(LibraryStructure,4)</onclick>
-						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),2)">Skin.SetString(LibraryStructure,3)</onclick>
-						<onclick condition="String.IsEqual(Skin.String(LibraryStructure),1)">Skin.SetString(LibraryStructure,2)</onclick>
 					</control>
 				</control>
 			</control>

@@ -2,98 +2,122 @@
 <shortcuts>
 	<shortcut>
 		<defaultID>pictures</defaultID>
-		<label>10002</label>
+		<label>1</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Image.png</icon>
-		<action>ActivateWindow(Pictures,return)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>music</defaultID>
-		<label>10005</label>
-		<label2 />
-		<icon>special://skin/extras/BigIcons/Headphone.png</icon>
-		<action>ActivateWindow(Music,musicdb://,return)</action>
-	</shortcut>
-	<shortcut>
-		<defaultID>movies</defaultID>
-		<label>342</label>
-		<label2 />
-		<icon>special://skin/extras/BigIcons/Film.png</icon>
-		<action>ActivateWindow(Videos,videodb://movies/titles/,return)</action>
-	</shortcut>
-	<shortcut>
-		<label>Oscars</label>
-		<label2 />
-		<icon>special://skin/extras/BigIcons/oscars.png</icon>
-		<action>ActivateWindow(VideoLibrary,special://skin/extras/Playlists/oscars/bestpicture.xsp,return)</action>
-	</shortcut>
-	<shortcut>
-		<label>Top 250</label>
-		<label2 />
-		<icon>special://skin/extras/BigIcons/top250.png</icon>
-		<action>ActivateWindow(VideoLibrary,special://skin/extras/Playlists/video/IMDbTop250.xsp,return)</action>
+		<icon>icons/home/pictures.png</icon>
+		<thumb />
+		<action>ActivateWindow(pictures)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>musicvideos</defaultID>
 		<label>20389</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Media.png</icon>
-		<action>ActivateWindow(Videos,videodb://musicvideos/titles/,return)</action>
+		<icon>icons/home/musicvideos.png</icon>
+		<thumb />
+		<action>ActivateWindow(videos,musicvideos,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>music</defaultID>
+		<label>2</label>
+		<label2 />
+		<icon>icons/home/music.png</icon>
+		<thumb />
+		<action>ActivateWindow(music,root,return)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>disc</defaultID>
+		<label>427</label>
+		<label2 />
+		<icon>icons/home/disc.png</icon>
+		<thumb />
+		<action>PlayDisc</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>movies</defaultID>
+		<label>342</label>
+		<label2 />
+		<icon>icons/home/movies.png</icon>
+		<thumb />
+		<action>ActivateWindow(videos,videodb://movies/titles/,return)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>tvshows</defaultID>
 		<label>20343</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Television.png</icon>
-		<action>ActivateWindow(Videos,videodb://tvshows/titles/,return)</action>
+		<icon>icons/home/tvshows.png</icon>
+		<thumb />
+		<action>ActivateWindow(videos,videodb://tvshows/titles/,return)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID>livetv</defaultID>
-		<label>32022</label>
+		<defaultID>tv</defaultID>
+		<label>19020</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Monitor.png</icon>
-		<action>ActivateWindow(TVChannels)</action>
+		<icon>icons/home/tv.png</icon>
+		<thumb />
+		<action>ActivateWindow(tvchannels)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>radio</defaultID>
+		<label>$LOCALIZE[19021]</label>
+		<label2 />
+		<icon>icons/home/radio.png</icon>
+		<thumb />
+		<action>ActivateWindow(radiochannels)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>videos</defaultID>
-		<label>10006</label>
+		<label>3</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Camcorder.png</icon>
-		<action>ActivateWindow(Videos,root)</action>
+		<icon>icons/home/videos.png</icon>
+		<thumb />
+		<action>ActivateWindow(videos,root)</action>
 	</shortcut>
 	<shortcut>
-		<defaultID>programs</defaultID>
-		<label>10001</label>
+		<defaultID>games</defaultID>
+		<label>15016</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Computer.png</icon>
-		<action>ActivateWindow(Programs,Addons,return)</action>
+		<icon>icons/home/games.png</icon>
+		<thumb />
+		<action>ActivateWindow(games)</action>
+	</shortcut>
+	<shortcut>
+		<defaultID>addons</defaultID>
+		<label>0</label>
+		<label2 />
+		<icon>icons/home/addons.png</icon>
+		<thumb />
+		<action>ActivateWindow(programs)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>settings</defaultID>
 		<label>13000</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Controlpanel.png</icon>
-		<action>ActivateWindow(Settings)</action>
+		<icon>icons/home/settings.png</icon>
+		<thumb />
+		<action>ActivateWindow(settings)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>power</defaultID>
 		<label>33060</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Power.png</icon>
+		<icon>icons/home/power.png</icon>
+		<thumb />
 		<action>ActivateWindow(shutdownmenu)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>favourites</defaultID>
-		<label>1036</label>
+		<label>10134</label>
 		<label2 />
-		<icon>special://skin/extras/BigIcons/Star.png</icon>
-		<action>ActivateWindow(Favourites)</action>
+		<icon>icons/home/favourites.png</icon>
+		<thumb />
+		<action>ActivateWindow(favourites)</action>
 	</shortcut>
 	<shortcut>
 		<defaultID>weather</defaultID>
-		<label>12600</label>
+		<label>8</label>
 		<label2 />
-		<icon>special://skin/extras//BigIcons/Weather.png</icon>
-		<action>ActivateWindow(Weather)</action>
+		<icon>icons/home/weather.png</icon>
+		<thumb />
+		<action>ActivateWindow(weather)</action>
 	</shortcut>
 </shortcuts>

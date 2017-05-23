@@ -3,20 +3,21 @@
 	<alwaysRestore>True</alwaysRestore>
 	<thumbnailBrowseDefault>special://skin/extras/BigIcons/</thumbnailBrowseDefault>
 	<!-- Background Defaults -->
-	<backgrounddefault labelID="pictures">special://skin/backgrounds/pictures/</backgrounddefault>
-	<backgrounddefault labelID="music">special://skin/backgrounds/music/</backgrounddefault>
-	<backgrounddefault labelID="movies">special://skin/backgrounds/movies/</backgrounddefault>
-	<backgrounddefault labelID="musicvideos">special://skin/backgrounds/musicvideos/</backgrounddefault>
-	<backgrounddefault labelID="tvshows">special://skin/backgrounds/tvshows/</backgrounddefault>
-	<backgrounddefault labelID="livetv">special://skin/backgrounds/livetv/</backgrounddefault>
-	<backgrounddefault labelID="videos">special://skin/backgrounds/videos/</backgrounddefault>
-	<backgrounddefault labelID="programs">special://skin/backgrounds/programs/</backgrounddefault>
-	<backgrounddefault labelID="settings">special://skin/backgrounds/system/</backgrounddefault>
-	<backgrounddefault labelID="power">special://skin/backgrounds/shutdown/</backgrounddefault>
-	<backgrounddefault labelID="favourites">special://skin/backgrounds/favourites/</backgrounddefault>
-	<backgrounddefault labelID="weather">special://skin/backgrounds/weather/</backgrounddefault>
-	<backgrounddefault labelID="script-imdb250-view">special://skin/backgrounds/top250/</backgrounddefault>
-	<backgrounddefault labelID="script-oscars-view.DATA">special://skin/backgrounds/oscars/</backgrounddefault>
+	<backgrounddefault labelID="pictures">special://skin/extras/backgrounds/pictures.jpg</backgrounddefault>
+	<backgrounddefault labelID="music">special://skin/extras/backgrounds/music.jpg</backgrounddefault>
+	<backgrounddefault labelID="movies">special://skin/extras/backgrounds/movies.jpg</backgrounddefault>
+	<backgrounddefault labelID="musicvideos">special://skin/extras/backgrounds/musicvideos.jpg</backgrounddefault>
+	<backgrounddefault labelID="tvshows">special://skin/extras/backgrounds/tvshows.jpg</backgrounddefault>
+	<backgrounddefault labelID="tv">special://skin/extras/backgrounds/tv.jpg</backgrounddefault>
+	<backgrounddefault labelID="radio">special://skin/extras/backgrounds/radio.jpg</backgrounddefault>
+	<backgrounddefault labelID="videos">special://skin/extras/backgrounds/videos.jpg</backgrounddefault>
+	<backgrounddefault labelID="addons">special://skin/extras/backgrounds/addons.jpg</backgrounddefault>
+	<backgrounddefault labelID="settings">special://skin/extras/backgrounds/settings.jpg</backgrounddefault>
+	<backgrounddefault labelID="power">special://skin/extras/backgrounds/power.jpg</backgrounddefault>
+	<backgrounddefault labelID="favourites">special://skin/extras/backgrounds/favourites.jpg</backgrounddefault>
+	<backgrounddefault labelID="weather">special://skin/extras/backgrounds/weather.jpg</backgrounddefault>
+	<backgrounddefault labelID="disc">special://skin/extras/backgrounds/disc.jpg</backgrounddefault>
+	<backgrounddefault labelID="games">special://skin/extras/backgrounds/games.jpg</backgrounddefault>
 	<!-- Backgrounds -->
 	<backgroundBrowse>True</backgroundBrowse>
 	<background condition="System.HasAddon(script.skin.helper.service)" label="smartshortcuts">||BROWSE||plugin://script.skin.helper.service/?action=backgrounds</background>

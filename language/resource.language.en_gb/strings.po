@@ -1115,11 +1115,11 @@ msgid "Extended Rating"
 msgstr ""
 
 msgctxt "#31276"
-msgid "Set up the Aeon MadNox main menu"
+msgid "Edit main menu"
 msgstr ""
 
 msgctxt "#31277"
-msgid "Reset main menu to default"
+msgid "Reset main menu"
 msgstr ""
 
 msgctxt "#31278"
@@ -2385,7 +2385,7 @@ msgid "Paths"
 msgstr ""
 
 msgctxt "#31643"
-msgid "Customize Home window furniture"
+msgid "Furniture"
 msgstr ""
 
 msgctxt "#31644"

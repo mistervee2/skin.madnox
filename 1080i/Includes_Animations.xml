@@ -17,22 +17,25 @@
 		<animation effect="fade" time="160">Hidden</animation>
 	</include>
 	<include name="Animation_Dialog_Popup">
-		<animation type="WindowOpen" reversible="false">
-			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
-			<effect type="fade" delay="200" start="0" end="100" time="300" />
-		</animation>
-		<animation type="WindowClose" reversible="false">
-			<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-		</animation>
-		<animation type="Visible" reversible="false">
-			<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
-			<effect type="fade" delay="200" start="0" end="100" time="300" />
-		</animation>
-		<animation type="Hidden" reversible="false">
-			<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
-			<effect type="fade" start="100" end="0" time="300" />
-		</animation>
+		<param name="condition">true</param>
+		<definition>
+			<animation type="WindowOpen" reversible="false" condition="$PARAM[condition]">
+				<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+				<effect type="fade" delay="200" start="0" end="100" time="300" />
+			</animation>
+			<animation type="WindowClose" reversible="false" condition="$PARAM[condition]">
+				<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+			<animation type="Visible" reversible="false" condition="$PARAM[condition]">
+				<effect type="zoom" start="80" end="100" center="auto" delay="200" easing="out" tween="back" time="300" />
+				<effect type="fade" delay="200" start="0" end="100" time="300" />
+			</animation>
+			<animation type="Hidden" reversible="false" condition="$PARAM[condition]">
+				<effect type="zoom" start="100" end="80" center="auto" easing="in" tween="back" time="300" />
+				<effect type="fade" start="100" end="0" time="300" />
+			</animation>
+		</definition>
 	</include>
 	<include name="Animation_Dialog_MediaMenu">
 		<param name="slide">430</param>

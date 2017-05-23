@@ -1,145 +1,229 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">90001</defaultcontrol>
+	<defaultcontrol always="true">211</defaultcontrol>
+	<menucontrol>9000</menucontrol>
 	<onunload>ClearProperty(skinshortcuts-management-widget,10000)</onunload>
+	<onunload condition="String.IsEmpty(Window.Property(additionalDialog))">RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;levels=2&amp;group=mainmenu|madnox-quicknav)</onunload>
 	<controls>
 		<control type="group">
 			<visible>String.IsEmpty(Window.Property(additionalDialog))</visible>
-			<animation effect="zoom" end="91" center="960,360" time="320" tween="cubic" easing="inout" condition="true">Conditional</animation>
+			<include content="Animation_Dialog_Popup">
+				<param name="condition">Window.IsActive(home)</param>
+			</include>
+			<include content="Panel_Background_Settings">
+				<param name="reflect">false</param>
+				<param name="visible">Window.IsActive(home)</param>
+			</include>
+			<!-- Left Content -->
+			<control type="label">
+				<label>$LOCALIZE[33061]</label>
+				<include>Settings_LeftLabel</include>
+			</control>
 			<control type="list" id="211">
-				<left>63</left>
-				<top>194</top>
-				<width>750</width>
-				<height>768</height>
-				<onright>90001</onright>
-				<onup>211</onup>
-				<ondown>211</ondown>
-				<scrolltime tween="sine">300</scrolltime>
-				<itemlayout height="74" width="570">
+				<left>101</left>
+				<top>200</top>
+				<width>323</width>
+				<height>612</height>
+				<onright>90000</onright>
+				<itemlayout height="68" width="323">
 					<control type="label">
-						<left>15</left>
-						<width>321</width>
-						<height>74</height>
+						<left>25</left>
+						<width>273</width>
+						<font>Font36_Reg</font>
+						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font_Bold34_Caps</font>
-						<textcolor>grey2</textcolor>
-						<visible>!Skin.HasSetting(mainmenuicons) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+						<visible>!String.Contains(Skin.String(HomeLayout),icons) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>244</width>
-						<height>74</height>
+						<left>25</left>
+						<width>213</width>
+						<font>Font36_Reg</font>
+						<textcolor>grey</textcolor>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font_Bold34_Caps</font>
-						<textcolor>grey2</textcolor>
-						<visible>Skin.HasSetting(mainmenuicons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+						<visible>String.Contains(Skin.String(HomeLayout),icons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 					<control type="image">
-						<left>260</left>
-						<top>0</top>
-						<width>70</width>
-						<height>70</height>
-						<texture colordiffuse="grey2">$INFO[Container(211).ListItem.Property(quickicon)]</texture>
-						<visible>Skin.HasSetting(mainmenuicons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+						<top>9</top>
+						<left>248</left>
+						<width>50</width>
+						<height>50</height>
+						<texture colordiffuse="grey">$INFO[ListItem.Icon]</texture>
+						<visible>String.Contains(Skin.String(HomeLayout),icons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 				</itemlayout>
-				<focusedlayout height="74" width="570">
+				<focusedlayout height="68" width="323">
 					<control type="image">
-						<width>324</width>
-						<height>74</height>
-						<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">views/tripanel/listselect_fo.png</texture>
-						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(9000)">Conditional</animation>
+						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
+						<animation effect="fade" start="100" end="50" time="40" condition="!Control.HasFocus(211)">Conditional</animation>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>321</width>
-						<height>74</height>
+						<left>25</left>
+						<width>273</width>
+						<font>Font36_Reg</font>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font_Bold34_Caps</font>
-						<visible>!Skin.HasSetting(mainmenuicons) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+						<visible>!String.Contains(Skin.String(HomeLayout),icons) | String.IsEqual(Window.Property(groupname),madnox-quicknav) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 					<control type="label">
-						<left>15</left>
-						<width>244</width>
-						<height>74</height>
+						<left>25</left>
+						<width>213</width>
+						<font>Font36_Reg</font>
 						<label>$INFO[ListItem.Label]</label>
-						<font>Font_Bold34_Caps</font>
-						<visible>Skin.HasSetting(mainmenuicons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+						<visible>String.Contains(Skin.String(HomeLayout),icons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 					<control type="image">
-						<left>260</left>
-						<top>2</top>
-						<width>70</width>
-						<height>70</height>
-						<texture>$INFO[Container(211).ListItem.Property(quickicon)]</texture>
-						<visible>Skin.HasSetting(mainmenuicons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+						<top>9</top>
+						<left>248</left>
+						<width>50</width>
+						<height>50</height>
+						<texture>$INFO[ListItem.Icon]</texture>
+						<visible>String.Contains(Skin.String(HomeLayout),icons) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 					</control>
 				</focusedlayout>
 			</control>
-			<control type="grouplist" id="90001">
-				<left>387</left>
-				<top>195</top>
-				<width>1469</width>
-				<height>732</height>
-				<itemgap>0</itemgap>
+			<control type="label">
+				<label>$INFO[Control.GetLabel(211)]</label>
+				<include>Settings_RightLabel</include>
+			</control>
+			<control type="image">
+				<top>200</top>
+				<left>426</left>
+				<height>68</height>
+				<width>1393</width>
+				<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
+				<visible>ControlGroup(90000).HasFocus</visible>
+			</control>
+			<control type="image">
+				<top>200</top>
+				<left>426</left>
+				<height>68</height>
+				<width>1393</width>
+				<texture border="30" colordiffuse="$VAR[PanelColorVar]">buttons/list-select-nofocus.png</texture>
+				<visible>!ControlGroup(90000).HasFocus</visible>
+			</control>
+			<control type="grouplist" id="90000">
+				<left>455</left>
+				<top>200</top>
+				<width>1393</width>
+				<height>68</height>
 				<onleft>211</onleft>
-				<onup>90001</onup>
+				<onright>60</onright>
 				<ondown>90001</ondown>
+				<orientation>horizontal</orientation>
+				<control type="button" id="303">
+					<description>Move up</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>68</width>
+					<align>center</align>
+					<font>Font40_Icon</font>
+					<label></label>
+				</control>
+				<control type="button" id="304">
+					<description>Move down</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>68</width>
+					<align>center</align>
+					<font>Font40_Icon</font>
+					<label></label>
+				</control>
+				<control type="button" id="301">
+					<description>Add shortcut</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>68</width>
+					<align>center</align>
+					<font>Font40_Icon</font>
+					<label></label>
+				</control>
+				<control type="button" id="302">
+					<description>Delete shortcut</description>
+					<texturefocus />
+					<texturenofocus />
+					<width>68</width>
+					<align>center</align>
+					<font>Font40_Icon</font>
+					<label></label>
+				</control>
+				<control type="label">
+					<width>16</width>
+				</control>
+				<control type="label">
+					<label>$VAR[SkinShortcutLabelVar]</label>
+				</control>
+			</control>
+
+
+
+
+
+
+
+
+			<control type="grouplist" id="90001">
+				<left>426</left>
+				<top>268</top>
+				<width>1393</width>
+				<height>680</height>
+				<pagecontrol>60</pagecontrol>
+				<onleft>211</onleft>
+				<onright>60</onright>
+				<onup>90000</onup>
 				<control type="button" id="401">
 					<description>Choose shortcut</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>$ADDON[script.skinshortcuts 32048]</label>
 				</control>
 				<control type="button" id="305">
 					<description>Change label</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>$ADDON[script.skinshortcuts 32025]</label>
 					<label2>$INFO[Container(211).ListItem.Label]</label2>
 				</control>
 				<control type="button" id="307">
 					<description>Change action</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>$ADDON[script.skinshortcuts 32027]</label>
 					<label2>$INFO[Container(211).ListItem.Property(displaypath)]</label2>
 				</control>
 				<control type="button" id="405">
 					<description>Edit submenu</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31742</label>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<!-- Background -->
 				<control type="button" id="310">
 					<description>Change background</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>$ADDON[script.skinshortcuts 32045]</label>
 					<label2>$INFO[Window.Property(backgroundName)]</label2>
 					<visible>!String.EndsWith(Window.Property(groupname),.1) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
 				<control type="button" id="602">
 					<description>Change live background image</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31743</label>
 					<label2>$INFO[Window.Property(backgroundLive)]</label2>
 					<visible>String.EndsWith(Window.Property(background),.Live)</visible>
 				</control>
 				<control type="button" id="601">
 					<description>Change live background case</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31744</label>
 					<label2>$VAR[backgroundCaseLabelVar]</label2>
 					<visible>String.EndsWith(Window.Property(background),.Live)</visible>
 				</control>
 				<control type="button" id="603">
 					<description>Change live background sort by</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31756</label>
 					<label2>$VAR[backgroundSortByLabelVar]</label2>
 					<visible>String.EndsWith(Window.Property(background),.Live) | String.EndsWith(Window.Property(background),.FanartList)</visible>
 				</control>
 				<control type="button" id="604">
 					<description>Change live background sort order</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31757</label>
 					<label2>$VAR[backgroundSortLabelVar]</label2>
 					<visible>String.EndsWith(Window.Property(background),.Live) | String.EndsWith(Window.Property(background),.FanartList)</visible>
@@ -147,30 +231,30 @@
 				<!-- End Background -->
 				<control type="button" id="500">
 					<description>Choose infoline</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31745</label>
 					<label2>$INFO[Window.Property(InfoLine)]</label2>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					<onclick>SetProperty(chooseProperty,InfoLine)</onclick>
 					<onclick>SendClick(404)</onclick>
 				</control>
-				<!-- <control type="button" id="306">
-					<description>Change icon</description>
-					<include>Default_SettingButton</include>
-					<label>31746</label>
-					<visible>Skin.HasSetting(mainmenuicons) | String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
-				</control> -->
 				<control type="button" id="306">
 					<description>Change icon</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
+					<label>31746</label>
+					<visible>[String.IsEqual(Window.Property(groupname),mainmenu) + String.Contains(Skin.String(HomeLayout),icons)] | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
+				</control>
+				<!-- <control type="button" id="306">
+					<description>Change icon</description>
+					<include>Settings_Button</include>
 					<label>SH 31746</label>
 					<onclick>RunScript(script.skin.helper.service,action=selectimage,skinshortcutsproperty=icon,resourceaddon=resource.images.skinbackgrounds)</onclick>
 					<visible>Skin.HasSetting(mainmenuicons) | String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
-				</control>
+				</control> -->
 
 				<control type="button" id="800">
 					<description>Widget 1</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31749</label>
 					<label2>$INFO[Window.Property(widgetStyle)]</label2>
 					<onclick>SetProperty(skinshortcuts-management-widget,1,10000)</onclick>
@@ -179,33 +263,17 @@
 				</control>
 				<control type="button" id="801">
 					<description>Widget 2</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>31760</label>
 					<label2>$INFO[Window.Property(widgetStyle.2)]</label2>
 					<onclick>SetProperty(skinshortcuts-management-widget,2,10000)</onclick>
 					<onclick>Control.SetFocus(2001)</onclick>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
-				<control type="button" id="303">
-					<description>Move up</description>
-					<include>Default_SettingButton</include>
-				</control>
-				<control type="button" id="304">
-					<description>Move down</description>
-					<include>Default_SettingButton</include>
-				</control>
-				<control type="button" id="301">
-					<description>Add shortcut</description>
-					<include>Default_SettingButton</include>
-					<label>$ADDON[script.skinshortcuts 32000]</label>
-				</control>
-				<control type="button" id="302">
-					<description>Delete shortcut</description>
-					<include>Default_SettingButton</include>
-				</control>
+				
 				<control type="button" id="308">
 					<description>Restore shortcuts</description>
-					<include>Default_SettingButton</include>
+					<include>Settings_Button</include>
 					<label>$ADDON[script.skinshortcuts 32028]</label>
 				</control>
 			</control>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window id="1122" type="dialog">
-	<defaultcontrol always="true">9001</defaultcontrol>
+	<defaultcontrol>9001</defaultcontrol>
 	<controls>
 		<control type="group">
 			<visible>!Window.IsActive(DialogSelect.xml) + !Window.IsActive(1110) + !Window.IsActive(1111)</visible>
@@ -22,6 +22,7 @@
 				<include condition="Window.IsActive(weather)">MediaMenu_Viewsettings_Weather</include>
 				<include condition="Window.IsActive(settings) | Window.IsActive(SettingsCategory.xml) | Window.IsActive(profiles) |  Window.IsActive(skinsettings) | Window.IsActive(eventlog) | Window.IsActive(systeminfo) | Window.IsActive(filemanager) | Window.IsActive(script-skinshortcuts.xml)">MediaMenu_Viewsettings_Settings</include>
 				<include condition="String.IsEqual(Container.Viewmode,$LOCALIZE[535])">MediaMenu_Viewsettings_View50</include>
+				<include condition="Window.IsVisible(home)">MediaMenu_Home_MainMenu</include>
 				<include condition="Window.IsVisible(videos)">MediaMenu_CommonViewsettings_Videos</include>
 				<include condition="Window.IsVisible(music)">MediaMenu_CommonViewsettings_Music</include>
 			</control>

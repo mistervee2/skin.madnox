@@ -2,7 +2,7 @@
 <includes>
 	<include name="MediaMenu_Common">
 		<left>-410</left>
-		<animation type="Conditional" condition="[ControlGroup(9000).HasFocus | Control.HasFocus(6130)] + !System.HasActiveModalDialog" reversible="true">
+		<animation type="Conditional" condition="[ControlGroup(9000).HasFocus | ControlGroup(9050).HasFocus | Control.HasFocus(6130)] + !System.HasActiveModalDialog" reversible="true">
 			<effect type="slide" start="0" end="410" time="320" tween="cubic" easing="out" />
 		</animation>
 		<animation type="WindowOpen">
@@ -45,25 +45,25 @@
 				<visible>$PARAM[visible]</visible>
 			</control>
 			<control type="image" id="9$PARAM[id]01">
-				<top>-75</top>
-				<left>10</left>
-				<width>70</width>
-				<height>70</height>
+				<top>-70</top>
+				<left>20</left>
+				<width>50</width>
+				<height>50</height>
 				<texture colordiffuse="grey">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="image" id="9$PARAM[id]02">
-				<top>-75</top>
-				<left>10</left>
-				<width>70</width>
-				<height>70</height>
+				<top>-70</top>
+				<left>20</left>
+				<width>50</width>
+				<height>50</height>
 				<texture colordiffuse="white">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="label" id="9$PARAM[id]03">
-				<top>-85</top>
+				<top>-70</top>
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
@@ -74,7 +74,7 @@
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="label" id="9$PARAM[id]04">
-				<top>-85</top>
+				<top>-70</top>
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
@@ -223,6 +223,12 @@
 		<textoffsetx>15</textoffsetx>
 		<font>Font28_Reg</font>
 	</include>
+	<include name="MediaMenu_ToggleButton_ViewSettings">
+		<width>470</width>
+		<height>60</height>
+		<textoffsetx>15</textoffsetx>
+		<font>Font28_Reg</font>
+	</include>
 	<include name="MediaMenu_Button_ViewType">
 		<width>230</width>
 		<height>60</height>
@@ -253,6 +259,55 @@
 				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-right.png</texture>
 			</control>
 		</definition>
+	</include>
+	<!-- Home -->
+	<include name="MediaMenu_Home_MainMenu">
+		<control type="label" id="101">
+			<label>$LOCALIZE[33061]</label>
+			<include>MediaMenu_Label_ViewSettings</include>
+		</control>
+		<control type="button" id="102">
+			<label>$LOCALIZE[31813]</label>
+			<label2>$INFO[Skin.String(HomeLayout)]</label2>
+			<onclick condition="String.IsEmpty(Skin.String(HomeLayout))">Skin.SetString(HomeLayout,wide)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(HomeLayout),wide)">Skin.SetString(HomeLayout,7icons)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(HomeLayout),7icons)">Skin.SetString(HomeLayout,5icons)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(HomeLayout),5icons)">Skin.SetString(HomeLayout,3icons)</onclick>
+			<onclick condition="String.IsEqual(Skin.String(HomeLayout),3icons)">Skin.Reset(HomeLayout)</onclick>
+			<include>MediaMenu_Button_ViewSettings</include>
+		</control>
+		<control type="radiobutton" id="103">
+			<label>Fixed List</label>
+			<onclick>Skin.ToggleSetting(HomeFixedList)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<onclick>Control.SetFocus(9052)</onclick>
+			<onclick>ActivateWindow(1122)</onclick>
+			<selected>Skin.HasSetting(HomeFixedList)</selected>
+			<include>MediaMenu_Button_ViewSettings</include>
+		</control>
+		<control type="radiobutton" id="104">
+			<label>Vertical</label>
+			<onclick>Skin.ToggleSetting(HomeVertical)</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<onclick>Control.SetFocus(9052)</onclick>
+			<onclick>ActivateWindow(1122)</onclick>
+			<selected>Skin.HasSetting(HomeVertical)</selected>
+			<include>MediaMenu_Button_ViewSettings</include>
+		</control>
+		<control type="radiobutton" id="105">
+			<label>Big Icons</label>
+			<onclick>Skin.ToggleSetting(HomeBigIcon)</onclick>
+			<selected>Skin.HasSetting(HomeBigIcon)</selected>
+			<include>MediaMenu_Button_ViewSettings</include>
+			<visible>String.Contains(Skin.String(HomeLayout),icons)</visible>
+		</control>
+		<control type="radiobutton" id="106">
+			<label>Label</label>
+			<onclick>Skin.ToggleSetting(HomeBigIconDisableLabel)</onclick>
+			<selected>!Skin.HasSetting(HomeBigIconDisableLabel)</selected>
+			<include>MediaMenu_Button_ViewSettings</include>
+			<visible>Skin.HasSetting(HomeBigIcon) + !Skin.HasSetting(HomeVertical)</visible>
+		</control>
 	</include>
 	<!-- Settings -->
 	<include name="MediaMenu_Settings">

@@ -2,6 +2,10 @@
 <includes>
 	<!-- START REWORK VARIABLES -->
 	<!-- Fanart -->
+	<variable name="HomeFanartVar">
+		<value condition="!String.IsEmpty(Container(9000).ListItem.Property(background))">$INFO[Container(9000).ListItem.Property(background)]</value>
+		<value>fanart.jpg</value>
+	</variable>
 	<variable name="MovieFanartVar">
 		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + String.Contains(ListItem.FolderPath,movie)">http://localhost:52307/getmoviegenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
 		<value condition="String.IsEqual(ListItem.DBTYPE,genre) + String.Contains(ListItem.FolderPath,tvshows)">http://localhost:52307/gettvshowgenreimagesrandom&amp;title=$INFO[Listitem.Label]&amp;type=fanart.0&amp;fallback=DefaultGenre.png</value>
@@ -41,6 +45,7 @@
 
 	<!-- Art -->
 	<variable name="GenrePosterVar">
+		<value condition="!String.Contains(ListItem.FolderPath,music)">http://localhost:52307/getmoviegenreimages&amp;title=$INFO[Listitem.Label]&amp;type=poster.0&amp;fallback=DefaultGenre.png</value>
 		<value condition="!String.Contains(ListItem.FolderPath,music)">$INFO[ListItem.Label,special://skin/extras/genre/movie/,.jpg]</value>
 		<value>$INFO[ListItem.Label,special://skin/extras/genre/music/,.jpg]</value>
 	</variable>
@@ -217,6 +222,12 @@
 		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback)">$LOCALIZE[31964]</value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),None)">$LOCALIZE[231]</value>
 		<value>$LOCALIZE[571]</value>
+	</variable>
+	<variable name="SkinShortcutLabelVar">
+		<value condition="Control.HasFocus(301)">$ADDON[script.skinshortcuts 32000]</value>
+		<value condition="Control.HasFocus(302)">$ADDON[script.skinshortcuts 32001]</value>
+		<value condition="Control.HasFocus(303)">$ADDON[script.skinshortcuts 32002]</value>
+		<value condition="Control.HasFocus(304)">$ADDON[script.skinshortcuts 32003]</value>
 	</variable>
 
 	<!-- Breadcrumbs -->

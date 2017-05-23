@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<!-- <defaultcontrol always="true">10</defaultcontrol> -->
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<!-- <onload>ReplaceWindow($INFO[System.StartupWindow])</onload> -->
 	<include>onunload_SkinSettings</include>
 	<!--
 	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
@@ -25,8 +25,8 @@
 			<onfocus condition="Skin.HasSetting(Use_Startup_Playlist) + !String.IsEmpty(Skin.String(Startup_Playlist_Path)) + String.StartsWith(Skin.String(Startup_Playlist_Path),RunScript)">$ESCINFO[Skin.String(Startup_Playlist_Path)]</onfocus>
 			<onfocus>SetFocus(11)</onfocus>
 			<onclick>noop</onclick>
-		</control>
-		<control type="button" id="11">
+		</control> -->
+		<control type="button" id="10">
 			<include>HiddenObject</include>
 			<onup>ReplaceWindow($INFO[System.StartupWindow])</onup>
 			<ondown>ReplaceWindow($INFO[System.StartupWindow])</ondown>
@@ -36,18 +36,26 @@
 			<onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
 			<animation effect="fade" start="100" end="0" time="7500">Focus</animation>
 		</control>
-		<control type="image">
+		<!-- <control type="image">
 			<texture>common/black.png</texture>
 			<include>Animation_WindowFade200</include>
 			<include>FullscreenDimensions</include>
 		</control> -->
-		<!-- <control type="image">
+		<control type="image">
 			<width>1920</width>
 			<height>1080</height>
 			<aspectratio scalediffuse="false">keep</aspectratio>
-			<texture>kodisplash.jpg</texture>
-			<visible>Skin.HasSetting(DisableIntro)</visible>
-		</control> -->
+			<texture>splash.png</texture>
+			<!-- <visible>Skin.HasSetting(DisableIntro)</visible> -->
+		</control>
+		<control type="image">
+			<centerleft>50%</centerleft>
+			<top>660</top>
+			<width>100</width>
+			<height>100</height>
+			<animation effect="rotate" end="-360" center="auto" time="2000" loop="true" condition="true">Conditional</animation>
+			<texture colordiffuse="$VAR[HighlightColorVar]">dialogs/spinner.png</texture>
+		</control>
 		<!-- <control type="image">
 			<left>923</left>
 			<top>603</top>

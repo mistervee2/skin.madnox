@@ -20,7 +20,7 @@
 				<top>-20</top>
 				<width>500</width>
 				<height>540</height>
-				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialogs/context-back.png</texture>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="40">dialogs/dialog-back.png</texture>
 			</control>
 			<control type="image">
 				<top>2</top>
