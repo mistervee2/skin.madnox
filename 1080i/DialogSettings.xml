@@ -5,68 +5,56 @@
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<include content="Dialog_Furniture_Background">
-				<param name="width">1238</param>
-				<param name="height">710</param>
-				<param name="labelleft">70</param>
-				<param name="labelalign">left</param>
 				<param name="labelid">2</param>
-				<param name="bottomseparatorvisible">false</param>
+				<param name="bottomseparatorvisible">Integer.IsLess(Container(5).NumItems,7)</param>
+				<param name="bottomrightlabel">$VAR[DialogItemsLabelVar]</param>
 			</include>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>30</bottom>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(5).HasNext</visible>
+			</control>
 			<control type="grouplist" id="5">
 				<description>control area</description>
-				<left>50</left>
-				<top>98</top>
-				<width>1138</width>
-				<height>560</height>
-				<bottom>62</bottom>
+				<left>20</left>
+				<top>88</top>
+				<width>1074</width>
+				<height>422</height>
 				<pagecontrol>60</pagecontrol>
-				<onup>5</onup>
-				<ondown>5</ondown>
 				<onright>8000</onright>
 				<onleft>60</onleft>
 			</control>
 			<control type="button" id="7">
-				<description>Default Button</description>
-				<width>800</width>
-		        <height>60</height>
+				<include>Dialog_Button_Default</include>
 			</control>
 			<control type="radiobutton" id="8">
-				<description>Default RadioButton</description>
-				<width>500</width>
-		        <height>60</height>
+				<include>Dialog_RadioButton_Default</include>
 			</control>
 			<control type="spincontrolex" id="9">
-				<description>Default SpinControlex</description>
-				<reverse>true</reverse>
-				<width>800</width>
-		        <height>60</height>
+				<include>Dialog_Button_Default</include>
 			</control>
 			<control type="image" id="11">
 				<description>Default separator</description>
-				<width>800</width>
-		        <height>20</height>
+				<height>1</height>
 			</control>
 			<control type="edit" id="12">
-				<description>Default Edit</description>
-				<width>800</width>
-		        <height>60</height>
+				<include>Dialog_Button_Default</include>
 			</control>
 			<control type="sliderex" id="13">
-				<description>Default Slider</description>
-				<width>600</width>
-		        <height>60</height>
-				<textoffsetx>10</textoffsetx>
+				<include>Dialog_Button_Default</include>
 			</control>
 			<control type="label" id="14">
-				<description>Default label</description>
-				<width>800</width>
-		        <height>60</height>
+				<include>Dialog_Button_Default</include>
 			</control>
 			<control type="grouplist" id="8000">
 				<right>60</right>
 				<top>28</top>
 				<width>600</width>
-				<onleft>10</onleft>
+				<onleft>5</onleft>
 				<ondown>5</ondown>
 				<align>right</align>
 				<itemgap>10</itemgap>
@@ -80,7 +68,7 @@
 				<include content="Dialog_Button_TopRight">
 					<param name="id">30</param>
 				</include>
-			</control>	
+			</control>
 			<control type="scrollbar" id="60">
 				<left>1</left>
 				<top>88</top>

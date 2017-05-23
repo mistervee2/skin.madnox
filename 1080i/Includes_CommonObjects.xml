@@ -42,7 +42,7 @@
 		</control>
 	</include>
 	<include name="Dialog_Furniture_Background">
-		<param name="width">1154</param>
+		<param name="width">1114</param>
 		<param name="height">588</param>
 		<param name="label"></param>
 		<param name="labelleft">70</param>
