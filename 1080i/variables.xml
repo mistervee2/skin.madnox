@@ -210,8 +210,6 @@
 
 	<!-- Dialogs -->
 	<variable name="DialogItemsLabelVar">
-		<value condition="ControlGroup(5).HasFocus">$INFO[Container(5).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(5).NumItems,/]</value>
-		<value condition="!ControlGroup(5).HasFocus">$LOCALIZE[31025]$INFO[Container(5).NumItems, 1/]</value>
 		<value condition="Control.IsVisible(3)">$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</value>
 		<value condition="Control.IsVisible(6)">$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</value>
 		<value condition="Control.IsVisible(450)">$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</value>

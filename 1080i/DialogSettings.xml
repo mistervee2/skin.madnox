@@ -7,7 +7,7 @@
 			<include content="Dialog_Furniture_Background">
 				<param name="labelid">2</param>
 				<param name="bottomseparatorvisible">Integer.IsLess(Container(5).NumItems,7)</param>
-				<param name="bottomrightlabel">$VAR[DialogItemsLabelVar]</param>
+				<param name="bottomrightlabel">$INFO[Container(5).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(5).NumItems,/]</param>
 			</include>
 			<control type="image">
 				<centerleft>50%</centerleft>
