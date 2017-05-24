@@ -13,7 +13,7 @@
 				<top>-10</top>
 				<width>1920</width>
 				<height>20</height>
-				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-bottom.png</texture>
+				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-top.png</texture>
 			</control>
 			<control type="image">
 				<width>1920</width>

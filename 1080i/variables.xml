@@ -291,6 +291,29 @@
 		<value condition="Control.HasFocus(803)">$LOCALIZE[31356]</value>
 		<value condition="Control.HasFocus(804)">$LOCALIZE[31026]</value>
 	</variable>
+	<!--  Music OSD Buttons Label  -->
+	<variable name="MusicOSDLabelVar">
+		<value condition="Control.HasFocus(601)">$LOCALIZE[10517]</value>
+		<value condition="Control.HasFocus(500)">$LOCALIZE[12006]</value>
+		<value condition="Control.HasFocus(602)">$LOCALIZE[250] $LOCALIZE[21417]</value>
+		<value condition="Control.HasFocus(603)">$LOCALIZE[31048]</value>
+	</variable>
+	<variable name="MusicOSDLabelVar2">
+		<value condition="Control.HasFocus(801)">$LOCALIZE[24013]</value>
+		<value condition="Control.HasFocus(802)">$LOCALIZE[486]$INFO[Playlist.Repeat, : ]</value>
+		<value condition="Control.HasFocus(803)">$LOCALIZE[590]$INFO[Playlist.Random, : ]</value>
+		<value condition="Control.HasFocus(804)">$LOCALIZE[31026]</value>
+	</variable>
+	<!--  Music Repeat Shuffle Buttons  -->
+	<variable name="MusicOSDRepeatButtonVar">
+		<value condition="Playlist.IsRepeatOne">buttons/player/repeatone.png</value>
+		<value condition="Playlist.IsRepeat">buttons/player/repeat.png</value>
+		<value>buttons/player/repeatoff.png</value>
+	</variable>
+	<variable name="MusicOSDShuffleButtonVar">
+		<value condition="Playlist.IsRandom">buttons/player/shuffle.png</value>
+		<value>buttons/player/shuffleoff.png</value>
+	</variable>
 
 
 	<!-- END REWORK VARIABLES -->
