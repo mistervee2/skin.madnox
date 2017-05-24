@@ -22,7 +22,7 @@
 			</control>
 			<control type="grouplist">
 				<left>100</left>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<onright>701</onright>
@@ -47,7 +47,7 @@
 				</include>
 			</control>
 			<control type="group">
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<align>left</align>
@@ -67,18 +67,17 @@
 				</include>
 			</control>
 			<control type="label">
-				<left>220</left>
-				<bottom>42</bottom>
+				<bottom>70</bottom>
 				<height>30</height>
 				<width>500</width>
-				<align>left</align>
+				<align>center</align>
 				<label>$VAR[VideoOSDLabelVar]</label>
 				<font>Font22_Reg_09</font>
 			</control>
 			<control type="grouplist">
 				<left>500</left>
 				<right>500</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>920</width>
 				<onright>801</onright>
@@ -123,7 +122,7 @@
 			<control type="group">
 				<left>500</left>
 				<right>500</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>920</width>
 				<align>center</align>
@@ -156,7 +155,7 @@
 			</control>
 			<control type="grouplist">
 				<right>100</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<onleft>706</onleft>
@@ -189,7 +188,7 @@
 			</control>
 			<control type="group">
 				<right>100</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<align>right</align>
@@ -213,8 +212,8 @@
 				</include>
 			</control>
 			<control type="label">
-				<right>220</right>
-				<bottom>42</bottom>
+				<right>200</right>
+				<bottom>70</bottom>
 				<height>30</height>
 				<width>500</width>
 				<align>right</align>
@@ -228,7 +227,7 @@
 				<control type="progress">
 					<centerleft>50%</centerleft>
 					<bottom>20</bottom>
-					<width>1500</width>
+					<width>1400</width>
 					<info>Player.ProgressCache</info>
 					<texturebg border="8">dialogs/progress-control/progress-back.png</texturebg>
 					<midtexture border="8">dialogs/progress-control/progress-mid-cache.png</midtexture>
@@ -236,14 +235,14 @@
 				<control type="progress">
 					<centerleft>50%</centerleft>
 					<bottom>20</bottom>
-					<width>1500</width>
+					<width>1400</width>
 					<texturebg border="8">dialogs/progress-control/progress-back-cache.png</texturebg>
 					<info>Player.Progress</info>
 				</control>
 				<control type="slider">
 					<centerleft>50%</centerleft>
 					<bottom>20</bottom>
-					<width>1500</width>
+					<width>1400</width>
 					<height>20</height>
 					<action>seek</action>
 					<texturesliderbar />
