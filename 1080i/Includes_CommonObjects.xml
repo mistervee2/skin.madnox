@@ -319,7 +319,7 @@
 			<control type="button" id="$PARAM[id]">
 				<width>110</width>
 				<height>110</height>
-				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[texture]</texturefocus>
+				<texturefocus>$PARAM[texture]</texturefocus>
 				<texturenofocus>$PARAM[texture]</texturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
 				<onclick>$PARAM[onclick2]</onclick>
@@ -339,9 +339,9 @@
 			<control type="togglebutton" id="$PARAM[id]">
 				<width>110</width>
 				<height>110</height>
-				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[texture]</texturefocus>
+				<texturefocus>$PARAM[texture]</texturefocus>
 				<texturenofocus>$PARAM[texture]</texturenofocus>
-				<alttexturefocus colordiffuse="$VAR[HighlightColorVar]" border="20">$PARAM[alttexture]</alttexturefocus>
+				<alttexturefocus>$PARAM[alttexture]</alttexturefocus>
 				<alttexturenofocus>$PARAM[alttexture]</alttexturenofocus>
 				<usealttexture>$PARAM[usealttexture]</usealttexture>
 				<onclick>$PARAM[onclick]</onclick>
@@ -349,7 +349,25 @@
 				<oninfo>Dialog.Close(all,true)</oninfo>
 			</control>
 		</definition>
-	</include>	
+	</include>
+	<include name="Dialog_Button_OSD_Highlight">
+		<param name="id" />
+		<param name="left"></param>
+		<param name="width">110</param>
+		<param name="height">110</param>
+		<definition>
+			<control type="image">
+				<left>$PARAM[left]</left>
+				<width>$PARAM[width]</width>
+				<height>$PARAM[height]</height>
+				<texture colordiffuse="$VAR[HighlightColorVar]">buttons/player/osd-focus.png</texture>
+				<align>center</align>
+				<aligny>center</aligny>
+				<visible>Control.HasFocus($PARAM[id])</visible>
+			</control>
+		</definition>
+	</include>
+
 	<!--  Topbar -->
 	<include name="TopBar">
 		<param name="breadcrumbs_icon">icons/mediamenu/cancel.png</param>
