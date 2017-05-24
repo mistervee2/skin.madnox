@@ -174,6 +174,7 @@
 					<param name="id" value="802" />
 					<param name="texture" value="buttons/player/3d.png" />
 					<param name="onclick" value="StereoMode" />
+					<param name="visible" value="VideoPalyer.IsStereoscopic" />
 				</include>
 				<include content="Dialog_Button_OSD">
 					<param name="id" value="803" />
