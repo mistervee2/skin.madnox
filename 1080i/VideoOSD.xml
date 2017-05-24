@@ -11,7 +11,8 @@
 			<top>920</top>
 			<control type="image">
 				<width>1920</width>
-				<height>20</height>
+				<height>15</height>
+				<bottom>150</bottom>
 				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-top.png</texture>
 			</control>
 			<control type="image">
@@ -171,9 +172,8 @@
 				</include>
 				<include content="Dialog_Button_OSD">
 					<param name="id" value="802" />
-					<param name="texture" value="buttons/player/viz.png" />
+					<param name="texture" value="buttons/player/3d.png" />
 					<param name="onclick" value="StereoMode" />
-					<param name="visible" value="VideoPalyer.IsStereoscopic" />
 				</include>
 				<include content="Dialog_Button_OSD">
 					<param name="id" value="803" />
