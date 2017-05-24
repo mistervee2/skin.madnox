@@ -8,15 +8,16 @@
 			<include content="Animation_Slide_Bottom">
 				<param name="slide">220</param>
 			</include>
-			<top>920</top>
+			<top>870</top>
 			<control type="image">
+				<top>-10</top>
 				<width>1920</width>
 				<height>20</height>
-				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-top.png</texture>
+				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-bottom.png</texture>
 			</control>
 			<control type="image">
 				<width>1920</width>
-				<height>200</height>
+				<height>210</height>
 				<texture colordiffuse="$VAR[PanelColorVar]" border="10">dialogs/osd-back.png</texture>
 			</control>
 			<control type="grouplist">
