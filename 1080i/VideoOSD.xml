@@ -2,7 +2,7 @@
 <window>
 	<defaultcontrol always="true">703</defaultcontrol>
 	<controls>
-<!---		<include>Dialog_Furniture_BackgroundFade</include>  -->
+		<!---		<include>Dialog_Furniture_BackgroundFade</include>  -->
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
 			<include content="Animation_Slide_Bottom">
@@ -47,7 +47,7 @@
 				</include>
 			</control>
 			<control type="group">
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<align>left</align>
@@ -68,8 +68,9 @@
 			</control>
 			<control type="label">
 				<bottom>70</bottom>
+				<left>110</left>
 				<height>30</height>
-				<width>500</width>
+				<width>300</width>
 				<align>center</align>
 				<label>$VAR[VideoOSDLabelVar]</label>
 				<font>Font22_Reg_09</font>
@@ -77,7 +78,7 @@
 			<control type="grouplist">
 				<left>500</left>
 				<right>500</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>920</width>
 				<onright>801</onright>
@@ -122,7 +123,7 @@
 			<control type="group">
 				<left>500</left>
 				<right>500</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>920</width>
 				<align>center</align>
@@ -155,7 +156,7 @@
 			</control>
 			<control type="grouplist">
 				<right>100</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<onleft>706</onleft>
@@ -188,7 +189,7 @@
 			</control>
 			<control type="group">
 				<right>100</right>
-				<bottom>50</bottom>
+				<bottom>80</bottom>
 				<height>120</height>
 				<width>500</width>
 				<align>right</align>
@@ -212,11 +213,11 @@
 				</include>
 			</control>
 			<control type="label">
-				<right>200</right>
+				<right>150</right>
 				<bottom>70</bottom>
 				<height>30</height>
-				<width>500</width>
-				<align>right</align>
+				<width>300</width>
+				<align>center</align>
 				<label>$VAR[VideoOSDLabelVar2]</label>
 				<font>Font22_Reg_09</font>
 			</control>
@@ -276,6 +277,6 @@
 					<label>$INFO[System.Time] / $INFO[Player.FinishTime]</label>
 				</control>
 			</control>
-		</control>	
+		</control>
 	</controls>
 </window>
