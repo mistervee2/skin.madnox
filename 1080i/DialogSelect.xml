@@ -35,7 +35,6 @@
 				<height>420</height>
 				<onleft>60</onleft>
 				<onright>8001</onright>
-				<scrolltime>200</scrolltime>
 				<pagecontrol>60</pagecontrol>
 				<include content="Dialog_List_Default">
 					<param name="id">3</param>

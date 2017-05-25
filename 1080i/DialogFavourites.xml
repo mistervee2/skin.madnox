@@ -1,200 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
 	<defaultcontrol>450</defaultcontrol>
-	<onunload condition="String.Contains(Skin.String(widgetlist),favourite) | String.Contains(Skin.String(widget2list),favourite)">AlarmClock(FavouriteUpdate,RunScript(script.favourites),00:01,silent)</onunload>
 	<controls>
 		<include>Dialog_Furniture_BackgroundFade</include>
 		<include>Dialog_Furniture_Close_Onclick</include>
 		<control type="group">
-			<left>140</left>
-			<top>60</top>
 			<include content="Dialog_Furniture_Background">
-				<param name="width">1640</param>
-				<param name="height">990</param>
-				<param name="labelid">2</param>
+				<param name="width">1320</param>
+				<param name="height">768</param>
 				<param name="label">$LOCALIZE[1036]</param>
-				<param name="bottomrightlabel">$INFO[Container(450).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(450).NumItems,/]</param>
+				<param name="bottomseparatorvisible">Integer.IsLess(Container(450).NumItems,10)</param>
+				<param name="bottomrightlabel">$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</param>
 			</include>
 			<control type="image">
-				<left>30</left>
-				<top>40</top>
-				<width>40</width>
-				<height>40</height>
-				<texture flipy="true" colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
-				<include>Animation_CommonFade</include>
-				<visible>Container(450).HasPrevious</visible>
-			</control>
-			<control type="image">
-				<left>30</left>
-				<top>920</top>
+				<centerleft>50%</centerleft>
+				<bottom>30</bottom>
 				<width>40</width>
 				<height>40</height>
 				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
 				<include>Animation_CommonFade</include>
 				<visible>Container(450).HasNext</visible>
 			</control>
-			<control type="button" id="449">
-				<left>1160</left>
-				<top>25</top>
-				<width>446</width>
-				<height>60</height>
-				<textoffsetx>70</textoffsetx>
-				<texturefocus colordiffuse="$VAR[FocusTextureColorVar]" border="8">buttons/list-select-focus.png</texturefocus>
-				<texturenofocus>-</texturenofocus>
-				<label>$LOCALIZE[31272]:</label>
-				<label2>[COLOR $VAR[FontColorVar]]$VAR[FavoritesListTypeVar][/COLOR]</label2>
-				<font>Font33_Bold</font>
-				<textcolor>$VAR[HighlightColorVar]</textcolor>
-				<onclick condition="String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))">Skin.SetString(FavoritesListType,2)</onclick>
-				<onclick condition="String.IsEqual(Skin.String(FavoritesListType),3)">Skin.SetString(FavoritesListType,1)</onclick>
-				<onclick condition="String.IsEqual(Skin.String(FavoritesListType),2)">Skin.SetString(FavoritesListType,3)</onclick>
-				<onclick condition="String.IsEqual(Skin.String(FavoritesListType),1)">Skin.SetString(FavoritesListType,2)</onclick>
-				<onleft>450</onleft>
-				<onright>60</onright>
-				<onup>450</onup>
-				<ondown>450</ondown>
+			<control type="panel" id="450">
+				<left>20</left>
+				<top>88</top>
+				<width>760</width>
+				<height>600</height>
+				<onleft>60</onleft>
+				<onright>8000</onright>
+				<pagecontrol>60</pagecontrol>
+				<include content="Dialog_List_Default">
+					<param name="id">450</param>
+					<param name="width">760</param>
+				</include>
 			</control>
-		</control>
-		<control type="panel" id="450">
-			<include>Animation_Dialog_Popup</include>
-			<left>185</left>
-			<top>152</top>
-			<width>1599</width>
-			<height>810</height>
-			<onleft>60</onleft>
-			<onright>449</onright>
-			<onup>450</onup>
-			<ondown>450</ondown>
-			<pagecontrol>60</pagecontrol>
-			<scrolltime>0</scrolltime>
-			<orientation>vertical</orientation>
-			<itemlayout height="60" width="550" condition="String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))">
-				<control type="label">
-					<left>10</left>
-					<width>550</width>
-					<height>60</height>
-					<font>Font_Reg30_2</font>
-					<textcolor>grey</textcolor>
-					<info>ListItem.Label</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="60" width="550" condition="String.IsEqual(Skin.String(FavoritesListType),1) | String.IsEmpty(Skin.String(FavoritesListType))">
-				<control type="image">
-					<width>550</width>
-					<height>60</height>
-					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">buttons/list-select-focus.png</texture>
-					<visible>Control.HasFocus(450)</visible>
-				</control>
-				<control type="label">
-					<left>10</left>
-					<width>550</width>
-					<height>60</height>
-					<font>Font_Reg30_2</font>
-					<info>ListItem.Label</info>
-				</control>
-			</focusedlayout>
-			<itemlayout height="90" width="800" condition="String.IsEqual(Skin.String(FavoritesListType),2)">
-				<control type="label">
-					<left>150</left>
-					<width>600</width>
-					<height>90</height>
-					<font>Font_Reg38</font>
-					<textcolor>grey2</textcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="image">
-					<left>52</left>
-					<top>8</top>
-					<width>75</width>
-					<height>75</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-				</control>
-			</itemlayout>
-			<focusedlayout height="90" width="800" condition="String.IsEqual(Skin.String(FavoritesListType),2)">
-				<control type="image">
-					<width>765</width>
-					<height>90</height>
-					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">buttons/list-select-focus.png</texture>
-					<visible>Control.HasFocus(450)</visible>
-				</control>
-				<control type="label">
-					<left>150</left>
-					<width>600</width>
-					<height>90</height>
-					<font>Font_Reg38</font>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="image">
-					<left>52</left>
-					<top>8</top>
-					<width>75</width>
-					<height>75</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-				</control>
-			</focusedlayout>
-			<itemlayout height="185" width="790" condition="String.IsEqual(Skin.String(FavoritesListType),3)">
-				<control type="label">
-					<left>205</left>
-					<width>580</width>
-					<height>185</height>
-					<font>Font_Reg38</font>
-					<textcolor>grey2</textcolor>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>5</top>
-					<width>175</width>
-					<height>175</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-				</control>
-			</itemlayout>
-			<focusedlayout height="185" width="790" condition="String.IsEqual(Skin.String(FavoritesListType),3)">
-				<control type="image">
-					<width>765</width>
-					<height>185</height>
-					<texture colordiffuse="$VAR[FocusTextureColorVar]" border="8">buttons/list-select-focus.png</texture>
-					<visible>Control.HasFocus(450)</visible>
-				</control>
-				<control type="label">
-					<left>205</left>
-					<width>580</width>
-					<height>185</height>
-					<font>Font_Reg38</font>
-					<info>ListItem.Label</info>
-				</control>
-				<control type="image">
-					<left>15</left>
-					<top>5</top>
-					<width>175</width>
-					<height>175</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Listitem.Icon]</texture>
-				</control>
-			</focusedlayout>
-		</control>
-		<control type="image">
-			<include>Animation_Dialog_Popup</include>
-			<left>1169</left>
-			<top>275</top>
-			<width>575</width>
-			<height>575</height>
-			<aspectratio>keep</aspectratio>
-			<texture>$INFO[Container(450).Listitem.Icon]</texture>
-			<bordertexture border="7">thumbs/shadow-square.png</bordertexture>
-			<bordersize>7</bordersize>
-			<visible>!String.IsEqual(Skin.String(FavoritesListType),3) | String.IsEmpty(Skin.String(FavoritesListType))</visible>
-		</control>
-		<control type="scrollbar" id="60">
-			<include>Animation_Dialog_Popup</include>
-			<onleft>449</onleft>
-			<onright>450</onright>
-			<left>142</left>
-			<top>180</top>
-			<height>420</height>
+			<control type="image">
+				<right>20</right>
+				<bottom>80</bottom>
+				<width>550</width>
+				<height>60</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texture>
+				<visible>!Integer.IsLess(Container(450).NumItems,10)</visible>
+			</control>
+			<control type="image">
+				<right>50</right>
+				<top>78</top>
+				<width>500</width>
+				<height>620</height>
+				<aspectratio align="center" aligny="center">keep</aspectratio>
+				<texture>$INFO[Container(450).Listitem.Icon]</texture>
+				<bordertexture border="20" colordiffuse="FF000000">thumbs/shadow-square.png</bordertexture>
+				<bordersize>20</bordersize>
+			</control>
+			<control type="grouplist" id="8000">
+				<right>60</right>
+				<top>28</top>
+				<width>400</width>
+				<onleft>450</onleft>
+				<ondown>450</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">8001</param>
+					<param name="label">$LOCALIZE[15067]</param>
+					<param name="onclick">Action(close)</param>
+				</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<left>1</left>
+				<top>88</top>
+				<bottom>80</bottom>
+				<onright>450</onright>
+			</control>
 		</control>
 	</controls>
 </window>
