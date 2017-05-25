@@ -35,17 +35,17 @@
 				</include>
 				<include content="Dialog_Button_OSD">
 					<param name="id" value="500" />
-					<param name="texture" value="buttons/player/audio.png" />
+					<param name="texture" value="buttons/player/visualisation.png" />
 				</include>
 				<include content="Dialog_Button_OSD">
 					<param name="id" value="602" />
-					<param name="texture" value="buttons/player/video.png" />
+					<param name="texture" value="buttons/player/settings.png" />
 					<param name="onclick" value="Addon.Default.OpenSettings(xbmc.player.musicviz)" />
 					<param name="visible" value="Visualisation.Enabled" />
 				</include>
 				<include content="Dialog_Button_OSD">
 					<param name="id" value="603" />
-					<param name="texture" value="buttons/player/video.png" />
+					<param name="texture" value="buttons/player/visualisationpreset.png" />
 					<param name="onclick" value="ActivateWindow(visualisationpresetlist)" />
 					<param name="visible" value="Visualisation.HasPresets" />
 				</include>
