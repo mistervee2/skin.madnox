@@ -186,11 +186,7 @@
 				<width>600</width>
 				<include content="Dialog_Button_OSD_Highlight">
 					<param name="left">150</param>
-					<param name="visible" value="Control.HasFocus(802) + VideoPlayer.IsStereoscopic" />
-				</include>
-				<include content="Dialog_Button_OSD_Highlight">
-					<param name="left">260</param>
-					<param name="visible" value="Control.HasFocus(802) + !VideoPlayer.IsStereoscopic" />
+					<param name="visible" value="Control.HasFocus(802)" />
 				</include>
 				<include content="Dialog_Button_OSD_Highlight">
 					<param name="left">260</param>
