@@ -78,7 +78,7 @@
 				<left>365</left>
 				<top>88</top>
 				<width>100%</width>
-				<height>640</height>
+				<height>624</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
@@ -86,50 +86,50 @@
 				<preloaditems>2</preloaditems>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout width="470" height="322">
+				<itemlayout width="464" height="312">
 					<control type="group">
-						<left>20</left>
 						<control type="image">
-							<left>0</left>
-							<top>12</top>
+							<left>12</left>
+							<top>24</top>
 							<width>400</width>
-							<height>250</height>
+							<height>225</height>
 							<aspectratio>scale</aspectratio>
 							<texture>$INFO[ListItem.Art(thumb)]</texture>
 						</control>
 						<control type="label">
-							<left>20</left>
-							<top>266</top>
+							<top>259</top>
+							<height>40</height>
 							<width>400</width>
-							<height>35</height>
+							<align>center</align>
+							<textoffsetx>12</textoffsetx>
 							<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
 							<align>center</align>
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="470" height="322">
-					<control type="group">
-						<left>20</left>
-						<control type="image">
-							<left>0</left>
-							<top>12</top>
-							<width>400</width>
-							<height>250</height>
-							<aspectratio>scale</aspectratio>
-							<texture colordiffuse="$VAR[HighlightColorVar]">$INFO[ListItem.Icon]</texture>
-							<bordertexture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</bordertexture>
-							<bordersize>10</bordersize>
-						</control>
-						<control type="label">
-							<left>20</left>
-							<top>266</top>
-							<width>400</width>
-							<height>35</height>
-							<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
-							<align>center</align>
-						</control>
-					</control>
-				</focusedlayout>
+                <focusedlayout width="464" height="312">
+                    <control type="image">
+                        <width>424</width>
+                        <height>249</height>
+                        <texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>12</left>
+                        <top>12</top>
+                        <width>400</width>
+                        <height>225</height>
+                        <aspectratio>scale</aspectratio>
+                        <texture>$INFO[ListItem.Art(thumb)]</texture>
+                    </control>
+                    <control type="label">
+                        <top>259</top>
+                        <height>40</height>
+						<width>400</width>
+						<align>center</align>
+                        <textoffsetx>12</textoffsetx>
+                        <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
+                    </control>
+                </focusedlayout>
 			</control>
 			<control type="grouplist" id="8000">
 				<right>60</right>
