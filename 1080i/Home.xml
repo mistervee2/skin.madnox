@@ -65,8 +65,8 @@
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9055" />
 					<param name="icon" value="icons/mediamenu/colors.png" />
-					<param name="label" value="$LOCALIZE[14078]" />
-					<param name="onclick" value="SetProperty(CustomColorLabel,$LOCALIZE[31736],home)" />
+					<param name="label" value="$LOCALIZE[31298]" />
+					<param name="onclick" value="SetProperty(CustomColorLabel,$LOCALIZE[10000],home)" />
 					<param name="onclick2" value="ActivateWindow(1110)" />
 				</include>
 				<include content="MediaMenu_Icon_Button">
