@@ -75,8 +75,8 @@
 			</control>
 			<!-- Video Thumb Preview  -->
 			<control type="panel" id="11">
-				<left>362</left>
-				<top>98</top>
+				<left>352</left>
+				<top>88</top>
 				<width>930</width>
 				<height>630</height>
 				<onleft>9000</onleft>
