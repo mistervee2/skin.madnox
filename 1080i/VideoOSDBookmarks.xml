@@ -1,177 +1,159 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<defaultcontrol always="true">450</defaultcontrol>
-	<coordinates>
-		<left>300</left>
-		<top>180</top>
-		<system>1</system>
-	</coordinates>
-	<include>Animation_DialogPopup2</include>
+	<defaultcontrol always="true">2</defaultcontrol>
 	<controls>
-		<control type="image">
-			<width>1322</width>
-			<height>722</height>
-			<texture>osd/osd_settings_back_glow.png</texture>
-			<colordiffuse>$VAR[ColorDiffuseVar]</colordiffuse>
-			<visible>!Skin.HasSetting(DisableGlowbar)</visible>
-			<include>PanelGlowFade</include>
-		</control>
-		<control type="image">
-			<width>1322</width>
-			<height>722</height>
-			<texture colordiffuse="$VAR[DialogColorVar]">osd/osd_settings_back.png</texture>
-		</control>
-		<control type="image">
-			<left>75</left>
-			<top>52</top>
-			<width>1172</width>
-			<height>60</height>
-			<texture border="1">osd/osd_settings_buttonnf.png</texture>
-		</control>
-		<control type="image">
-			<left>75</left>
-			<top>578</top>
-			<width>1172</width>
-			<height>60</height>
-			<texture border="1">osd/osd_settings_buttonnf.png</texture>
-		</control>
-		<control type="label">
-			<left>120</left>
-			<top>45</top>
-			<width>1322</width>
-			<height>45</height>
-			<label>$LOCALIZE[298]</label>
-			<font>Font_Bold33</font>
-			<textcolor>$VAR[TitleColorVar]</textcolor>
-		</control>
-		<control type="grouplist" id="450">
-			<left>0</left>
-			<top>638</top>
-			<width>1000</width>
-			<height>135</height>
-			<align>center</align>
-			<onup>11</onup>
-			<ondown>11</ondown>
-			<onleft>450</onleft>
-			<onright>450</onright>
-			<scrolltime tween="sine">200</scrolltime>
-			<orientation>horizontal</orientation>
-			<itemgap>30</itemgap>
-			<control type="button" id="2">
-				<width>315</width>
-				<height>60</height>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label>294</label>
-				<textcolor>grey2</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>Control.IsEnabled(2)</visible>
+		<include>Dialog_Furniture_BackgroundFade</include>
+		<include>Dialog_Furniture_Close_Onclick</include>
+		<control type="group">
+			<include content="Dialog_Furniture_Background">
+				<param name="width">1320</param>
+				<param name="height">800</param>
+				<param name="label">$LOCALIZE[444] $LOCALIZE[298]</param>
+				<param name="bottomseparatorvisible">Integer.IsLess(Container(11).NumItems,10)</param>
+				<param name="bottomrightlabel">$INFO[Container(11).NumItems,, $LOCALIZE[31025]]$INFO[Container(11).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(11).NumPages,/,)]</param>
+			</include>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<bottom>30</bottom>
+				<width>40</width>
+				<height>40</height>
+				<texture colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(11).HasNext</visible>
 			</control>
-			<control type="button" id="4">
-				<width>315</width>
-				<height>60</height>
-				<textoffsetx>0</textoffsetx>
-				<align>center</align>
-				<label>20406</label>
-				<textcolor>grey2</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>Control.IsEnabled(4)</visible>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<top>40</top>
+				<width>40</width>
+				<height>40</height>
+				<texture flipy="true" colordiffuse="$VAR[HighlightColorVar]">icons/default/arrowdown.png</texture>
+				<include>Animation_CommonFade</include>
+				<visible>Container(11).HasPrevious</visible>
 			</control>
-			<control type="button" id="3">
-				<width>315</width>
-				<height>60</height>
-				<align>center</align>
-				<label>296</label>
-				<textcolor>grey2</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
+			<!-- Left menu -->
+			<control type="grouplist" id="9000">
+				<left>20</left>
+				<top>88</top>
+				<width>330</width>
+				<height>240</height>
+				<onright>11</onright>
+				<onleft>8000</onleft>
+				<control type="button" id="2">
+					<width>330</width>
+					<label>$LOCALIZE[294]</label>
+					<include>Dialog_Button_Left</include>
+				</control>
+				<control type="button" id="3">
+					<width>330</width>
+					<label>$LOCALIZE[296]</label>
+					<include>Dialog_Button_Left</include>
+				</control>
+				<control type="button" id="4">
+					<width>330</width>
+					<label>$LOCALIZE[20406]</label>
+					<include>Dialog_Button_Left</include>
+					<visible>Control.IsEnabled(4)</visible>
+				</control>
 			</control>
-			<control type="button" id="5">
-				<width>180</width>
-				<height>60</height>
-				<align>center</align>
-				<label>13012</label>
-				<onclick>PreviousMenu</onclick>
-				<textcolor>grey2</textcolor>
-				<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				<visible>system.getbool(input.enablemouse)</visible>
+			<control type="image">
+				<left>351</left>
+				<top>88</top>
+				<width>4</width>
+				<height>630</height>
+				<texture colordiffuse="$VAR[PanelColorVar]">panels/line-vertical.png</texture>
 			</control>
-		</control>
-		<control type="label">
-			<left>970</left>
-			<top>658</top>
-			<width>315</width>
-			<height>60</height>
-			<align>right</align>
-			<aligny>bottom</aligny>
-			<label>$INFO[Container(11).NumItems,, $LOCALIZE[31025]]$INFO[Container(11).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(11).NumPages,/,)]</label>
-			<font>Font_Reg25</font>
-			<textcolor>grey2</textcolor>
-		</control>
-		<control type="panel" id="11">
-			<left>124</left>
-			<top>114</top>
-			<width>1080</width>
-			<height>525</height>
-			<onleft>450</onleft>
-			<onright>61</onright>
-			<ondown>2</ondown>
-			<onup>3</onup>
-			<scrolltime>200</scrolltime>
-			<pagecontrol>61</pagecontrol>
-			<itemlayout height="262" width="360">
-				<control type="image">
-					<width>345</width>
-					<height>225</height>
-					<aspectratio aligny="center">scale</aspectratio>
-					<texture>common/black.png</texture>
-					<info>ListItem.Icon</info>
-					<bordertexture border="5">thumbs/bordershadow4.png</bordertexture>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<top>228</top>
-					<width>338</width>
-					<height>22</height>
-					<align>center</align>
-					<info>ListItem.Label</info>
-				</control>
-			</itemlayout>
-			<focusedlayout height="262" width="360">
-				<control type="image">
-					<width>345</width>
-					<height>225</height>
-					<aspectratio aligny="center">scale</aspectratio>
-					<texture>common/black.png</texture>
-					<info>ListItem.Icon</info>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="image">
-					<width>345</width>
-					<height>225</height>
-					<texture border="6">views/addonwall_select.png</texture>
-					<colordiffuse>$VAR[FocusTextureColorVar]</colordiffuse>
-				</control>
-				<control type="label">
-					<left>0</left>
-					<top>228</top>
-					<width>338</width>
-					<height>22</height>
-					<align>center</align>
-					<info>ListItem.Label</info>
-				</control>
-			</focusedlayout>
-		</control>
-		<control type="scrollbar" id="61">
-			<left>1283</left>
-			<top>105</top>
-			<width>42</width>
-			<height>540</height>
-			<include>Animation_VerticalScrollBar</include>
-			<onleft>2</onleft>
-			<onright>11</onright>
-			<ondown>61</ondown>
-			<onup>61</onup>
+			<control type="textbox">
+				<left>400</left>
+				<top>300</top>
+				<width>820</width>
+				<height>250</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$LOCALIZE[106] $LOCALIZE[21362]</label>
+				<font>Font33_Bold</font>
+				<visible>Integer.IsEqual(Container(11).NumItems,0)</visible>
+			</control>
+
+			<control type="panel" id="11">
+				<left>365</left>
+				<top>88</top>
+				<width>100%</width>
+				<height>640</height>
+				<onleft>9000</onleft>
+				<onright>60</onright>
+				<pagecontrol>60</pagecontrol>
+				<viewtype label="536">icon</viewtype>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>vertical</orientation>
+				<itemlayout width="470" height="322">
+					<control type="group">
+						<left>20</left>
+						<control type="image">
+							<left>0</left>
+							<top>12</top>
+							<width>400</width>
+							<height>250</height>
+							<aspectratio>scale</aspectratio>
+							<texture>$INFO[ListItem.Art(thumb)]</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>266</top>
+							<width>400</width>
+							<height>35</height>
+							<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
+							<align>center</align>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout width="470" height="322">
+					<control type="group">
+						<left>20</left>
+						<control type="image">
+							<left>0</left>
+							<top>12</top>
+							<width>400</width>
+							<height>250</height>
+							<aspectratio>scale</aspectratio>
+							<texture colordiffuse="$VAR[HighlightColorVar]">$INFO[ListItem.Icon]</texture>
+							<bordertexture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</bordertexture>
+							<bordersize>10</bordersize>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>266</top>
+							<width>400</width>
+							<height>35</height>
+							<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
+							<align>center</align>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="8000">
+				<right>60</right>
+				<top>28</top>
+				<width>600</width>
+				<onleft>11</onleft>
+				<onright>60</onright>
+				<ondown>11</ondown>
+				<align>right</align>
+				<itemgap>10</itemgap>
+				<orientation>horizontal</orientation>
+				<include content="Dialog_Button_TopRight">
+					<param name="id">8001</param>
+					<param name="label">$LOCALIZE[15067]</param>
+					<param name="onclick">Action(close)</param>
+				</include>
+			</control>
+			<control type="scrollbar" id="60">
+				<right>1</right>
+				<top>88</top>
+				<height>420</height>
+				<onleft>11</onleft>
+				<onright>8000</onright>
+			</control>
 		</control>
 	</controls>
 </window>
