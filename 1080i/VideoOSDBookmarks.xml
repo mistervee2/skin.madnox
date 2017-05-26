@@ -62,7 +62,7 @@
 				<height>630</height>
 				<texture colordiffuse="$VAR[PanelColorVar]">panels/line-vertical.png</texture>
 			</control>
-			<control type="textbox">
+			<control type="textbox" >
 				<left>400</left>
 				<top>300</top>
 				<width>820</width>
@@ -73,12 +73,12 @@
 				<font>Font33_Bold</font>
 				<visible>Integer.IsEqual(Container(11).NumItems,0)</visible>
 			</control>
-
+			<!-- Video Thumb Preview  -->
 			<control type="panel" id="11">
-				<left>365</left>
-				<top>88</top>
-				<width>100%</width>
-				<height>624</height>
+				<left>362</left>
+				<top>98</top>
+				<width>930</width>
+				<height>630</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
 				<pagecontrol>60</pagecontrol>
@@ -86,11 +86,11 @@
 				<preloaditems>2</preloaditems>
 				<scrolltime tween="sine">200</scrolltime>
 				<orientation>vertical</orientation>
-				<itemlayout width="464" height="312">
+				<itemlayout width="465" height="315">
 					<control type="group">
 						<control type="image">
-							<left>12</left>
-							<top>24</top>
+							<left>20</left>
+							<top>20</top>
 							<width>400</width>
 							<height>225</height>
 							<aspectratio>scale</aspectratio>
@@ -99,23 +99,21 @@
 						<control type="label">
 							<top>259</top>
 							<height>40</height>
-							<width>400</width>
+							<width>465</width>
 							<align>center</align>
-							<textoffsetx>12</textoffsetx>
 							<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
-							<align>center</align>
 						</control>
 					</control>
 				</itemlayout>
-                <focusedlayout width="464" height="312">
+                <focusedlayout width="465" height="315">
                     <control type="image">
-                        <width>424</width>
-                        <height>249</height>
+                        <width>440</width>
+                        <height>265</height>
                         <texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
                     </control>
                     <control type="image">
-                        <left>12</left>
-                        <top>12</top>
+                        <left>20</left>
+                        <top>20</top>
                         <width>400</width>
                         <height>225</height>
                         <aspectratio>scale</aspectratio>
@@ -124,9 +122,8 @@
                     <control type="label">
                         <top>259</top>
                         <height>40</height>
-						<width>400</width>
+						<width>465</width>
 						<align>center</align>
-                        <textoffsetx>12</textoffsetx>
                         <label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
                     </control>
                 </focusedlayout>
