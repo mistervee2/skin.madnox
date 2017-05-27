@@ -26,7 +26,6 @@
 				<width>415</width>
 				<height>210</height>
 				<onright>11</onright>
-				<onleft>8000</onleft>
 				<control type="button" id="2">
 					<textoffsetx>20</textoffsetx>
 					<label>$LOCALIZE[294]</label>
@@ -58,7 +57,6 @@
 				<width>1504</width>
 				<height>210</height>
 				<onleft>9000</onleft>
-				<onright>60</onright>
 				<onup>9000</onup>
 				<pagecontrol>60</pagecontrol>
 				<orientation>horizontal</orientation>
@@ -80,14 +78,24 @@
 							<top>165</top>
 							<width>338</width>
 							<height>40</height>
-							<texture border="1" colordiffuse="$VAR[HighlightColorVar]">dialogs/osd-back.png</texture>
+							<texture>dialogs/thumb-overlay.png</texture>
 						</control>
 						<control type="label">
 							<top>170</top>
 							<height>30</height>
 							<width>338</width>
-							<align>center</align>
-							<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
+							<align>left</align>
+							<textoffsetx>10</textoffsetx>
+							<font>Font26_Reg_08</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<top>170</top>
+							<height>30</height>
+							<width>338</width>
+							<align>right</align>
+							<font>Font26_Reg_08</font>
+							<label>$INFO[ListItem.Label2]</label>
 						</control>
 					</control>
 				</itemlayout>
@@ -108,18 +116,28 @@
 						<texture>$INFO[ListItem.Art(thumb)]</texture>
 					</control>
 					<control type="image">
-							<left>5</left>
-							<top>165</top>
-							<width>338</width>
-							<height>40</height>
-							<texture border="1" colordiffuse="$VAR[HighlightColorVar]">dialogs/osd-back.png</texture>
+						<left>5</left>
+						<top>165</top>
+						<width>338</width>
+						<height>40</height>
+						<texture>dialogs/thumb-overlay.png</texture>
 					</control>
 					<control type="label">
 						<top>170</top>
 						<height>30</height>
 						<width>338</width>
-						<align>center</align>
-						<label>$INFO[ListItem.Label][CR]$INFO[ListItem.Label2]</label>
+						<align>left</align>
+						<textoffsetx>10</textoffsetx>
+						<font>Font26_Reg_08</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<top>170</top>
+						<height>30</height>
+						<width>338</width>
+						<align>right</align>
+						<font>Font26_Reg_08</font>
+						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>
 			</control>
