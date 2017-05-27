@@ -59,6 +59,7 @@
 				<height>210</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
+				<onup>9000</onup>
 				<pagecontrol>60</pagecontrol>
 				<orientation>horizontal</orientation>
 				<viewtype label="536">icon</viewtype>
