@@ -31,15 +31,13 @@
 			<include content="Panel_Background_Default">
 				<param name="reflect">!Skin.HasSetting(SettingsHideFloor)</param>
 			</include>
-			<control type="fixedlist" id="50">
+			<control type="list" id="50">
 				<left>101</left>
 				<top>145</top>
 				<width>1718</width>
 				<height>798</height>
 				<onleft>9000</onleft>
 				<onright>60</onright>
-				<onup>50</onup>
-				<ondown>50</ondown>
 				<viewtype label="535">list</viewtype>
 				<pagecontrol>60</pagecontrol>
 				<itemlayout height="114">
@@ -60,9 +58,7 @@
 						<right>465</right>
 						<top>15</top>
 						<height>42</height>
-						<aligny>center</aligny>
 						<font>Font32_Reg</font>
-						
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
@@ -81,7 +77,6 @@
 						<height>42</height>
 						<align>right</align>
 						<font>Font32_Reg</font>
-						
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</itemlayout>
@@ -107,9 +102,7 @@
 						<right>465</right>
 						<top>15</top>
 						<height>42</height>
-						<aligny>center</aligny>
 						<font>Font32_Reg</font>
-						
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="label">
@@ -128,7 +121,6 @@
 						<height>42</height>
 						<align>right</align>
 						<font>Font32_Reg</font>
-						
 						<label>$INFO[ListItem.Label2]</label>
 					</control>
 				</focusedlayout>
@@ -162,11 +154,12 @@
 				<onleft condition="!Skin.HasSetting(DisableQuickNav)">ActivateWindow(1113)</onleft>
 				<onright>50</onright>
 				<onback>50</onback>
-				<include content="MediaMenu_Icon_ToggleButton">
-					<param name="id">4</param>
-					<param name="label">$LOCALIZE[584]</param>
-					<param name="altlabel">$LOCALIZE[585]</param>
-					<param name="icon">icons/mediamenu/arrowdown.png</param>
+				<include content="MediaMenu_Icon_RadioButton">
+					<param name="id" value="4" />
+					<param name="iconon" value="icons/mediamenu/ascending.png" />
+					<param name="iconoff" value="icons/mediamenu/descending.png" />
+					<param name="label" value="$INFO[Container.SortOrder]" />
+					<param name="selected">String.IsEqual(Container.SortOrder,$LOCALIZE[584])</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">21</param>
@@ -175,17 +168,17 @@
 				</include>
 				<include content="MediaMenu_Icon_RadioButton">
 					<param name="id">22</param>
-					<param name="label">$INFO[Control.GetLabel(22)]</param>
+					<param name="label">$LOCALIZE[14120]</param>
 					<param name="visible">!String.Contains(Control.GetLabel(21),$LOCALIZE[14118])</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">20</param>
-					<param name="icon">icons/mediamenu/remove.png</param>
+					<param name="icon">icons/mediamenu/clear.png</param>
 					<param name="label">$LOCALIZE[192]</param>
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">501</param>
-					<param name="icon">icons/mediamenu/skinsettings.png</param>
+					<param name="icon">icons/mediamenu/settings.png</param>
 					<param name="label">$LOCALIZE[5]</param>
 					<param name="onclick">ActivateWindow(systemsettings,logging)</param>
 				</include>

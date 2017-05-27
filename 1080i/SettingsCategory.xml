@@ -122,8 +122,8 @@
 				<onback>3</onback>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="20" />
-					<param name="label" value="$LOCALIZE[31217]: $INFO[Control.GetLabel(20)]" />
-					<param name="icon" value="icons/mediamenu/skinsettings.png" />
+					<param name="label" value="$INFO[Control.GetLabel(20)]" />
+					<param name="icon" value="icons/mediamenu/level.png" />
 					<param name="onclick" value="SettingsLevelChange" />
 					<param name="visible" value="Window.IsActive(SettingsCategory.xml)" />
 				</include>

@@ -116,7 +116,6 @@
 						<control type="label">
 							<left>45</left>
 							<width>780</width>
-							<font>Font30_Reg</font>
 							<textcolor>grey</textcolor>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -124,7 +123,6 @@
 							<right>45</right>
 							<width>500</width>
 							<align>right</align>
-							<font>Font30_Reg</font>
 							<textcolor>grey</textcolor>
 							<label fallback="20113">$INFO[ListItem.Label2]</label>
 						</control>
@@ -139,14 +137,12 @@
 						<control type="label">
 							<left>45</left>
 							<width>780</width>
-							<font>Font30_Reg</font>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 						<control type="label">
 							<right>45</right>
 							<width>500</width>
 							<align>right</align>
-							<font>Font30_Reg</font>
 							<label fallback="20113">$INFO[ListItem.Label2]</label>
 						</control>
 					</focusedlayout>

@@ -461,10 +461,12 @@ msgctxt "#31112"
 msgid "Coloured"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31113"
 msgid "Single Image"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31114"
 msgid "Multi Image"
 msgstr ""
@@ -873,8 +875,9 @@ msgctxt "#31215"
 msgid "Enable TvTunes"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31216"
-msgid "Update art (Landscape, Logo, ClearArt) after Database update"
+msgid "Run artwork downloader after database update"
 msgstr ""
 
 msgctxt "#31217"
@@ -1070,6 +1073,7 @@ msgctxt "#31264"
 msgid "Colored Mpaa Flags"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31265"
 msgid "Smaller pop-up notifications"
 msgstr ""
@@ -1114,10 +1118,14 @@ msgctxt "#31275"
 msgid "Extended Rating"
 msgstr ""
 
+#: /1080i/Home.xml
+#: /1080i/SkinSettings.xml
 msgctxt "#31276"
 msgid "Edit main menu"
 msgstr ""
 
+#: /1080i/Home.xml
+#: /1080i/SkinSettings.xml
 msgctxt "#31277"
 msgid "Reset main menu"
 msgstr ""
@@ -1130,6 +1138,7 @@ msgctxt "#31279"
 msgid "Play trailers in fullscreen"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31280"
 msgid "Show Scroll Letter"
 msgstr ""
@@ -1194,6 +1203,7 @@ msgctxt "#31295"
 msgid "Widget"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31296"
 msgid "Dim screen on dialog popup"
 msgstr ""
@@ -1247,6 +1257,7 @@ msgctxt "#31308"
 msgid "  •  Cast on widget info"
 msgstr ""
 
+#: /1080i/SettingsSystemInfo.xml
 msgctxt "#31309"
 msgid "Memory"
 msgstr ""
@@ -1399,8 +1410,9 @@ msgctxt "#31346"
 msgid "  •  Show Waveform Progress"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31347"
-msgid "Customize Quick Nav"
+msgid "Customise Quick Nav"
 msgstr ""
 
 msgctxt "#31348"
@@ -1611,10 +1623,12 @@ msgctxt "#31399"
 msgid "Flat Discs"
 msgstr ""
 
+#: /1080i/SettingsSystemInfo.xml
 msgctxt "#31400"
 msgid "CPU"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31401"
 msgid "Predictive text for virtual keyboard"
 msgstr ""
@@ -1628,10 +1642,12 @@ msgctxt "#31403"
 msgid "Manage"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31404"
 msgid "Video now playing background"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31405"
 msgid "Music now playing background"
 msgstr ""
@@ -1645,25 +1661,27 @@ msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31408"
-msgid "Enable day/night color themes"
+msgid "Enable day and night colour themes"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31409"
-msgid "Theme to use at day time"
+msgid "Theme for day time"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
 msgctxt "#31410"
-msgid "Theme to use at night time"
+msgid "Theme for night time"
 msgstr ""
 
 msgctxt "#31411"
 msgid "MANAGER"
 msgstr ""
 
-###########################################################################
-# 31412 empty
+#: /1080i/SkinSettings.xml
+msgctxt "#31412"
+msgid "Weather icons"
+msgstr ""
 
 msgctxt "#31413"
 msgid "MONITOR"
@@ -1889,8 +1907,9 @@ msgctxt "#31468"
 msgid "Get extrathumbs"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31469"
-msgid "Use SkinHelper Animated Posters / Backgrounds"
+msgid "Animated posters"
 msgstr ""
 
 msgctxt "#31470"
@@ -2353,10 +2372,13 @@ msgctxt "#31632"
 msgid "Enable Extended Info widget"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31633"
-msgid "Quick Nav"
+msgid "Quick nav"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31634"
 msgid "Main Menu"
 msgstr ""
@@ -2389,6 +2411,7 @@ msgctxt "#31641"
 msgid "Paths"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31643"
 msgid "Furniture"
 msgstr ""
@@ -2417,6 +2440,8 @@ msgctxt "#31675"
 msgid "Customize top bar"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+#: /1080i/Includes_MediaMenu.xml
 #: /1080i/Custom_1110_Colors.xml
 msgctxt "#31676"
 msgid "Top bar"
@@ -2642,6 +2667,7 @@ msgctxt "#31734"
 msgid "Use QuickList instead of default shutdown menu"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31735"
 msgid "Artwork"
 msgstr ""
@@ -2659,6 +2685,7 @@ msgctxt "#31738"
 msgid "Item Count"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 #: /1080i/Custom_1110_Colors.xml
 msgctxt "#31739"
 msgid "Floor"
@@ -2753,6 +2780,27 @@ msgctxt "#31760"
 msgid "Configure widget 2"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
+msgctxt "#31761"
+msgid "Coloured media flags"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31762"
+msgid "Country icons"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31763"
+msgid "Animated fanart"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31764"
+msgid "Default backgrounds"
+msgstr ""
+
+
 # skinshortcuts Locals END here
 ###########################################################################
 
@@ -2803,6 +2851,7 @@ msgctxt "#31775"
 msgid "Colored Clear White"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31776"
 msgid "Weather fanart"
 msgstr ""
@@ -2939,6 +2988,18 @@ msgstr ""
 msgctxt "#31827"
 msgid "Widget Transparency"
 msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31828"
+msgid "Installed"
+msgstr ""
+
+#: /1080i/SkinSettings.xml
+msgctxt "#31829"
+msgid "Not Installed"
+msgstr ""
+
+########### Empty a whole bunch
 
 msgctxt "#31858"
 msgid "Show list widget info"
@@ -3403,6 +3464,7 @@ msgctxt "#31951"
 msgid "Custom"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31952"
 msgid "Language flags"
 msgstr ""
@@ -3490,8 +3552,9 @@ msgctxt "#31974"
 msgid "Source Flags"
 msgstr ""
 
+#: /1080i/SkinSettings.xml
 msgctxt "#31975"
-msgid "Colored icons"
+msgid "Coloured icons"
 msgstr ""
 
 msgctxt "#31976"

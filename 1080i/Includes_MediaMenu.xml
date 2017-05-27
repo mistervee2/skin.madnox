@@ -98,10 +98,10 @@
 			<control type="radiobutton" id="$PARAM[id]">
 				<width>400</width>
 				<height>90</height>
-				<radiowidth>70</radiowidth>
-				<radioheight>70</radioheight>
-				<radioposx>10</radioposx>
-				<radioposy>15</radioposy>
+				<radiowidth>50</radiowidth>
+				<radioheight>50</radioheight>
+				<radioposx>20</radioposx>
+				<radioposy>20</radioposy>
 				<font />
 				<textureradioonfocus colordiffuse="white">$PARAM[iconon]</textureradioonfocus>
 				<textureradioonnofocus colordiffuse="grey">$PARAM[iconon]</textureradioonnofocus>
@@ -313,7 +313,7 @@
 	<include name="MediaMenu_Settings">
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9010" />
-			<param name="icon" value="icons/mediamenu/image.png" />
+			<param name="icon" value="icons/mediamenu/viewsettings.png" />
 			<param name="label" value="$LOCALIZE[14018]" />
 			<param name="onclick" value="ActivateWindow(1122)" />
 		</include>
