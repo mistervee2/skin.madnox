@@ -754,7 +754,7 @@
 					</control>
 					<control type="label">
 						<height>40</height>
-						<label>"blurayartsoriano" for Testing and BugHunting</label>
+						<label>"bsoriano" for Testing and BugHunting</label>
 						<font>Font_Reg22</font>
 						<textcolor>grey2</textcolor>
 					</control>
