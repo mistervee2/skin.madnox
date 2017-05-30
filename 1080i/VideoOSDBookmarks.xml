@@ -58,9 +58,9 @@
 				<onleft>9000</onleft>
 				<onup>9000</onup>
 				<movement>3</movement>
-				<scrolltime tween="cubic" easing="inout">400</scrolltime>
-				<orientation>horizontal</orientation>
 				<preloaditems>2</preloaditems>
+				<orientation>horizontal</orientation>
+				<scrolltime tween="cubic" easing="inout">400</scrolltime>
 				<itemlayout width="348" height="200">
 					<control type="image">
 						<top>5</top>
@@ -102,7 +102,6 @@
 				</itemlayout>
 				<focusedlayout width="348" height="200">
 					<control type="image">
-						<width>348</width>
 						<texture border="10" colordiffuse="$VAR[HighlightColorVar]">buttons/list-select-focus.png</texture>
 						<visible>Control.HasFocus(11)</visible>
 					</control>
