@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Home_Mainmenu_Horizontal">
+		<param name="listtype">wraplist</param>
+		<definition>
+			<control type="group">
+				<left>0</left>
+				<top>850</top>
+				<width>1920</width>
+				<height>140</height>
+				<control type="image">
+					<top>-20</top>
+					<width>1920</width>
+					<height>140</height>
+					<texture colordiffuse="FF000000">home/horizontal-glow.png</texture>
+				</control>
+				<control type="image">
+					<top>-20</top>
+					<width>1920</width>
+					<height>140</height>
+					<texture colordiffuse="FFFFFFFF">home/horizontal-default-back.png</texture>
+				</control>
+				<control type="wraplist" id="9000">
+					<height>100</height>
+					<width>3200</width>
+					<onleft>9000</onleft>
+					<onright>9000</onright>
+					<onup>9050</onup>
+					<ondown>9001</ondown>
+					<orientation>horizontal</orientation>
+					<focusposition>3</focusposition>
+					<scrolltime tween="quadratic">300</scrolltime>
+					<animation effect="slide" end="-720,0" condition="String.IsEmpty(Skin.String(HomeLayout))">Conditional</animation>
+					<animation effect="slide" end="-1280,0" condition="Skin.String(HomeLayout,wide) | Skin.String(HomeLayout,3icons)">Conditional</animation>
+					<animation effect="slide" end="-384,0" condition="Skin.String(HomeLayout,5icons)">Conditional</animation>
+					<itemlayout width="480" height="100" condition="String.IsEmpty(Skin.String(HomeLayout))">
+						<control type="label">
+							<align>center</align>
+							<font>Font_MainMenu</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="480" height="100" condition="String.IsEmpty(Skin.String(HomeLayout))">
+						<control type="label">
+							<align>center</align>
+							<font>Font_MainMenu</font>
+							<textcolor>$VAR[HighlightColorVar]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+					</focusedlayout>
+					<itemlayout width="640" height="100" condition="String.IsEqual(Skin.String(HomeLayout),wide)">
+						<control type="label">
+							<align>center</align>
+							<font>Font_MainMenu</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="640" height="100" condition="String.IsEqual(Skin.String(HomeLayout),wide)">
+						<control type="label">
+							<align>center</align>
+							<font>Font_MainMenu</font>
+							<textcolor>$VAR[HighlightColorVar]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+					</focusedlayout>
+					<itemlayout width="274" height="100" condition="String.IsEqual(Skin.String(HomeLayout),7icons)">
+						<control type="image">
+							<top>5</top>
+							<height>60</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="image">
+							<top>5</top>
+							<height>90</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<top>70</top>
+							<height>30</height>
+							<align>center</align>
+							<font>Font_MainMenu_Icons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="274" height="100" condition="String.IsEqual(Skin.String(HomeLayout),7icons)">
+						<control type="group">
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<control type="image">
+								<top>5</top>
+								<width>274</width>
+								<height>60</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="image">
+								<top>5</top>
+								<height>90</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<top>70</top>
+								<height>30</height>
+								<align>center</align>
+								<font>Font_MainMenu_Icons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<itemlayout width="384" height="100" condition="String.IsEqual(Skin.String(HomeLayout),5icons)">
+						<control type="image">
+							<top>5</top>
+							<height>60</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="image">
+							<top>5</top>
+							<height>90</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<top>70</top>
+							<height>30</height>
+							<align>center</align>
+							<font>Font_MainMenu_Icons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="384" height="100" condition="String.IsEqual(Skin.String(HomeLayout),5icons)">
+						<control type="group">
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<control type="image">
+								<top>5</top>
+								<height>60</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="image">
+								<top>5</top>
+								<height>90</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<top>70</top>
+								<height>30</height>
+								<align>center</align>
+								<font>Font_MainMenu_Icons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<itemlayout width="640" height="100" condition="String.IsEqual(Skin.String(HomeLayout),3icons)">
+						<control type="image">
+							<top>5</top>
+							<height>60</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="image">
+							<top>5</top>
+							<height>90</height>
+							<aspectratio align="center" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<top>70</top>
+							<height>30</height>
+							<align>center</align>
+							<font>Font_MainMenu_Icons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="640" height="100" condition="String.IsEqual(Skin.String(HomeLayout),3icons)">
+						<control type="group">
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<control type="image">
+								<top>5</top>
+								<height>60</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="image">
+								<top>5</top>
+								<height>90</height>
+								<aspectratio align="center" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<top>70</top>
+								<height>30</height>
+								<align>center</align>
+								<font>Font_MainMenu_Icons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include>skinshortcuts-mainmenu</include>
+					</content>
+				</control>
+				<control type="image">
+					<left>0</left>
+					<top>0</top>
+					<width>1920</width>
+					<height>100</height>
+					<texture>home/horizontal-gradient.png</texture>
+					<colordiffuse>88000000</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Home_Mainmenu_Vertical">
+		<param name="listtype">wraplist</param>
+		<definition>
+			<control type="group">
+				<width>460</width>
+				<height>1080</height>
+				<control type="image">
+					<left>440</left>
+					<width>20</width>
+					<height>1080</height>
+					<texture colordiffuse="FFFFFFFF">home/vertical-glow.png</texture>
+				</control>
+				<control type="image">
+					<width>460</width>
+					<height>1080</height>
+					<texture colordiffuse="FFFFFFFF">home/vertical-default-back.png</texture>
+				</control>
+				<control type="wraplist" id="9000">
+					<left>10</left>
+					<height>1800</height>
+					<width>420</width>
+					<onleft>9050</onleft>
+					<focusposition>3</focusposition>
+					<scrolltime tween="quadratic">300</scrolltime>
+					<animation effect="slide" end="0,-216" condition="String.IsEmpty(Skin.String(HomeLayout))">Conditional</animation>
+					<animation effect="slide" end="0,-720" condition="Skin.String(HomeLayout,wide) | Skin.String(HomeLayout,3icons)">Conditional</animation>
+					<animation effect="slide" end="0,-216" condition="Skin.String(HomeLayout,5icons)">Conditional</animation>
+					<itemlayout width="420" height="216" condition="String.IsEmpty(Skin.String(HomeLayout))">
+						<control type="label">
+							<align>right</align>
+							<font>Font_MainMenu_Vertical</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="420" height="216" condition="String.IsEmpty(Skin.String(HomeLayout))">
+						<control type="label">
+							<align>right</align>
+							<font>Font_MainMenu_Vertical</font>
+							<textcolor>$VAR[HighlightColorVar]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+					</focusedlayout>
+					<itemlayout width="420" height="360" condition="String.IsEqual(Skin.String(HomeLayout),wide)">
+						<control type="label">
+							<align>right</align>
+							<font>Font_MainMenu_Vertical</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</itemlayout>
+					<focusedlayout width="420" height="360" condition="String.IsEqual(Skin.String(HomeLayout),wide)">
+						<control type="label">
+							<align>right</align>
+							<font>Font_MainMenu_Vertical</font>
+							<textcolor>$VAR[HighlightColorVar]</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+						</control>
+					</focusedlayout>
+					<itemlayout width="420" height="154.29" condition="String.IsEqual(Skin.String(HomeLayout),7icons)">
+						<control type="image">
+							<left>350</left>
+							<width>60</width>
+							<aspectratio align="right" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<width>90</width>
+							<aspectratio align="right" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<width>330</width>
+							<align>right</align>
+							<font>Font_MainMenu_Vertical_Icons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<width>300</width>
+							<align>right</align>
+							<font>Font_MainMenu_Vertical_BigIcons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="420" height="154.29" condition="String.IsEqual(Skin.String(HomeLayout),7icons)">
+						<control type="group">
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<control type="image">
+								<left>350</left>
+								<width>60</width>
+								<aspectratio align="right" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="image">
+								<left>320</left>
+								<width>90</width>
+								<aspectratio align="right" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<width>330</width>
+								<align>right</align>
+								<font>Font_MainMenu_Vertical_Icons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<width>300</width>
+								<align>right</align>
+								<font>Font_MainMenu_Vertical_BigIcons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<itemlayout width="420" height="216" condition="String.IsEqual(Skin.String(HomeLayout),5icons)">
+						<control type="image">
+							<left>350</left>
+							<width>60</width>
+							<aspectratio align="right" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<width>90</width>
+							<aspectratio align="right" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<width>330</width>
+							<align>right</align>
+							<font>Font_MainMenu_Vertical_Icons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<width>300</width>
+							<align>right</align>
+							<font>Font_MainMenu_Vertical_BigIcons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="420" height="216" condition="String.IsEqual(Skin.String(HomeLayout),5icons)">
+						<control type="group">
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<control type="image">
+								<left>350</left>
+								<width>60</width>
+								<aspectratio align="right" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="image">
+								<left>320</left>
+								<width>90</width>
+								<aspectratio align="right" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<width>330</width>
+								<align>right</align>
+								<font>Font_MainMenu_Vertical_Icons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<width>300</width>
+								<align>right</align>
+								<font>Font_MainMenu_Vertical_BigIcons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<itemlayout width="420" height="360" condition="String.IsEqual(Skin.String(HomeLayout),3icons)">
+						<control type="image">
+							<left>350</left>
+							<width>60</width>
+							<aspectratio align="right" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.ActualIcon]</texture>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="image">
+							<left>320</left>
+							<width>90</width>
+							<aspectratio align="right" aligny="center">keep</aspectratio>
+							<texture colordiffuse="grey3">$INFO[ListItem.Icon]</texture>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<width>330</width>
+							<align>right</align>
+							<font>Font_MainMenu_Vertical_Icons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+						<control type="label">
+							<width>300</width>
+							<align>right</align>
+							<font>Font_MainMenu_Vertical_BigIcons</font>
+							<textcolor>grey3</textcolor>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>Skin.HasSetting(HomeBigIcon)</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout width="420" height="360" condition="String.IsEqual(Skin.String(HomeLayout),3icons)">
+						<control type="group">
+							<animation effect="fade" start="100" end="28" time="200" condition="!Control.HasFocus(9000)">Conditional</animation>
+							<control type="image">
+								<left>350</left>
+								<width>60</width>
+								<aspectratio align="right" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="image">
+								<left>320</left>
+								<width>90</width>
+								<aspectratio align="right" aligny="center">keep</aspectratio>
+								<texture>$INFO[ListItem.Icon]</texture>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<width>330</width>
+								<align>right</align>
+								<font>Font_MainMenu_Vertical_Icons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+							<control type="label">
+								<width>300</width>
+								<align>right</align>
+								<font>Font_MainMenu_Vertical_BigIcons</font>
+								<textcolor>$VAR[HighlightColorVar]</textcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>Skin.HasSetting(HomeBigIcon)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+					<content>
+						<include>skinshortcuts-mainmenu</include>
+					</content>
+				</control>
+				<control type="image">
+					<width>440</width>
+					<height>1080</height>
+					<texture>home/vertical-gradient.png</texture>
+					<colordiffuse>FF000000</colordiffuse>
+				</control>
+			</control>
+		</definition>
+	</include>
+	<include name="Home_Submenu_Horizontal">
+		<control type="group">
+			<centerleft>50%</centerleft>
+			<width>1920</width>
+			<top>950</top>
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<width>1556</width>
+				<height>86</height>
+				<texture border="80,0,80,0" colordiffuse="FFFFFFFF">home/submenu-bar.png</texture>
+			</control>
+			<control type="fixedlist" id="9001">
+				<centerleft>50%</centerleft>
+				<width>1400</width>
+				<height>40</height>
+				<onleft>9010</onleft>
+				<onright>9010</onright>
+				<onup>9000</onup>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<movement>2</movement>
+				<scrolltime tween="cubic" easing="inout">200</scrolltime>
+				<itemlayout width="280" height="40">
+					<control type="label">
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="280" height="40">
+					<control type="label">
+						<align>center</align>
+						<textcolor>grey</textcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!Control.HasFocus(9010)</visible>
+					</control>
+					<control type="label">
+						<align>center</align>
+						<font>font28_title</font>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>Control.HasFocus(9010)</visible>
+					</control>
+				</focusedlayout>
+				<content>
+					<include>skinshortcuts-submenu</include>
+				</content>
+			</control>
+		</control>
+	</include>
+	<include name="Home_Submenu_Vertical">
+		<control type="group">
+			<!-- <left>-400</left>
+			<animation type="Conditional" condition="Control.HasFocus(9001) + !System.HasActiveModalDialog" reversible="true">
+				<effect type="slide" start="0" end="400" time="320" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowOpen">
+				<effect type="slide" start="-400" end="0" time="320" delay="0" tween="cubic" easing="out" />
+			</animation>
+			<animation type="WindowClose">
+				<effect type="slide" start="0" end="-400" time="320" delay="0" tween="cubic" easing="out" />
+			</animation> -->
+			<control type="image">
+				<left>0</left>
+				<width>400</width>
+				<height>1080</height>
+				<texture colordiffuse="$VAR[PanelColorVar]" border="20">dialogs/mediamenu-back.png</texture>
+			</control>
+			<control type="image">
+				<left>391</left>
+				<width>20</width>
+				<height>1080</height>
+				<texture colordiffuse="$VAR[GlowColorVar]">dialogs/glow-right.png</texture>
+			</control>
+			
+		</control>
+	</include>
+	<include name="Home_Time">
+		<control type="grouplist">
+			<top>810</top>
+			<right>5</right>
+			<width>700</width>
+			<orientation>horizontal</orientation>
+			<align>right</align>
+			<usecontrolcoords>true</usecontrolcoords>
+			<itemgap>0</itemgap>
+			<animation effect="slide" start="0,0" end="0,-810" condition="Skin.HasSetting(HomeVertical)">Conditional</animation>
+			<control type="multiimage">
+				<left>20</left>
+				<width>40</width>
+				<height>40</height>
+				<imagepath>$INFO[Skin.String(WeatherIcons.path)]$INFO[Weather.FanartCode]$INFO[Skin.String(WeatherIcons.ext)]</imagepath>
+				<timeperimage>050</timeperimage>
+				<fadetime>TextureFadeTime</fadetime>
+				<randomize>false</randomize>
+				<loop>true</loop>
+				<visible>!Skin.HasSetting(DisableTopbarWeather) + !String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+			</control>
+			<control type="label">
+				<label>$INFO[Window(weather).Property(Current.Temperature), ]$INFO[System.TemperatureUnits]</label>
+				<include>BreadcrumbsLabel</include>
+				<visible>!Skin.HasSetting(DisableTopbarWeather) + !String.IsEmpty(Window(Weather).Property(Current.Temperature))</visible>
+			</control>
+			<control type="label">
+				<textcolor>grey2</textcolor>
+				<label>$INFO[System.Date,  ]</label>
+				<include>BreadcrumbsLabel</include>
+				<visible>!Skin.HasSetting(DisableTopbarDate)</visible>
+			</control>
+			<control type="label">
+				<textcolor>$VAR[HighlightColorVar]</textcolor>
+				<label>$INFO[System.Time,  ]</label>
+				<include>BreadcrumbsLabel</include>
+				<visible>!Skin.HasSetting(DisableTopbarTime)</visible>
+			</control>
+		</control>
+	</include>
+	<include name="Home_Info">
+		<control type="label">
+			<top>810</top>
+			<left>5</left>
+			<width>760</width>
+			<include>BreadcrumbsLabel</include>
+			<label>$INFO[Window(Home).Property(Movies.Count),[COLOR grey]$LOCALIZE[20342]:[/COLOR] ]$INFO[Window(Home).Property(Movies.Watched),[COLOR grey]  $LOCALIZE[16102]:[/COLOR] ]$INFO[Window(Home).Property(Movies.UnWatched),[COLOR grey]  $LOCALIZE[16101]:[/COLOR] ]</label>
+			<animation effect="slide" start="0,0" end="500,-810" condition="Skin.HasSetting(HomeVertical)">Conditional</animation>
+		</control>
+	</include>
+	<include name="Home_RSS">
+		<control type="group">
+			<animation effect="slide" start="0,0" end="510,0" condition="Skin.HasSetting(HomeVertical)">Conditional</animation>
+			<control type="image">
+				<left>-80</left>
+				<top>994</top>
+				<width>2000</width>
+				<height>86</height>
+				<texture border="80,0,0,0" colordiffuse="FFFFFFFF">home/time-bar.png</texture>
+			</control>
+			<control type="rss">
+				<left>0</left>
+				<top>1040</top>
+				<width>1920</width>
+				<height>40</height>
+				<font>Font28_Reg</font>
+				<urlset>1</urlset>
+				<textcolor>grey</textcolor>
+				<headlinecolor>grey</headlinecolor>
+				<titlecolor>white</titlecolor>
+			</control>
+		</control>
+	</include>
+</includes>
