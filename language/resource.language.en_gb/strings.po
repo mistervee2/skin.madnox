@@ -149,6 +149,7 @@ msgctxt "#31034"
 msgid "Move tooltip to top bar"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31035"
 msgid "Conditional weather"
 msgstr ""
@@ -1559,6 +1560,7 @@ msgctxt "#31383"
 msgid "Backdrop"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31384"
 msgid "View Options"
 msgstr ""
@@ -2511,6 +2513,7 @@ msgctxt "#31692"
 msgid "Shorter time and library stats panel"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31694"
 msgid "Fixed list"
 msgstr ""
@@ -3054,6 +3057,7 @@ msgctxt "#31812"
 msgid "Show CDArt"
 msgstr ""
 
+#: /1080i/Includes_MediaMenu.xml
 msgctxt "#31813"
 msgid "Main Menu Layout"
 msgstr ""

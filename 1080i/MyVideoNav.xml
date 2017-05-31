@@ -1093,7 +1093,7 @@
 				<!-- Watched Toggle -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="10" />
-					<param name="icon" value="icons/mediamenu/eye.png" />
+					<param name="icon" value="icons/mediamenu/watch.png" />
 					<param name="label" value="$INFO[Control.GetLabel(10)]$INFO[Container.NumItems,: ]" />
 					<param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.content(seasons) | Container.Content(episodes)" />
 				</include>
@@ -1126,7 +1126,7 @@
 				<!-- Go to playlist -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="612" />
-					<param name="icon" value="icons/mediamenu/playlist.png" />
+					<param name="icon" value="icons/mediamenu/list.png" />
 					<param name="label" value="$LOCALIZE[559]" />
 					<param name="onclick" value="ActivateWindow(videoplaylist)" />
 					<param name="visible">Integer.IsGreater(Playlist.Length(video),0)</param>

@@ -223,9 +223,10 @@
 		<textoffsetx>15</textoffsetx>
 		<font>Font28_Reg</font>
 	</include>
-	<include name="MediaMenu_ToggleButton_ViewSettings">
+	<include name="MediaMenu_RadioButton_ViewSettings">
 		<width>470</width>
 		<height>60</height>
+		<radioposx>394</radioposx>
 		<textoffsetx>15</textoffsetx>
 		<font>Font28_Reg</font>
 	</include>
@@ -277,35 +278,35 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="103">
-			<label>Fixed List</label>
+			<label>$LOCALIZE[31694]</label>
 			<onclick>Skin.ToggleSetting(HomeFixedList)</onclick>
 			<onclick>ReloadSkin()</onclick>
 			<onclick>Control.SetFocus(9052)</onclick>
 			<onclick>ActivateWindow(1122)</onclick>
 			<selected>Skin.HasSetting(HomeFixedList)</selected>
-			<include>MediaMenu_Button_ViewSettings</include>
+			<include>MediaMenu_RadioButton_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="104">
-			<label>Vertical</label>
+			<label>$LOCALIZE[19297]</label>
 			<onclick>Skin.ToggleSetting(HomeVertical)</onclick>
 			<onclick>ReloadSkin()</onclick>
 			<onclick>Control.SetFocus(9052)</onclick>
 			<onclick>ActivateWindow(1122)</onclick>
 			<selected>Skin.HasSetting(HomeVertical)</selected>
-			<include>MediaMenu_Button_ViewSettings</include>
+			<include>MediaMenu_RadioButton_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="105">
-			<label>Big Icons</label>
+			<label>$LOCALIZE[538]</label>
 			<onclick>Skin.ToggleSetting(HomeBigIcon)</onclick>
 			<selected>Skin.HasSetting(HomeBigIcon)</selected>
-			<include>MediaMenu_Button_ViewSettings</include>
+			<include>MediaMenu_RadioButton_ViewSettings</include>
 			<visible>String.Contains(Skin.String(HomeLayout),icons)</visible>
 		</control>
 		<control type="radiobutton" id="106">
-			<label>Label</label>
+			<label>$LOCALIZE[21899]</label>
 			<onclick>Skin.ToggleSetting(HomeBigIconDisableLabel)</onclick>
 			<selected>!Skin.HasSetting(HomeBigIconDisableLabel)</selected>
-			<include>MediaMenu_Button_ViewSettings</include>
+			<include>MediaMenu_RadioButton_ViewSettings</include>
 			<visible>Skin.HasSetting(HomeBigIcon) + !Skin.HasSetting(HomeVertical)</visible>
 		</control>
 	</include>
@@ -346,14 +347,12 @@
 		</control>
 		<control type="radiobutton" id="106">
 			<label>$LOCALIZE[31739]</label>
-			<radioposx>394</radioposx>
 			<onclick>Skin.ToggleSetting(SettingsHideFloor)</onclick>
 			<selected>!Skin.HasSetting(SettingsHideFloor)</selected>
-			<include>MediaMenu_Button_ViewSettings</include>
+			<include>MediaMenu_RadioButton_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="107">
 			<label>$LOCALIZE[31676]</label>
-			<radioposx>394</radioposx>
 			<onclick>Skin.ToggleSetting(SettingsHideTopBar)</onclick>
 			<selected>!Skin.HasSetting(SettingsHideTopBar)</selected>
 			<include>MediaMenu_Button_ViewSettings</include>
@@ -435,14 +434,14 @@
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="3" />
-			<param name="icon" value="icons/mediamenu/list.png" />
+			<param name="icon" value="icons/mediamenu/sort.png" />
 			<param name="label" value="$INFO[Container.SortMethod]" />
 			<param name="visible" value="Control.IsEnabled(3)" />
 		</include>
 		<include content="MediaMenu_Icon_RadioButton">
 			<param name="id" value="4" />
-			<param name="iconon" value="icons/mediamenu/arrowdown.png" />
-			<param name="iconoff" value="icons/mediamenu/arrowup.png" />
+			<param name="iconon" value="icons/mediamenu/ascending.png" />
+			<param name="iconoff" value="icons/mediamenu/descending.png" />
 			<param name="label" value="$INFO[Container.SortOrder]" />
 			<param name="selected">String.IsEqual(Container.SortOrder,$LOCALIZE[584])</param>
 			<param name="visible" value="Control.IsEnabled(4)" />
@@ -503,12 +502,12 @@
 			<label>$LOCALIZE[20445]</label>
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
-		<control type="radiobutton" id="102">
+		<!-- <control type="radiobutton" id="102">
 			<label>Slim List</label>
 			<onclick>Skin.ToggleSetting(View50SlimList)</onclick>
 			<selected>Skin.HasSetting(View50SlimList)</selected>
 			<include>MediaMenu_Button_ViewSettings</include>
-		</control>
+		</control> -->
 	</include>
 
 
