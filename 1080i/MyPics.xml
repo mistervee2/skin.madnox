@@ -5,7 +5,7 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<control type="group">
-			<include>Animation_CommonFade</include>
+			<include>Animation_VisibleFade</include>
 			<include>View_50_List</include>
 		</control>
 		<!-- Top Bar -->

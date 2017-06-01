@@ -1120,7 +1120,6 @@
 					<param name="icon" value="icons/mediamenu/refresh.png" />
 					<param name="label" value="$LOCALIZE[653]" />
 					<param name="altlabel" value="$LOCALIZE[13353]" />
-					<param name="onclick" value="UpdateLibrary(video)" />
 					<param name="visible">!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</param>
 				</include>
 				<!-- Go to playlist -->

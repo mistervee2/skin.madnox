@@ -154,30 +154,32 @@
 				<altlabel>$PARAM[altlabel]</altlabel>
 				<texturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">buttons/list-select-focus.png</texturefocus>
 				<texturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</texturenofocus>
+				<alttexturefocus colordiffuse="$VAR[HighlightColorVar]" border="10">buttons/list-select-focus.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="$VAR[PanelColorVar]" border="30">buttons/list-select-nofocus.png</alttexturenofocus>
 				<onclick>$PARAM[onclick]</onclick>
 				<onfocus>$PARAM[onfocus]</onfocus>.
 				<visible>$PARAM[visible]</visible>
 			</control>
 			<control type="image" id="9$PARAM[id]01">
-				<top>-75</top>
-				<left>10</left>
-				<width>70</width>
-				<height>70</height>
+				<top>-70</top>
+				<left>20</left>
+				<width>50</width>
+				<height>50</height>
 				<texture colordiffuse="grey">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="image" id="9$PARAM[id]02">
-				<top>-75</top>
-				<left>10</left>
-				<width>70</width>
-				<height>70</height>
+				<top>-70</top>
+				<left>20</left>
+				<width>50</width>
+				<height>50</height>
 				<texture colordiffuse="white">$PARAM[icon]</texture>
 				<visible>$PARAM[visible]</visible>
 				<visible>Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="label" id="9$PARAM[id]03">
-				<top>-85</top>
+				<top>-70</top>
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
@@ -188,7 +190,7 @@
 				<visible>!Control.HasFocus($PARAM[id])</visible>
 			</control>
 			<control type="label" id="9$PARAM[id]04">
-				<top>-85</top>
+				<top>-70</top>
 				<left>80</left>
 				<width>320</width>
 				<height>90</height>
@@ -428,7 +430,7 @@
 		</include>
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9002" />
-			<param name="icon" value="icons/mediamenu/viewsettings.png" />
+			<param name="icon" value="icons/mediamenu/viewoptions.png" />
 			<param name="label" value="$LOCALIZE[31384]" />
 			<param name="onclick" value="ActivateWindow(1122)" />
 		</include>

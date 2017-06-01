@@ -203,24 +203,6 @@
 						<width>400</width>
 						<height>39</height>
 						<align>right</align>
-						<label>$LOCALIZE[31898]:</label>
-						<font>Font32_Reg</font>
-						<textcolor>grey2</textcolor>
-						<visible>!String.IsEmpty(Window(weather).Property(Current.Visibility))</visible>
-					</control>
-					<control type="label">
-						<left>420</left>
-						<top>-39</top>
-						<width>400</width>
-						<height>39</height>
-						<label>$INFO[Window(weather).Property(Current.Visibility)]</label>
-						<font>Font32_Reg</font>
-						<visible>!String.IsEmpty(Window(weather).Property(Current.Visibility))</visible>
-					</control>
-					<control type="label">
-						<width>400</width>
-						<height>39</height>
-						<align>right</align>
 						<label>$LOCALIZE[33027]:</label>
 						<font>Font32_Reg</font>
 						<textcolor>grey2</textcolor>
@@ -574,7 +556,7 @@
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9002</param>
-					<param name="icon">icons/mediamenu/weather.png</param>
+					<param name="icon">icons/mediamenu/timeline.png</param>
 					<param name="label">$LOCALIZE[10508]</param>
 					<param name="onfocus">ClearProperty(Weather.CurrentView,weather)</param>
 				</include>
@@ -629,7 +611,7 @@
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id">9010</param>
-					<param name="icon">icons/mediamenu/image.png</param>
+					<param name="icon">icons/mediamenu/viewoptions.png</param>
 					<param name="label">$LOCALIZE[14018]</param>
 					<param name="onclick">ActivateWindow(1122)</param>
 				</include>

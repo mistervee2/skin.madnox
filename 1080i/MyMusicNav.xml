@@ -10,7 +10,7 @@
 			<param name="imagepath">$VAR[MusicFanartVar]</param>
 		</include>
 		<control type="group">
-			<include>Animation_CommonFade</include>
+			<include>Animation_VisibleFade</include>
 			<include>View_50_List</include>
 		</control>
 
@@ -525,7 +525,6 @@
 					<param name="icon" value="icons/mediamenu/refresh.png" />
 					<param name="label" value="$LOCALIZE[653]" />
 					<param name="altlabel" value="$LOCALIZE[13353]" />
-					<param name="onclick" value="UpdateLibrary(music)" />
 					<param name="visible">!Container.Content(addons)+ String.IsEmpty(Container.PluginName)</param>
 				</include>
 				<!-- PartyMode -->
@@ -537,7 +536,7 @@
 				<!-- Go to playlist -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="612" />
-					<param name="icon" value="icons/mediamenu/playlist.png" />
+					<param name="icon" value="icons/mediamenu/list.png" />
 					<param name="label" value="$LOCALIZE[559]" />
 					<param name="onclick" value="ActivateWindow(musicplaylist)" />
 					<param name="visible">Integer.IsGreater(Playlist.Length(music),0)</param>
@@ -545,7 +544,7 @@
 				<!-- Get more -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="621" />
-					<param name="icon" value="icons/mediamenu/settings.png" />
+					<param name="icon" value="icons/mediamenu/add.png" />
 					<param name="label" value="$LOCALIZE[21452]" />
 					<param name="onclick" value="ActivateWindow(addonbrowser,addons://more/audio/,return)" />
 					<param name="visible">Container.Content(addons)</param>

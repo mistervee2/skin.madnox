@@ -5,7 +5,7 @@
 	<menucontrol>9000</menucontrol>
 	<controls>
 		<control type="group">
-			<include>Animation_CommonFade</include>
+			<include>Animation_VisibleFade</include>
 			<include>View_50_List</include>
 		</control>
 		<!-- Topbar -->
@@ -34,25 +34,29 @@
 					<param name="id" value="20" />
 					<param name="iconon" value="icons/mediamenu/random.png" />
 					<param name="iconoff" value="icons/mediamenu/randomoff.png" />
-					<param name="label" value="$LOCALIZE[191]" />
+					<param name="label" value="$LOCALIZE[590]" />
+					<param name="visible" value="Control.IsEnabled(20)" />
 				</include>
 				<!-- Repeat -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="26" />
 					<param name="icon" value="$VAR[PlaylistRepeatIconVar]" />
 					<param name="label" value="$INFO[Control.GetLabel(26)]" />
+					<param name="visible" value="Control.IsEnabled(26)" />
 				</include>
 				<!-- Save -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="21" />
 					<param name="icon" value="icons/mediamenu/save.png" />
 					<param name="label" value="$LOCALIZE[190]" />
+					<param name="visible" value="Control.IsEnabled(21)" />
 				</include>
 				<!-- Clear -->
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="22" />
-					<param name="icon" value="icons/mediamenu/remove.png" />
+					<param name="icon" value="icons/mediamenu/clear.png" />
 					<param name="label" value="$LOCALIZE[192]" />
+					<param name="visible" value="Control.IsEnabled(22)" />
 				</include>
 				<!-- Quicknav -->
 				<include content="MediaMenu_Icon_Button">
