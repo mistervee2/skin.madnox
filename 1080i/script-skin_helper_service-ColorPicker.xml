@@ -11,7 +11,7 @@
 				<param name="width">854</param>
 				<param name="height">469</param>
 				<param name="bottomleftlabel">[COLOR $INFO[Window.Property(colorstring)]]$INFO[Window.Property(colorstring), ][/COLOR]</param>
-				<param name="bottomrightlabel">$INFO[Container(3110).NumItems,, $LOCALIZE[14078]]$INFO[Container(3110).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3110).NumPages,/,)]</param>
+				<param name="bottomrightlabel">$INFO[Container(3110).NumItems,, $LOCALIZE[14078]]$INFO[Container(3110).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(3110).NumPages,/,)]</param>
 			</include>
 			<control type="image">
 				<left>376</left>

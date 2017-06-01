@@ -41,38 +41,38 @@
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9051" />
 					<param name="icon" value="icons/mediamenu/menu.png" />
-					<param name="label" value="$LOCALIZE[31276]" />
+					<param name="label" value="$LOCALIZE[31017]" />
 					<param name="onclick" value="RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)" />
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9052" />
 					<param name="icon" value="icons/mediamenu/settings.png" />
-					<param name="label" value="$LOCALIZE[31643]" />
+					<param name="label" value="$LOCALIZE[31041]" />
 					<param name="onclick" value="ActivateWindow(1122)" />
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9053" />
 					<param name="icon" value="icons/mediamenu/widgets.png" />
-					<param name="label" value="$LOCALIZE[31479]" />
+					<param name="label" value="$LOCALIZE[31039]" />
 					<param name="onclick" value="" />
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9054" />
 					<param name="icon" value="icons/mediamenu/play.png" />
-					<param name="label" value="$LOCALIZE[31040]" />
+					<param name="label" value="$LOCALIZE[31002]" />
 					<param name="onclick" value="" />
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9055" />
 					<param name="icon" value="icons/mediamenu/colors.png" />
-					<param name="label" value="$LOCALIZE[31298]" />
+					<param name="label" value="$LOCALIZE[31021]" />
 					<param name="onclick" value="SetProperty(CustomColorLabel,$LOCALIZE[10000],home)" />
 					<param name="onclick2" value="ActivateWindow(1110)" />
 				</include>
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9056" />
 					<param name="icon" value="icons/mediamenu/reset.png" />
-					<param name="label" value="$LOCALIZE[31277]" />
+					<param name="label" value="$LOCALIZE[31018]" />
 					<param name="onclick" value="RunScript(script.skinshortcuts,type=resetall)" />
 				</include>
 			</control>

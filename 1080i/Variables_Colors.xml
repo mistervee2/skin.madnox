@@ -130,7 +130,7 @@
 	</variable>
 	<variable name="HomeHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(HomeHighlight.Color.base))">$INFO[Skin.String(HomeHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="HomePanelColorVar">
@@ -140,7 +140,7 @@
 	</variable>
 	<variable name="HomePanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(HomePanel.Color.base))">$INFO[Skin.String(HomePanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="HomeGlowColorVar">
@@ -150,7 +150,7 @@
 	</variable>
 	<variable name="HomeGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(HomeGlow.Color.base))">$INFO[Skin.String(HomeGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="HomeBackgroundColorVar">
@@ -160,7 +160,7 @@
 	</variable>
 	<variable name="HomeBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(HomeBackground.Color.base))">$INFO[Skin.String(HomeBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="HomeTopbarColorVar">
@@ -170,7 +170,7 @@
 	</variable>
 	<variable name="HomeTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(HomeTopbar.Color.base))">$INFO[Skin.String(HomeTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="HomeFloorColorVar">
@@ -180,7 +180,7 @@
 	</variable>
 	<variable name="HomeFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(HomeFloor.Color.base))">$INFO[Skin.String(HomeFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- Videos -->
@@ -191,7 +191,7 @@
 	</variable>
 	<variable name="VideosHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(VideosHighlight.Color.base))">$INFO[Skin.String(VideosHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="VideosPanelColorVar">
@@ -201,7 +201,7 @@
 	</variable>
 	<variable name="VideosPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(VideosPanel.Color.base))">$INFO[Skin.String(VideosPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="VideosGlowColorVar">
@@ -211,7 +211,7 @@
 	</variable>
 	<variable name="VideosGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(VideosGlow.Color.base))">$INFO[Skin.String(VideosGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="VideosBackgroundColorVar">
@@ -221,7 +221,7 @@
 	</variable>
 	<variable name="VideosBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(VideosBackground.Color.base))">$INFO[Skin.String(VideosBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="VideosTopbarColorVar">
@@ -231,7 +231,7 @@
 	</variable>
 	<variable name="VideosTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(VideosTopbar.Color.base))">$INFO[Skin.String(VideosTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="VideosFloorColorVar">
@@ -241,7 +241,7 @@
 	</variable>
 	<variable name="VideosFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(VideosFloor.Color.base))">$INFO[Skin.String(VideosFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- PVR and Live TV -->
@@ -252,7 +252,7 @@
 	</variable>
 	<variable name="PVRHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRHighlight.Color.base))">$INFO[Skin.String(PVRHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PVRPanelColorVar">
@@ -262,7 +262,7 @@
 	</variable>
 	<variable name="PVRPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRPanel.Color.base))">$INFO[Skin.String(PVRPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PVRGlowColorVar">
@@ -272,7 +272,7 @@
 	</variable>
 	<variable name="PVRGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRGlow.Color.base))">$INFO[Skin.String(PVRGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PVRBackgroundColorVar">
@@ -282,7 +282,7 @@
 	</variable>
 	<variable name="PVRBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRBackground.Color.base))">$INFO[Skin.String(PVRBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PVRTopbarColorVar">
@@ -292,7 +292,7 @@
 	</variable>
 	<variable name="PVRTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRTopbar.Color.base))">$INFO[Skin.String(PVRTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PVRFloorColorVar">
@@ -302,7 +302,7 @@
 	</variable>
 	<variable name="PVRFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PVRFloor.Color.base))">$INFO[Skin.String(PVRFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- Music -->
@@ -313,7 +313,7 @@
 	</variable>
 	<variable name="MusicHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(MusicHighlight.Color.base))">$INFO[Skin.String(MusicHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="MusicPanelColorVar">
@@ -323,7 +323,7 @@
 	</variable>
 	<variable name="MusicPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(MusicPanel.Color.base))">$INFO[Skin.String(MusicPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="MusicGlowColorVar">
@@ -333,7 +333,7 @@
 	</variable>
 	<variable name="MusicGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(MusicGlow.Color.base))">$INFO[Skin.String(MusicGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="MusicBackgroundColorVar">
@@ -343,7 +343,7 @@
 	</variable>
 	<variable name="MusicBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(MusicBackground.Color.base))">$INFO[Skin.String(MusicBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="MusicTopbarColorVar">
@@ -353,7 +353,7 @@
 	</variable>
 	<variable name="MusicTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(MusicTopbar.Color.base))">$INFO[Skin.String(MusicTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="MusicFloorColorVar">
@@ -363,7 +363,7 @@
 	</variable>
 	<variable name="MusicFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(MusicFloor.Color.base))">$INFO[Skin.String(MusicFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- Games -->
@@ -374,7 +374,7 @@
 	</variable>
 	<variable name="GamesHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(GamesHighlight.Color.base))">$INFO[Skin.String(GamesHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="GamesPanelColorVar">
@@ -384,7 +384,7 @@
 	</variable>
 	<variable name="GamesPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(GamesPanel.Color.base))">$INFO[Skin.String(GamesPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="GamesGlowColorVar">
@@ -394,7 +394,7 @@
 	</variable>
 	<variable name="GamesGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(GamesGlow.Color.base))">$INFO[Skin.String(GamesGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="GamesBackgroundColorVar">
@@ -404,7 +404,7 @@
 	</variable>
 	<variable name="GamesBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(GamesBackground.Color.base))">$INFO[Skin.String(GamesBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="GamesTopbarColorVar">
@@ -414,7 +414,7 @@
 	</variable>
 	<variable name="GamesTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(GamesTopbar.Color.base))">$INFO[Skin.String(GamesTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="GamesFloorColorVar">
@@ -424,7 +424,7 @@
 	</variable>
 	<variable name="GamesFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(GamesFloor.Color.base))">$INFO[Skin.String(GamesFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- Pictures -->
@@ -435,7 +435,7 @@
 	</variable>
 	<variable name="PicturesHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PicturesHighlight.Color.base))">$INFO[Skin.String(PicturesHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PicturesPanelColorVar">
@@ -445,7 +445,7 @@
 	</variable>
 	<variable name="PicturesPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PicturesPanel.Color.base))">$INFO[Skin.String(PicturesPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PicturesGlowColorVar">
@@ -455,7 +455,7 @@
 	</variable>
 	<variable name="PicturesGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PicturesGlow.Color.base))">$INFO[Skin.String(PicturesGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PicturesBackgroundColorVar">
@@ -465,7 +465,7 @@
 	</variable>
 	<variable name="PicturesBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PicturesBackground.Color.base))">$INFO[Skin.String(PicturesBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PicturesTopbarColorVar">
@@ -475,7 +475,7 @@
 	</variable>
 	<variable name="PicturesTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PicturesTopbar.Color.base))">$INFO[Skin.String(PicturesTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="PicturesFloorColorVar">
@@ -485,7 +485,7 @@
 	</variable>
 	<variable name="PicturesFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(PicturesFloor.Color.base))">$INFO[Skin.String(PicturesFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- Weather -->
@@ -496,7 +496,7 @@
 	</variable>
 	<variable name="WeatherHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherHighlight.Color.base))">$INFO[Skin.String(WeatherHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="WeatherPanelColorVar">
@@ -506,7 +506,7 @@
 	</variable>
 	<variable name="WeatherPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherPanel.Color.base))">$INFO[Skin.String(WeatherPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="WeatherGlowColorVar">
@@ -516,7 +516,7 @@
 	</variable>
 	<variable name="WeatherGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherGlow.Color.base))">$INFO[Skin.String(WeatherGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="WeatherBackgroundColorVar">
@@ -526,7 +526,7 @@
 	</variable>
 	<variable name="WeatherBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherBackground.Color.base))">$INFO[Skin.String(WeatherBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="WeatherTopbarColorVar">
@@ -536,7 +536,7 @@
 	</variable>
 	<variable name="WeatherTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherTopbar.Color.base))">$INFO[Skin.String(WeatherTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="WeatherFloorColorVar">
@@ -546,7 +546,7 @@
 	</variable>
 	<variable name="WeatherFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(WeatherFloor.Color.base))">$INFO[Skin.String(WeatherFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<!-- System -->
@@ -557,7 +557,7 @@
 	</variable>
 	<variable name="SystemHighlightColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(SystemHighlight.Color.base))">$INFO[Skin.String(SystemHighlight.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalHighlight.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="SystemPanelColorVar">
@@ -567,7 +567,7 @@
 	</variable>
 	<variable name="SystemPanelColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(SystemPanel.Color.base))">$INFO[Skin.String(SystemPanel.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalPanel.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="SystemGlowColorVar">
@@ -577,7 +577,7 @@
 	</variable>
 	<variable name="SystemGlowColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(SystemGlow.Color.base))">$INFO[Skin.String(SystemGlow.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalGlow.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="SystemBackgroundColorVar">
@@ -587,7 +587,7 @@
 	</variable>
 	<variable name="SystemBackgroundColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(SystemBackground.Color.base))">$INFO[Skin.String(SystemBackground.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalBackground.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="SystemTopbarColorVar">
@@ -597,7 +597,7 @@
 	</variable>
 	<variable name="SystemTopbarColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(SystemTopbar.Color.base))">$INFO[Skin.String(SystemTopbar.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalTopbar.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="SystemFloorColorVar">
@@ -607,7 +607,7 @@
 	</variable>
 	<variable name="SystemFloorColorLabelVar">
 		<value condition="!String.IsEmpty(Skin.String(SystemFloor.Color.base))">$INFO[Skin.String(SystemFloor.Color.base)]</value>
-		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31736]</value>
+		<value condition="!String.IsEmpty(Skin.String(GlobalFloor.Color.base))">$LOCALIZE[31045]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 </includes>

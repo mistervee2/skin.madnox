@@ -35,14 +35,14 @@
 				<width>265</width>
 				<align>right</align>
 				<include>MediaFlagLabel</include>
-				<label>$LOCALIZE[31993][CR][B]$INFO[Window(Home).Property(NextAired.NextNumber)][CR]$INFO[Window(Home).Property(NextAired.NextDay),, ]$INFO[Window(Home).Property(NextAired.ShortTime)][/B]</label>
+				<label>$LOCALIZE[31063][CR][B]$INFO[Window(Home).Property(NextAired.NextNumber)][CR]$INFO[Window(Home).Property(NextAired.NextDay),, ]$INFO[Window(Home).Property(NextAired.ShortTime)][/B]</label>
 				<visible>!String.IsEmpty(Window(Home).Property(NextAired.NextDay))</visible>
 			</control>
 			<control type="label">
 				<width>265</width>
 				<align>right</align>
 				<include>MediaFlagLabel</include>
-				<label>$LOCALIZE[31994][CR][B]$INFO[Window(Home).Property(NextAired.LatestNumber)][CR]$INFO[Window(Home).Property(NextAired.LatestDay)][/B]</label>
+				<label>$LOCALIZE[31064][CR][B]$INFO[Window(Home).Property(NextAired.LatestNumber)][CR]$INFO[Window(Home).Property(NextAired.LatestDay)][/B]</label>
 				<visible>String.IsEmpty(Window(Home).Property(NextAired.NextDay)) + !String.IsEmpty(Window(Home).Property(NextAired.LatestDay))</visible>
 			</control>
 		</control>

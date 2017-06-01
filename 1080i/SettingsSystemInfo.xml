@@ -158,7 +158,7 @@
 					<height>30</height>
 					<font>Font29_Cond</font>
 					<textcolor>white2</textcolor>
-					<label>$LOCALIZE[31400][COLOR grey2]$INFO[System.CPUUsage,  ][/COLOR]</label>
+					<label>$LOCALIZE[31022][COLOR grey2]$INFO[System.CPUUsage,  ][/COLOR]</label>
 				</control>
 				<control type="progress">
 					<info>System.CPUUsage</info>
@@ -167,7 +167,7 @@
 					<height>30</height>
 					<font>Font29_Cond</font>
 					<textcolor>white2</textcolor>
-					<label>$LOCALIZE[31309][COLOR grey2]$INFO[system.memory(used.percent),  ][/COLOR]</label>
+					<label>$LOCALIZE[31023][COLOR grey2]$INFO[system.memory(used.percent),  ][/COLOR]</label>
 				</control>
 				<control type="progress">
 					<info>system.memory(used)</info>

@@ -643,7 +643,7 @@
 						<visible>Integer.IsGreater(Container.NumItems,0) + Skin.HasSetting(ColoredIcons)</visible>
 					</control>
 					<control type="label">
-						<label>$INFO[Container.NumItems,, $LOCALIZE[31025] ]</label>
+						<label>$INFO[Container.NumItems,, $LOCALIZE[31001] ]</label>
 						<include>BreadcrumbsLabel</include>
 					</control>
 					<control type="image">

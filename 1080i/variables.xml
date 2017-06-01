@@ -200,26 +200,26 @@
 	<!-- Next Aired -->
 	<variable name="NextAiredStausLabelVar">
 		<value condition="String.IsEqual(Window(Home).Property(NextAired.Today),True)">$LOCALIZE[33006]</value>
-		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),0)">$LOCALIZE[31245]</value>
-		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),1)">$LOCALIZE[31246]</value>
-		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),2)">$LOCALIZE[31247]</value>
-		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),4)">$LOCALIZE[31249]</value>
-		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),6)">$LOCALIZE[31250]</value>
+		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),0)">$LOCALIZE[31011]</value>
+		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),1)">$LOCALIZE[31012]</value>
+		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),2)">$LOCALIZE[31013]</value>
+		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),4)">$LOCALIZE[31014]</value>
+		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),6)">$LOCALIZE[31015]</value>
 		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),-1)">$LOCALIZE[1446]</value>
 	</variable>
 
 	<!-- Dialogs -->
 	<variable name="DialogItemsLabelVar">
-		<value condition="Control.IsVisible(3)">$INFO[Container(3).NumItems,, $LOCALIZE[31025]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3).NumPages,/,)]</value>
-		<value condition="Control.IsVisible(6)">$INFO[Container(6).NumItems,, $LOCALIZE[31025]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(6).NumPages,/,)]</value>
-		<value condition="Control.IsVisible(450)">$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</value>
-		<value condition="Control.IsVisible(451)">$INFO[Container(451).NumItems,, $LOCALIZE[31025]]$INFO[Container(451).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(451).NumPages,/,)]</value>
-		<value condition="ControlGroup(100).HasFocus">$INFO[Container(100).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(100).NumItems,/]</value>
-		<value condition="!ControlGroup(100).HasFocus">$LOCALIZE[31025]$INFO[Container(100).NumItems, 1/]</value>
+		<value condition="Control.IsVisible(3)">$INFO[Container(3).NumItems,, $LOCALIZE[31001]]$INFO[Container(3).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(3).NumPages,/,)]</value>
+		<value condition="Control.IsVisible(6)">$INFO[Container(6).NumItems,, $LOCALIZE[31001]]$INFO[Container(6).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(6).NumPages,/,)]</value>
+		<value condition="Control.IsVisible(450)">$INFO[Container(450).NumItems,, $LOCALIZE[31001]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(450).NumPages,/,)]</value>
+		<value condition="Control.IsVisible(451)">$INFO[Container(451).NumItems,, $LOCALIZE[31001]]$INFO[Container(451).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(451).NumPages,/,)]</value>
+		<value condition="ControlGroup(100).HasFocus">$INFO[Container(100).CurrentItem,$LOCALIZE[31001] ]$INFO[Container(100).NumItems,/]</value>
+		<value condition="!ControlGroup(100).HasFocus">$LOCALIZE[31001]$INFO[Container(100).NumItems, 1/]</value>
 	</variable>
 	<variable name="DialogMovieBackgroundLabelVar">
-		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart)">$LOCALIZE[31424]</value>
-		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback)">$LOCALIZE[31964]</value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),ExtraFanart)">$LOCALIZE[31035]</value>
+		<value condition="String.IsEqual(Skin.String(MovieFanart),Fallback)">$LOCALIZE[31036]</value>
 		<value condition="String.IsEqual(Skin.String(MovieFanart),None)">$LOCALIZE[231]</value>
 		<value>$LOCALIZE[571]</value>
 	</variable>
@@ -270,8 +270,8 @@
 
 	<!-- Topbar -->
 	<variable name="TopBarStyleLabelVar">
-		<value condition="String.IsEqual(Skin.String(TopBarStyle),shadow)">$LOCALIZE[31054]</value>
-		<value condition="String.IsEqual(Skin.String(TopBarStyle),flat)">$LOCALIZE[31770]</value>
+		<value condition="String.IsEqual(Skin.String(TopBarStyle),shadow)">$LOCALIZE[31005]</value>
+		<value condition="String.IsEqual(Skin.String(TopBarStyle),flat)">$LOCALIZE[31006]</value>
 		<value>$LOCALIZE[13278]</value>
 	</variable>
 	<variable name="TopBarStyleVar">
@@ -828,7 +828,7 @@
 		<value condition="Container.Content(studios)">$LOCALIZE[20388]</value>
 		<value condition="Container.Content(directors) + String.IsEqual(Container.NumItems,1)">$LOCALIZE[20339]</value>
 		<value condition="Container.Content(directors)">$LOCALIZE[20348]</value>
-		<value>$LOCALIZE[31025]</value>
+		<value>$LOCALIZE[31001]</value>
 	</variable>
 	<variable name="VideoExtraFanartVar">
 		<value condition="ListItem.IsCollection">$INFO[Window(Home).Property(SkinHelper.ListItem.Art.ExtraFanArt)]</value>

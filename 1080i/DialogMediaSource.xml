@@ -7,7 +7,7 @@
 		<control type="group">
 			<include content="Dialog_Furniture_Background">
 				<param name="labelid">2</param>
-				<param name="bottomrightlabel">$INFO[Container(10).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(10).NumItems,/]</param>
+				<param name="bottomrightlabel">$INFO[Container(10).CurrentItem,$LOCALIZE[31001] ]$INFO[Container(10).NumItems,/]</param>
 			</include>
 			<control type="image">
 				<centerleft>50%</centerleft>

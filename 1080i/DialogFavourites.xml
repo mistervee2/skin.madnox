@@ -10,7 +10,7 @@
 				<param name="height">768</param>
 				<param name="label">$LOCALIZE[1036]</param>
 				<param name="bottomseparatorvisible">Integer.IsLess(Container(450).NumItems,10)</param>
-				<param name="bottomrightlabel">$INFO[Container(450).NumItems,, $LOCALIZE[31025]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(450).NumPages,/,)]</param>
+				<param name="bottomrightlabel">$INFO[Container(450).NumItems,, $LOCALIZE[31001]]$INFO[Container(450).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(450).NumPages,/,)]</param>
 			</include>
 			<control type="image">
 				<centerleft>50%</centerleft>

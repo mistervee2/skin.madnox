@@ -1150,7 +1150,7 @@
 				<include content="MediaMenu_Icon_Button">
 					<param name="id" value="9011" />
 					<param name="icon" value="icons/mediamenu/arrowleft.png" />
-					<param name="label" value="$LOCALIZE[31633]" />
+					<param name="label" value="$LOCALIZE[31040]" />
 					<param name="onclick" value="ActivateWindow(1113)" />
 					<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
 				</include>

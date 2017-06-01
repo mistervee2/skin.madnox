@@ -270,7 +270,7 @@
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
 		<control type="button" id="102">
-			<label>$LOCALIZE[31813]</label>
+			<label>$LOCALIZE[31059]</label>
 			<label2>$INFO[Skin.String(HomeLayout)]</label2>
 			<onclick condition="String.IsEmpty(Skin.String(HomeLayout))">Skin.SetString(HomeLayout,wide)</onclick>
 			<onclick condition="String.IsEqual(Skin.String(HomeLayout),wide)">Skin.SetString(HomeLayout,7icons)</onclick>
@@ -280,7 +280,7 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="103">
-			<label>$LOCALIZE[31694]</label>
+			<label>$LOCALIZE[31043]</label>
 			<onclick>Skin.ToggleSetting(HomeFixedList)</onclick>
 			<onclick>ReloadSkin()</onclick>
 			<onclick>Control.SetFocus(9052)</onclick>
@@ -323,7 +323,7 @@
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9011" />
 			<param name="icon" value="icons/mediamenu/arrowleft.png" />
-			<param name="label" value="$LOCALIZE[31633]" />
+			<param name="label" value="$LOCALIZE[31040]" />
 			<param name="onclick" value="ActivateWindow(1113)" />
 			<param name="visible" value="!Skin.HasSetting(DisableQuickNav)" />
 		</include>
@@ -334,12 +334,12 @@
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
 		<control type="button" id="103">
-			<label>$LOCALIZE[31113]</label>
+			<label>$LOCALIZE[31007]</label>
 			<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=SettingsFanart,resourceaddon=resource.images.skinbackgrounds)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="button" id="104">
-			<label>$LOCALIZE[31114]</label>
+			<label>$LOCALIZE[31008]</label>
 			<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=SettingsFanart,addontype=resource.images.skinbackgrounds)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
@@ -348,13 +348,13 @@
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="106">
-			<label>$LOCALIZE[31739]</label>
+			<label>$LOCALIZE[31047]</label>
 			<onclick>Skin.ToggleSetting(SettingsHideFloor)</onclick>
 			<selected>!Skin.HasSetting(SettingsHideFloor)</selected>
 			<include>MediaMenu_RadioButton_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="107">
-			<label>$LOCALIZE[31676]</label>
+			<label>$LOCALIZE[31042]</label>
 			<onclick>Skin.ToggleSetting(SettingsHideTopBar)</onclick>
 			<selected>!Skin.HasSetting(SettingsHideTopBar)</selected>
 			<include>MediaMenu_Button_ViewSettings</include>
@@ -364,7 +364,7 @@
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
 		<control type="button" id="109">
-			<label>$LOCALIZE[31298]</label>
+			<label>$LOCALIZE[31021]</label>
 			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[24992],home)</onclick>
 			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
@@ -377,12 +377,12 @@
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
 		<control type="button" id="102">
-			<label>$LOCALIZE[31113]</label>
+			<label>$LOCALIZE[31007]</label>
 			<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=WeatherFanart,resourceaddon=resource.images.skinbackgrounds)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="button" id="103">
-			<label>$LOCALIZE[31035]</label>
+			<label>$LOCALIZE[31004]</label>
 			<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=WeatherFanart,addontype=resource.images.weatherfanart)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
@@ -396,14 +396,14 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="106">
-			<label>$LOCALIZE[31739]</label>
+			<label>$LOCALIZE[31047]</label>
 			<radioposx>394</radioposx>
 			<onclick>Skin.ToggleSetting(WeatherHideFloor)</onclick>
 			<selected>!Skin.HasSetting(WeatherHideFloor)</selected>
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="radiobutton" id="107">
-			<label>$LOCALIZE[31676]</label>
+			<label>$LOCALIZE[31042]</label>
 			<radioposx>394</radioposx>
 			<onclick>Skin.ToggleSetting(WeatherHideTopBar)</onclick>
 			<selected>!Skin.HasSetting(WeatherHideTopBar)</selected>
@@ -414,7 +414,7 @@
 			<include>MediaMenu_Label_ViewSettings</include>
 		</control>
 		<control type="button" id="109">
-			<label>$LOCALIZE[31298]</label>
+			<label>$LOCALIZE[31021]</label>
 			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[400],home)</onclick>
 			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
@@ -431,7 +431,7 @@
 		<include content="MediaMenu_Icon_Button">
 			<param name="id" value="9002" />
 			<param name="icon" value="icons/mediamenu/viewoptions.png" />
-			<param name="label" value="$LOCALIZE[31384]" />
+			<param name="label" value="$LOCALIZE[31025]" />
 			<param name="onclick" value="ActivateWindow(1122)" />
 		</include>
 		<include content="MediaMenu_Icon_Button">
@@ -475,7 +475,7 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="button" id="203">
-			<label>$LOCALIZE[31298]</label>
+			<label>$LOCALIZE[31021]</label>
 			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[3],home)</onclick>
 			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
@@ -493,7 +493,7 @@
 			<include>MediaMenu_Button_ViewSettings</include>
 		</control>
 		<control type="button" id="203">
-			<label>$LOCALIZE[31298]</label>
+			<label>$LOCALIZE[31021]</label>
 			<onclick>SetProperty(CustomColorLabel,$LOCALIZE[2],home)</onclick>
 			<onclick>ActivateWindow(1110)</onclick>
 			<include>MediaMenu_Button_ViewSettings</include>
@@ -1201,7 +1201,7 @@
 			<align>center</align>
 			<texturefocus colordiffuse="$VAR[FontColorVar]" border="8">views/tripanel/listselect_fo.png</texturefocus>
 			<texturenofocus colordiffuse="$VAR[FontColorVar]" border="3">settings/listselect_nf.png</texturenofocus>
-			<label>$LOCALIZE[31633]</label>
+			<label>$LOCALIZE[31040]</label>
 			<font>Font_Reg26_Caps</font>
 			<textcolor>$VAR[SubTitleColorVar]</textcolor>
 			<disabledcolor>$VAR[FontColorVar]</disabledcolor>

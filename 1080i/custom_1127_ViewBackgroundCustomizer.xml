@@ -60,13 +60,13 @@
 					<include>Dialog_Label_Narrow</include>
 				</control>
 				<control type="radiobutton" id="105">
-					<label>$LOCALIZE[31113]</label>
+					<label>$LOCALIZE[31007]</label>
 					<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=MovieFanartFallback,resourceaddon=resource.images.skinbackgrounds)</onclick>
 					<selected>String.Endswith(Skin.String(MovieFanartFallback.path),jpg)</selected>
 					<include>Dialog_RadioButton_Narrow</include>
 				</control>
 				<control type="radiobutton" id="106">
-					<label>$LOCALIZE[31114]</label>
+					<label>$LOCALIZE[31008]</label>
 					<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=MovieFanartFallback,addontype=resource.images.skinbackgrounds)</onclick>
 					<selected>String.Endswith(Skin.String(MovieFanartFallback.path),/)</selected>
 					<include>Dialog_RadioButton_Narrow</include>
@@ -110,13 +110,13 @@
 					<include>Dialog_Label_Narrow</include>
 				</control>
 				<control type="radiobutton" id="105">
-					<label>$LOCALIZE[31113]</label>
+					<label>$LOCALIZE[31007]</label>
 					<onclick>RunScript(script.skin.helper.service,action=selectimage,skinstring=MusicFanartFallback,resourceaddon=resource.images.skinbackgrounds)</onclick>
 					<selected>String.Endswith(Skin.String(MusicFanartFallback.path),jpg)</selected>
 					<include>Dialog_RadioButton_Narrow</include>
 				</control>
 				<control type="radiobutton" id="106">
-					<label>$LOCALIZE[31114]</label>
+					<label>$LOCALIZE[31008]</label>
 					<onclick>RunScript(script.skin.helper.service,action=setresourceaddon,skinstring=MusicFanartFallback,addontype=resource.images.skinbackgrounds)</onclick>
 					<selected>String.Endswith(Skin.String(MusicFanartFallback.path),/)</selected>
 					<include>Dialog_RadioButton_Narrow</include>

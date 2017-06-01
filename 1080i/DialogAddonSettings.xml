@@ -10,7 +10,7 @@
 				<param name="labelright">70</param>
 				<param name="width">1440</param>
 				<param name="height">590</param>
-				<param name="bottomrightlabel">$INFO[Container(3110).NumItems,, $LOCALIZE[14078]]$INFO[Container(3110).CurrentPage, - $LOCALIZE[31024] (]$INFO[Container(3110).NumPages,/,)]</param>
+				<param name="bottomrightlabel">$INFO[Container(3110).NumItems,, $LOCALIZE[14078]]$INFO[Container(3110).CurrentPage, - $LOCALIZE[31000] (]$INFO[Container(3110).NumPages,/,)]</param>
 			</include>
 			<control type="image">
 				<left>160</left>
@@ -100,7 +100,7 @@
 				<right>70</right>
 				<height>60</height>
 				<align>right</align>
-				<label>$INFO[Container(2).CurrentItem,$LOCALIZE[31025] ]$INFO[Container(2).NumItems,/]</label>
+				<label>$INFO[Container(2).CurrentItem,$LOCALIZE[31001] ]$INFO[Container(2).NumItems,/]</label>
 				<font>Font25_Cond</font>
 				<textcolor>grey</textcolor>
 				<visible>ControlGroup(2).HasFocus</visible>
@@ -111,7 +111,7 @@
 				<right>70</right>
 				<height>60</height>
 				<align>right</align>
-				<label>$LOCALIZE[31025]$INFO[Container(2).NumItems, 1/]</label>
+				<label>$LOCALIZE[31001]$INFO[Container(2).NumItems, 1/]</label>
 				<font>Font25_Cond</font>
 				<textcolor>grey</textcolor>
 				<visible>!ControlGroup(2).HasFocus + !String.IsEqual(Container(2).NumItems,0)</visible>

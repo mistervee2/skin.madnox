@@ -232,7 +232,7 @@
 				<control type="button" id="500">
 					<description>Choose infoline</description>
 					<include>Settings_Button</include>
-					<label>$LOCALIZE[31745]</label>
+					<label>$LOCALIZE[31050]</label>
 					<label2>$INFO[Window.Property(InfoLine)]</label2>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					<onclick>SetProperty(chooseProperty,InfoLine)</onclick>
@@ -241,7 +241,7 @@
 				<control type="button" id="306">
 					<description>Change icon</description>
 					<include>Settings_Button</include>
-					<label>$LOCALIZE[31959]</label>
+					<label>$LOCALIZE[31061]</label>
 					<visible>[String.IsEqual(Window.Property(groupname),mainmenu) + String.Contains(Skin.String(HomeLayout),icons)] | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
 				<!-- <control type="button" id="306">
@@ -337,7 +337,7 @@
 				<control type="button" id="1001">
 					<description>Change widget style 1</description>
 					<include>ColorChooserButton</include>
-					<label>31750</label>
+					<label>$LOCALIZE[31051]</label>
 					<label2>$VAR[WidgetStyleLabelVar]</label2>
 				</control>
 				<control type="button" id="1002">
@@ -604,7 +604,7 @@
 				<control type="button" id="2001">
 					<description>Change widget style 2</description>
 					<include>ColorChooserButton</include>
-					<label>31750</label>
+					<label>$LOCALIZE[31051]</label>
 					<label2>$VAR[WidgetStyle2LabelVar]</label2>
 				</control>
 				<control type="button" id="2002">
