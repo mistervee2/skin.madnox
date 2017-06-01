@@ -105,10 +105,12 @@ msgctxt "#31023"
 msgid "Reset Fallback"
 msgstr ""
 
+#: /1080i/ For Page count
 msgctxt "#31024"
 msgid "Page"
 msgstr ""
 
+#: /1080i/ For Item Count
 msgctxt "#31025"
 msgid "Items"
 msgstr ""
@@ -137,8 +139,9 @@ msgctxt "#31031"
 msgid "Last Logged In"
 msgstr ""
 
+#: /1080i/SmartPlaylistEditor.xml
 msgctxt "#31032"
-msgid "Nothing"
+msgid "Order"
 msgstr ""
 
 msgctxt "#31033"
@@ -170,6 +173,8 @@ msgctxt "#31039"
 msgid "CD-Wall"
 msgstr ""
 
+#: /1080i/Home.xml
+#: /1080i/Custom_1111_Topbar.xml
 msgctxt "#31040"
 msgid "Now Playing"
 msgstr ""
@@ -226,6 +231,7 @@ msgctxt "#31053"
 msgid "Fullscreen"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31054"
 msgid "Shadow"
 msgstr ""
@@ -994,14 +1000,17 @@ msgctxt "#31244"
 msgid "Enable cdART in 'Now Playing' widget"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31245"
 msgid "Returning"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31246"
 msgid "Ended"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31247"
 msgid "TBD"
 msgstr ""
@@ -1010,10 +1019,12 @@ msgctxt "#31248"
 msgid "BD/DVD Cases"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31249"
 msgid "New Series"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31250"
 msgid "Finale"
 msgstr ""
@@ -1213,6 +1224,7 @@ msgctxt "#31297"
 msgid "  •  Global widget backgrounds"
 msgstr ""
 
+#: /1080i/Home.xml
 #: /1080i/Includes_MediaMenu.xml
 msgctxt "#31298"
 msgid "Set area color"
@@ -1729,6 +1741,7 @@ msgctxt "#31423"
 msgid "Perspective Layout"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31424"
 msgid "Extra Fanart"
 msgstr ""
@@ -1950,6 +1963,7 @@ msgctxt "#31478"
 msgid "Setup"
 msgstr ""
 
+#: /1080i/Home.xml
 msgctxt "#31479"
 msgid "Widgets"
 msgstr ""
@@ -2413,6 +2427,7 @@ msgctxt "#31641"
 msgid "Paths"
 msgstr ""
 
+#: /1080i/Home.xml
 #: /1080i/SkinSettings.xml
 msgctxt "#31643"
 msgid "Furniture"
@@ -2684,6 +2699,7 @@ msgctxt "#31737"
 msgid "Time"
 msgstr ""
 
+#: /1080i/Custom_1111_Topbar.xml
 msgctxt "#31738"
 msgid "Item Count"
 msgstr ""
@@ -2719,6 +2735,7 @@ msgctxt "#31744"
 msgid "  •  Case"
 msgstr ""
 
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31745"
 msgid "Choose infoline"
 msgstr ""
@@ -2739,6 +2756,7 @@ msgctxt "#31749"
 msgid "Configure widget 1"
 msgstr ""
 
+#: /1080i/Custom_1111_Topbar.xml
 msgctxt "#31750"
 msgid "Style"
 msgstr ""
@@ -2830,6 +2848,7 @@ msgctxt "#31769"
 msgid "Extended Mixed"
 msgstr ""
 
+#: /1080i/Variables.xml
 msgctxt "#31770"
 msgid "Flat"
 msgstr ""
@@ -3497,6 +3516,7 @@ msgctxt "#31958"
 msgid "Menu label"
 msgstr ""
 
+#: /1080i/script-skinshortcuts.xml
 msgctxt "#31959"
 msgid "Icon"
 msgstr ""
@@ -3515,7 +3535,8 @@ msgstr ""
 
 #########################
 # 31963 empty
- 
+
+#: /1080i/Variables.xml
 msgctxt "#31964"
 msgid "Fallback"
 msgstr ""
@@ -3625,10 +3646,12 @@ msgctxt "#31992"
 msgid "IMDB Flag"
 msgstr ""
 
+#: /1080i/Includes_MediaFlags.xml
 msgctxt "#31993"
 msgid "On Air"
 msgstr ""
 
+#: /1080i/Includes_MediaFlags.xml
 msgctxt "#31994"
 msgid "Last Aired"
 msgstr ""

@@ -205,7 +205,7 @@
 		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),2)">$LOCALIZE[31247]</value>
 		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),4)">$LOCALIZE[31249]</value>
 		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),6)">$LOCALIZE[31250]</value>
-		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),-1)">$LOCALIZE[31251]</value>
+		<value condition="String.Contains(Window(Home).Property(NextAired.StatusID),-1)">$LOCALIZE[1446]</value>
 	</variable>
 
 	<!-- Dialogs -->
@@ -286,10 +286,10 @@
 		<value condition="Control.HasFocus(603)">$LOCALIZE[13395]</value>
 	</variable>
 	<variable name="VideoOSDLabel2Var">
-		<value condition="Control.HasFocus(802)">$LOCALIZE[31355]</value>
-		<value condition="Control.HasFocus(803)">$LOCALIZE[31218]</value>
-		<value condition="Control.HasFocus(804)">$LOCALIZE[31356]</value>
-		<value condition="Control.HasFocus(805)">$LOCALIZE[31026]</value>
+		<value condition="Control.HasFocus(802)">$LOCALIZE[33061]</value>
+		<value condition="Control.HasFocus(803)">$LOCALIZE[36501]</value>
+		<value condition="Control.HasFocus(804)">$LOCALIZE[24012]</value>
+		<value condition="Control.HasFocus(805)">$LOCALIZE[33063]</value>
 	</variable>
 	<!--  Music OSD Buttons -->
 	<variable name="MusicOSDLabelVar">
@@ -302,7 +302,7 @@
 		<value condition="Control.HasFocus(802)">$LOCALIZE[24013]</value>
 		<value condition="Control.HasFocus(803)">$LOCALIZE[486][CR]$INFO[Playlist.Repeat]</value>
 		<value condition="Control.HasFocus(805)">$LOCALIZE[590][CR]$INFO[Playlist.Random]</value>
-		<value condition="Control.HasFocus(806)">$LOCALIZE[31026]</value>
+		<value condition="Control.HasFocus(806)">$LOCALIZE[33063]</value>
 	</variable>
 	<variable name="MusicOSDRepeatButtonVar">
 		<value condition="Playlist.IsRepeatOne">buttons/player/repeatone.png</value>

@@ -58,7 +58,7 @@
 					<visible>!Skin.HasSetting(DisableTopbar)</visible>
 				</control>
 				<control type="radiobutton" id="106">
-					<label>$LOCALIZE[31510]</label>
+					<label>$LOCALIZE[8]</label>
 					<onclick>Skin.ToggleSetting(DisableTopbarWeather)</onclick>
 					<selected>!Skin.HasSetting(DisableTopbarWeather)</selected>
 					<radioposx>963</radioposx>
@@ -74,7 +74,7 @@
 					<visible>!Skin.HasSetting(DisableTopbar)</visible>
 				</control>
 				<control type="radiobutton" id="108">
-					<label>$LOCALIZE[31737]</label>
+					<label>$LOCALIZE[555]</label>
 					<onclick>Skin.ToggleSetting(DisableTopbarTime)</onclick>
 					<selected>!Skin.HasSetting(DisableTopbarTime)</selected>
 					<radioposx>963</radioposx>

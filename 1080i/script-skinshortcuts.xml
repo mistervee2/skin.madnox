@@ -189,7 +189,7 @@
 				<control type="button" id="405">
 					<description>Edit submenu</description>
 					<include>Settings_Button</include>
-					<label>31742</label>
+					<label>$ADDON[script.skinshortcuts 32072]</label>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 				</control>
 				<!-- Background -->
@@ -200,7 +200,7 @@
 					<label2>$INFO[Window.Property(backgroundName)]</label2>
 					<visible>!String.EndsWith(Window.Property(groupname),.1) + !String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
-				<control type="button" id="602">
+<!-- 				<control type="button" id="602">
 					<description>Change live background image</description>
 					<include>Settings_Button</include>
 					<label>31743</label>
@@ -227,12 +227,12 @@
 					<label>31757</label>
 					<label2>$VAR[backgroundSortLabelVar]</label2>
 					<visible>String.EndsWith(Window.Property(background),.Live) | String.EndsWith(Window.Property(background),.FanartList)</visible>
-				</control>
+				</control> -->
 				<!-- End Background -->
 				<control type="button" id="500">
 					<description>Choose infoline</description>
 					<include>Settings_Button</include>
-					<label>31745</label>
+					<label>$LOCALIZE[31745]</label>
 					<label2>$INFO[Window.Property(InfoLine)]</label2>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
 					<onclick>SetProperty(chooseProperty,InfoLine)</onclick>
@@ -241,7 +241,7 @@
 				<control type="button" id="306">
 					<description>Change icon</description>
 					<include>Settings_Button</include>
-					<label>31746</label>
+					<label>$LOCALIZE[31959]</label>
 					<visible>[String.IsEqual(Window.Property(groupname),mainmenu) + String.Contains(Skin.String(HomeLayout),icons)] | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control>
 				<!-- <control type="button" id="306">
@@ -252,7 +252,7 @@
 					<visible>Skin.HasSetting(mainmenuicons) | String.EndsWith(Window.Property(groupname),.1) | String.IsEqual(Window.Property(groupname),madnox-quicknav)</visible>
 				</control> -->
 
-				<control type="button" id="800">
+				<!-- <control type="button" id="800">
 					<description>Widget 1</description>
 					<include>Settings_Button</include>
 					<label>31749</label>
@@ -269,7 +269,7 @@
 					<onclick>SetProperty(skinshortcuts-management-widget,2,10000)</onclick>
 					<onclick>Control.SetFocus(2001)</onclick>
 					<visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
-				</control>
+				</control> -->
 				
 				<control type="button" id="308">
 					<description>Restore shortcuts</description>
